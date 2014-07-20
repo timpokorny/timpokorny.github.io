@@ -1,0 +1,50 @@
+Fix the menubar to match this
+--------------------------------------
+
+/ index.html
+
+	/ news
+		- index.html
+
+	/ about
+		- index.html        <-- About Portico, History and Developer Team
+		- roadmap.html      <-- Roadmap
+		- sponsors.html     <-- Sponsor information
+		- get.html          <-- Download, Get the Source
+		- nightly.html      <-- Nightly Builds
+		- contact.html      <-- Location Information, Contact Form & Email
+
+	/ documentation
+		/ user
+			- index.html             <-- Documentation Index
+			- gettingstarted.html    <-- Simple walkthrough
+			- switching.html         <-- Switch from another RTI
+			- configure.html         <-- Configuration Guide
+			- troubleshooting.html   <-- How to debug Portico
+			- faq.html               <-- Duh
+
+		/ developer
+			- index.html             <-- Documentation Index
+			- welcome.html           <-- Welcome to the HLA - Overview
+			- java.html              <-- Writing Java Federates
+			- cpp.html               <-- Writing C++ Federates
+			- apistatus.html         <-- Current Portico API Support
+			- building.html          <-- How to Build Portico
+
+		/ lvc
+			- vbs.html
+			- steelbeasts.html
+			- xplane.html
+			- unity.html
+			- onesaf.html
+			- jsaf.html
+
+	/ community
+		- index.html          <-- Community Resources, Support
+		- bugs.html           <-- How to report bugs
+		- contributing.html   <-- How to help out
+
+	/ support
+		- index.html        <-- Community and Commercial Support
+
+

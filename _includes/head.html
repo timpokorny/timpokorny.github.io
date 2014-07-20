@@ -1,0 +1,66 @@
+<head>
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8" />
+	<title>The Portico Project</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/colors/8.css" id="color" />
+	<link rel="stylesheet" href="css/overrides.css" type="text/css" media="screen"/>
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="{{ "js/jquery.jcarousel.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.easing.1.3.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.themepunch.plugins.min.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.themepunch.revolution.min.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.twitter.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.quovolver.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.isotope.min.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.tooltipster.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.jpanelmenu.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/jquery.swipebox.min.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/swipe.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/retina.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "js/custom.js" | prepend: site.baseurl }}"></script>
+	
+	<script src="js/switcher.js" type="text/javascript"></script>
+</head>
+
+
+
+<!--
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    Custom CSS
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+</head>
+-->

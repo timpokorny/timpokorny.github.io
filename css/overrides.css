@@ -1,0 +1,399 @@
+/*
+ * Custom stylesheet for Portico and OpenLVC
+ */
+
+/* ----------------------------------------
+ * Flat-UI Background Colorws
+ * In swatch pairs from flatuicolors.com
+ * ------------------------------------- */
+Flat background colours in swatch pairs from http://flatuicolors.com/ */
+.background-white        { background-color: #ffffff; }
+.background-black        { background-color: #000000; }
+
+.background-turquoise    { background-color: #1abc9c; }
+.background-greensea     { background-color: #16a085; }
+
+.background-emerland     { background-color: #2ecc71; }
+.background-nephritis    { background-color: #27ae60; }
+
+.background-peterriver   { background-color: #3498db; }
+.background-belizehole   { background-color: #2980b9; }
+
+.background-wetasphalt   { background-color: #34495e; }
+.background-midnightblue { background-color: #2c3e50; }
+
+.background-sunflower    { background-color: #f1c40f; }
+.background-orange       { background-color: #f39c12; }
+
+.background-carrot       { background-color: #e67e22; }
+.background-pumpkin      { background-color: #d35400; }
+
+.background-alizarin     { background-color: #e74c3c; }
+.background-pomegranate  { background-color: #c0392b; }
+
+.background-clouds       { background-color: #ecf0f1; }
+.background-silver       { background-color: #bdc3c7; }
+
+.background-concrete     { background-color: #95a5a6; }
+.background-asbestos     { background-color: #7f8c8d; }
+
+/* --------------------------------------------------       
+ * Navbar Customizations
+ * ----------------------------------------------- */
+
+/* --------------------------------------------------       
+ * Main body overrides
+ * ----------------------------------------------- */
+body
+{
+	color: #555;
+	-webkit-font-smoothing:subpixel-antialiased;
+	/*-webkit-font-smoothing:antialiased;*/
+	/*-webkit-font-smoothing:none;*/
+}
+
+/* --------------------------------------------------       
+ * Hero-Unit Customizations/Augmentations
+ * The following is used along with the hero-unit
+ * used for the site header
+ * ----------------------------------------------- */
+.site-header
+{
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 30px;
+	padding-top: 2em;
+	padding-bottom: 3em;
+	background-color: #ffffff;
+}
+
+.site-header p{ line-height: 30px; }
+.site-header img{ margin-bottom: 10px; }
+
+a.logo
+{
+	height:40px;
+	width:200px;
+	padding-top: 10px;
+	padding-top: 11px;
+}
+
+/* --------------------------------------------------       
+ * Button overrides
+ * ----------------------------------------------- */
+a.btn.thin
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+/* --------------------------------------------------       
+ * Version tabs/pills on the front page.
+ * ----------------------------------------------- */
+/* The container - reduce the zealous padding a bit */
+#tabs_content_container
+{
+	padding: 5px 0px;
+}
+
+.version-pane
+{
+	margin-left: 0px;
+}
+
+.version-pane p
+{
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
+.version-pane h1
+{
+	font-family: "Open Sans";
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 1.0;
+	margin: 0 0 0 0;
+	color: #555555;
+}
+
+.version-pane small
+{
+	font-size: 13px;
+}
+
+.version-pane img
+{
+	width: 48px; /* os-logo icons */
+	display: inline;
+}
+
+/* for pass/fail nightly build badges */
+.version-pane .label
+{
+	display: inline-block;
+	width: 48px; /* meant to be same as os-logo - this makes it look that way. no idea why */
+	padding: 0 0 0 0;
+}
+
+.version-pane a:visited,
+.version-pane a:link
+{
+	color: #555555;
+}
+
+/* --------------------------------------------------       
+ * Text style overrides
+ * ----------------------------------------------- */
+h1, h2, h3, h4, h5, h6
+{
+	margin: 10px 0;
+	line-height: 20px;
+	color: #555555;
+	text-rendering: optimizelegibility;
+	font-weight:900;
+}
+
+h1, h2
+{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-weight: 400;
+}
+
+p
+{
+	/*margin-bottom:0.8em;*/
+	line-height: 22px;
+	font-weight: 300;
+}
+
+.lead
+{
+	font-size: 18px;
+	font-weight: 200;
+	margin-bottom: 20px;
+}
+
+/* ---------------------------
+ * Labels
+ * ------------------------ */
+.label
+{
+	padding-left: 0.1em;
+	padding-right: 0.1em;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	text-align: center;
+	color: #ffffff;
+	font-size: 75%;
+}
+
+.label-default{ background-color: #999999; }
+.label-primary{ background-color: #008cba; }
+.label-success{ background-color: #43ac6a; }
+.label-warning{ background-color: #e99002; }
+.label-danger { background-color: #f04124; }
+.label-info   { background-color: #5bc0de; }
+
+/* ---------------------------
+ * Alerts
+ * ------------------------ */
+.alert-heading
+{
+	color: #ffffff;
+	margin: 0;
+	font-weight: 900;
+}
+
+.alert-orange
+{
+	background-color: #ff7518;
+	padding: 15px;
+	margin: 20px 0 20px 0;
+}
+
+.alert-orange p
+{
+	color: #ffffff;
+}
+
+.alert-orange a:visited,
+.alert-orange a:link
+{
+	color: #ffffff;
+	text-decoration:underline;
+}
+
+/* --------------------------------------------------       
+ * Thumbnail Sections -- from Bootstrap Examples
+ * ----------------------------------------------- */
+.tiles h4
+{
+  margin: 10px 0 5px;
+}
+
+.tiles p
+{
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.tiles .thumbnail
+{
+  margin-bottom: 9px;
+  background-color: #ddd;
+}
+
+.tile p
+{
+	margin-bottom: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.thumbnail
+{
+	display: block;
+	padding: 4px;
+	line-height: 20px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+	   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+	        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	     -o-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus
+{
+	border-color: transparent;
+	background-color: #bbbbbb;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	        box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.thumbnail > img
+{
+	display: block;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* --------------------------------------------------       
+ * Block Quotes
+ * ----------------------------------------------- */
+blockquote
+{
+	border-left: 5px solid #fc7373; /* color from 8.css */
+	margin: 0 0 20px;
+	padding: 12px 15px;
+}
+
+blockquote p
+{
+	margin-bottom: 0;
+	font-size: 17.5px;
+	font-weight: 300;
+	line-height: 1.25;
+	font-style: normal;
+	color: #555;
+}
+
+blockquote small
+{
+	display: block;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 20px;
+	font-style: normal;
+	color: #dfdfdf;
+	color: #ccc;
+}
+
+blockquote small:before
+{
+	content: '\2014 \00A0';
+}
+
+.promobar-eye
+{
+	background-color: transparent;
+	background:url('../images/eye.jpg') repeat center center;
+}
+
+/* --------------------------------------------------       
+ * Footer text styles
+ * ----------------------------------------------- */
+.footer
+{
+	padding-top:40px;
+	background-color: #c0392b; /* pomegranate */
+	font-size: 12px;
+	color: #222222; /* off-black */
+}
+
+footer a
+{
+	font-weight: 300;
+}
+
+address  { font-weight: 300; line-height: 1.6em; }
+address b{ font-weight: 700; line-height: 1.6em; }
+
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #dfdfdf;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+/** Newsletter Input Field **/
+.newsletter input
+{
+	margin: 10px 0 0 0;
+	text-align: start;
+	border: 1px solid #e0e0e0;
+	padding: 0 0 0 10px;
+	outline: none;
+	font-size: 13px;
+	color: #888;
+	max-width: 75%;
+	display: block;
+	background: #fff;
+	-webkit-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+	box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+	border-radius: 2px;
+}
+
+.newsletter input:focus
+{
+	border: 1px solid #d6d6d6;
+	color: #888;
+}
+
+/* --------------------------------------------------       
+ * Misc Stuff
+ * ----------------------------------------------- */
+.img-circle
+{
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
+
+
+
