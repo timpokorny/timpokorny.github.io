@@ -27,6 +27,7 @@ end
 class Jekyll::Post
 
   def relative
+
     count = url.split("/").length
     if url == "/"
       ""

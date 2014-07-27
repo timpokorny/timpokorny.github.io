@@ -4,16 +4,16 @@
 	<title>The Portico Project</title>
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	<link rel="shortcut icon" href="{{page.relative}}assets/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="{{page.relative}}favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{% site_asset favicon.ico %}" type="image/x-icon">
+	<link rel="icon" href="{% site_asset favicon.ico %}" type="image/x-icon">
 	
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Style Files -->
-	<link rel="stylesheet" href="{{page.relative}}assets/css/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="{{page.relative}}assets/css/colors/8.css" id="color" />
-	<link rel="stylesheet" href="{{page.relative}}assets/css/overrides.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="{% site_asset css/style.css %}" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{% site_asset css/colors/8.css %}" id="color" />
+	<link rel="stylesheet" href="{% site_asset css/overrides.css %}" type="text/css" media="screen"/>
 	
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,20 +28,20 @@
 	</style>
 
 	<!-- jQuery library -->
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery-1.9.0.min.js %}"></script>
 	
 	<!-- Scripts -->
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.jcarousel.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.themepunch.plugins.min.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.themepunch.revolution.min.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.twitter.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.quovolver.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.isotope.min.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.tooltipster.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.jpanelmenu.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/jquery.swipebox.min.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/swipe.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/retina.js"></script>
-	<script type="text/javascript" src="{{page.relative}}assets/js/custom.js"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.jcarousel.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.easing.1.3.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.themepunch.plugins.min.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.themepunch.revolution.min.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.twitter.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.quovolver.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.isotope.min.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.tooltipster.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.jpanelmenu.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/jquery.swipebox.min.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/swipe.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/retina.js %}"></script>
+	<script type="text/javascript" src="{% site_asset js/custom.js %}"></script>
 </head>

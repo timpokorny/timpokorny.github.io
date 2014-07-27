@@ -9,79 +9,79 @@
     <a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
     
     <!-- Logo  -->  
-    <a class="logo" href="index.html"><img src="assets/images/logo.png"/></a>
+    <a class="logo" href="{% site_root %}index.html"><img src="{% site_asset images/logo.png %}"/></a>
     
     <!-- Navigation -->   
     <nav>
       <ul class="navigation">
         <li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
-        <li class="current"><a href="index.html">Home</a></li>
+        <li class="current"><a href="{% site_root %}index.html">Home</a></li>
 
-        <li><a href="/about/index.html" class="arrow">About</a>
+        <li><a href="{% site_root %}about/index.html" class="arrow">About</a>
           <!-- Drop-Down / Start -->
           <ul>
-            <li><a href="/news/">Latest News</a></li>
-            <li><a href="/about/index.html">About Portico</a></li>
-            <li><a href="/about/index.html#devteam">Developer Team</a></li>
-            <li><a href="/about/roadmap.html">Status and Roadmap</a></li>
-            <li><a href="/about/get.html">Get Portico</a></li>
-            <li><a href="/about/nightly.html">Nightly Builds</a></li>
+            <li><a href="{% site_root %}news/">Latest News</a></li>
+            <li><a href="{% site_root %}about/index.html">About Portico</a></li>
+            <li><a href="{% site_root %}about/index.html#devteam">Developer Team</a></li>
+            <li><a href="{% site_root %}about/roadmap.html">Status and Roadmap</a></li>
+            <li><a href="{% site_root %}about/get.html">Get Portico</a></li>
+            <li><a href="{% site_root %}about/nightly.html">Nightly Builds</a></li>
           </ul>
           <!-- Drop-Down / End -->
         </li>
 
-        <li><a href="#" class="arrow">Documentation</a>
+        <li><a href="{% site_root %}documentation/" class="arrow">Documentation</a>
           <!-- Drop-Down / Start -->
           <ul>
-            <li><a href="/documentation/user/" class="arrow">For Users</a>
+            <li><a href="{% site_root %}documentation/user/" class="arrow">For Users</a>
               <ul>
-                <li><a href="/documentation/user/gettingstarted.html">Getting Started</a></li>
-                <li><a href="/documentation/user/switching.html">Switching to Portico</a></li>
-                <li><a href="/documentation/user/configure.html">Configuring Portico</a></li>
-                <li><a href="/documentation/user/troubleshooting.html">Troubleshooting</a></li>
-                <li><a href="/documentation/user/faq.html">Portico FAQ</a></li>
+                <li><a href="{% site_root %}documentation/user/gettingstarted.html">Getting Started</a></li>
+                <li><a href="{% site_root %}documentation/user/switching.html">Switching to Portico</a></li>
+                <li><a href="{% site_root %}documentation/user/configure.html">Configuring Portico</a></li>
+                <li><a href="{% site_root %}documentation/user/troubleshooting.html">Troubleshooting</a></li>
+                <li><a href="{% site_root %}documentation/user/faq.html">Portico FAQ</a></li>
               </ul>
             </li>
-            <li><a href="/documentation/developer/" class="arrow">For Developers</a>
+            <li><a href="{% site_root %}documentation/developer/" class="arrow">For Developers</a>
               <ul>
-                <li><a href="/documentation/developer/welcome.html">Welcome to the HLA</a></li>
-                <li><a href="/documentation/developer/java.html">Java Federates</a></li>
-                <li><a href="/documentation/developer/cpp.html">C++ Federates</a></li>
-                <li><a href="/documentation/developer/apistatus.html">Portico API Status</a></li>
-                <li><a href="/documentation/developer/building.html">Building Portico</a></li>
+                <li><a href="{% site_root %}documentation/developer/welcome.html">Welcome to the HLA</a></li>
+                <li><a href="{% site_root %}documentation/developer/java.html">Java Federates</a></li>
+                <li><a href="{% site_root %}documentation/developer/cpp.html">C++ Federates</a></li>
+                <li><a href="{% site_root %}documentation/developer/apistatus.html">Portico API Status</a></li>
+                <li><a href="{% site_root %}documentation/developer/building.html">Building Portico</a></li>
               </ul>
             </li>
-            <li><a href="/documentation/lvc/" class="arrow">Portico LVC</a>
+            <li><a href="{% site_root %}documentation/lvc/" class="arrow">Portico LVC</a>
               <ul>
                 <!-- Live -->
                 <!-- Virtual -->
-                <li><a href="/documentation/lvc/vbs.html">VBS</a></li>
-                <li><a href="/documentation/lvc/steelbeasts.html">Steel Beasts</a></li>
-                <li><a href="/documentation/lvc/xplane.html">X-Plane</a></li>
-                <li><a href="/documentation/lvc/unity.html">Unity3D</a></li>
+                <li><a href="{% site_root %}documentation/lvc/vbs.html">VBS</a></li>
+                <li><a href="{% site_root %}documentation/lvc/steelbeasts.html">Steel Beasts</a></li>
+                <li><a href="{% site_root %}documentation/lvc/xplane.html">X-Plane</a></li>
+                <li><a href="{% site_root %}documentation/lvc/unity.html">Unity3D</a></li>
                 <!-- Constructive -->
-                <li><a href="/documentation/lvc/onesaf.html">OneSAF</a></li>
-                <li><a href="/documentation/lvc/jsaf.html">JSAF</a></li>
+                <li><a href="{% site_root %}documentation/lvc/onesaf.html">OneSAF</a></li>
+                <li><a href="{% site_root %}documentation/lvc/jsaf.html">JSAF</a></li>
               </ul>
             </li>
           </ul>
           <!-- Drop-Down / End -->
         </li>
 
-        <li><a href="/community/" class="arrow">Community</a>
+        <li><a href="{% site_root %}community/" class="arrow">Community</a>
           <!-- Drop-Down / Start -->
           <ul>
-            <li><a href="/community/index.html#mailing-lists">Mailing Lists</a></li>
-            <li><a href="/community/index.html#forums">Community Support</a></li>
-            <li><a href="/community/bugs.html">Reporting Bugs</a></li>
-            <li><a href="/community/contributing.html">Contributing</a></li>
+            <li><a href="{% site_root %}community/index.html#mailing-lists">Mailing Lists</a></li>
+            <li><a href="{% site_root %}community/index.html#forums">Community Support</a></li>
+            <li><a href="{% site_root %}community/bugs.html">Reporting Bugs</a></li>
+            <li><a href="{% site_root %}community/contributing.html">Contributing</a></li>
           </ul>
           <!-- Drop-Down / End -->
         </li>
 
-        <li><a href="/support/">Support</a></li>
+        <li><a href="{% site_root %}support/">Support</a></li>
 
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="{% site_root %}contact.html">Contact</a></li>
       </ul>
     </nav>
   </div><!-- End of container -->
