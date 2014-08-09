@@ -29,13 +29,21 @@ Flat background colours in swatch pairs from http://flatuicolors.com/ */
 .background-pumpkin      { background-color: #d35400; }
 
 .background-alizarin     { background-color: #e74c3c; }
-.background-pomegranate  { background-color: #c0392b; }
+.background-pomegranate  { background-color: #c0392b !important; }
 
 .background-clouds       { background-color: #ecf0f1; }
 .background-silver       { background-color: #bdc3c7; }
 
 .background-concrete     { background-color: #95a5a6; }
 .background-asbestos     { background-color: #7f8c8d; }
+
+.theme-red               { background-color: #fc6264 !important; } /* from the vena theme */
+.theme-brown             { background-color: #fc7373 !important; } /* from the vena theme */
+.theme-blue              { background-color: #5dd7e2 !important; } /* from the vena theme */
+.theme-orange            { background-color: #c05f06 !important; } /* from the vena theme */
+.theme-green             { background-color: #9ecc3b !important; } /* from the vena theme */
+.theme-grey              { background-color: #575757 !important; } /* from the vena theme */
+.alt-blue                { background-color: #1799dd !important; } /* from coming-soon theme */
 
 /* --------------------------------------------------       
  * Navbar Customizations
@@ -46,10 +54,69 @@ Flat background colours in swatch pairs from http://flatuicolors.com/ */
  * ----------------------------------------------- */
 body
 {
-	color: #555;
 	-webkit-font-smoothing:subpixel-antialiased;
 	/*-webkit-font-smoothing:antialiased;*/
 	/*-webkit-font-smoothing:none;*/
+}
+
+/* --------------------------------------------------       
+ * Text style overrides
+ * ----------------------------------------------- */
+h1, h2, h3, h4, h5, h6
+{
+	margin: 10px 0;
+	/*line-height: 20px;*/
+	color: #555555;
+	text-rendering: optimizelegibility;
+	font-weight:900;
+}
+
+h1, h2
+{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-weight: 400;
+}
+
+.page-title h1
+{
+	margin: 0;
+}
+
+p
+{
+	/*margin-bottom:0.8em;*/
+	/*line-height: 22px; default:25 */
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.list
+{
+	font-weight: 300;
+	margin-left:20px;
+}
+
+.bigger /* should be put on <p> elements */
+{
+	font-size: 17px;
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+.lead
+{
+	font-size: 18px;
+	font-weight: 200;
+	margin-bottom: 20px;
+}
+
+
+.fullwidth
+{
+	padding: 40px 0; 
+	margin: 55px 0;
+	background: #f5f5f5;
 }
 
 /* --------------------------------------------------       
@@ -143,41 +210,8 @@ a.btn.thin
 }
 
 /* --------------------------------------------------       
- * Text style overrides
- * ----------------------------------------------- */
-h1, h2, h3, h4, h5, h6
-{
-	margin: 10px 0;
-	line-height: 20px;
-	color: #555555;
-	text-rendering: optimizelegibility;
-	font-weight:900;
-}
-
-h1, h2
-{
-	margin-top: 10px;
-	margin-bottom: 15px;
-	font-weight: 400;
-}
-
-p
-{
-	/*margin-bottom:0.8em;*/
-	line-height: 22px;
-	font-weight: 300;
-}
-
-.lead
-{
-	font-size: 18px;
-	font-weight: 200;
-	margin-bottom: 20px;
-}
-
-/* ---------------------------
  * Labels
- * ------------------------ */
+ * ----------------------------------------------- */
 .label
 {
 	padding-left: 0.1em;
@@ -196,9 +230,9 @@ p
 .label-danger { background-color: #f04124; }
 .label-info   { background-color: #5bc0de; }
 
-/* ---------------------------
+/* --------------------------------------------------       
  * Alerts
- * ------------------------ */
+ * ----------------------------------------------- */
 .alert-heading
 {
 	color: #ffffff;
@@ -301,12 +335,12 @@ blockquote
 
 blockquote p
 {
-	margin-bottom: 0;
-	font-size: 17.5px;
+	/*margin-bottom: 0;*/
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.25;
-	font-style: normal;
-	color: #555;
+	font-style: italic;
+	color: #777;
 }
 
 blockquote small
@@ -383,6 +417,91 @@ abbr.initialism {
 {
 	border: 1px solid #d6d6d6;
 	color: #888;
+}
+
+/* --------------------------------------------------       
+ * Want to Contribute? Banner
+ * ----------------------------------------------- */
+.contribute, .contribute h2
+{
+	text-align: center;
+	color: #ffffff;
+}
+
+
+/* --------------------------------------------------       
+ * Team Social - List of social icons under dev team
+ * ----------------------------------------------- */
+.team-social
+{
+	list-style: none;
+	margin-left: 0;
+}
+
+.team-social li
+{
+	float: left;
+	margin-left: 10px;
+}
+
+.team-social li:first-child
+{
+	margin-left: 0;
+}
+
+.team-social a
+{
+	/* background: #49535d; /* original */
+	background: #fc6264;    /* theme red */
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	height: 30px;
+	line-height: 1.875;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition:	all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition:	all 0.2s ease;
+	width: 30px;
+}
+
+.team-social a:hover
+{
+	background: #575757; /* theme-grey */
+}
+
+/* --------------------------------------------------       
+ * Celebrity Endorsement
+ * ----------------------------------------------- */
+.celebrity
+{
+	vertical-align: middle;
+	padding-bottom: 0; /* make sure their image rides low on the line - where Snoop likes it */
+}
+
+.celebrity p
+{
+	padding-top: 1.5em;
+	font-size: 18px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.celebrity input
+{
+	margin: 10px auto 10px auto;
+	text-align: start;
+	border: 1px solid #e0e0e0;
+	padding: 0 0 0 10px;
+	outline: none;
+	font-size: 13px;
+	color: #888;
+	max-width: 33%;
+	display: block;
+	background: #f8f8f8;
+	border-radius: 2px;
 }
 
 /* --------------------------------------------------       
