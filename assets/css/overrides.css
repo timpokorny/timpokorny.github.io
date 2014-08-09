@@ -10,32 +10,32 @@ Flat background colours in swatch pairs from http://flatuicolors.com/ */
 .background-white        { background-color: #ffffff; }
 .background-black        { background-color: #000000; }
 
-.background-turquoise    { background-color: #1abc9c; }
-.background-greensea     { background-color: #16a085; }
+.background-turquoise    { background-color: #1abc9c !important; }
+.background-greensea     { background-color: #16a085 !important; }
 
-.background-emerland     { background-color: #2ecc71; }
-.background-nephritis    { background-color: #27ae60; }
+.background-emerland     { background-color: #2ecc71 !important; }
+.background-nephritis    { background-color: #27ae60 !important; }
 
-.background-peterriver   { background-color: #3498db; }
-.background-belizehole   { background-color: #2980b9; }
+.background-peterriver   { background-color: #3498db !important; }
+.background-belizehole   { background-color: #2980b9 !important; }
 
-.background-wetasphalt   { background-color: #34495e; }
-.background-midnightblue { background-color: #2c3e50; }
+.background-wetasphalt   { background-color: #34495e !important; }
+.background-midnightblue { background-color: #2c3e50 !important; }
 
-.background-sunflower    { background-color: #f1c40f; }
-.background-orange       { background-color: #f39c12; }
+.background-sunflower    { background-color: #f1c40f !important; }
+.background-orange       { background-color: #f39c12 !important; }
 
-.background-carrot       { background-color: #e67e22; }
-.background-pumpkin      { background-color: #d35400; }
+.background-carrot       { background-color: #e67e22 !important; }
+.background-pumpkin      { background-color: #d35400 !important; }
 
-.background-alizarin     { background-color: #e74c3c; }
+.background-alizarin     { background-color: #e74c3c !important; }
 .background-pomegranate  { background-color: #c0392b !important; }
 
-.background-clouds       { background-color: #ecf0f1; }
-.background-silver       { background-color: #bdc3c7; }
+.background-clouds       { background-color: #ecf0f1 !important; }
+.background-silver       { background-color: #bdc3c7 !important; }
 
-.background-concrete     { background-color: #95a5a6; }
-.background-asbestos     { background-color: #7f8c8d; }
+.background-concrete     { background-color: #95a5a6 !important; }
+.background-asbestos     { background-color: #7f8c8d !important; }
 
 .theme-red               { background-color: #fc6264 !important; } /* from the vena theme */
 .theme-brown             { background-color: #fc7373 !important; } /* from the vena theme */
@@ -76,6 +76,12 @@ h1, h2
 	margin-top: 10px;
 	margin-bottom: 15px;
 	font-weight: 400;
+}
+
+h1 span, h2 span
+{
+	font-weight: 300;
+	color: #888888;
 }
 
 .page-title h1
@@ -503,6 +509,55 @@ abbr.initialism {
 	background: #f8f8f8;
 	border-radius: 2px;
 }
+
+/* --------------------------------------------------       
+ * Get Portico
+ * ----------------------------------------------- */
+.get-portico
+{
+	padding: 0;
+	border: 1px solid #dadada;
+	border-top: none;
+	border-bottom: none;
+}
+
+.plan h3
+{
+	margin: 0;
+}
+
+.nightly h2
+{
+	color: #ffffff;
+}
+
+.nightly h2 span
+{
+	color: #cccccc;
+}
+
+.nightly .get-portico
+{
+	border: 0;
+}
+
+.nightly .plan-features
+{
+	background-color: #464646;
+	color: #cccccc;
+	border: 0;
+}
+
+.nightly .plan-features ul li
+{
+	border-bottom: 1px solid #888888;
+}
+
+.nightly .plan-price:after {
+	border-color: #ffffff transparent;
+	display: block;
+}
+
 
 /* --------------------------------------------------       
  * Misc Stuff
