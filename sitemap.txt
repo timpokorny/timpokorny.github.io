@@ -7,7 +7,7 @@ Fix the menubar to match this
 		- index.html
 
 	/ about
-		- index.html        <-- About Portico, History and Developer Team
+		- (d) index.html        <-- About Portico, History and Developer Team
 		- roadmap.html      <-- Roadmap
 		- sponsors.html     <-- Sponsor information
 		- get.html          <-- Download, Get the Source
@@ -31,7 +31,7 @@ Fix the menubar to match this
 			- apistatus.html         <-- Current Portico API Support
 			- building.html          <-- How to Build Portico
 
-		/ lvc
+		/ guides
 			- vbs.html
 			- steelbeasts.html
 			- xplane.html

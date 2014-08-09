@@ -9,5 +9,5 @@ github_username:  timpokorny
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+#permalink: pretty
 
