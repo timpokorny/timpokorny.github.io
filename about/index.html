@@ -374,7 +374,7 @@ layout: default
 
 <!-- Snoop  / Start
 ================================================== -->
-<div class="fullwidth theme-blue celebrity" style="margin-bottom:-50px;">
+<div class="fullwidth background-silver celebrity dragdown" style="padding-bottom:0;">
 	<div class="container">
 		<img src="{% site_asset images/people/snoop-dogg.png %}" style="float:left;width:250px;"/>
 		<p>
@@ -382,18 +382,8 @@ layout: default
 			you'll have everything you need to stand out from the crowd. Impress collegues, woo
 			potential partners, make your Mum proud.
 		</p>
-			<form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8"
-			      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-			      class="validate" target="_blank" novalidate>
 
-				<input type="email" value="you@yourcompany.com" name="EMAIL" class="email"
-				       id="mce-EMAIL" placeholder="email address"
-				       onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
-				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				<div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
-				<input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-			</form>
-
+		{% include celebrity-signup.html %}
 	</div>
 </div>
 <!-- Want to Contribute? / End

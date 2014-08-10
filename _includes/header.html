@@ -17,7 +17,12 @@
 				<li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
 				<li class="current"><a href="{% site_root %}index.html">Home</a></li>
 
-				<li><a href="{% site_root %}get.html">Get</a></li>
+				<li><a href="{% site_root %}get.html">Get</a>
+					<ul>
+						<li><a href="{% site_root %}get.html#stable">Stable</a></li>
+						<li><a href="{% site_root %}get.html#nightly">Nightly</a></li>
+					</ul>
+				</li>
 
 				<li><a href="{% site_root %}about/index.html" class="arrow">About</a>
 					<!-- Drop-Down / Start -->
@@ -26,8 +31,6 @@
 						<li><a href="{% site_root %}about/index.html#devteam">Developer Team</a></li>
 						<li><a href="{% site_root %}about/index.html#history">Portico History</a></li>
 						<li><a href="{% site_root %}about/roadmap.html">Status and Roadmap</a></li>
-						<li><a href="{% site_root %}/get.html">Get Portico</a></li>
-						<li><a href="{% site_root %}/nightly.html">Nightly Builds</a></li>
 					</ul>
 					<!-- Drop-Down / End -->
 				</li>

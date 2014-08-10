@@ -3,8 +3,8 @@ Fix the menubar to match this
 
 / (d) index.html
 	- (d) contact.html      <-- Location Information, Contact Form & Email
-	- (d) get.html          <-- Download, Get the Source
-	- nightly.html      <-- Nightly Builds
+	- (u) get.html          <-- Download, Get the Source
+	- (u) nightly.html      <-- Nightly Builds
 
 	/ news
 		- index.html

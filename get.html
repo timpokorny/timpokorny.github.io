@@ -60,11 +60,11 @@ layout: default
 			</div>
 			<div class="plan-features">
 				<ul>
-					<li>Ubuntu 14.04 & 12.04</li>
-					<li>CentOS 6.5</li>
-					<li>Debian 7.5</li>
+					<li>Ubuntu 12.04/14.04 and CentOS 6.5</li>
 					<li><strong>64-bit</strong></li>
 					<li><strong>GCC</strong> 4.4+</li>
+					<li><strong>Java</strong> 8u5</li>
+					<li>Free and Easy</li>
 				</ul>
 				<a class="btn" href="#">Download</a>
 			</div>
@@ -92,13 +92,13 @@ layout: default
 <!-- Stable / End
 ================================================== -->
 
-<!-- Stable / Start
+<!-- Nightly / Start
 ================================================== -->
 <section id="nightly">
 
 	<a name="nightly"></a>
 
-	<div class="fullwidth background-midnightblue" style="margin-bottom:-50px;">
+	<div class="fullwidth background-midnightblue" style="margin-bottom:-60px;">
 		<div class="container nightly">
 		
 			<div class="sixteen columns">
@@ -112,11 +112,11 @@ layout: default
 				</div>
 				<div class="plan-features">
 					<ul>
+						<li><span class="bigger label label-success">Build Passed</span></li>
 						<li><strong>Windows</strong> 7 and 8</li>
 						<li>32 & 64-bit</li>
 						<li><strong>Visual Studio</strong> 8, 9 and 10</li>
 						<li><strong>Java</strong> 8u5</li>
-						<li>Metro Hipster Chic</li>
 					</ul>
 					<a class="btn grey" href="#">Download</a>
 				</div>
@@ -129,11 +129,11 @@ layout: default
 				</div>
 				<div class="plan-features">
 					<ul>
-						<li>Ubuntu 14.04 & 12.04</li>
-						<li>CentOS 6.5</li>
-						<li>Debian 7.5</li>
+						<li><span class="bigger label label-danger">Build Failed</span></li>
+						<li>Ubuntu 12.04/14.04 and CentOS 6.5</li>
 						<li><strong>64-bit</strong></li>
 						<li><strong>GCC</strong> 4.4+</li>
+						<li><strong>Java</strong> 8u5</li>
 					</ul>
 					<a class="btn grey" href="#">Download</a>
 				</div>
@@ -146,11 +146,11 @@ layout: default
 				</div>
 				<div class="plan-features">
 					<ul>
+						<li><span class="bigger label label-success">Build Passed</span></li>
 						<li><strong>OS X</strong> 10.8+</li>
 						<li><strong>64-bit</strong></li>
 						<li><strong>GCC</strong> 4.4+</li>
 						<li><strong>Java</strong> 8u5</li>
-						<li><strong>Unlimited</strong> Awesome</li>
 					</ul>
 					<a class="btn grey" href="#">Download</a>
 				</div>
@@ -158,5 +158,58 @@ layout: default
 		</div> <!-- Container -->
 	</div> <!-- Full Width -->
 </section>
-<!-- Stable / End
+<!-- Nightly / End
 ================================================== -->
+
+<!-- Archive / Start
+================================================== -->
+<section id="archive">
+
+	<a name="archive"></a>
+
+	<div class="fullwidth background-silver" style="margin-bottom:0;">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>Archive / <span>Release History</span></h2>
+
+				<table class="default-table">
+					<tr>
+						<th>Version</th>
+						<th>Release Date</th>
+						<th>Windows</th>
+						<th>Linux</th>
+						<th>Mac OS X</th>
+					</tr>
+					<tr>
+						<td>2.0.0</td>
+						<td>April 1, 2012</td>
+						<td>Download</td>
+						<td>Download</td>
+						<td>Download</td>
+					</tr>
+				</table>
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Archive / End
+================================================== -->
+
+<!-- HRH Queen Liz / Start
+================================================== -->
+<div class="fullwidth theme-blue celebrity dragdown">
+	<div class="container">
+		<img src="{% site_asset images/people/queen.png %}" style="float:left;width:250px;"/>
+		<p>
+			Way down here in Australia, we on Team Portico speak the Queen's English. 
+			Sign up to the announcement mailing list and see for yourself! Liz would.
+		</p>
+
+		{% include celebrity-signup.html %}
+	</div>
+</div>
+<!-- HRH Queen Liz / End
+================================================== -->
+
