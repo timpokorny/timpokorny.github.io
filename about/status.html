@@ -1,0 +1,437 @@
+---
+layout: default
+---
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="twelve columns">
+			<h1>Status & Roadmap</h1>
+		</div>
+		
+		<nav class="four columns">
+			<ul class="breadcrumbs">
+				<li><a href="../index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li><a href="../about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li>Status & Roadmap </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+<!--<div class="fullwidth band-turquoise dragdown" style="margin-top:-40px;">-->
+<div class="page-content">
+	<div class="container">
+	
+		<p class="bigger">This page is the canonical reference for anything related to the current
+			or future status of the project, including the supported platforms, HLA interfaces and
+			"New and Noteworthy" notes about each of the releases.
+		</p>
+
+		<div class="row">
+			<div class="one-fourth column" style="text-align:center;">
+				<a href="#roadmap">
+					<h2>Roadmap</h2>
+					<img src="{% site_asset images/icons/map.png %}" style="margin:auto;">
+				</a>
+			</div>
+
+			<div class="one-fourth column" style="text-align:center;">
+				<a href="#supported-interfaces">
+					<h2>Supported Interfaces</h2>
+					<img src="{% site_asset images/icons/check.png %}" style="margin:auto;">
+				</a>
+			</div>
+
+			<div class="one-fourth column" style="text-align:center;">
+				<a href="#supported-platforms">
+					<h2>Supported Platforms</h2>
+					<img src="{% site_asset images/icons/responsive.png %}" style="margin:auto;">
+				</a>
+			</div>
+
+			<div class="one-fourth column" style="text-align:center;">
+				<a href="#release-notes">
+					<h2>Release Notes</h2>
+					<img src="{% site_asset images/icons/file.png %}" style="margin:auto;">
+				</a>
+			</div>
+
+		</div>
+
+	</div> <!-- Container -->
+</div> <!-- Page Content -->
+
+
+<!-- Roadmap / Start
+================================================== -->
+<section id="roadmap">
+
+	<a name="roadmap"></a>
+
+	<div class="fullwidth">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>Roadmap / <span>Upcoming</span></h2>
+				<p class="bigger">The Roadmap breaks down the high-level features we'd like to add
+					to Portico into groups, notionally assigning them to particular version numbers.
+					These are not fixed, but rather an indication of our current direction.
+				</p>
+				<p class="bigger">
+					If you have things you'd like to see on the roadmap, please <a href="#">get involved</a>!
+				</p>
+
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Roadmap / End
+================================================== -->
+
+
+<!-- Supported Interfaces / Start
+================================================== -->
+<section id="supported-interfaces">
+
+	<a name="supported-interfaces"></a>
+
+	<div class="page-content">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>Supported Interfaces / <span>HLA Versions</span></h2>
+
+				<p class="bigger lightest">Click the interface name to get a listing of the
+					supported API calls. If a call is supported, it is supported in all
+					languages on all platforms.
+				</p>
+
+				<table class="default-table">
+					<tr>
+						<th>&nbsp;</th>
+						<th><h3>Java<br/><small style="color:#999999;">All Platforms</small></h3></th>
+						<th><h3>C++<br/><small style="color:#999999;">Windows</small></h3></th>
+						<th><h3>C++<br/><small style="color:#999999;">Linux</small></h3></th>
+						<th><h3>C++<br/><small style="color:#999999;">Mac OS X</small></h3></th>
+					</tr>
+					<tr>
+						<td><a href="#">HLA v1.3</a></a></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td><a href="#">HLA v1.3 DLC</a></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td><a href="#">IEEE-1516e</a></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+
+					<tr><th colspan="5" style="text-align:center;"><h3>Deprecated Interfaces</h3></th></tr>
+
+					<tr>
+						<td><a href="#">IEEE-1516 (2000)</a></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+					</tr>
+
+					<tr>
+						<td><a href="#">IEEE-1516 DLC (2004)</a></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+						<td><span class="tooltip label label-danger" title="Never supported">Not Supported</span></td>
+					</tr>
+				</table>
+
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Supported Interfaces / End
+================================================== -->
+
+<!-- HRH Queen Liz / Start
+================================================== -->
+<div class="fullwidth theme-blue celebrity">
+	<div class="container">
+		<img src="{% site_asset images/people/queen.png %}" style="float:left;width:250px;"/>
+		<p>
+			Way down here in Australia, we on Team Portico speak the Queen's English. 
+			Sign up to the announcement mailing list and see for yourself! Liz would.
+		</p>
+
+		{% include celebrity-signup.html %}
+	</div>
+</div>
+<!-- HRH Queen Liz / End
+================================================== -->
+
+<!-- Supported Platform / Start
+================================================== -->
+<section id="supported-platforms">
+
+	<a name="supported-platforms"></a>
+
+	<div class="page-content">
+		<div class="container">
+		
+			<div class="sixteen columns">
+
+				<!-- ============ Windows ============ -->
+				<h2>Supported Platforms / <span>Windows</span></h2>
+				<p class="bigger">Windows distributions are supported in <span class="label label-success">32 and 64-bit</span></p>
+				<table class="default-table" style="width:auto;">
+					<tr>
+						<th>Operating System</th>
+						<th>Status</th>
+					</tr>
+					<tr>
+						<td>Windows 8.1 Enterprise</td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td>Windows 7 Enterprise</td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td><span style="color:#ccc;">Windows XP</span></td>
+						<td><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+					</tr>
+				</table>
+
+				<p class="bigger">The following Visual Studio versions are officially supported.</p>
+				<table class="default-table" style="width:auto;">
+					<tr>
+						<th>Version</th>
+						<th>x86</th>
+						<th>amd64</th>
+						<th>Distribution EOL</th>
+						<th>Notes</th>
+					</tr>
+					<tr>
+						<td>Visual Studio 2010 <small>(vc10)</small></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>July 14, 2020</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Visual Studio 2008 <small>(vc9)</small></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>April 10, 2018</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Visual Studio 2005 <small>(vc8)</small></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>April 12, 2016</td>
+						<td>Legacy for VBS 1.x/2.x</td>
+					</tr>
+				</table>
+
+				<!-- ============ Linux ============ -->
+				<p>&nbsp;</p>
+				<h2>Supported Platforms / <span>Linux</span></h2>
+				<p class="bigger">Linux platforms are supported in <span class="label label-info">64-bit only</span></p>
+				<table class="default-table">
+					<tr>
+						<th>Version</th>
+						<th>Status</th>
+						<th>GCC Version</th>
+						<th>Glibc Version</th>
+						<th>Distribution EOL</th>
+					</tr>
+
+					<!-- Ubuntu LTS -->
+					<tr><th colspan="5"><h3>Ubuntu LTS</h3></th></tr>
+					<tr>
+						<td>Ubuntu 14.04 <em>"Trusty"</em></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>4.8.2</td>
+						<td>2.19</td>
+						<td>April, 2019</td>
+					</tr>
+					<tr>
+						<td>Ubuntu 12.04 <em>"Precise"</em></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>4.6.3</td>
+						<td>2.15</td>
+						<td>April, 2017</td>
+					</tr>
+
+					<!-- CentOS and RHEL -->
+					<tr><th colspan="5"><h3>CentOS</h3></th></tr>
+					<tr>
+						<td>CentOS 6.5</td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>4.4.7</td>
+						<td>2.12</td>
+						<td>November 20, 2020</td>
+					</tr>
+					<tr style="color:#ccc;">
+						<td>CentOS 5.10</td>
+						<td><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+						<td>4.1.2</td>
+						<td>2.5</td>
+						<td>March 31, 2017</td>
+					</tr>
+					<tr style="color:#ccc;">
+						<td>CentOS 5.9</td>
+						<td><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+						<td>4.1.2</td>
+						<td>2.5</td>
+						<td>March 31, 2017</td>
+					</tr>
+
+					<!-- Debian -->
+					<tr><th colspan="5"><h3>Debian</h3></th></tr>
+					<tr>
+						<td>Debian 7 <em>"Wheezy"</em></td>
+						<td><span class="label label-success">Supported</span></td>
+						<td>4.8.2</td>
+						<td>2.13</td>
+						<td>TBA</td>
+					</tr>
+					<tr style="color:#ccc;">
+						<td>Debian 6 <em>"Squeeze"</em></td>
+						<td><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+						<td>4.4.5</td>
+						<td>2.11.2</td>
+						<td>March 31, 2014</td>
+					</tr>
+				</table>
+
+				<!-- ============ Mac OS X ============ -->
+				<p>&nbsp;</p>
+				<h2>Supported Platforms / <span>Mac OS X</span></h2>
+				<p class="bigger">Mac OS X version are supported in <span class="label label-info">64-bit only</span></p>
+				<table class="default-table">
+					<tr>
+						<th colspan="2">Operating System</th>
+						<th colspan="2">Compiler</th>
+					</tr>
+					<tr>
+						<th>Version</th>
+						<th>Status</th>
+						<th>Version</th>
+						<th>Status</th>
+					</tr>
+
+					<!-- Yosemite 10.10 -->
+					<tr>
+						<td rowspan="2">Yosemite 10.10</td>
+						<td rowspan="2"><span class="label label-primary">Upcoming</span></td>
+						<td>XCode 6</td>
+						<td><span class="label label-primary">Upcoming</span></td>
+					</tr>
+					<tr>
+						<td>XCode 5.1</td>
+						<td><span class="label label-primary">Upcoming</span></td>
+					</tr>
+
+					<!-- Mavericks 10.9 -->
+					<tr>
+						<td rowspan="2">Mavericks 10.9</td>
+						<td rowspan="2"><span class="label label-success">Supported</span></td>
+						<td>XCode 5.1</td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td>XCode 5.0</td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+
+					<!-- Mavericks 10.8 -->
+					<tr>
+						<td rowspan="4">Mountain Lion 10.8</td>
+						<td rowspan="4"><span class="label label-success">Supported</span></td>
+						<td>XCode 5.1</td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td>XCode 5.0</td>
+						<td><span class="label label-success">Supported</span></td>
+					</tr>
+					<tr>
+						<td>XCode 4.6</td>
+						<td><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+					</tr>
+					<tr>
+						<td>XCode 4.5</td>
+						<td><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+					</tr>
+
+					<!-- Lion -->
+					<tr>
+						<td style="color:#ccc;">Lion 10.7</td>
+						<td colspan="3"><span class="tooltip label label-danger" title="Last supported in v1.0.0">Not Supported</span></td>
+					</tr>
+				</table>
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Supported Platforms / End
+================================================== -->
+
+<!-- Release Notes / Start
+================================================== -->
+<section id="release-notes">
+
+	<a name="release-notes"></a>
+
+	<div class="fullwidth dragdown">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>Release Notes / <span>Archive</span></h2>
+				<p class="bigger">For each release of Portico a "New and Noteworthy" document is
+					prepared. It contains summary information of the release, and a change-log.
+					You can access these here.
+				</p>
+				<div class="widget">
+				<ul class="categories-list">
+					<li style="border:0;"><a href="{% site_root %}about/releases/2.0.0/">Portico New and Noteworthy v2.0.0</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/1.0.2/">Portico New and Noteworthy v1.0.2</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/1.0.1/">Portico New and Noteworthy v1.0.1</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/1.0.0/">Portico New and Noteworthy v1.0.0</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/0.9.0/">Portico New and Noteworthy v0.9.0</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/0.8.0/">Portico New and Noteworthy v0.8.0</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/0.7.0/">Portico New and Noteworthy v0.7.0</a></li>
+					<li style="border:0;"><a href="{% site_root %}about/releases/0.6.0/">Portico New and Noteworthy v0.6.0</a></li>
+				</ul>
+				</div>
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Release Notes / End
+================================================== -->
+

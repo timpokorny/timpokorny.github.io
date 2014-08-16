@@ -1,6 +1,9 @@
 Fix the menubar to match this
 --------------------------------------
 
+(d) == Done
+(u) == Needs Update
+
 / (d) index.html
 	- (d) contact.html      <-- Location Information, Contact Form & Email
 	- (u) get.html          <-- Download, Get the Source
@@ -11,8 +14,12 @@ Fix the menubar to match this
 
 	/ about
 		- (d) index.html        <-- About Portico, History and Developer Team
-		- roadmap.html      <-- Roadmap
-		- sponsors.html     <-- Sponsor information
+		- status.html           <-- Status, Roadmap, Supported Interfaces, Supported Platforms
+		- sponsors.html         <-- Sponsor information
+		/ releases
+			- Portico 2.0.0     <-- New & Noteworthy, Supported Platforms & Interfaces
+			- Portico 1.0.2     <-- New & Noteworthy, Supported Platforms & Interfaces
+			- Portico 1.0.1     <-- ...
 
 	/ documentation
 		/ user

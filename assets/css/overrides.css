@@ -13,7 +13,7 @@ Flat background colours in swatch pairs from http://flatuicolors.com/ */
 .background-turquoise    { background-color: #1abc9c !important; }
 .background-greensea     { background-color: #16a085 !important; }
 
-.background-emerland     { background-color: #2ecc71 !important; }
+.background-emerald      { background-color: #2ecc71 !important; }
 .background-nephritis    { background-color: #27ae60 !important; }
 
 .background-peterriver   { background-color: #3498db !important; }
@@ -110,13 +110,18 @@ p
 	margin-bottom: 10px;
 }
 
+/* should be put on <p> elements with darker backgrounds */
+.lighter  { color: #cccccc; }
+.lightest { color: #ffffff; }
+.darker   { color: #777777; }
+.darkest  { color: #555555; }
+
 .lead
 {
 	font-size: 18px;
 	font-weight: 200;
 	margin-bottom: 20px;
 }
-
 
 .fullwidth
 {
@@ -125,10 +130,37 @@ p
 	background: #f5f5f5;
 }
 
-.dragdown
+.dragdown { margin-bottom: -50px !important; }
+.dragup { margin-top: -50px !important; }
+.no-margin{ margin-top: 0px; margin-bottom: 0px; }
+
+/* --------------------------------------------------       
+ * Full-width Bands - Containers with colours
+ * ----------------------------------------------- */
+.band-turquoise
 {
-	margin-bottom: -50px !important;
+	background-color: #1abc9c;
+	color: #ffffff;
 }
+.band-turquoise h2      { color: #ffffff; }
+.band-turquoise h2 span { color: #cccccc; }
+
+.band-midnightblue
+{
+	background-color: #2c3e50;
+	color: #ffffff;
+}
+.band-midnightblue h2      { color: #ffffff; }
+.band-midnightblue h2 span { color: #cccccc; }
+
+.band-silver
+{
+	background-color: #bdc3c7;
+	color: #ffffff;
+}
+.band-silver h2      { color: #ffffff; }
+.band-silver h2 span { color: #cccccc; }
+
 
 /* --------------------------------------------------       
  * Hero-Unit Customizations/Augmentations
@@ -512,7 +544,7 @@ abbr.initialism {
  * ----------------------------------------------- */
 .celebrity
 {
-	margin: 0;
+	/*margin: 0;*/
 }
 
 .celebrity-flat
