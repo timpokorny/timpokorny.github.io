@@ -14,7 +14,7 @@ Fix the menubar to match this
 
 	/ about
 		- (d) index.html        <-- About Portico, History and Developer Team
-		- status.html           <-- Status, Roadmap, Supported Interfaces, Supported Platforms
+		- (u) status.html       <-- Status, Roadmap, Supported Interfaces, Supported Platforms
 		- sponsors.html         <-- Sponsor information
 		/ releases
 			- Portico 2.0.0     <-- New & Noteworthy, Supported Platforms & Interfaces
