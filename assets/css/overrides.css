@@ -100,12 +100,13 @@ p
 .list
 {
 	font-weight: 300;
-	margin-left:20px;
+	margin-left: 20px;
+	padding-bottom: 10px;
 }
 
 .bigger /* should be put on <p> elements */
 {
-	font-size: 17px;
+	font-size: 16px;
 	line-height: 25px;
 	margin-bottom: 10px;
 }
@@ -133,6 +134,8 @@ p
 .dragdown { margin-bottom: -50px !important; }
 .dragup { margin-top: -50px !important; }
 .no-margin{ margin-top: 0px; margin-bottom: 0px; }
+
+.middle{ margin-left:auto; margin-right:auto;}
 
 /* --------------------------------------------------       
  * Full-width Bands - Containers with colours
