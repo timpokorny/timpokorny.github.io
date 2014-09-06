@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="twelve columns">
+			<h1>Portico v1.0.2</h1>
+		</div>
+		
+		<nav class="four columns">
+			<ul class="breadcrumbs">
+				<li><a href="{% site_root %}index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/status.html#release-notes">Releases</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li>1.0.2 </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+
+<!-- Introduction / Start
+================================================== -->
+<div class="container">
+
+	<div class="five columns">
+		<table class="default-table" style="width:auto;">
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>December 27th, 2010</td>
+			</tr>
+			<tr>
+				<td><strong>Status</strong></td>
+				<td><span class="bigger label label-success">Released</span></td>
+			</tr>
+			<tr>
+				<td><strong>Download</strong></td>
+				<td><a href="{% site_root %}get.html#archive">Archive</a></td>
+			</tr>
+			<tr>
+				<td><strong>Git Tag</strong></td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td><strong>Baseline</strong></td>
+				<td>/portico-1.0.x</td>
+			</tr>
+
+
+		</table>
+	</div>
+
+	<div class="eleven columns">
+
+		{% include release-maintenance.html %}
+
+		<h2>JSAF Stability Improvements</h2>
+
+		<p>
+			<span class="dropcap">A</span> lot of work has been done on getting Portico and JSAF
+			working happily together. Most of the problems stem from JSAFs use of custom signal
+			handlers, and this conflicting with internal requirements of Portico.
+		</p>
+		<p>
+			Fortunately there is a reasonably simple remedy to this situation (although one
+			that was difficult to find!), although the process of getting Portico and JSAF running
+			together is still a little cumbersome. A guide on what is needed has been developed
+			and is available here: <a href="{% site_root %}/documentation/guides/jsaf.html">Portico and JSAF</a>.
+		</p>
+
+	</div>
+
+</div>
+<!-- Introduction / End
+================================================== -->
+
+{% include celebrity-kevin.html %}
+
+
