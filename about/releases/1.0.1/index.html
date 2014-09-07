@@ -8,7 +8,7 @@ layout: default
 	<div class="container">
 
 		<div class="four columns">
-			<h1>Portico v1.0.2</h1>
+			<h1>Portico v1.0.1</h1>
 		</div>
 		
 		<nav class="twelve columns">
@@ -22,7 +22,7 @@ layout: default
 				<li><a href="{% site_root %}about/status.html#release-notes">Releases</a></li>
 				<li><i class="icon-angle-right"></i></li>
 
-				<li>1.0.2 </li>
+				<li>1.0.1 </li>
 			</ul>
 		</nav>
 		
@@ -41,7 +41,7 @@ layout: default
 		<table class="default-table" style="width:auto;">
 			<tr>
 				<td><strong>Release Date</strong></td>
-				<td>December 27th, 2010</td>
+				<td>June 3rd, 2009</td>
 			</tr>
 			<tr>
 				<td><strong>Status</strong></td>
@@ -59,9 +59,8 @@ layout: default
 				<td><strong>Baseline</strong></td>
 				<td>/portico-1.0.x</td>
 			</tr>
-
-
 		</table>
+
 	</div>
 
 	<div class="eleven columns">
@@ -82,6 +81,44 @@ layout: default
 			and is available here: <a href="{% site_root %}/documentation/guides/jsaf.html">Portico and JSAF</a>.
 		</p>
 
+		<h2>Unique Federate Names</h2>
+		<p>
+			An often requested feature is to allow multiple federates in a single federation
+			with the same name. By default, Portico will reject any federate that attempts to
+			join with a name that another federate is already using. By setting the RID property
+			<code>portico.uniqueFederateNames</code> to <code>true</code>, you can disable this
+			check, thus easily allowing multiple instances of applications like JSAF or VBS2 to
+			be run in a single federation without additional configuration.
+		</p>
+		<p>
+			For those interested, what happens internally is that when this setting is
+			<code>true</code> and Portico sees that a second federate is attempting to join with
+			a used federate name, it changes the requested name from "federateName" to
+			"federateName (federateHandle)" in an attempt to make it unique.
+		</p>
+
+		<h2>Object Name Negotiation</h2>
+		<p>
+			When registering an object with a specific name (as many applications do), Portico
+			has to do some additional work to make sure the name is unique within the federation.
+			The work of negotiating with the other federates in the federation to make sure the
+			name is unique imposes a significant performance penalty.
+		</p>
+		<p>
+			In the vast majority of circumstances, application themselves ensure that the names
+			they use are unique (perhaps prefixing some local id or something or that nature to it).
+			In these situations, the performance hit is for a process that has become redundant.
+			In Portico v1.0.1 the default setting to always negotiate has been changed.
+		</p>
+		<p>
+			Unless explicitly enabled through the RID, a federate will not perform the lengthy
+			negotiation process. This does not mean that no checks are made. If an object is
+			already known to a federate, that name can't be reused. What is does mean is that
+			if two federates attempt to register an object with the same name at the same time,
+			duplicate names could exist in the federation. If problems occur, it is recommended 
+			to enable full negotiation through the RID file option
+			<code>portico.object.negotiateNames=true</code> setting.
+
 	</div>
 
 </div>
@@ -89,5 +126,14 @@ layout: default
 ================================================== -->
 
 {% include celebrity-kevin.html %}
+
+
+
+
+
+
+
+
+
 
 
