@@ -86,15 +86,16 @@ layout: default
 			An often requested feature is to allow multiple federates in a single federation
 			with the same name. By default, Portico will reject any federate that attempts to
 			join with a name that another federate is already using. By setting the RID property
-			<code>portico.uniqueFederateNames</code> to <code>true</code>, you can disable this
-			check, thus easily allowing multiple instances of applications like JSAF or VBS2 to
-			be run in a single federation without additional configuration.
+			<span class="code">portico.uniqueFederateNames</span> to <span class="code">true</span>,
+			you can disable this check, thus easily allowing multiple instances of applications
+			like JSAF or VBS2 to be run in a single federation without additional configuration.
 		</p>
 		<p>
 			For those interested, what happens internally is that when this setting is
-			<code>true</code> and Portico sees that a second federate is attempting to join with
-			a used federate name, it changes the requested name from "federateName" to
-			"federateName (federateHandle)" in an attempt to make it unique.
+			<span class="code">true</span> and Portico sees that a second federate is attempting
+			to join with a used federate name, it changes the requested name from
+			<span class="code">"federateName"</span> to <span class="code">"federateName (federateHandle)"</span>
+			in an attempt to make it unique.
 		</p>
 
 		<h2>Object Name Negotiation</h2>
@@ -117,7 +118,7 @@ layout: default
 			if two federates attempt to register an object with the same name at the same time,
 			duplicate names could exist in the federation. If problems occur, it is recommended 
 			to enable full negotiation through the RID file option
-			<code>portico.object.negotiateNames=true</code> setting.
+			<span class="code">portico.object.negotiateNames=true</span> setting.
 
 	</div>
 
