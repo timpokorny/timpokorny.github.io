@@ -1,0 +1,131 @@
+---
+layout: default
+---
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="four columns">
+			<h1>Portico v0.7.0</h1>
+		</div>
+		
+		<nav class="twelve columns">
+			<ul class="breadcrumbs">
+				<li><a href="{% site_root %}index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/status.html#release-notes">Releases</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li>0.7.0 </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+
+<!-- Introduction / Start
+================================================== -->
+<div class="container">
+
+	<div class="four columns">
+		<table class="default-table" style="width:auto;">
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>August 28th, 2007</td>
+			</tr>
+			<tr>
+				<td><strong>Status</strong></td>
+				<td><span class="bigger label label-default">Deprecated</span></td>
+			</tr>
+			<tr>
+				<td><strong>Download</strong></td>
+				<td><a href="{% site_root %}get.html#archive">Archive</a></td>
+			</tr>
+			<tr>
+				<td><strong>Git Tag</strong></td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td><strong>Baseline</strong></td>
+				<td>N/A</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="eleven columns">
+
+		{% include release-deprecated.html %}
+
+		<p>
+			<span class="dropcap">W</span>ith over 200 tickets covering new features, bug fixes
+			and documentation addressed in this release, Portico v0.7 is bursting at the seams.
+			By far and away the biggest and most requested addition is that of <b>native C++ Support</b>.
+			But we didn't stop there!
+		</p>
+		<ul class="bigger list nested-list">
+			<li>C++ Interface for HLA v1.3</li>
+			<li>Platform Specific Installers</li>
+			<li>Complete Unit Test Framework</li>
+			<li>Extended Java Interface</li>
+			<li>Bug Fixes and More</li>
+		</ul>
+
+		<h2>C++ Interface for HLA 1.3</h2>
+		<p>
+			One of the most requested Portico features has been a C++ interface. Finally, there
+			is no need for developers to live without this. Portico v0.7 introduces a C++
+			interface for HLA 1.3. This interface covers the same amount of functionality that
+			is currently present in the Portico Java 1.3 interface. Also added during this time
+			has been the beginnings of the 1.3 DLC C++ interface (again, implemented to the same
+			level as currently exists in the Java interfaces).
+		</p>
+
+		<h2>Platform Specific Installers</h2>
+		<p>
+			Coupled with the introduction of a C++ interface for Portico, there are now
+			platform-specific installers available for Windows and Linux. Each installer provides
+			the relevant C++ libraries. A windows installer that bundles an appropriate version of
+			Java has also been made available (windows-standalone).
+		</p>
+
+		<h2>Full Unit Test Framework</h2>
+		<p>
+			As part of a push to validate the behavior of Portico, a large unit test suite in both
+			Java and C++ has been implemented. Over time, this suite will continue to grow with
+			Portico and can be used to help any Portico developers identify bugs or other
+			anomalies inside Portico.
+		</p>
+
+		<h2>Java Interface: hla.rti13.java1</h2>
+		<p>
+			This release includes support for the Java classes in the package <code>hla.rti13.java1<code>.
+			These interfaces are most commonly associated with the RTI-NGv3/4/5/6 java bindings.
+			Portico now provides an implementation of them as well.
+		</p>
+
+		<h2>Miscellaneous</h2>
+		<p>
+			Much, much more went into Portico v0.7, for a complete listing of the over 210
+			improvements/bug fixes/new features that were completed, see the
+			<a href="http://jira.porticoproject.org/secure/ReleaseNote.jspa?projectId=10000&styleName=Html&version=10061">ChangeLog</a>.
+		</p>
+
+	</div>
+
+</div>
+<!-- Introduction / End
+================================================== -->
+
+
+{% include celebrity-kevin.html %}

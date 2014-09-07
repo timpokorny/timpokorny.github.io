@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="four columns">
+			<h1>Portico v0.8.0</h1>
+		</div>
+		
+		<nav class="twelve columns">
+			<ul class="breadcrumbs">
+				<li><a href="{% site_root %}index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/status.html#release-notes">Releases</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li>0.8.0 </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+
+<!-- Introduction / Start
+================================================== -->
+<div class="container">
+
+	<div class="four columns">
+		<table class="default-table" style="width:auto;">
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>March 3rd, 2008</td>
+			</tr>
+			<tr>
+				<td><strong>Status</strong></td>
+				<td><span class="bigger label label-default">Deprecated</span></td>
+			</tr>
+			<tr>
+				<td><strong>Download</strong></td>
+				<td><a href="{% site_root %}get.html#archive">Archive</a></td>
+			</tr>
+			<tr>
+				<td><strong>Git Tag</strong></td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td><strong>Baseline</strong></td>
+				<td>N/A</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="eleven columns">
+
+		{% include release-major.html %}
+
+		<p>
+			<span class="dropcap">B</span>race yourselves; Portico v0.8 is upon us. As with all
+			the major Portico releases to date, it include a significant step forward in coverage
+			of the HLA specification, as well as a number of bug fixes and stability improvements.
+			In this release we've added support for the HLA Data Distribution Management API
+			services - and boy what a trial it was! Fold in a healthy dose of quality time with the
+			C++ interface and you have all the ingredients for a big release, including:
+		</p>
+		<ul class="bigger list nested-list">
+			<li>HLA 1.3 DDM Support</li>
+			<li>C++ Interface Improvements</li>
+			<li>The Portico GUI</li>
+			<li>Native Mac OS X C++ Support</li>
+			<li>SIMplicity Free for Portico Users</li>
+			<li>Bug Fixes</li>
+		</ul>
+
+		<h2>HLA 1.3 DDM Support</h2>
+		<p>
+			The primary development activity for Portico v0.8 was the implementation of DDM
+			support for HLA 1.3. All of the API calls listed in the "Data Distribution Management"
+			section of the HLA 1.3 specification have now been implemented in both the Java and
+			C++ interfaces.
+		</p>
+
+		<h2>C++ Interface Improvements
+		<p>
+			While developing Portico v0.8, a number of memory leaks and bugs were found and
+			fixed in the C++ interface. This interface continues to grow more robust and stable
+			as development goes on and the implementation in v0.8 is the strongest version yet.
+		</p>
+
+		<h2>The Portico GUI</h2>
+		<p>
+			While serving as a <strike>prisoner</strike> intern at Calytrix Technologies this
+			past summer (Australian that is), Nick Staples braved the large and often smelly
+			beasts that roam the Portico internals and began implementing a Portico GUI Plugin
+			that shows live data about active federations. For more information about the Portico
+			GUI plugin, see the Plugin Directory.
+		</p>
+
+		<h2>Native Mac OSX C++ Support</h2>
+		<p>
+			C++ interface support for Mac OS X has now been added and a separate download for
+			this platform is available. The current C++ interface has been compiled on Mac OS X
+			Leopard (10.5) and is targeted at Apple's Intel-based computers. At the moment,
+			the current C++ libraries don't seem to work out of the box with Tiger (10.4),
+			but we have had reports that the interface does happily compile and run on Tiger
+			(if users wish to complete this task themselves).
+		</p>
+
+		<h2>Miscellaneous</h2>
+		<p>
+			Throughout the development process, a number of smaller new features were added
+			and bugs fixed. For the full list of more than 70 features/bug fixes/improvements
+			that went into Portico v0.8, see the ChangeLog.
+		</p>
+
+		<h2>SIMplicity Free for Portico Users</h2>
+		<p>
+			Although not strictly directly related to Portico, one other new and noteworthy
+			event that occurred during Portico v0.8 development was the announcement by
+			<a href="http://www.calytrix.com">Calytrix Technologies</a> that they decided to make
+			<a href="http://simplicity.calytrix.com">SIMplicity Online</a> available for free when
+			using Portico. This is a fantastic resource for the wider simulation community and
+			I would encourage all people to take a look at SIMplicity and make use of it if it
+			suites their requirements.
+		</p>
+
+	</div>
+
+</div>
+<!-- Introduction / End
+================================================== -->
+
+
+{% include celebrity-kevin.html %}

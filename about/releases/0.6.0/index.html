@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="four columns">
+			<h1>Portico v0.6.0</h1>
+		</div>
+		
+		<nav class="twelve columns">
+			<ul class="breadcrumbs">
+				<li><a href="{% site_root %}index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/status.html#release-notes">Releases</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li>0.6.0 </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+
+<!-- Introduction / Start
+================================================== -->
+<div class="container">
+
+	<div class="four columns">
+		<table class="default-table" style="width:auto;">
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>August 24th, 2006</td>
+			</tr>
+			<tr>
+				<td><strong>Status</strong></td>
+				<td><span class="bigger label label-default">Deprecated</span></td>
+			</tr>
+			<tr>
+				<td><strong>Download</strong></td>
+				<td><a href="{% site_root %}get.html#archive">Archive</a></td>
+			</tr>
+			<tr>
+				<td><strong>Git Tag</strong></td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td><strong>Baseline</strong></td>
+				<td>N/A</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="eleven columns">
+
+		{% include release-deprecated.html %}
+
+		<p>
+			<span class="dropcap">D</span>id someone say IEEE-1516? Why yes, it was me. Despite
+			presenting a number of problems (verbose, difficult to use API, binary link incompatible
+			specification, etc...) we've had a few requests for an implementation of the IEEE-1516 (2000)
+			interface in Portico. To help give people a taste for the newer standard we've gone ahead
+			and added a first-pass implementation, as well as a few other things...
+		</p>
+		<ul class="bigger list nested-list">
+			<li>IEEE 1516 (2000) Support</li>
+			<li>RTI and LVC Plugin Support</li>
+			<li>The Embedded Executor</li>
+			<li>RTI Console</li>
+			<li>Documentation</li>
+			<li>Miscellaneous Fixes</li>
+		</ul>
+
+<h2>IEEE 1516 Support</h2>
+		<p>
+			Support for the IEEE 1516 API has been added. As Portico still doesn't implement the
+			full HLA specification, not all methods are currently supported. See Portico Status
+			for a listing of those methods that are/are not supported up to this point. Portico
+			supports the ability for 1516 and 1.3 federates to worth together in the same
+			federation.
+		</p>
+		<p>
+			With this additional, there is now two separate jar files for the client side (one
+			containing the 1.3 API, the other containing the 1516 API). As usual, they are located
+			in the portico-0.6/lib directory. Make sure you have the correct one on the classpath
+			when running your federates.
+		</p>
+		<p>
+			Additionally, support for 1516-style XML FOMs was also added. Please note that although
+			1516 and 1.3 federates can work together in the same federation, 1516-FOMs are only
+			supported through the 1516 API. That is, you cannot pass a 1516 FOM to the 1.3 API.
+		</p>
+
+		<h2>RTI and LRC Plugin support</h2>
+		<p>
+			The support for RTI and LRC plug-ins has been completed. This service allows third
+			party developers to alter the behaviour of either the LRC or RTI (or both). While
+			this ability previously existed, doing so required modification of internal
+			configuration files and the editing of startup script to extend the classpath.
+			Naturally this required a convoluted installation process that demanded far too
+			much of the end user. The facilities that have now been completed allow plug-ins
+			to be packaged as a single jar file and deployed via placing them in a special
+			directory. All configuration information is completed by the developer of the
+			plugin and packaged directly in the jar.
+		</p>
+
+		<h2>The Embedded Executor</h2>
+		<p>
+			One of the major strengths of Portico is that it is communications binding neutral.
+			Federates communicating over different bindings can interoperate in the same
+			federation, and the provision of a communications binding is abstracted from the
+			actual business logic of the RTI. In order to simplify testing, the first binding
+			created was the JVM Binding. This binding acts as a shared-memory communications link,
+			allowing federates and the RTI to be executed in the same JVM. This removes the
+			biggest bottleneck of any RTI: network I/O.
+		</p>
+		<p>
+			The Embedded Executor is a special startup facility that will take the names of
+			multiple federates and start them in a single JVM along with an instance of the RTI.
+			Previously, if you wanted to use the JVM binding, you had to write your own custom
+			startup class that started the RTI and launched all your federates. The Embedded
+			Executor will take care of this for you, starting each federate in a separate Thread.
+		</p>
+		<p>
+			For more information, see <a href="http://portico.openlvc.org/index.php?title=The_Embedded_Executor">
+			The Embedded Executor.</a>
+		</p>
+
+		<h2>RTI Console</h2>
+		<p>
+			Michael has begun development on an RTI-console project designed to provide similar
+			functionality as the rti-console utility found with the old DMSO RTI-NG. As of v0.6,
+			the console has been included directly with Portico. Additionally, the console client
+			has also be made available as a separate download for situations where you don't want
+			to access and install the full distribution.
+		</p>
+		<p>
+			The RTI-side of the console has been developed using the Portico plugin facilities,
+			and if you run the Portico RTI in verbose mode (using the -v command line argument)
+			you will see that an extra bootstrap is being loaded on startup. This starts a
+			listener with the RTI that allows the console client to connect from a remote computer.
+		</p>
+
+		<h2>Documentation</h2>
+		<p>
+			Much additional documentation has been added to the website since the last release,
+			but there is still lots more to go. At many points, reference is made to internal
+			features such as Bootstraps, Modules and Bindings, all without giving much information
+			about what they are or how they work. To this point in time, focus has been on
+			user-level documentation. In the future, additional developer documentation will be
+			created and added.
+		</p>
+
+		<h2>Miscellaneous</h2>
+		<p>
+			In addition to these primary features, Portico v0.6 has undergone significant internal
+			structural changes. Generally speaking, this means that the 1516 and 1.3 APIs are
+			quarantined. Thus, in the future, adding support for new APIs (such as HLA Evolved)
+			will require much less effort. Beyond this, some new developer features have been
+			added, the most noteworthy of which is the diagnostics command line argument that
+			allows a developer to see a list of all the modules currently loaded without having
+			to start the RTI.
+		</p>
+
+	</div>
+
+</div>
+<!-- Introduction / End
+================================================== -->
+
+
+{% include celebrity-kevin.html %}
