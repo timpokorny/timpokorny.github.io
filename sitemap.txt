@@ -27,6 +27,7 @@ Fix the menubar to match this
 			- gettingstarted.html    <-- Simple walkthrough
 			- switching.html         <-- Switch from another RTI
 			- configure.html         <-- Configuration Guide
+			- performance.html       <-- Tweaking Portico Performance
 			- troubleshooting.html   <-- How to debug Portico
 			- faq.html               <-- Duh
 
