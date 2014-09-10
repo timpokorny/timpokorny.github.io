@@ -665,11 +665,25 @@ abbr.initialism {
 /* --------------------------------------------------       
  * Scrolling Sidebar
  * ----------------------------------------------- */
+/* So it sticks nicely to the bottom when it hits and doesn't jump back to the top of the page */
+.affix-bottom
+{
+	position: absolute;
+	width:250px;
+}
+
 @media screen and (min-width: 768px) {
 
 	.affix-top, .affix
 	{
 		position: static;
+		width:250px;
+	}
+
+	#sidebar li.active
+	{
+		border:0 #eee solid;
+		border-right-width:4px;
 	}
 
 	@media (min-width: 979px) {
@@ -677,20 +691,14 @@ abbr.initialism {
 		{
 			position: static;
 			margin-top:30px;
-			width:228px;
+			width:250px;
 		}
   
 		#sidebar.affix
 		{
 			position: fixed;
 			top:70px;
-			width:228px;
+			width:250px;
 		}
-	}
-
-	#sidebar li.active
-	{
-		border:0 #eee solid;
-		border-right-width:4px;
 	}
 }

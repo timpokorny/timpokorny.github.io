@@ -6,7 +6,7 @@
 
 	{% include head.html %}
 
-	<body>
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
 
 		{% include header.html %}
 
@@ -15,23 +15,6 @@
 		{% include footer.html %}
 
 		<script type="text/javascript" src="{% site_asset js/bootstrap-3.2.0.min.js %}"></script>
-		<script type="text/javascript">
-			$(document).ready(function()
-			{
-				$('#sidebar').affix({
-					offset:{ top: 245 }
-				});
-
-				var $body = $(document.body);
-				var navHeight = $('.navbar').outerHeight(true) + 10;
-
-				$body.scrollspy({
-					target: '#sidebar-div',
-					offset: navHeight
-				});
-					
-			});
-		</script>
 	</body>
 
 </html>

@@ -58,7 +58,7 @@ layout: documentation
 					<p class="begin">Sed varius rutrum turpis vitae sodales. Nam condimentum rutrum arcu a eleifend. 
 					Mauris ligula turpis, vulputate a lacinia ut, sodales eu dui?</p>
 					
-					<h3>Tellus congue non erat</h3>
+					<h3 id="sec1">Section One</h3>
 					<p>Pellentesque habitant 
 					morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris 
 					consectetur venenatis erat, in pharetra tellus eleifend vitae. Sed lacus augue, 
@@ -79,7 +79,8 @@ layout: documentation
 					Nec labores blandit ei, eius assum facilisi at pro. Ut pro vero possit delicatissimi, 
 					id esse quando neglegentur sit. Facer sensibus his eu.
 					</blockquote>
-					
+
+					<h3 id="sec2">Section Two</h3>
 					<p>Cras tellus metus sagittis a fringilla at, congue non erat. Integer nunc mi, tincidunt 
 					vitae dignissim at, faucibus ac erat. Cras vulputate quam et sapien adipiscing porta 
 					faucibus risus semper. Cras dignissim eros id diam dapibus ultricies. Quisque commodo 
@@ -107,22 +108,16 @@ layout: documentation
 			
 		</div>
 		
-		<!-- Sidebar Start -->
 		<div class="one_fourth column">
 			
-			<div id="sidebar">
+			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="410">
 			
-				<!-- Search -->
-				<div class="widget">
-					<div class="search-icon"><input type="text" class="searching" placeholder="Search..." /></div>
-				</div>
-				
 				<!-- Categories -->
-				<div class="widget">
-					<h3>Categories</h3>
-					<ul class="categories-list">
-						<li><a href="#">Design</a></li>
-						<li><a href="#">Technology</a></li>
+				<div class="widget" id="menu">
+					<h3>Contents</h3>
+					<ul class="categories-list nav">
+						<li class="active"><a href="#sec1">Section One</a></li>
+						<li><a href="#sec2">Section Two</a></li>
 						<li><a href="#">Video</a></li>
 						<li><a href="#">Music</a></li>
 						<li><a href="#">Uncategorized</a></li>
@@ -145,16 +140,13 @@ layout: documentation
 					</ul>
 				</div>
 				
-				<!-- Text Widget -->
+				<!-- Search -->
 				<div class="widget">
-					<h3>About Us</h3>
-					<p>Nec labores blandit ei, eius assum facilisi at pro.
-					Ut pro vero possit delicatissimi, id esse quando neglegentur sit facer</p>
+					<div class="search-icon"><input type="text" class="searching" placeholder="Search..." /></div>
 				</div>
-				
+
 			</div>
 		</div>
-		<!-- Sidebar End -->
 		
 </section>
 <!-- Blog / End

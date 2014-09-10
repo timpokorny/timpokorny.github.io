@@ -1364,7 +1364,7 @@ article.post-author p {
 
 .widget ul.categories-list li{
 	display: block;
-	border-bottom: 1px solid #EEE;
+	/*border-bottom: 1px solid #EEE;*/
 }
 
 .widget ul.categories-list li a{
