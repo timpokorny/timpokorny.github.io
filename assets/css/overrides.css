@@ -46,8 +46,25 @@ Flat background colours in swatch pairs from http://flatuicolors.com/ */
 .alt-blue                { background-color: #1799dd !important; } /* from coming-soon theme */
 
 /* --------------------------------------------------       
- * Navbar Customizations
+ * Banner overlay at top of screen for announcements
  * ----------------------------------------------- */
+ /* To use properly, must wrap in div that specifies the appropriate background colour */
+.banner
+{
+	/* width: 100%; */
+	position: relative; width: 1200px; margin: 0 auto;
+	padding: 0 0 5px 0;
+}
+
+.banner p
+{
+	padding: 15px 0 0 0;
+	margin-left: 20px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.banner .close{ color: #ffffff; opacity: 1.0; }
 
 /* --------------------------------------------------       
  * Main body overrides
@@ -699,6 +716,14 @@ abbr.initialism {
 {
 	width: auto;
 	height: 14px;
+}
+
+/* Articles have a big booty because they have a comment section underneath. Slim it down */
+article.post .post-content
+{
+	padding-bottom: 40px;
+	margin-bottom: 10px;
+	border-bottom: none; /* 2px solid #EEE; */
 }
 
 /* --------------------------------------------------       
