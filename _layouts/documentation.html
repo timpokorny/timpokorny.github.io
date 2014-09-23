@@ -3,8 +3,10 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
-	{% include head.html %}
+	<head>
+		{% include head.html %}
+		<link rel="stylesheet" href="{% site_asset css/prism.css %}">
+	</head>
 
 	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
 
@@ -15,6 +17,7 @@
 		{% include footer.html %}
 
 		<script type="text/javascript" src="{% site_asset js/bootstrap-3.2.0.min.js %}"></script>
+		<script src="{% site_asset js/prism.js %}"></script>
 	</body>
 
 </html>

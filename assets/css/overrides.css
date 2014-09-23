@@ -98,6 +98,13 @@ p
 	font-size: 16px;
 }
 
+/* code style for documentation */
+code, pre
+{
+	background-color: #4e4e4e !important; /* overwrites the existing "white smoke" #f5f5f5 */
+	color: #ffffff;
+}
+
 .code /* pretty much copied from the style for labels */
 {
 	background-color: #777;
@@ -661,6 +668,38 @@ abbr.initialism {
           border-radius: 500px;
 }
 
+
+
+/* --------------------------------------------------       
+ * Documentation Template
+ * ----------------------------------------------- */
+
+/* For <code> formatting, see the text formatting section in this file */
+
+/* Sidebar Table of Contents
+   Reduce the sub-list size so that it slots in under the major headings */
+.widget ul.categories-list li ul{ margin: -5px 0 0 10px; }
+
+.widget ul.categories-list li ul li a{
+	padding: 0.5em 0 0 2em;
+	display: block;
+	font-size:10px;
+}
+
+.widget ul.categories-list li ul li a:before{
+	content: "\f054";
+	font-size: 7px;
+	font-family: "FontAwesome";
+	margin-right: 9px;
+	float: left;
+	margin-top: 4px;
+}
+
+.meta img
+{
+	width: auto;
+	height: 14px;
+}
 
 /* --------------------------------------------------       
  * Scrolling Sidebar

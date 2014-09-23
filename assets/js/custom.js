@@ -352,9 +352,11 @@ $('.tooltip').tooltipster({
 /*----------------------------------------------------*/
 /*	Twitter Feed
 /*----------------------------------------------------*/
+/* disabled 
 $.getJSON('get-tweets.php?url='+encodeURIComponent(), function(tweets){
 	$("#twitter-feed").html(tz_format_twitter(tweets));
 }); 
+*/
 
 
 /*----------------------------------------------------*/
@@ -362,9 +364,7 @@ $.getJSON('get-tweets.php?url='+encodeURIComponent(), function(tweets){
 /*----------------------------------------------------*/
 
 var jPanelMenu = {};
-$(function() {
-	$('pre').each(function(i, e) {hljs.highlightBlock(e)});
-	
+$(function() {	
 	jPanelMenu = $.jPanelMenu({
 		menu: '.navigation',
 		animated: false

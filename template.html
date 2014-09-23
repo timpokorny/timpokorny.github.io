@@ -1,5 +1,9 @@
 ---
 layout: documentation
+date: 2014-09-10
+author: Tim Pokorny
+section: Developer Documentation
+section-path: documentation/developer
 ---
 
 <!-- Title Bar / Start
@@ -9,6 +13,12 @@ layout: documentation
 
 		<div class="twelve columns">
 			<h1>Replace Me</h1>
+			<div class="meta clearfix">
+{% if page.author %}  <span><img src="{% site_asset images/icons/user.png %}" alt="author">posted by {{ page.author }},</span> {% endif %}
+{% if page.date %}    <span><img src="{% site_asset images/icons/calendar.png %}" alt="author">{{ page.date | date: "%b %-d, %Y" }}</span> {% endif %}
+{% if page.section %} <span><img src="{% site_asset images/icons/ribbon.png %}" alt="section"> <span>in <a href="{% site_root %}{{page.section-path}}">{{page.section}}</a>.</span> {% endif %}
+
+			</div>
 		</div>
 		
 		<nav class="four columns">
@@ -25,7 +35,7 @@ layout: documentation
 <!-- Title Bar / End
 ================================================== -->
 
-<!-- Blog / Start
+<!-- Article / Start
 ================================================== -->
 <section class="article">
 	<div class="container">
@@ -38,14 +48,14 @@ layout: documentation
 				<div class="main-info">
 					<!-- Date -->
 					<div class="date">
-						<span class="month">May</span>
-						<span class="day">26</span>
+						<span class="month">version</span>
+						<span class="day">2.0+</span>
 					</div>
 					
 					<!-- Comments Number -->
-					<a href="single-post.html#comments" class="commentsnumber">
-						<span>4</span>
-						comments 
+					<a href="{% site_root %}support/" class="commentsnumber">
+						Get
+						<span>Help</span>
 					</a>
 				</div>
 			
@@ -58,7 +68,10 @@ layout: documentation
 					<p class="begin">Sed varius rutrum turpis vitae sodales. Nam condimentum rutrum arcu a eleifend. 
 					Mauris ligula turpis, vulputate a lacinia ut, sodales eu dui?</p>
 					
-					<h3 id="sec1">Section One</h3>
+					<!--              -->
+					<!--  Section Two -->
+					<!--              -->
+					<h2 id="sec1">Section One</h2>
 					<p>Pellentesque habitant 
 					morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris 
 					consectetur venenatis erat, in pharetra tellus eleifend vitae. Sed lacus augue, 
@@ -80,14 +93,44 @@ layout: documentation
 					id esse quando neglegentur sit. Facer sensibus his eu.
 					</blockquote>
 
-					<h3 id="sec2">Section Two</h3>
+					<h3 id="sec11">Section 1.1</h3>
+					<p>Pellentesque habitant 
+					morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris 
+					consectetur venenatis erat, in pharetra tellus eleifend vitae. Sed lacus augue, 
+					mattis ac vehicula quis, malesuada sit amet nulla. Mauris nulla felis, cursus 
+					molestie condimentum quis, faucibus nec lorem. <strong>Pellentesque libero eros</strong>, 
+					lacinia eu vulputate ornare, euismod in tellus. Sed egestas justo vitae urna laoreet mollis. 
+					In iaculis ullamcorper fermentum.</p>
+
+					<h3 id="sec12">Section 1.2</h3>
+					<p>Pellentesque habitant 
+					morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris 
+					consectetur venenatis erat, in pharetra tellus eleifend vitae. Sed lacus augue, 
+					mattis ac vehicula quis, malesuada sit amet nulla. Mauris nulla felis, cursus 
+					molestie condimentum quis, faucibus nec lorem. <strong>Pellentesque libero eros</strong>, 
+					lacinia eu vulputate ornare, euismod in tellus. Sed egestas justo vitae urna laoreet mollis. 
+					In iaculis ullamcorper fermentum.</p>
+
+					<h3 id="sec13">Section 1.3</h3>
+					<p>Pellentesque habitant 
+					morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris 
+					consectetur venenatis erat, in pharetra tellus eleifend vitae. Sed lacus augue, 
+					mattis ac vehicula quis, malesuada sit amet nulla. Mauris nulla felis, cursus 
+					molestie condimentum quis, faucibus nec lorem. <strong>Pellentesque libero eros</strong>, 
+					lacinia eu vulputate ornare, euismod in tellus. Sed egestas justo vitae urna laoreet mollis. 
+					In iaculis ullamcorper fermentum.</p>
+
+					<!--              -->
+					<!--  Section Two -->
+					<!--              -->
+					<h2 id="sec2">Section Two</h2>
 					<p>Cras tellus metus sagittis a fringilla at, congue non erat. Integer nunc mi, tincidunt 
 					vitae dignissim at, faucibus ac erat. Cras vulputate quam et sapien adipiscing porta 
 					faucibus risus semper. Cras dignissim eros id diam dapibus ultricies. Quisque commodo 
 					aliquet orci, eu pulvinar nisi porta.</p>
 					
 				
-					<code>
+					<code class="language-css">
 .class {
 	width: 160px;
 	height: 10px;
@@ -101,6 +144,31 @@ layout: documentation
 					egestas. Mauris id neque vitae tellus pulvinar luctus in vel libero. Cum sociis natoque 
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur et ornare nibh.</p>
 					
+					<h2 id="sec3">A Code Example</h2>
+					<p>
+						It's important to have lots of code examples. Everyone loves code. I love it, 
+						you love it, we all love it, so let's highlight it.
+					</p>
+
+					<code class="language-java">
+public static void main( String[] args )
+{
+	System.out.println( "Do you like Portico?" );
+	for( int i = 0; i < 10; i++ )
+	{
+		String temp = "Yes I do!";
+		System.out.println( temp );
+	}
+}
+					</code>
+
+					<!-- Inline Image -->
+					<img src="{% site_asset images/logos/macosx-yosemite-450x250.png %}"
+					     alt="A very helpful diagram"
+					     style="margin:auto;"/>
+
+					<!-- Bring in some code from an external file -->
+					<pre data-src="myfile.js" class="language-java"></pre>
 				</div>
 		
 			</article>
@@ -112,43 +180,48 @@ layout: documentation
 			
 			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="410">
 			
-				<!-- Categories -->
+				<!-- Search -->
+				<!--
+				<div class="widget">
+					<div class="search-icon"><input type="text" class="searching" placeholder="Search..." /></div>
+				</div>
+				-->
+
+				<!-- Contents -->
 				<div class="widget" id="menu">
-					<h3>Contents</h3>
+					<h3>Table of Contents</h3>
 					<ul class="categories-list nav">
 						<li class="active"><a href="#sec1">Section One</a></li>
+						<li>
+							<ul class="categories-list nav">
+								<li><a href="#sec11">Section 1.1</a></li>
+								<li><a href="#sec12">Section 1.2</a></li>
+								<li><a href="#sec13">Section 1.3</a></li>
+							</ul>
+						</li>
 						<li><a href="#sec2">Section Two</a></li>
-						<li><a href="#">Video</a></li>
-						<li><a href="#">Music</a></li>
-						<li><a href="#">Uncategorized</a></li>
+						<li><a href="#sec3">Section Three</a></li>
 					</ul>
 				</div>
 				
 				<!-- Tags -->
+				<!--
 				<div class="widget">
 					<h3>Tags</h3>
 					<ul class="tags-list">
-						<li><a href="#">Wordpress</a></li>
-						<li><a href="#">Technology</a></li>
-						<li><a href="#">HTML5</a></li>
-						<li><a href="#">Illustrator</a></li>
-						<li><a href="#">Music</a></li>
-						<li><a href="#">CSS3</a></li>
-						<li><a href="#">Video</a></li>
-						<li><a href="#">Photoshop</a></li>
-						<li><a href="#">jQuery</a></li>
+						<li><a href="#">hla13</a></li>
+						<li><a href="#">ieee1516e</a></li>
+						<li><a href="#">vbs</a></li>
+						<li><a href="#">java</a></li>
+						<li><a href="#">c++</a></li>
 					</ul>
 				</div>
+				-->
 				
-				<!-- Search -->
-				<div class="widget">
-					<div class="search-icon"><input type="text" class="searching" placeholder="Search..." /></div>
-				</div>
-
 			</div>
 		</div>
 		
 </section>
-<!-- Blog / End
+<!-- Article / End
 ================================================== -->
 
