@@ -722,15 +722,20 @@ abbr.initialism {
    Reduce the sub-list size so that it slots in under the major headings */
 .widget ul.categories-list li ul{ margin: -5px 0 0 10px; }
 
-.widget ul.categories-list li ul li a{
-	padding: 0.5em 0 0 2em;
+.widget ul.categories-list li a{
+	padding: 5px 0;
 	display: block;
-	font-size:10px;
+}
+
+.widget ul.categories-list li ul li a{
+	padding: 0.5em 0 0 1em;
+	display: block;
+	font-size:12px;
 }
 
 .widget ul.categories-list li ul li a:before{
 	content: "\f054";
-	font-size: 7px;
+	font-size: 9px;
 	font-family: "FontAwesome";
 	margin-right: 9px;
 	float: left;
@@ -750,6 +755,8 @@ article.post .post-content
 	margin-bottom: 10px;
 	border-bottom: none; /* 2px solid #EEE; */
 }
+
+
 
 /* --------------------------------------------------       
  * Scrolling Sidebar

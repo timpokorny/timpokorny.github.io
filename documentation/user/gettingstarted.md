@@ -26,8 +26,8 @@ possibly need to know for things 'n stuff, including:
 
 So strap yourself in and let's get started!
 
-See Some Code {#sec2}
--------------
+See Some Code
+=============
 
 ```java
 public static void main( String[] args )
@@ -45,7 +45,8 @@ This is some more text that contains `someInlineCode()` for your consideration.
 
 Now we'll try for some embedded HTML code with the <span class="code">doSomethingInteresting()</span> method.
 
-### Tables {#tables}
+Tables
+--------------------
 Tables? You want tables? OK.
 
 | Left-Aligned     |   Center Aligned    |    Right Aligned |
@@ -54,22 +55,25 @@ Tables? You want tables? OK.
 | col 2 is         | centered            |             $12  |
 | zebra stripes    | are neat            |              $1  |
 
-### Links {#links}
+Links
+--------------------
 Here are some links: 
 
   * The [Portico Website](http://www.porticoproject.org)
   * A direct reference to <http://www.porticoproject.org>
   * An email link for <support@porticoproject.org>
 
-### Images {#images}
+Images
+--------------------
 Some example syntax for images:
 
 ![This is the alt text for the image]({% site_asset images/logos/macosx-yosemite-450x250.png %})
 
-### Quotes {#quotes}
+Quotes
+--------------------
 For when you can't figure out how to say it better than someone else, use a quote:
 
- > Shit just got real
+ > Shit just got real<br/>
  > Really real
  >
  >  -- Some person, some place
