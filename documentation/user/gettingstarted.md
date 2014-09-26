@@ -1,0 +1,78 @@
+---
+layout: documentation2
+
+title: Getting Started with Portico
+
+header-image-path: assets/images/logos/macosx-yosemite-450x250.png
+header-image-text: Some descriptive text
+
+excerpt: > 
+    Welcome to Portico! Grab a drink and settle in, we're about to walk you through everything
+    you need to know to install Portico and get an example federation up and running. By the
+    end of this you'll have built up enough confidence to go forth and break many things!
+
+
+---
+
+Getting Started
+===============
+
+This is the Portico _Getting Started_ Guide, it will walk you through *everything* you could
+possibly need to know for things 'n stuff, including:
+
+  * How to win friends and influence people
+  * How to score with chicks
+  * How to do other awesome stuff.
+
+So strap yourself in and let's get started!
+
+See Some Code {#sec2}
+-------------
+
+```java
+public static void main( String[] args )
+{
+	System.out.println( "Do you like Portico?" );
+	for( int i = 0; i < 10; i++ )
+	{
+		String temp = "Yes I do!";
+		System.out.println( temp );
+	}
+}
+```
+
+This is some more text that contains `someInlineCode()` for your consideration. 
+
+Now we'll try for some embedded HTML code with the <span class="code">doSomethingInteresting()</span> method.
+
+### Tables {#tables}
+Tables? You want tables? OK.
+
+| Left-Aligned     |   Center Aligned    |    Right Aligned |
+| :--------------- |:-------------------:| ----------------:|
+| col 3 is         | some wordy text     |           $1600  |
+| col 2 is         | centered            |             $12  |
+| zebra stripes    | are neat            |              $1  |
+
+### Links {#links}
+Here are some links: 
+
+  * The [Portico Website](http://www.porticoproject.org)
+  * A direct reference to <http://www.porticoproject.org>
+  * An email link for <support@porticoproject.org>
+
+### Images {#images}
+Some example syntax for images:
+
+![This is the alt text for the image]({% site_asset images/logos/macosx-yosemite-450x250.png %})
+
+### Quotes {#quotes}
+For when you can't figure out how to say it better than someone else, use a quote:
+
+ > Shit just got real
+ > Really real
+ >
+ >  -- Some person, some place
+
+
+That's all for now!

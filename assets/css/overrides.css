@@ -116,17 +116,42 @@ p
 }
 
 /* code style for documentation */
-code, pre
+/* 
+   This is all weird. When converting from Markdown, fenced blocks render as <pre><code>... blocks,
+   while backtick (`) inline blocks end up just as <code> blocks. As such, we need to ensure that
+   we render <pre><code> differently from just <code>.
+
+   To make it more interesting, we really don't want to apply inline style to ALL <code> blocks,
+   only those converted from backticks. Since we have a specific template for this thing, and it
+   wraps everything in an <article> tag, we zero-in on inline code in that specific circumstance.
+   We also support <span class="code">...</span> for inline code across the whole site.
+*/ 
+pre, code, pre code, .code
 {
-	background-color: #4e4e4e !important; /* overwrites the existing "white smoke" #f5f5f5 */
-	color: #ffffff;
+	/* make sure the background is the same colour for both the wrapper and nested versions */
+	background-color: #4e4e4e !important;/*
+	background-color: #777 !important;*/
 }
 
-.code /* pretty much copied from the style for labels */
+/* set up fenced code block specifics - these must  be !important so they override the more
+   specific settings from the article.post... settings below. */
+pre code
 {
-	background-color: #777;
-	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	display: block !important;
+	white-space: pre !important;
+	line-height: 18px !important;
+	font-size: 14px !important;
+	text-align: left !important;
+	padding: 5px 0px 5px 25px !important;
+	margin: 15px 0 !important;
 
+	color: #ffffff;	
+}
+
+/* define the style for in-line code within a paragraph */
+.code, article.post .post-content code /* pretty much copied from the style for labels */
+{
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	border-radius: .25em;
 	display: inline;
 	padding: .2em .4em .2em;

@@ -1215,9 +1215,9 @@ article.post .post-content h5{
 }
 
 article.post .post-content p.begin {
-	font-size: 23px;
+	font-size: 20px;
 	font-weight: 300;
-	line-height: 28px;
+	line-height: 1.3em;
 	margin-top: 10px;
 }
 
