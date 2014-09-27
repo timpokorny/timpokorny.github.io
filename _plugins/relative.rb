@@ -3,7 +3,7 @@
 #
 # To use inside a template, use {{page.relative}} in your template (no slash required at the end)
 
-class Jekyll::Page
+class Jekyll::Page2
 
   def relative
     count = url.split("/").length
@@ -24,7 +24,7 @@ class Jekyll::Page
   end
 end
 
-class Jekyll::Post
+class Jekyll::Post2
 
   def relative
 

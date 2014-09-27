@@ -1,7 +1,9 @@
 ---
-layout: documentation2
-
+layout: documentation
 title: Getting Started with Portico
+author: Tim Pokorny
+section: User Documentation
+section-path: documentation/user/
 
 header-image-path: assets/images/logos/macosx-yosemite-450x250.png
 header-image-text: Some descriptive text
@@ -41,12 +43,18 @@ public static void main( String[] args )
 }
 ```
 
-This is some more text that contains `someInlineCode()` for your consideration. 
+This is some more text that contains `someInlineCode()` for your consideration.
 
 Now we'll try for some embedded HTML code with the <span class="code">doSomethingInteresting()</span> method.
 
+Awesome! Finally, we'll let you bring in code from an external file:
+
+<!-- Bring in some code from an external file -->
+<pre data-src="myfile.js" class="language-java"></pre>
+
+
 Tables
---------------------
+------
 Tables? You want tables? OK.
 
 | Left-Aligned     |   Center Aligned    |    Right Aligned |
@@ -55,22 +63,24 @@ Tables? You want tables? OK.
 | col 2 is         | centered            |             $12  |
 | zebra stripes    | are neat            |              $1  |
 
+
 Links
---------------------
+-----
 Here are some links: 
 
   * The [Portico Website](http://www.porticoproject.org)
   * A direct reference to <http://www.porticoproject.org>
   * An email link for <support@porticoproject.org>
 
+
 Images
---------------------
+------
 Some example syntax for images:
 
 ![This is the alt text for the image]({% site_asset images/logos/macosx-yosemite-450x250.png %})
 
 Quotes
---------------------
+------
 For when you can't figure out how to say it better than someone else, use a quote:
 
  > Shit just got real<br/>
