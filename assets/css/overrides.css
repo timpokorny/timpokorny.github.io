@@ -295,7 +295,7 @@ a.btn.thin
 
 .version-pane h1
 {
-	font-family: "Open Sans", "Roboto";
+	font-family: Roboto, "Open Sans", "Roboto";
 	font-size: 48px;
 	font-weight: 300;
 	line-height: 1.0;
@@ -394,7 +394,7 @@ a.btn.thin
 	text-decoration:underline;
 }
 
-/* --------------------------------------------------       
+/* --------------------------------------------------
  * Table Overrides
  * ----------------------------------------------- */
 table.default-table td
@@ -506,6 +506,14 @@ blockquote small:before
 {
 	background-color: transparent;
 	background:url('../images/eye.jpg') repeat center center;
+}
+
+/* --------------------------------------------------
+ * Contact Page Sidebar
+ * ----------------------------------------------- */
+.contact-sidebar li
+{
+	font-weight: 300;
 }
 
 /* --------------------------------------------------       
@@ -725,12 +733,14 @@ abbr.initialism {
 .widget ul.categories-list li a{
 	padding: 5px 0;
 	display: block;
+	font-size: 15px;
+	font-weight: 300;
 }
 
 .widget ul.categories-list li ul li a{
 	padding: 0.5em 0 0 1em;
 	display: block;
-	font-size:12px;
+	font-size:13px;
 }
 
 .widget ul.categories-list li ul li a:before{
@@ -741,6 +751,8 @@ abbr.initialism {
 	float: left;
 	margin-top: 4px;
 }
+
+.widget ul.tags-list li{ font-weight: 300; }
 
 .meta img
 {
@@ -803,7 +815,7 @@ article table td strong
 {
 	font-size: 16px;
 	font-weight: 600;
-	font-family: "Open Sans", "Roboto";
+	font-family: Roboto, "Open Sans", "Roboto";
 }
 
 /* borders - put the border on the far right edge */

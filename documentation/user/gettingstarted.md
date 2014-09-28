@@ -4,6 +4,7 @@ title: Getting Started with Portico
 author: Tim Pokorny
 section: User Documentation
 section-path: documentation/user/
+tags: [java, c++, hla13, ieee1516e]
 
 header-image-path: assets/images/logos/macosx-yosemite-450x250.png
 header-image-text: Some descriptive text
@@ -12,7 +13,6 @@ excerpt: >
     Welcome to Portico! Grab a drink and settle in, we're about to walk you through everything
     you need to know to install Portico and get an example federation up and running. By the
     end of this you'll have built up enough confidence to go forth and break many things!
-
 
 ---
 
