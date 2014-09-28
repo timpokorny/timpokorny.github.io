@@ -1,22 +1,18 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: The Portico Project
+email: peeps@porticoproject.org
+description: "The Portico Project - Open Source HLA: By Jerks, For Jerks."
 baseurl: ""
 url: "http://timpokorny.github.io"
-#twitter_username: jekyllrb
 github_username:  timpokorny
 
 # Build settings
-#markdown: kramdown
 markdown: redcarpet
+redcarpet:
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "tables", "with_toc_data"]
 
 kramdown:
     input: GFM
-
-redcarpet:
-    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-
 
 #permalink: pretty
 

@@ -394,6 +394,11 @@ a.btn.thin
 	text-decoration:underline;
 }
 
+.success p
+{
+	color: #ffffff;
+}
+
 /* --------------------------------------------------
  * Table Overrides
  * ----------------------------------------------- */

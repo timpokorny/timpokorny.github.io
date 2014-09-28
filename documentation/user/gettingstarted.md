@@ -55,6 +55,30 @@ Awesome! Finally, we'll let you bring in code from an external file:
 <pre data-src="myfile.js" class="language-java"></pre>
 
 
+Alerts
+------
+Below are some alert box styles you can use to call attention to various important things
+in your document. Unfortunately these are only available as embedded HTML as there is no
+easy Markdown conversion.
+
+<div class="alert info">
+  <p>This is an Info alert - use it to alert people to alertful things.</p>
+</div>
+
+<div class="alert success">
+  <p>This is a Success alert - use it to affirm successful things.</p>
+</div>
+
+<div class="alert warning">
+  <p>This is a Warning alert - use it to warn people about scary things.</p>
+</div>
+
+<div class="alert error">
+  <p>This is an Error alert - use it to alert people to red things.</p>
+</div>
+
+
+
 Tables
 ------
 Tables? You want tables? OK.
