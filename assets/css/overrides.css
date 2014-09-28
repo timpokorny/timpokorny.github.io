@@ -111,7 +111,7 @@ p
 	/*margin-bottom:0.8em;*/
 	/*line-height: 22px; default:25 */
 	font-weight: 300;
-	margin-bottom: 10px;
+	margin-bottom: 0.8em;
 	font-size: 16px;
 }
 
@@ -246,7 +246,7 @@ pre code
 .site-header
 {
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 30px;
 	padding-top: 2em;
 	padding-bottom: 3em;
@@ -295,7 +295,7 @@ a.btn.thin
 
 .version-pane h1
 {
-	font-family: "Open Sans";
+	font-family: "Open Sans", "Roboto";
 	font-size: 48px;
 	font-weight: 300;
 	line-height: 1.0;
@@ -756,10 +756,12 @@ article.post .post-content
 	border-bottom: none; /* 2px solid #EEE; */
 }
 
+article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.5em; }
+
 /* Fix the lists by giving them back some basic style, but only for articles */
 article ul { list-style-type: disc; margin-bottom: 10px; }
 article ol { list-style-type: decimal; margin-bottom: 10px; }
-article li { line-height: 1.5em; margin-left: 2em; font-size:16px; font-weight: 300; }
+article li { line-height: 1.5em; margin-left: 3em; font-size:17px; font-weight:300; line-height: 1.5em; }
 
 /* Tables are wonky for articles (generated from Markdown) because they're not given the css
    class they would be if we did them by hand, and rather than force every table to have that
@@ -794,6 +796,14 @@ article table td
 	border: #E7E7E7 1px solid;
 	border-top: none;
 	border-right: none;
+	font-weight: 300;
+}
+
+article table td strong
+{
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "Open Sans", "Roboto";
 }
 
 /* borders - put the border on the far right edge */
@@ -841,7 +851,7 @@ article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-borde
 		#sidebar.affix
 		{
 			position: fixed;
-			top:70px;
+			top:30px;
 			width:250px;
 		}
 	}

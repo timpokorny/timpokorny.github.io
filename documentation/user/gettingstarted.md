@@ -28,6 +28,8 @@ possibly need to know for things 'n stuff, including:
 
 So strap yourself in and let's get started!
 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
 See Some Code
 =============
 
@@ -59,7 +61,7 @@ Tables? You want tables? OK.
 
 | Left-Aligned     |   Center Aligned    |    Right Aligned |
 | :--------------- |:-------------------:| ----------------:|
-| col 3 is         | some wordy text     |           $1600  |
+| col 3 is         | **some wordy text**     |           **$1600**  |
 | col 2 is         | centered            |             $12  |
 | zebra stripes    | are neat            |              $1  |
 

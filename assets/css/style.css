@@ -735,6 +735,7 @@ a.go-to-portfolio:hover {
 }
 
 .news-item .description p {
+	font-size: 14px;
 	line-height: 19px;
 	margin-top: 9px;
 }
