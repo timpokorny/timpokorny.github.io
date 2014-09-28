@@ -845,6 +845,8 @@ article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-borde
 
 @media screen and (min-width: 768px) {
 
+	#menu, #search { display: none; }
+
 	.affix-top, .affix
 	{
 		position: static;
@@ -858,6 +860,8 @@ article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-borde
 	}
 
 	@media (min-width: 979px) {
+		#menu, #search { display: block; }
+
 		#sidebar.affix-top
 		{
 			position: static;

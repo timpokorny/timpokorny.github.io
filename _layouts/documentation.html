@@ -49,7 +49,7 @@
 
 <!-- Article / Start
 ================================================== -->
-<section class="article">
+<section class="article" style="margin-bottom:-50px;">
 	<div class="container">
 	
 		<div class="three_fourth column">
@@ -94,10 +94,10 @@
 		
 		<div class="one_fourth column">
 			
-			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="410">
+			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="440">
 
 				<!-- Search -->
-				<div class="widget">
+				<div class="widget" id="search">
 					<form name="search-form" action="https://www.google.com/search" method="get">
 						<div class="search-icon"><input type="text" class="searching" name="as_q" placeholder="Search..." /></div>
 						<input type="submit" style="display:none;" name="as_sitesearch" value="porticoproject.org"/>
@@ -112,7 +112,7 @@
 				</div>
 
 			{% if page.tags %}
-				<div class="widget">
+				<div class="widget" id="tags">
 					<h3>Tags</h3>
 					<ul class="tags-list">
 					{% for tag in page.tags %}
