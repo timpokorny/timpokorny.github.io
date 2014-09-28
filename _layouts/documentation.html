@@ -6,76 +6,6 @@
 	<head>
 		{% include head.html %}
 		<link rel="stylesheet" href="{% site_asset css/prism.css %}">
-		<style>
-			article ul { list-style-type: disc; margin-bottom: 10px; }
-			article ol { list-style-type: decimal; margin-bottom: 10px; }
-			article li { line-height: 1.5em; margin-left: 2em; font-size:16px; font-weight: 300; }
-
-/* Tables */
-article table {
-	width: 100%;
-	border-collapse: separate;
-	border-spacing: 0;
-	border: none;
-	margin-bottom: 15px;
-}
-
-article table th:first-child {}
-article table th:last-child  { border-right: 1px solid #E7E7E7; }
-article table td:last-child { border-right: 1px solid #E7E7E7; }
-
-article table th
-{
-	border: 1px solid #E7E7E7;
-	border-right: none;
-	background-color: #F5F5F5;
-	text-align: left;
-	padding: 13px 15px 10px;
-	color: #454545;
-	vertical-align: top;
-	font-size: 13px;
-	font-weight: 700;
-	font-family: "Lato", sans-serif;
-}
-
-article table td
-{
-	padding: 10px 15px;
-	border: #E7E7E7 1px solid;
-	border-top: none;
-	border-right: none;
-}
-
-
-article table th:first-child
-{
-	border-radius: 4px 0 0 0;
-	-moz-border-radius: 4px 0 0 0;
-	-webkit-border-radius: 4px 0 0 0;
-}
-
-article table th:last-child
-{
-	border-radius: 0 4px 0 0;
-	-moz-border-radius: 0 4px 0 0;
-	-webkit-border-radius: 0 4px 0 0;
-}
-
-article table tr:last-child td:first-child
-{
-	border-radius: 0 4px 0;
-	-moz-border-radius: 0 4px 0;
-	-webkit-border-radius: 0 4px 0;
-}
-
-article table tr:last-child td:last-child
-{
-	border-radius: 0 0 4px 0;
-	-moz-border-radius: 0 0 4px 0;
-	-webkit-border-radius: 0 0 4px 0;
-}
-
-		</style>
 	</head>
 
 	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
@@ -108,15 +38,6 @@ article table tr:last-child td:last-child
 			{% endfor %}
 				<li class="active">{{ page.title }}</li>
 			</ul>
-
-		<!--
-			<ul class="breadcrumbs">
-				<li><a href="{% site_root %}index.html">Home</a></li>
-				<li><i class="icon-angle-right"></i></li>
-				<li>{{ page.title }} </li>
-			</ul>
-		-->
-
 
 		</nav>
 
@@ -181,8 +102,6 @@ article table tr:last-child td:last-child
 					<h3>Table of Contents</h3>
 					<div class="toc"></div>
 				</div>
-
-
 
 			</div>
 		</div>
