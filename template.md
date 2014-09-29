@@ -1,7 +1,8 @@
 ---
+title: Markdown Template
 layout: documentation
-title: Getting Started with Portico
 author: Tim Pokorny
+
 section: User Documentation
 section-path: documentation/user/
 tags: [java, c++, hla13, ieee1516e]
@@ -210,3 +211,4 @@ Images are also straightforward, except that you have little control over things
 ![This is the alt text for the image]({% site_asset images/logos/macosx-yosemite-450x250.png %})
 
 That's all for now!
+

@@ -126,6 +126,13 @@ p
    wraps everything in an <article> tag, we zero-in on inline code in that specific circumstance.
    We also support <span class="code">...</span> for inline code across the whole site.
 */ 
+pre, pre[class*="language-"]
+{
+	margin: 1em 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
 pre, code, pre code, .code
 {
 	/* make sure the background is the same colour for both the wrapper and nested versions */
@@ -142,8 +149,8 @@ pre code
 	line-height: 18px !important;
 	font-size: 14px !important;
 	text-align: left !important;
-	padding: 5px 0px 5px 25px !important;
-	margin: 15px 0 !important;
+	padding: 20px 0 30px 25px !important;
+	margin: 15px 0 0 0 !important;
 
 	color: #ffffff;	
 }
@@ -161,7 +168,7 @@ pre code
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
-	vertical-align: baseline;	
+	vertical-align: baseline;
 }
 
 .list
@@ -773,6 +780,7 @@ article.post .post-content
 	border-bottom: none; /* 2px solid #EEE; */
 }
 
+article.post .post-content h3{ margin-top: 30px; }
 article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.5em; }
 
 /* Fix the lists by giving them back some basic style, but only for articles */
