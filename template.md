@@ -101,7 +101,7 @@ Code Highlighting
 
 ### Inline Code
 
-The Markdown conversion supports inline code through the use of backticks ```, allowing you to
+The Markdown conversion supports inline code through the use of backticks <span class="code">\`</span>, allowing you to
 create sections `like this`.
 
 If we want to get a bit more specific with the background colour of the highlight we have to

@@ -150,8 +150,8 @@ pre code
 	line-height: 18px !important;
 	font-size: 14px !important;
 	text-align: left !important;
-	padding: 20px 0 30px 25px !important;
-	margin: 15px 0 0 0 !important;
+	padding: 20px 0 20px 20px !important;
+	margin: 0 0 0 0 !important;
 
 	color: #ffffff;	
 }
@@ -170,6 +170,21 @@ pre code
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: baseline;
+}
+
+/*  Lists with circle icons */
+.default-list
+{
+	list-style-type: disc;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	font-weight: 300;
+}
+
+.default-list li
+{
+	line-height: 25px; margin-left: 23px; font-size:17px;
 }
 
 .list
@@ -739,6 +754,12 @@ abbr.initialism {
 
 /* For <code> formatting, see the text formatting section in this file */
 
+strong
+{
+	font-family: Roboto, "Open Sans";
+	font-weight: 700;
+}
+
 /* Sidebar Table of Contents
    Reduce the sub-list size so that it slots in under the major headings */
 .widget ul.categories-list li ul{ margin: -5px 0 0 10px; }
@@ -789,6 +810,10 @@ article ul { list-style-type: disc; margin-bottom: 10px; }
 article ol { list-style-type: decimal; margin-bottom: 10px; }
 article li { line-height: 1.5em; margin-left: 3em; font-size:17px; font-weight:300; line-height: 1.5em; }
 
+/* Different list style for tabs */
+article .tabs ul {  margin: 0; }
+article .tabs li { margin: 0; font-size:17px; font-weight:300; line-height: 1.5em; }
+
 /* Tables are wonky for articles (generated from Markdown) because they're not given the css
    class they would be if we did them by hand, and rather than force every table to have that
    extra bit of annotation just to make them look "normal", we'll fix the styling for all
@@ -829,7 +854,7 @@ article table td strong
 {
 	font-size: 16px;
 	font-weight: 600;
-	font-family: Roboto, "Open Sans", "Roboto";
+	font-family: Roboto, "Open Sans";
 }
 
 /* borders - put the border on the far right edge */
