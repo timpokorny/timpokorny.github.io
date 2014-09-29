@@ -7,7 +7,7 @@
 		{% include head.html %}
 	</head>
 
-	<body>
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
 
 		{% include header.html %}
 
@@ -15,6 +15,15 @@
 
 		{% include footer.html %}
 
+		<script src="{% site_asset js/prism.js %}"></script>
+
+		{% if page.toc == "auto" %}
+		<script type="text/javascript" src="{% site_asset js/bootstrap-3.2.0.min.js %}"></script>
+		<script src="{% site_asset js/toc.js %}"></script>
+		<script type="text/javascript">
+			$(document).ready(function() { $('.toc').toc(); });
+		</script>
+		{% endif %}
 	</body>
 
 </html>

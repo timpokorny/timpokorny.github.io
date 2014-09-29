@@ -867,6 +867,12 @@ article table th:last-child  { border-radius: 0 4px 0 0; -moz-border-radius: 0 4
 article table tr:last-child td:first-child{ border-radius: 0 4px 0; -moz-border-radius: 0 4px 0; -webkit-border-radius: 0 4px 0; }
 article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-border-radius: 0 0 4px 0; -webkit-border-radius: 0 0 4px 0; }
 
+/* Frequency Asked Questions */
+.faq h1, h2
+{
+	padding-top: 30px;
+}
+
 /* --------------------------------------------------       
  * Scrolling Sidebar
  * ----------------------------------------------- */

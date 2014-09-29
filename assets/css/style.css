@@ -2340,7 +2340,6 @@ table.default-table tr:last-child td:last-child {
 #tabs {
 	list-style: none;
 	padding: 10px 0 9px;
-	height: 23px;
 }
 
 #tabs li {
