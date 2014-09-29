@@ -90,8 +90,8 @@ h1, h2, h3, h4, h5, h6
 
 h1, h2
 {
-	margin-top: 10px;
-	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-bottom: 10px;
 	font-weight: 400;
 }
 
@@ -113,6 +113,7 @@ p
 	font-weight: 300;
 	margin-bottom: 0.8em;
 	font-size: 16px;
+	color: #34495e;
 }
 
 /* code style for documentation */
@@ -851,9 +852,42 @@ article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-borde
 	width:250px;
 }
 
-@media screen and (min-width: 768px) {
+
+/* #Dekstop (960 Grid)
+================================================== */
+@media only screen and (min-width: 960px) {
+	#menu, #search { display: block; }
+	.main-info{ display: block; }
+
+	#sidebar.affix-top
+	{
+		position: static;
+		margin-top:30px;
+		width:250px;
+	}
+
+	#sidebar.affix
+	{
+		position: fixed;
+		top:30px;
+		width:250px;
+	}
+
+	#sidebar li.active
+	{
+		border:0 #fc7373 solid;
+		border-right-width:4px;
+	}
+}
+
+/* Everything below the Desktop
+   Will be overridden by those above
+================================================== */
+@media screen and (max-width: 959px) {
 
 	#menu, #search { display: none; }
+	article.post .main-info{ display: none; }
+	article.post .post-content{ margin-left: 0px; }
 
 	.affix-top, .affix
 	{
@@ -861,27 +895,4 @@ article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-borde
 		width:250px;
 	}
 
-	#sidebar li.active
-	{
-		border:0 #eee solid;
-		border-right-width:4px;
-	}
-
-	@media (min-width: 979px) {
-		#menu, #search { display: block; }
-
-		#sidebar.affix-top
-		{
-			position: static;
-			margin-top:30px;
-			width:250px;
-		}
-  
-		#sidebar.affix
-		{
-			position: fixed;
-			top:30px;
-			width:250px;
-		}
-	}
 }
