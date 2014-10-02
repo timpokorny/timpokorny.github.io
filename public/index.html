@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+			<!-- Basic Page Needs -->
+	<meta charset="utf-8" />
+	<title>The Portico Project</title>
+    <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
+    <link rel="canonical" href="http://timpokorny.github.io/">
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/css/colors/8.css" id="color" />
+	<link rel="stylesheet" href="assets/css/overrides.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="assets/css/prism.css">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="assets/js/jquery-1.9.0.min.js"></script>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="assets/js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.quovolver.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.tooltipster.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.jpanelmenu.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript" src="assets/js/swipe.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+	</head>
+
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
+
+		
+<!-- ===================================================================== -->
+<!--                            Navigation Bar                             -->
+<!-- ===================================================================== -->
+<header class="menu">
+	<div class="container">
+	
+		<!-- Mobile Only Menu Button  -->
+		<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+		
+		<!-- Logo  -->  
+		<a class="logo" href="index.html"><img src="assets/images/logo.png"/></a>
+		
+		<!-- Navigation -->   
+		<nav>
+			<ul class="navigation">
+				<li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
+				<li class="current"><a href="index.html">Home</a></li>
+
+				<li><a href="get.html">Get</a>
+					<ul>
+						<li><a href="get.html#stable">Stable</a></li>
+						<li><a href="get.html#nightly">Nightly</a></li>
+						<li><a href="get.html#archive">Archive</a></li>
+					</ul>
+				</li>
+
+				<li><a href="about/index.html" class="arrow">About</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="about/index.html">About Portico</a></li>
+						<li><a href="about/index.html#devteam">Developer Team</a></li>
+						<li><a href="about/index.html#history">Portico History</a></li>
+						<li><a href="about/status.html">Status and Roadmap</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="documentation/" class="arrow">Documentation</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="documentation/user/" class="arrow">For Users</a>
+							<ul>
+								<li><a href="documentation/user/gettingstarted.html">Getting Started</a></li>
+								<li><a href="documentation/user/switching.html">Switching to Portico</a></li>
+								<li><a href="documentation/user/configure.html">Configuring Portico</a></li>
+								<li><a href="documentation/user/performance.html">Performance</a></li>
+								<li><a href="documentation/user/troubleshooting.html">Troubleshooting</a></li>
+								<li><a href="documentation/user/faq.html">Portico FAQ</a></li>
+							</ul>
+						</li>
+						<li><a href="documentation/developer/" class="arrow">For Developers</a>
+							<ul>
+								<li><a href="documentation/developer/welcome.html">Welcome to the HLA</a></li>
+								<li><a href="documentation/developer/java.html">Java Federates</a></li>
+								<li><a href="documentation/developer/cpp.html">C++ Federates</a></li>
+								<li><a href="documentation/developer/apistatus.html">Portico API Status</a></li>
+								<li><a href="documentation/developer/building.html">Building Portico</a></li>
+							</ul>
+						</li>
+						<li><a href="documentation/guides/" class="arrow">Portico Guides</a>
+							<ul>
+								<!-- Live -->
+								<!-- Virtual -->
+								<li><a href="documentation/guides/vbs.html">VBS</a></li>
+								<li><a href="documentation/guides/steelbeasts.html">Steel Beasts</a></li>
+								<li><a href="documentation/guides/xplane.html">X-Plane</a></li>
+								<li><a href="documentation/guides/unity.html">Unity3D</a></li>
+								<!-- Constructive -->
+								<li><a href="documentation/guides/onesaf.html">OneSAF</a></li>
+								<li><a href="documentation/guides/jsaf.html">JSAF</a></li>
+							</ul>
+						</li>
+						<li><a href="about/status.html#supported-platforms">Supported Platforms</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="community/" class="arrow">Community</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="news/">Latest News</a></li>
+						<li><a href="community/index.html#mailing-lists">Mailing Lists</a></li>
+						<li><a href="community/index.html#forums">Community Support</a></li>
+						<li><a href="community/bugs.html">Reporting Bugs</a></li>
+						<li><a href="community/contributing.html">Contributing</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="support/">Support</a></li>
+
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div><!-- End of container -->
+</header>
+<!-- Main Menu / End
+================================================== -->
+
+
+		<!-- ===================================================================== -->
+<!--                             Main Content                              -->
+<!-- ===================================================================== -->
+
+<!-- Jumbotron / Start
+================================================== -->
+
+<div class="container">
+	<div class="sixteen columns site-header">
+		<p align="center"><img src="assets/images/portico-banner.png" align="center"/></p>
+		<p align="center" style="font-size:18px;">
+			Welcome to The Portico Project! Portico is an <em>open source</em>,
+			cross-platform, <em>fully supported</em> HLA RTI implementation. Designed with
+			modularity and flexibility in mind, Portico is a production-grade RTI for the
+			Simulation and Training Community, so come say hi!
+		</p>
+ 	</div>
+</div>
+
+<!-- Jumbotron / End
+================================================== -->
+
+
+<!-- Introduction / Start
+================================================== -->
+
+<div class="container" style="padding-bottom: 30px;">
+	<!-- ==================================== -->
+	<!--           Download Section           -->
+	<!-- ==================================== -->
+	<div class="one-third column">
+
+		<h2>Download</h2>
+		<div id="tabs_container">
+			<ul id="tabs">
+				<li class="active"><a href="#versions-stable">Stable</a></li>
+				<li><a href="#versions-nightly">Nightly</a></li>
+				<li><a href="#versions-source">Source</a></li>
+			</ul>
+		</div>
+		<div id="tabs_content_container">
+			<div class="tab_content" id="versions-stable" style="display:block;">
+				<div class="version-pane">
+					<h1>v2.0.0</h1>
+					<p><small>April 1, 2013</small></p>
+					<p>
+						<a href="#"><img src="assets/images/logos/windows-logo64.png" title="Windows"/></a> &nbsp;
+						<a href="#"><img src="assets/images/logos/ubuntu-logo64.png" title="Linux"/></a> &nbsp;
+						<a href="#"><img src="assets/images/logos/apple-logo64.png" title="Mac OS X"/></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="tab_content" id="versions-nightly">
+				<div class="version-pane">
+					<h1>v2.1.0-dev</h1>
+					<p><small>April 1, 2013</small></p>
+					<p style="margin-bottom: -5px"><!-- bring the pass/fail line closer -->
+						<a href="#"><img src="assets/images/logos/windows-logo64.png" title="Windows"/></a> &nbsp;
+						<a href="#"><img src="assets/images/logos/ubuntu-logo64.png" title="Linux"/></a> &nbsp;
+						<a href="#"><img src="assets/images/logos/apple-logo64.png" title="Mac OS X"/></a>
+					</p>
+					<p>
+						<span class="version-pane-label label-success"> Pass </span> &nbsp;
+						<span class="version-pane-label label-danger">Fail</span> &nbsp;
+						<span class="version-pane-label label-success">Pass</span>
+					</p>
+				</div>
+
+			</div>
+			
+			<div class="tab_content" id="versions-source">
+				<div class="version-pane">
+					<img src="assets/images/logos/octocat256.jpg" style="width:128px" class="pull-left"/>
+					<p>&nbsp;</p>
+					<p><h1>GitHub</h1></p>
+					<p><a href="https://github.com/openlvc/portico">https://github.com/openlvc/portico</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- ==================================== -->
+	<!--        Documentation Section         -->
+	<!-- ==================================== -->
+	<div class="one-third column">
+		<h2>Documentation</h2>
+		<p>
+			Once you've got Portico, you'll need to know how to use it. Whether you're a
+			<em>general user</em> or a <em>federate developer</em>, we've got you covered.
+			Here you'll find guides to get you started with widely-used training tools, in
+			addition to code examples and walk-through's for the coders out there. Java or
+			C++; we won't judge.
+		</p>
+		<p style="padding-top: 1em;">
+			<a class="btn blue thin" href="#">Portico for Users &raquo;</a> &nbsp;
+			<a class="btn green thin" href="#">Portico for Developers &raquo;</a>
+		</p>
+	</div>
+
+	<!-- ==================================== -->
+	<!--           Community Section          -->
+	<!-- ==================================== -->
+	<div class="one-third column">
+		<h2>Community</h2>
+		<p>It's not nice to feel lonely. Luckily, you don't have to! Portico has a large install
+			base of attractive and intelligent users you can interact with. If you need help,
+			or want to contribute and level-up your street cred, you can learn how here.
+			If you wear a suit, we're down with that as well and
+			<a href="#">Commercial Support</a> is available.
+		</p>
+		<p style="padding-top: 1em;">
+			<a class="btn orange thin" href="#">To the People &raquo;</a>
+		</p>
+	</div>
+</div>
+
+<!-- Introduction / End
+================================================== -->
+
+
+<!-- Why Use Portico? / Start
+================================================== -->
+
+<div style="background-color:#f0f0f0">
+<div class="container">
+
+	<div class="sixteen columns" style="margin:20px 0 20px 0;">
+		<p><h2 style="font-size:24px">Why use Portico?</h2></p>
+		<p class="lead">Portico provides a lot of value over alternatives, here are a few reasons to choose it...</p>
+
+		<ul class="serviceboxes">
+		
+			<li>
+				<div class="service-icon"><img src="assets/images/icons/check.png" alt=""></div>
+				<h3>Standards Compliant</h3>
+				<p>Portico supports all the major IEEE and SISO standards. HLA v1.3, SISO DLC, IEEE-1516e, it's practically raining standards!</p>
+			</li>
+			
+			<li>
+				<div class="service-icon"><img src="assets/images/icons/github-blue.png" alt=""></div>
+				<h3>Open Source</h3>
+				<p>May the source be with you. No really, go get it. The full Portico source code
+					is freely available and waiting for you. Fork us and contribute!</p>
+			</li>
+			
+			<li>
+				<div class="service-icon"><img src="assets/images/icons/person.png" alt=""></div>
+				<h3>Commercial Support</h3>
+				<p>Need someone who will answer your calls and fix your problems? We've got you
+					covered. Commercial support is readily available.</p>
+			</li>
+			
+			<li>
+				<div class="service-icon"><img src="assets/images/icons/ui.png" alt=""></div>
+				<h3>Easy to Use</h3>
+				<p>The HLA is hard enough as it is, so we've tried to make the RTI easy.
+				   Portico doesn't require a central RTI, has sensible defaults and is designed to
+				   let you just get down to work.</p>
+			</li>
+
+			<li>
+				<div class="service-icon"><img src="assets/images/icons/briefcase.png" alt=""></div>
+				<h3>Production Grade</h3>
+				<p>We do simulation. Daily. Portico is used in our commercial products and we
+					hammer it hard, because we want the open standard to set the standard.</p>
+			</li>
+
+			<li>
+				<div class="service-icon"><img src="assets/images/icons/world-map.png" alt=""></div>
+				<h3>Worldwide Community</h3>
+				<p>Portico has been downloaded in more than 50 countries. It is used in government,
+					industry and academia the world over, because open source knows no accent.</p>
+			</li>
+				
+		</ul>
+	</div>		
+</div>
+</div>
+<!-- End of container -->
+<!-- Why Use Portico? / End
+================================================== -->
+
+
+<!-- Commercial Support / Start
+================================================== -->
+
+<div class="container">
+<div class="alert-orange">
+	<h4 class="alert-heading">Commercial Support</h4>
+	<p>Commercial support helps sustain Portico development and provides a number of benefits,
+	   including a dedicated helpdesk, long-term release support, custom development time and
+	   service-level agreements. For all the details, see the 
+	   <a href="support/index.htm">Support page</a>.</p>
+</div>
+</div>
+
+<!-- Commercial Support / End
+================================================== -->
+
+
+<!-- Portico Enabled / Start
+================================================== -->
+<div class="container" style="margin-top:40px;">
+	<p><h2 style="font-size:24px">Portico Enabled and Ready</h2></p>
+	<p class="lead">Portico is continuously tested and validated against leading simulation systems from the Live, Virtual and Constructive domains.</p>
+
+	<ul class="thumbnails tiles">
+		<!--                            -->
+		<!-- Virtual Simulation Systems -->
+		<!--                            -->
+		<li class="one-third column tile">
+			<a class="thumbnail" href="/documentation/lvc/xplane.html"><img src="assets/images/simsystems/xplane.jpg" alt="X-Plane Flight Simulator by Laminar Research"/></a>
+			<h4>X-Plane</h4>
+			<p>
+				<a href="http://www.x-plane.com/">X-Plane</a> is the premier flight simulator for
+				personal computers and high-fidelity simulation systems alike. Offering a highly
+				realistic flight model, X-Plane is a fully-fledged engineering tool for either
+				fixed-wing or rotary aircraft flight training and analysis. X-Plane 10 is DIS and
+				HLA enabled via 
+				<a href="http://www.calytrix.com/products/lvcgame/">Calytrix LVC Game.</a></p>
+			</p>
+		</li>
+		<li class="one-third column tile">
+			<a class="thumbnail" href="/documentation/lvc/vbs.html"><img src="assets/images/simsystems/vbs3.jpg" alt="Virtual Battlespace (VBS3) by Bohemia Interactive Simulations"/></a>
+			<h4>VBS</h4>
+			<p>
+				<a href="http://www.bisimulations/vbs3">VBS</a> is a first-person virtual
+				environment supporting individual and collective training. VBS3 merges mainstream
+				game technology with simulation and training features and a comprehensive content
+				suite to deliever the most widely deployed virtual military training environment
+				globally. VBS is DIS and HLA enabled via
+				<a href="http://www.calytrix.com/products/lvcgame/">Calytrix LVC Game.</a>
+			</p>
+		</li>
+		<li class="one-third column tile">
+			<a class="thumbnail" href="/documentation/lvc/steelbeasts.html"><img src="assets/images/simsystems/steelbeasts.jpg" alt="Steel Beasts by eSim Games"/></a>
+			<h4>Steel Beasts</h4>
+			<p>
+				<a href="http://www.esimgames.com/">Steel Beasts</a> is a small-unit armored and
+				mechanized combat simulation. Distinguished from other simulations by a faithful
+				reproduction of tactical manoeuvres and Fire Control Systems, Steel Beasts provides
+				tactical training for single-vehicle, platoon and company scenarios. Steel Beasts
+				supports DIS and HLA via
+				<a href="http://www.calytrix.com/products/lvcgame/">Calytrix LVC Game.</a>
+			</p>
+		</li>
+
+		<!--                                 -->
+		<!-- Constructive Simulation Systems -->
+		<!--                                 -->
+		<li class="one-third column tile">
+			<a class="thumbnail" href="/documentation/lvc/jsaf.html"><img src="assets/images/simsystems/jsaf.png" alt="Joint Semi-Automated Forces Constructive Simulation"/></a>
+			<h4>JSAF</h4>
+			<p>
+				Joint Semi Automated Forces (JSAF) is a constructive simulation developed
+				by the United Stated Joint Forces Command (USJFCOM) with the aim of providing
+				a high fidelity entity level simulation to support training and experimentation.
+				JSAF is HLA-enabled natively and includes a DIS bridge.
+			</p>
+		</li>
+		<li class="one-third column tile">
+			<a class="thumbnail" href="/documentation/lvc/onesaf.html"><img src="assets/images/simsystems/onesaf.jpg" alt="OneSAF Objective System"/></a>
+			<h4>OneSAF</h4>
+			<p>
+				OneSAF is an entity-level, brigade-and-below constructive simulation system
+				developed by the US Army. It is designed to support a variery of needs
+				including training, experimentation, analysis, mission planning and rehersal.
+				OneSAF is distributed and supports DIS and HLA operation.</p>
+		</li>
+
+		<!--                         -->
+		<!-- Commercial Game Engines -->
+		<!--                         -->
+		<li class="one-third column tile">
+			<a class="thumbnail" href="/documentation/lvc/unity.html"><img src="assets/images/simsystems/unity.jpg" alt="The Unity3D Engine by Unity"/></a>
+			<h4>Unity</h4>
+			<p>
+				<a href="http://unity3d.com/">Unity3D</a> is a powerful cross-platform 3D engine
+				and auser-friendly development environment. With a growing user base supporting
+				everything from Indie game development to serious simulators, desktop and mobile,
+				the Unity platform continues to expand. Support within Unity comes via the 
+				<a href="http://www.calytrix.com/products/lvcgame/unity/">Calytrix LVC Game for Unity SDK</a>.
+			</p>
+		</li>
+	</ul>
+</div>
+
+<!-- Portico Enabled / End
+================================================== -->
+
+
+<!-- I see you / Start
+================================================== -->
+<!--
+<div class="container">
+	
+	<div class="one-fourth column">
+		<blockquote>
+			<div class="service-icon"><img src="assets/images/icons/view.png"
+			     width="20%" style="float:left;margin-top:-5px;padding-right:10px;" alt=""></div>
+			<p>I seeeee you.</p>
+			<small>That big eye-thing in the Hobbit</small>
+		</blockquote>
+	</div>
+
+	<div class="three_fourth column">
+		<p><span style="font-weight:600;">You never call anymore</span><br/>
+		   Sadly, unlike the big eye-thing in those movies, we don't see you. People click download
+		   and then they're gone! Do you love it? Hate it? We don't know.
+		   We don't even know who you are! If you won't talk to us, at least let us
+		   talk to you. Sign up to the <a href="http://eepurl.com/VLgSP">Announcements mailing list</a>.
+		</p>
+	</div>
+</div>
+-->
+
+<!-- I see you / End
+================================================== -->
+
+
+<!-- I see you Promo Bar / Start
+================================================== -->
+
+<div class="promobar promobar-eye">
+	<div class="container">
+		<h2 style="color:#ffffff;font-weight:900;text-align:center;">I seeeeeeeeeee you</h2>
+		<p style="color:#ffffff;">
+		   Unlike the big eye-thing in those movies, we don't see you. Your mother and I are
+		   very worried. You only call when you need something. At least sign up to
+		   the <a href="http://eepurl.com/VLgSP" style="color:#ffffff;">Announcements mailing list</a>.
+		</p>
+		<p style="color:#dddddd;">
+			<a href="http://eepurl.com/VLgSP" class="btn" style="width:160px;"><i class="icon-envelope-alt"></i>Call Me, Maybe?</a>
+		</p>
+	</div>
+</div>
+
+<!-- I see you Promo Bar / End
+================================================== -->
+
+
+<!-- Recent News / Start
+================================================== -->
+<div class="container">
+	
+	<!-- 3/4 column / Start -->
+	<div class="three_fourth column">
+		<section id="recent-news">
+			<h3>Recent News</h3>
+			
+			<ul class="clearfix">
+
+				<!-- Recent News Item -->
+				<li class="four columns alpha">
+					<article class="news-item">
+						
+						<div class="news-thumb">
+							<a href="#"><img src="assets/images/simsystems/vbs3-2.jpg" alt=""></a>
+						</div>
+
+						<!-- Post Informations -->
+						<div class="date">
+							<span class="month">Jul</span>
+							<span class="day">31</span>
+						</div>
+
+						<!-- Post Content -->
+						<div class="description">
+							<h4><a href="#">Portico v2.0.1 Released</a><br/></h4>
+							<p>With a bunch of community provided patches, the dev team can lay
+								virtually no claim to this release. Portico v2.0.1 is available
+								now for Windows, Linux and Mac OS X.
+							</p>
+						</div>
+
+					</article>
+				</li>
+				
+				<!-- Recent News Item -->
+				<li class="four columns alpha">
+					<article class="news-item">
+						
+						<div class="news-thumb">
+							<a href="#"><img src="assets/posts/news/2014/7/31/googlegroups.png" alt=""></a>
+						</div>
+
+						<!-- Post Informations -->
+						<div class="date">
+							<span class="month">Jul</span>
+							<span class="day">31</span>
+						</div>
+
+						<!-- Post Content -->
+						<div class="description">
+							<h4><a href="#">Getting Groupy With It</a><br/></h4>
+							<p>Worst. Pun. Ever. Let's just move on, shall we? Quick and accessible
+								community support is essential to any open source project. Portico
+								support is now powered by Google Groups, because... reasons.
+							</p>
+						</div>
+
+					</article>
+				</li>
+				
+				<!-- Recent News Item -->
+				<li class="four columns alpha">
+					<article class="news-item">
+						
+						<div class="news-thumb">
+							<a href="#"><img src="assets/posts/news/2014/7/31/newwebsite.png" alt=""></a>
+						</div>
+
+						<!-- Post Informations -->
+						<div class="date">
+							<span class="month">Jul </span>
+							<span class="day">26</span>
+						</div>
+
+						<!-- Post Content -->
+						<div class="description">
+							<h4><a href="#">Portico Web 2.0</a><br/></h4>
+							<p>I used to have a website like you, then I took an arrow to the knee.
+								Not ones to let that stop us, we decided to release a new site.
+								New look, new content, new stress, now released!
+							</p>
+						</div>
+
+					</article>
+				</li>
+
+			</ul>
+		</section>
+	
+	</div>
+	<!-- 3/4 column / End -->
+	
+	<!-- 1/4 column / Start -->
+	<div class="one_fourth column">
+	
+		<section class="testimonials">
+			<h3>Testimonials</h3>
+			
+			<blockquote class="quote">
+				<div class="bubble">
+					<p>"In hendrerit, felis ac dapibus sollicitudin, leo leo tincidunt sapien, sit
+						amet blandit tellus augue at arcu. Sed placerat adipiscing mi vitae
+						vulputate. Sed odio nunc, congue elementum rhoncus massa. Pellentesque
+						tempus diam sit amet tortor volutpat urna aliquam. "</p>
+					<div class="quote-author">
+						<cite>
+							<strong>John G. Riffe,</strong>
+							<span>Engineer</span>
+						</cite>
+					</div>
+				</div>
+			</blockquote>
+			
+			<blockquote class="quote">
+				<div class="bubble">
+					<p>"Pellentesque justo urna, feugiat quis bibendum vel, consequat nec diam.
+						Suspendisse potenti. Sed eu blandit neque. Nullam ut justo augue, sed
+						accumsan est. Nam mi felis, gravida sit amet accumsan vitae, elementum ac
+						lacus. Aenean ultricies sollicitudin dignissim.</p>
+					<div class="quote-author">
+						<cite>
+							<strong>Ann Smith,</strong>
+							<span>Redactor</span>
+						</cite>
+					</div>
+				</div>
+			</blockquote>
+			
+			<blockquote class="quote">
+				<div class="bubble">
+					<p>"Suspendisse ultrices lorem sed ante mollis non luctus mauris convallis.
+						In sed massa mauris, sit amet iaculis augue. Etiam dignissim fringilla
+						vehicula. Proin tempus lacus ac velit convallis facilisis. Vestibulum
+						ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+						Curae."</p>
+					<div class="quote-author">
+						<cite>
+							<strong>John Doe,</strong>
+							<span>Designer</span>
+						</cite>
+					</div>
+				</div>
+			</blockquote>
+		</section>
+
+	</div>
+	<!-- 1/4 column / End -->
+	
+</div>
+<!-- ==================================================
+Recent News / End -->
+
+
+
+		
+<!-- Footer / Start
+================================================== -->
+<footer>
+  <section id="footer-mainn">
+    <div class="container">
+
+      <!-- Project Information -->
+      <div class="three columns">
+        <h4>Project</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="about/index.html">About Portico</a></li>
+          <li><a href="about/index.html#devteam">Developer Team</a></li>
+          <li><a href="about/roadmap.html">Status and Roadmap</a></li>
+          <li><a href="/get.html">Get Portico</a></li>
+          <li><a href="/nightly.html">Nightly Builds</a></li>
+        </ul>
+      </div>
+
+      <!-- User Documentation -->
+      <div class="three columns">
+        <h4>For Users</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="documentation/user/gettingstarted.html">Getting Started with Portico</a></li>
+          <li><a href="documentation/guides/index.html">Portico and LVC Tools</a></li>
+          <li><a href="documentation/user/switching.html">Switching to Portico</a></li>
+          <li><a href="documentation/user/configure.html">Configuring Portico</a></li>
+          <li><a href="documentation/user/troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="documentation/user/faq.html">Portico FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Developer Documentation -->
+      <div class="three columns">
+        <h4>For Developers</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="documentation/developer/welcome.html">Welcome to the HLA</a></li>
+          <li><a href="documentation/developer/java.html">Writing Java Federates</a></li>
+          <li><a href="documentation/developer/cpp.html">Writing C++ Federates</a></li>
+          <li><a href="documentation/developer/apistatus.html">Portico API Status</a></li>
+          <li><a href="documentation/developer/building.html">Building Portico</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Documentation -->
+      <div class="two columns">
+        <h4>Community</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="news/">Latest News</a></li>
+          <li><a href="community/bugs.html">Reporting Bugs</a></li>
+          <li><a href="community/index.html#mailing-lists">Mailing Lists</a></li>
+          <li><a href="community/index.html#forums">Community Forums</a></li>
+          <li><a href="community/contributing.html">Contributing</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="five columns" style="margin-left:20px;margin-right:0;">
+        <h4>Commercial Support</h4>
+        <hr class="smalline"/>
+        <p><img src="assets/images/logos/calytrix-logo-icon.jpg" class="img-circle pull-left"/>
+          <address>
+            &nbsp;&nbsp;<b>Calytrix Technologies</b><br>
+            &nbsp;&nbsp;Level 2, 110 William St <br/>
+            &nbsp;&nbsp;Perth, Western Australia, 6000<br/>
+            &nbsp;&nbsp;<abbr title="Email"><b>E:</b></abbr> sales@calytrix.com<br/>
+            &nbsp;&nbsp;<abbr title="Phone"><b>P:</b></abbr> +61 8 9226 4288<br/>
+            &nbsp;&nbsp;<a href="/contact.html"><i class="icon-pencil"></i> Go to contact form</a>
+          </address>
+        </p>
+
+        <!-- Mailchimp Signup -->
+        <!--
+        <p>
+          <h4 style="margin-top:0;padding-top:5px;">Announcement List</h4>
+          <div class="newsletter">
+            <form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
+            <input type="email" value="you@yourcompany.com"
+                name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+                onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+            <input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+          </form>
+          </div>
+        </p>
+        -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="footer-bar">
+    <div class="container">
+      <div class="eight columns">
+        <div class="footer-logo"><span>2014 © The Portico Project.</span></div>
+      </div>
+      
+      <div class="eight columns">
+        <ul class="footer-links">
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<!-- ==================================================
+Footer / End -->
+
+
+		<script src="assets/js/prism.js"></script>
+
+		
+	</body>
+
+</html>

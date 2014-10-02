@@ -1,0 +1,929 @@
+/*
+ * Custom stylesheet for Portico and OpenLVC
+ */
+
+/* ----------------------------------------
+ * Flat-UI Background Colorws
+ * In swatch pairs from flatuicolors.com
+ * ------------------------------------- */
+Flat background colours in swatch pairs from http://flatuicolors.com/ */
+.background-white        { background-color: #ffffff; }
+.background-black        { background-color: #000000; }
+
+.background-turquoise    { background-color: #1abc9c !important; }
+.background-greensea     { background-color: #16a085 !important; }
+
+.background-emerald      { background-color: #2ecc71 !important; }
+.background-nephritis    { background-color: #27ae60 !important; }
+
+.background-peterriver   { background-color: #3498db !important; }
+.background-belizehole   { background-color: #2980b9 !important; }
+
+.background-wetasphalt   { background-color: #34495e !important; }
+.background-midnightblue { background-color: #2c3e50 !important; }
+
+.background-sunflower    { background-color: #f1c40f !important; }
+.background-orange       { background-color: #f39c12 !important; }
+
+.background-carrot       { background-color: #e67e22 !important; }
+.background-pumpkin      { background-color: #d35400 !important; }
+
+.background-alizarin     { background-color: #e74c3c !important; }
+.background-pomegranate  { background-color: #c0392b !important; }
+
+.background-clouds       { background-color: #ecf0f1 !important; }
+.background-silver       { background-color: #bdc3c7 !important; }
+
+.background-concrete     { background-color: #95a5a6 !important; }
+.background-asbestos     { background-color: #7f8c8d !important; }
+
+.theme-red               { background-color: #fc6264 !important; } /* from the vena theme */
+.theme-brown             { background-color: #fc7373 !important; } /* from the vena theme */
+.theme-blue              { background-color: #5dd7e2 !important; } /* from the vena theme */
+.theme-orange            { background-color: #c05f06 !important; } /* from the vena theme */
+.theme-green             { background-color: #9ecc3b !important; } /* from the vena theme */
+.theme-grey              { background-color: #575757 !important; } /* from the vena theme */
+.alt-blue                { background-color: #1799dd !important; } /* from coming-soon theme */
+
+/* --------------------------------------------------       
+ * Banner overlay at top of screen for announcements
+ * ----------------------------------------------- */
+ /* To use properly, must wrap in div that specifies the appropriate background colour */
+.banner
+{
+	/* width: 100%; */
+	position: relative; width: 1200px; margin: 0 auto;
+	padding: 0 0 5px 0;
+}
+
+.banner p
+{
+	padding: 15px 0 0 0;
+	margin-left: 20px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.banner .close{ color: #ffffff; opacity: 1.0; }
+
+/* --------------------------------------------------       
+ * Main body overrides
+ * ----------------------------------------------- */
+body
+{
+	-webkit-font-smoothing:subpixel-antialiased;
+	/*-webkit-font-smoothing:antialiased;*/
+	/*-webkit-font-smoothing:none;*/
+}
+
+/* --------------------------------------------------       
+ * Text style overrides
+ * ----------------------------------------------- */
+h1, h2, h3, h4, h5, h6
+{
+	margin: 10px 0;
+	/*line-height: 20px;*/
+	color: #555555;
+	text-rendering: optimizelegibility;
+	font-weight:900;
+}
+
+h1, h2
+{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+h1 span, h2 span
+{
+	font-weight: 300;
+	color: #888888;
+}
+
+.page-title h1
+{
+	margin: 0;
+}
+
+p
+{
+	/*margin-bottom:0.8em;*/
+	/*line-height: 22px; default:25 */
+	font-weight: 300;
+	margin-bottom: 0.8em;
+	font-size: 16px;
+	color: #34495e;
+}
+
+/* code style for documentation */
+/* 
+   This is all weird. When converting from Markdown, fenced blocks render as <pre><code>... blocks,
+   while backtick (`) inline blocks end up just as <code> blocks. As such, we need to ensure that
+   we render <pre><code> differently from just <code>.
+
+   To make it more interesting, we really don't want to apply inline style to ALL <code> blocks,
+   only those converted from backticks. Since we have a specific template for this thing, and it
+   wraps everything in an <article> tag, we zero-in on inline code in that specific circumstance.
+   We also support <span class="code">...</span> for inline code across the whole site.
+*/ 
+pre, pre[class*="language-"]
+{
+	margin: 1em 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
+pre, code, pre code, .code
+{
+	/* make sure the background is the same colour for both the wrapper and nested versions */
+	background-color: #4e4e4e !important;/*
+	background-color: #777 !important;*/
+}
+
+/* set up fenced code block specifics - these must  be !important so they override the more
+   specific settings from the article.post... settings below. */
+pre code
+{
+	display: block !important;
+	white-space: pre !important;
+	line-height: 18px !important;
+	font-size: 14px !important;
+	text-align: left !important;
+	padding: 20px 0 20px 20px !important;
+	margin: 0 0 0 0 !important;
+
+	color: #ffffff;	
+}
+
+/* define the style for in-line code within a paragraph */
+.code, article.post .post-content code /* pretty much copied from the style for labels */
+{
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	border-radius: .25em;
+	display: inline;
+	padding: .2em .4em .2em;
+	font-size: 85%;
+	font-weight: normal;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+/*  Lists with circle icons */
+.default-list
+{
+	list-style-type: disc;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	font-weight: 300;
+}
+
+.default-list li
+{
+	line-height: 25px; margin-left: 23px; font-size:17px;
+}
+
+.list
+{
+	font-weight: 300;
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
+
+.bigger /* should be put on <p> elements */
+{
+	font-size: 17px;
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+.smaller
+{
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/* should be put on <p> elements with darker backgrounds */
+.lighter  { color: #cccccc; }
+.lightest { color: #ffffff; }
+.darker   { color: #777777; }
+.darkest  { color: #555555; }
+
+.lead
+{
+	font-size: 18px;
+	font-weight: 200;
+	margin-bottom: 20px;
+}
+
+.fullwidth
+{
+	padding: 40px 0; 
+	margin: 55px 0;
+	background: #f5f5f5;
+}
+
+.dragdown { margin-bottom: -50px !important; }
+.dragup { margin-top: -50px !important; }
+.no-margin{ margin-top: 0px; margin-bottom: 0px; }
+
+.middle{ margin-left:auto; margin-right:auto;}
+
+/* --------------------------------------------------       
+ * Full-width Bands - Containers with colours
+ * ----------------------------------------------- */
+.band-turquoise
+{
+	background-color: #1abc9c;
+	color: #ffffff;
+}
+.band-turquoise h2      { color: #ffffff; }
+.band-turquoise h2 span { color: #cccccc; }
+
+.band-midnightblue
+{
+	background-color: #2c3e50;
+	color: #ffffff;
+}
+.band-midnightblue h2      { color: #ffffff; }
+.band-midnightblue h2 span { color: #cccccc; }
+
+.band-silver
+{
+	background-color: #bdc3c7;
+	color: #ffffff;
+}
+.band-silver h2      { color: #ffffff; }
+.band-silver h2 span { color: #cccccc; }
+
+
+/* --------------------------------------------------       
+ * Hero-Unit Customizations/Augmentations
+ * The following is used along with the hero-unit
+ * used for the site header
+ * ----------------------------------------------- */
+.site-header
+{
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 30px;
+	padding-top: 2em;
+	padding-bottom: 3em;
+	background-color: #ffffff;
+}
+
+.site-header p{ line-height: 30px; }
+.site-header img{ margin-bottom: 10px; }
+
+a.logo
+{
+	height:40px;
+	width:200px;
+	padding-top: 10px;
+	padding-top: 11px;
+}
+
+/* --------------------------------------------------       
+ * Button overrides
+ * ----------------------------------------------- */
+a.btn.thin
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+/* --------------------------------------------------       
+ * Version tabs/pills on the front page.
+ * ----------------------------------------------- */
+/* The container - reduce the zealous padding a bit */
+#tabs_content_container
+{
+	padding: 5px 0px;
+}
+
+.version-pane
+{
+	margin-left: 0px;
+}
+
+.version-pane p
+{
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
+.version-pane h1
+{
+	font-family: Roboto, "Open Sans", "Roboto";
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 1.0;
+	margin: 0 0 0 0;
+	color: #555555;
+}
+
+.version-pane small
+{
+	font-size: 13px;
+}
+
+.version-pane img
+{
+	width: 48px; /* os-logo icons */
+	display: inline;
+}
+
+/* for pass/fail nightly build badges */
+.version-pane-label
+{
+	display: inline-block;
+	width: 48px; /* meant to be same as os-logo - this makes it look that way. no idea why */
+	padding: 0 0 0 0;
+	text-align: center;
+	color: #ffffff;
+	font-size: 75%;
+}
+
+.version-pane a:visited,
+.version-pane a:link
+{
+	color: #555555;
+}
+
+/* --------------------------------------------------       
+ * Labels (via Bootstrap)
+ * ----------------------------------------------- */
+.label
+{
+	border-radius: .25em;
+	display: inline;
+	padding: .2em .6em .2em;
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+
+.label-default { background-color: #777; }
+.label-primary { background-color: #428bca; }
+.label-success { background-color: #5cb85c; }
+.label-info    { background-color: #5bc0de; }
+.label-warning { background-color: #f0ad4e; }
+.label-danger  { background-color: #d9534f; }
+
+/*
+.label-default{ background-color: #999999; }
+.label-primary{ background-color: #008cba; }
+.label-success{ background-color: #43ac6a; }
+.label-warning{ background-color: #e99002; }
+.label-danger { background-color: #f04124; }
+.label-info   { background-color: #5bc0de; }
+*/
+
+/* --------------------------------------------------       
+ * Alerts
+ * ----------------------------------------------- */
+.alert-heading
+{
+	color: #ffffff;
+	margin: 0;
+	font-weight: 900;
+}
+
+.alert-orange
+{
+	background-color: #ff7518;
+	padding: 15px;
+	margin: 20px 0 20px 0;
+}
+
+.alert-orange p
+{
+	color: #ffffff;
+}
+
+.alert-orange a:visited,
+.alert-orange a:link
+{
+	color: #ffffff;
+	text-decoration:underline;
+}
+
+.success p
+{
+	color: #ffffff;
+}
+
+/* --------------------------------------------------
+ * Table Overrides
+ * ----------------------------------------------- */
+table.default-table td
+{
+	background-color: #ecf0f1;
+}
+
+/* --------------------------------------------------       
+ * Thumbnail Sections -- from Bootstrap Examples
+ * ----------------------------------------------- */
+.tiles h4
+{
+  margin: 10px 0 5px;
+}
+
+.tiles p
+{
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.tiles .thumbnail
+{
+  margin-bottom: 9px;
+  background-color: #ddd;
+}
+
+.tile p
+{
+	margin-bottom: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.thumbnail
+{
+	display: block;
+	padding: 4px;
+	line-height: 20px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+	   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+	        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	     -o-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus
+{
+	border-color: transparent;
+	background-color: #bbbbbb;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	        box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.thumbnail > img
+{
+	display: block;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* --------------------------------------------------       
+ * Block Quotes
+ * ----------------------------------------------- */
+blockquote
+{
+	border-left: 5px solid #fc7373; /* color from 8.css */
+	margin: 0 0 20px;
+	padding: 12px 15px;
+}
+
+blockquote p
+{
+	/*margin-bottom: 0;*/
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.25;
+	font-style: italic;
+	color: #777;
+}
+
+blockquote small
+{
+	display: block;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 20px;
+	font-style: normal;
+	color: #dfdfdf;
+	color: #ccc;
+}
+
+blockquote small:before
+{
+	content: '\2014 \00A0';
+}
+
+.promobar-eye
+{
+	background-color: transparent;
+	background:url('../images/eye.jpg') repeat center center;
+}
+
+/* --------------------------------------------------
+ * Contact Page Sidebar
+ * ----------------------------------------------- */
+.contact-sidebar li
+{
+	font-weight: 300;
+}
+
+/* --------------------------------------------------       
+ * Footer text styles
+ * ----------------------------------------------- */
+.footer
+{
+	padding-top:40px;
+	background-color: #c0392b; /* pomegranate */
+	font-size: 12px;
+	color: #222222; /* off-black */
+}
+
+footer a
+{
+	font-weight: 300;
+}
+
+address  { font-weight: 300; line-height: 1.6em; }
+address b{ font-weight: 700; line-height: 1.6em; }
+
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #dfdfdf;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+/** Newsletter Input Field **/
+.newsletter input
+{
+	margin: 10px 0 0 0;
+	text-align: start;
+	border: 1px solid #e0e0e0;
+	padding: 0 0 0 10px;
+	outline: none;
+	font-size: 13px;
+	color: #888;
+	max-width: 75%;
+	display: block;
+	background: #fff;
+	-webkit-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+	box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+	border-radius: 2px;
+}
+
+.newsletter input:focus
+{
+	border: 1px solid #d6d6d6;
+	color: #888;
+}
+
+/* --------------------------------------------------       
+ * Want to Contribute? Banner
+ * ----------------------------------------------- */
+.contribute, .contribute h2
+{
+	text-align: center;
+	color: #ffffff;
+}
+
+
+/* --------------------------------------------------       
+ * Team Social - List of social icons under dev team
+ * ----------------------------------------------- */
+.team-social
+{
+	list-style: none;
+	margin-left: 0;
+}
+
+.team-social li
+{
+	float: left;
+	margin-left: 10px;
+}
+
+.team-social li:first-child
+{
+	margin-left: 0;
+}
+
+.team-social a
+{
+	/* background: #49535d; /* original */
+	background: #fc6264;    /* theme red */
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	height: 30px;
+	line-height: 1.875;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition:	all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition:	all 0.2s ease;
+	width: 30px;
+}
+
+.team-social a:hover
+{
+	background: #575757; /* theme-grey */
+}
+
+/* --------------------------------------------------       
+ * Celebrity Endorsement
+ * ----------------------------------------------- */
+.celebrity
+{
+	/*margin: 0;*/
+}
+
+.celebrity-flat
+{
+	padding-bottom: 0; /* make sure their image rides low on the line - where Snoop likes it */
+}
+
+.celebrity p
+{
+	padding-top: 1.5em;
+	font-size: 18px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.celebrity input
+{
+	margin: 10px auto 10px auto;
+	text-align: start;
+	border: 1px solid #e0e0e0;
+	padding: 0 0 0 10px;
+	outline: none;
+	font-size: 13px;
+	color: #888;
+	max-width: 33%;
+	display: block;
+	background: #f8f8f8;
+	border-radius: 2px;
+}
+
+/* --------------------------------------------------       
+ * Get Portico
+ * ----------------------------------------------- */
+.get-portico
+{
+	padding: 0;
+	border: 1px solid #dadada;
+	border-top: none;
+	border-bottom: none;
+}
+
+.plan h3
+{
+	margin: 0;
+}
+
+.nightly h2
+{
+	color: #ffffff;
+}
+
+.nightly h2 span
+{
+	color: #cccccc;
+}
+
+.nightly .get-portico
+{
+	border: 0;
+}
+
+.nightly .plan-features
+{
+	background-color: #464646;
+	color: #cccccc;
+	border: 0;
+}
+
+.nightly .plan-features ul li
+{
+	border-bottom: 1px solid #888888;
+}
+
+.nightly .plan-price:after {
+	border-color: #ffffff transparent;
+	display: block;
+}
+
+
+/* --------------------------------------------------       
+ * Misc Stuff
+ * ----------------------------------------------- */
+.img-circle
+{
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
+
+
+
+/* --------------------------------------------------       
+ * Documentation Template
+ * ----------------------------------------------- */
+
+/* For <code> formatting, see the text formatting section in this file */
+
+strong
+{
+	font-family: Roboto, "Open Sans";
+	font-weight: 700;
+}
+
+/* Sidebar Table of Contents
+   Reduce the sub-list size so that it slots in under the major headings */
+.widget ul.categories-list li ul{ margin: -5px 0 0 10px; }
+
+.widget ul.categories-list li a{
+	padding: 5px 0;
+	display: block;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.widget ul.categories-list li ul li a{
+	padding: 0.5em 0 0 1em;
+	display: block;
+	font-size:13px;
+}
+
+.widget ul.categories-list li ul li a:before{
+	content: "\f054";
+	font-size: 9px;
+	font-family: "FontAwesome";
+	margin-right: 9px;
+	float: left;
+	margin-top: 4px;
+}
+
+.widget ul.tags-list li{ font-weight: 300; }
+
+.meta img
+{
+	width: auto;
+	height: 14px;
+}
+
+/* Articles have a big booty because they have a comment section underneath. Slim it down */
+article.post .post-content
+{
+	padding-bottom: 40px;
+	margin-bottom: 10px;
+	border-bottom: none; /* 2px solid #EEE; */
+}
+
+article.post .post-content h3{ margin-top: 30px; }
+article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.5em; }
+
+/* Fix the lists by giving them back some basic style, but only for articles */
+article ul { list-style-type: disc; margin-bottom: 10px; }
+article ol { list-style-type: decimal; margin-bottom: 10px; }
+article li { line-height: 1.5em; margin-left: 3em; font-size:17px; font-weight:300; line-height: 1.5em; }
+
+/* Different list style for tabs */
+article .tabs ul {  margin: 0; }
+article .tabs li { margin: 0; font-size:17px; font-weight:300; line-height: 1.5em; }
+
+/* Tables are wonky for articles (generated from Markdown) because they're not given the css
+   class they would be if we did them by hand, and rather than force every table to have that
+   extra bit of annotation just to make them look "normal", we'll fix the styling for all
+   tables that are inside an <article> */
+article table
+{
+	/*width: 100%;*/
+	border-collapse: separate;
+	border-spacing: 0;
+	border: none;
+	margin-bottom: 15px;
+}
+
+article table th
+{
+	border: 1px solid #E7E7E7;
+	border-right: none;
+	background-color: #F5F5F5;
+	text-align: left;
+	padding: 13px 15px 10px;
+	color: #454545;
+	vertical-align: top;
+	font-size: 13px;
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+}
+
+article table td
+{
+	padding: 10px 15px;
+	border: #E7E7E7 1px solid;
+	border-top: none;
+	border-right: none;
+	font-weight: 300;
+}
+
+article table td strong
+{
+	font-size: 16px;
+	font-weight: 600;
+	font-family: Roboto, "Open Sans";
+}
+
+/* borders - put the border on the far right edge */
+article table th:last-child  { border-right: 1px solid #E7E7E7; }
+article table td:last-child { border-right: 1px solid #E7E7E7; }
+
+/* borders - round these out, because... reasons */
+article table th:first-child { border-radius: 4px 0 0 0; -moz-border-radius: 4px 0 0 0; -webkit-border-radius: 4px 0 0 0; }
+article table th:last-child  { border-radius: 0 4px 0 0; -moz-border-radius: 0 4px 0 0; -webkit-border-radius: 0 4px 0 0; }
+article table tr:last-child td:first-child{ border-radius: 0 4px 0; -moz-border-radius: 0 4px 0; -webkit-border-radius: 0 4px 0; }
+article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-border-radius: 0 0 4px 0; -webkit-border-radius: 0 0 4px 0; }
+
+/* Frequency Asked Questions */
+.faq h1, h2
+{
+	padding-top: 30px;
+}
+
+/* --------------------------------------------------       
+ * Scrolling Sidebar
+ * ----------------------------------------------- */
+/* So it sticks nicely to the bottom when it hits and doesn't jump back to the top of the page */
+.affix-bottom
+{
+	position: absolute;
+	width:250px;
+}
+
+
+/* #Dekstop (960 Grid)
+================================================== */
+@media only screen and (min-width: 960px) {
+	#menu, #search { display: block; }
+	.main-info{ display: block; }
+
+	#sidebar.affix-top
+	{
+		position: static;
+		margin-top:30px;
+		width:250px;
+	}
+
+	#sidebar.affix
+	{
+		position: fixed;
+		top:30px;
+		width:250px;
+	}
+
+	#sidebar li.active
+	{
+		border:0 #fc7373 solid;
+		border-right-width:4px;
+	}
+}
+
+/* Everything below the Desktop
+   Will be overridden by those above
+================================================== */
+@media screen and (max-width: 959px) {
+
+	#menu, #search { display: none; }
+	article.post .main-info{ display: none; }
+	article.post .post-content{ margin-left: 0px; }
+
+	.affix-top, .affix
+	{
+		position: static;
+		width:250px;
+	}
+
+}

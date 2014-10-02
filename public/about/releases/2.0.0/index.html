@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+			<!-- Basic Page Needs -->
+	<meta charset="utf-8" />
+	<title>The Portico Project</title>
+    <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
+    <link rel="canonical" href="http://timpokorny.github.io/about/releases/2.0.0/">
+	<link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../assets/favicon.ico" type="image/x-icon">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" href="../../../assets/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../../assets/css/colors/8.css" id="color" />
+	<link rel="stylesheet" href="../../../assets/css/overrides.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../../../assets/css/prism.css">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="../../../assets/js/jquery-1.9.0.min.js"></script>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="../../../assets/js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.quovolver.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.tooltipster.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.jpanelmenu.js"></script>
+	<script type="text/javascript" src="../../../assets/js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript" src="../../../assets/js/swipe.js"></script>
+	<script type="text/javascript" src="../../../assets/js/retina.js"></script>
+	<script type="text/javascript" src="../../../assets/js/custom.js"></script>
+
+	</head>
+
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
+
+		
+<!-- ===================================================================== -->
+<!--                            Navigation Bar                             -->
+<!-- ===================================================================== -->
+<header class="menu">
+	<div class="container">
+	
+		<!-- Mobile Only Menu Button  -->
+		<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+		
+		<!-- Logo  -->  
+		<a class="logo" href="../../../index.html"><img src="../../../assets/images/logo.png"/></a>
+		
+		<!-- Navigation -->   
+		<nav>
+			<ul class="navigation">
+				<li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
+				<li class="current"><a href="../../../index.html">Home</a></li>
+
+				<li><a href="../../../get.html">Get</a>
+					<ul>
+						<li><a href="../../../get.html#stable">Stable</a></li>
+						<li><a href="../../../get.html#nightly">Nightly</a></li>
+						<li><a href="../../../get.html#archive">Archive</a></li>
+					</ul>
+				</li>
+
+				<li><a href="../../../about/index.html" class="arrow">About</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../../about/index.html">About Portico</a></li>
+						<li><a href="../../../about/index.html#devteam">Developer Team</a></li>
+						<li><a href="../../../about/index.html#history">Portico History</a></li>
+						<li><a href="../../../about/status.html">Status and Roadmap</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../../documentation/" class="arrow">Documentation</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../../documentation/user/" class="arrow">For Users</a>
+							<ul>
+								<li><a href="../../../documentation/user/gettingstarted.html">Getting Started</a></li>
+								<li><a href="../../../documentation/user/switching.html">Switching to Portico</a></li>
+								<li><a href="../../../documentation/user/configure.html">Configuring Portico</a></li>
+								<li><a href="../../../documentation/user/performance.html">Performance</a></li>
+								<li><a href="../../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
+								<li><a href="../../../documentation/user/faq.html">Portico FAQ</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../documentation/developer/" class="arrow">For Developers</a>
+							<ul>
+								<li><a href="../../../documentation/developer/welcome.html">Welcome to the HLA</a></li>
+								<li><a href="../../../documentation/developer/java.html">Java Federates</a></li>
+								<li><a href="../../../documentation/developer/cpp.html">C++ Federates</a></li>
+								<li><a href="../../../documentation/developer/apistatus.html">Portico API Status</a></li>
+								<li><a href="../../../documentation/developer/building.html">Building Portico</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../documentation/guides/" class="arrow">Portico Guides</a>
+							<ul>
+								<!-- Live -->
+								<!-- Virtual -->
+								<li><a href="../../../documentation/guides/vbs.html">VBS</a></li>
+								<li><a href="../../../documentation/guides/steelbeasts.html">Steel Beasts</a></li>
+								<li><a href="../../../documentation/guides/xplane.html">X-Plane</a></li>
+								<li><a href="../../../documentation/guides/unity.html">Unity3D</a></li>
+								<!-- Constructive -->
+								<li><a href="../../../documentation/guides/onesaf.html">OneSAF</a></li>
+								<li><a href="../../../documentation/guides/jsaf.html">JSAF</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../about/status.html#supported-platforms">Supported Platforms</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../../community/" class="arrow">Community</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../../news/">Latest News</a></li>
+						<li><a href="../../../community/index.html#mailing-lists">Mailing Lists</a></li>
+						<li><a href="../../../community/index.html#forums">Community Support</a></li>
+						<li><a href="../../../community/bugs.html">Reporting Bugs</a></li>
+						<li><a href="../../../community/contributing.html">Contributing</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../../support/">Support</a></li>
+
+				<li><a href="../../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div><!-- End of container -->
+</header>
+<!-- Main Menu / End
+================================================== -->
+
+
+		<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="four columns">
+			<h1>Portico v2.0.0</h1>
+		</div>
+		
+		<nav class="twelve columns">
+			<ul class="breadcrumbs">
+				<li><a href="../../../index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="../../../about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="../../../about/status.html#release-notes">Releases</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li>2.0.0 </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+
+<!-- Introduction / Start
+================================================== -->
+<div class="container">
+
+	<div class="four columns">
+		<table class="default-table" style="width:auto;">
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>April 1st, 2013</td>
+			</tr>
+			<tr>
+				<td><strong>Status</strong></td>
+				<td><span class="bigger label label-success">Released</span></td>
+			</tr>
+			<tr>
+				<td><strong>Download</strong></td>
+				<td><a href="../../../get.html#archive">Archive</a></td>
+			</tr>
+			<tr>
+				<td><strong>Git Tag</strong></td>
+				<td><a href="https://github.com/openlvc/portico/releases/tag/portico-2.0.0">portico-2.0.0</a></td>
+			</tr>
+			<tr>
+				<td><strong>Baseline</strong></td>
+				<td><a href="https://github.com/openlvc/portico/tree/maintenance-2.0.x">/portico-2.0.x</a></td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="eleven columns">
+
+				<div class="alert success">
+			<p>This is a Major Release. It contains significant updates and is recommended for all users.</p>
+		</div>
+
+
+
+		<p class="bigger">
+			<span class="dropcap">N</span>otwithstanding the date, I am now very pleased to report
+			that the latest release of Portico, <em>v2.0.0</em>, is now available and ready for
+			download. This has been the focus of a large development and testing effort in recent
+			months and brings with it a number of significant updates.
+		</p>
+
+		<p class="bigger">
+			The Portico v2.0.0 release signals the completion of a large development and testing
+			effort over the past 6 months. This major update has two main focus areas:
+		</p>
+
+		<ul class="bigger list nested-list">
+			<li>Initial Support for IEEE-1516 (2010) -- HLA Evolved</li>
+			<li>Enhanced C++ compiler support to 32/64-bit and cover Visual Studio 2005, 2008 and 2010</li>
+			<li>Network Binding Updates</li>
+			<li>Move to Git and GitHub</li>
+		</ul>
+
+		<p class="bigger">
+			In addition to these main focus areas, a number of bug fixes, minor enhancements
+			and performance improvements have been added, and the version of the underlying
+			networking library has been updated to provide increased performance and stability.
+		</p>
+
+	</div>
+
+</div>
+<!-- Introduction / End
+================================================== -->
+
+
+<!-- HLA Evolved Support / Start
+================================================== -->
+<div class="container">
+
+	<div class="fifteen columns">
+		<h2 style="margin-bottom:30px;">HLA Evolved</h2>
+
+		<p class="bigger">
+			The major update for Portico v2.0 has been the introduction of an IEEE-1516 (2010)
+			or HLA-Evolved interface. This work has been funded by Thales Group and brings with it
+			support for all the most commonly used services of the HLA Evolved interface.
+		</p>
+
+		<p class="bigger">From the Thales Press Release:</p>
+
+		<p class="bigger">
+			<em>Dan Gregory, responsible for modelling and simulation activities in the Thales Group
+			Technical Directorate, identified that the lack of quality open source RTIs was
+			restricting the adoption of standards-based architectures and was also causing
+			architects to make design compromises in order to optimise licensing costs.</em>
+		</p>
+
+		<blockquote>
+			"We saw the opportunity for a quick-win in kick-starting HLA adoption, particularly
+			outside the training community. Portico was an obvious choice for meeting this objective."
+		</blockquote>
+
+		<img src="500px-Thales-Logo.jpg" class="middle"/>
+		<img src="500px-Calytrix-Logo.jpg" class="middle"/>
+
+	</div>
+
+</div>
+<!-- HLA Evolved Support / End
+================================================== -->
+
+<!-- C++ Compiler Support / Start
+================================================== -->
+<div class="container">
+
+	<div class="sixteen columns">
+		<h2 style="margin-bottom:30px;">C++ Compiler Support</h2>
+
+		<p class="bigger">
+			As part of the work completed with Thales, a considerable revamp of the supported C++
+			compilers for both the HLA v1.3 and IEEE-1516e interfaces has been completed. This
+			has seen support added for 64-bit across Windows, Linux and Mac OSX, as well as the
+			general expansion of compiler support on Windows. The full list of supported
+			environments is listed below:
+		</p>
+
+		<ul class="bigger list nested-list">
+			<li>Visual Studio 2005 32-bit</li>
+			<li>Visual Studio 2005 64-bit</li>
+			<li>Visual Studio 2008 32-bit</li>
+			<li>Visual Studio 2008 64-bit</li>
+			<li>Visual Studio 2010 32-bit</li>
+			<li>Visual Studio 2010 64-bit</li>
+			<li>GCC 4+ 32-bit on Linux</li>
+			<li>GCC 4+ 64-bit on Linux</li>
+			<li>GCC 4+ 64-bit on Mac OS X</li>
+		</ul>
+
+	</div>
+
+</div>
+<!-- C++ Compiler Support / End
+================================================== -->
+
+<!-- Network Binding Update / Start
+================================================== -->
+<div class="container">
+
+	<div class="sixteen columns">
+		<h2 style="margin-bottom:30px;">Network Binding Update</h2>
+
+		<p class="bigger">
+			This release of Portico has also seen a significant update to the underlying
+			communications library used to network federates together. This binding was last
+			updated with the Portico v0.9 release, and has now been moved to a newer version
+			of the supporting reliable-multicast library (<a href="http://www.jgroups.org">JGroups</a>).
+			There have been a number of stability and throughput improvements implemented in
+			recent versions of JGroups, as well as a number of API changes (making a quick update
+			a bit difficult!). 
+		</p>
+
+		<p class="bigger">
+			This update has now rolled into Portico v2.0.0.
+		</p>
+
+	</div>
+
+</div>
+<!-- Network Binding Update / End
+================================================== -->
+
+<!-- Github / Start
+================================================== -->
+<div class="container">
+
+	<div class="sixteen columns">
+		<h2 style="margin-bottom:30px;">Fork us on GitHub!</h2>
+
+		<p class="bigger">
+			Portico has now moved the hosting of its code from Subversion over to Git.
+			Given the largely distributed development nature of Portico, Git provides a number of
+			advantages and more readily supports the involvement of developers outside the
+			core group.
+		</p>
+
+		<p class="bigger">
+			You can find the Portico Git repositories on GitHub here:
+			<a href="https://github.org/openlvc/portico">https://github.com/openlvc/portico</a>
+		</p>
+
+		<a href="https://github.com/openlvc/portico"><img src="GitHub-Logo.jpg" class="middle"></a>
+
+	</div>
+
+</div>
+<!-- Github / End
+================================================== -->
+
+<!-- Kevin / Start
+================================================== -->
+<div class="fullwidth background-turquoise celebrity celebrity-flat dragdown">
+	<div class="container">
+		<img src="../../../assets/images/people/garnett.png" style="float:left;width:250px;"/>
+		<p>
+			If Kevin is to be believed, <a href="https://www.youtube.com/watch?v=Wcz_kDCBTBk" style="color:#ffffff">anything
+			is possible</a>. Where "anything" includes you signing up to the Portico announcement
+			mailing list, he may well be right. Is he? Don't let Kevin down. He's a big guy.
+		</p>
+
+				<form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8"
+		      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+		      class="validate" target="_blank" novalidate>
+
+			<input type="email" value="you@yourcompany.com" name="EMAIL" class="email"
+			       id="mce-EMAIL" placeholder="email address"
+			       onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+			<div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+			<input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+		</form>
+
+	</div>
+</div>
+<!-- Kevin / End
+================================================== -->
+
+
+
+
+
+		
+<!-- Footer / Start
+================================================== -->
+<footer>
+  <section id="footer-mainn">
+    <div class="container">
+
+      <!-- Project Information -->
+      <div class="three columns">
+        <h4>Project</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../about/index.html">About Portico</a></li>
+          <li><a href="../../../about/index.html#devteam">Developer Team</a></li>
+          <li><a href="../../../about/roadmap.html">Status and Roadmap</a></li>
+          <li><a href="../../..//get.html">Get Portico</a></li>
+          <li><a href="../../..//nightly.html">Nightly Builds</a></li>
+        </ul>
+      </div>
+
+      <!-- User Documentation -->
+      <div class="three columns">
+        <h4>For Users</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../documentation/user/gettingstarted.html">Getting Started with Portico</a></li>
+          <li><a href="../../../documentation/guides/index.html">Portico and LVC Tools</a></li>
+          <li><a href="../../../documentation/user/switching.html">Switching to Portico</a></li>
+          <li><a href="../../../documentation/user/configure.html">Configuring Portico</a></li>
+          <li><a href="../../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="../../../documentation/user/faq.html">Portico FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Developer Documentation -->
+      <div class="three columns">
+        <h4>For Developers</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../documentation/developer/welcome.html">Welcome to the HLA</a></li>
+          <li><a href="../../../documentation/developer/java.html">Writing Java Federates</a></li>
+          <li><a href="../../../documentation/developer/cpp.html">Writing C++ Federates</a></li>
+          <li><a href="../../../documentation/developer/apistatus.html">Portico API Status</a></li>
+          <li><a href="../../../documentation/developer/building.html">Building Portico</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Documentation -->
+      <div class="two columns">
+        <h4>Community</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../news/">Latest News</a></li>
+          <li><a href="../../../community/bugs.html">Reporting Bugs</a></li>
+          <li><a href="../../../community/index.html#mailing-lists">Mailing Lists</a></li>
+          <li><a href="../../../community/index.html#forums">Community Forums</a></li>
+          <li><a href="../../../community/contributing.html">Contributing</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="five columns" style="margin-left:20px;margin-right:0;">
+        <h4>Commercial Support</h4>
+        <hr class="smalline"/>
+        <p><img src="../../../assets/images/logos/calytrix-logo-icon.jpg" class="img-circle pull-left"/>
+          <address>
+            &nbsp;&nbsp;<b>Calytrix Technologies</b><br>
+            &nbsp;&nbsp;Level 2, 110 William St <br/>
+            &nbsp;&nbsp;Perth, Western Australia, 6000<br/>
+            &nbsp;&nbsp;<abbr title="Email"><b>E:</b></abbr> sales@calytrix.com<br/>
+            &nbsp;&nbsp;<abbr title="Phone"><b>P:</b></abbr> +61 8 9226 4288<br/>
+            &nbsp;&nbsp;<a href="/contact.html"><i class="icon-pencil"></i> Go to contact form</a>
+          </address>
+        </p>
+
+        <!-- Mailchimp Signup -->
+        <!--
+        <p>
+          <h4 style="margin-top:0;padding-top:5px;">Announcement List</h4>
+          <div class="newsletter">
+            <form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
+            <input type="email" value="you@yourcompany.com"
+                name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+                onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+            <input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+          </form>
+          </div>
+        </p>
+        -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="footer-bar">
+    <div class="container">
+      <div class="eight columns">
+        <div class="footer-logo"><span>2014 © The Portico Project.</span></div>
+      </div>
+      
+      <div class="eight columns">
+        <ul class="footer-links">
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<!-- ==================================================
+Footer / End -->
+
+
+		<script src="../../../assets/js/prism.js"></script>
+
+		
+	</body>
+
+</html>

@@ -5,6 +5,7 @@ description: "The Portico Project - Open Source HLA: By Jerks, For Jerks."
 baseurl: ""
 url: "http://timpokorny.github.io"
 github_username:  timpokorny
+destination: ../public/
 
 # Build settings
 markdown: redcarpet
