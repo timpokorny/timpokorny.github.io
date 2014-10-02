@@ -74,6 +74,8 @@ body
 	-webkit-font-smoothing:subpixel-antialiased;
 	/*-webkit-font-smoothing:antialiased;*/
 	/*-webkit-font-smoothing:none;*/
+
+	font: 14px "Open Sans", sans-serif;
 }
 
 /* --------------------------------------------------       
@@ -82,10 +84,10 @@ body
 h1, h2, h3, h4, h5, h6
 {
 	margin: 10px 0;
-	/*line-height: 20px;*/
 	color: #555555;
 	text-rendering: optimizelegibility;
 	font-weight:900;
+	font-family: "Lato", sans-serif;
 }
 
 h1, h2
@@ -109,7 +111,7 @@ h1 span, h2 span
 p
 {
 	/*margin-bottom:0.8em;*/
-	/*line-height: 22px; default:25 */
+	line-height: 1.6em;
 	font-weight: 300;
 	margin-bottom: 0.8em;
 	font-size: 16px;
@@ -184,7 +186,7 @@ pre code
 
 .default-list li
 {
-	line-height: 25px; margin-left: 23px; font-size:17px;
+	line-height: 1.5em; margin-left: 23px; font-size:17px;
 }
 
 .list
@@ -197,14 +199,14 @@ pre code
 .bigger /* should be put on <p> elements */
 {
 	font-size: 17px;
-	line-height: 25px;
+	line-height: 1.6em;
 	margin-bottom: 10px;
 }
 
 .smaller
 {
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 1.6em;
 }
 
 /* should be put on <p> elements with darker backgrounds */
@@ -318,7 +320,7 @@ a.btn.thin
 
 .version-pane h1
 {
-	font-family: Roboto, "Open Sans", "Roboto";
+	font-family: "Open Sans";
 	font-size: 48px;
 	font-weight: 300;
 	line-height: 1.0;
@@ -509,7 +511,7 @@ blockquote p
 	/*margin-bottom: 0;*/
 	font-size: 16px;
 	font-weight: 300;
-	line-height: 1.25;
+	line-height: 1.6em;
 	font-style: italic;
 	color: #777;
 }
@@ -637,7 +639,7 @@ abbr.initialism {
 	display: block;
 	font-size: 16px;
 	height: 30px;
-	line-height: 1.875;
+	line-height: 1.875em;
 	text-align: center;
 	text-decoration: none;
 	-webkit-transition:	all 0.2s ease;
@@ -756,7 +758,7 @@ abbr.initialism {
 
 strong
 {
-	font-family: Roboto, "Open Sans";
+	font-family: "Open Sans";
 	font-weight: 700;
 }
 
@@ -803,12 +805,12 @@ article.post .post-content
 }
 
 article.post .post-content h3{ margin-top: 30px; }
-article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.5em; }
+article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.6em; }
 
 /* Fix the lists by giving them back some basic style, but only for articles */
 article ul { list-style-type: disc; margin-bottom: 10px; }
 article ol { list-style-type: decimal; margin-bottom: 10px; }
-article li { line-height: 1.5em; margin-left: 3em; font-size:17px; font-weight:300; line-height: 1.5em; }
+article li { margin-left: 3em; font-size:17px; font-weight:300; line-height: 1.5em; }
 
 /* Different list style for tabs */
 article .tabs ul {  margin: 0; }
@@ -854,7 +856,7 @@ article table td strong
 {
 	font-size: 16px;
 	font-weight: 600;
-	font-family: Roboto, "Open Sans";
+	font-family: "Open Sans";
 }
 
 /* borders - put the border on the far right edge */

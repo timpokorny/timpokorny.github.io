@@ -50,7 +50,7 @@
 	
 	body {
 		background: #fff;
-		font: 14px Roboto, "Open Sans", "Roboto", sans-serif;
+		font: 14px "Open Sans", sans-serif;
 		color: #777;
 		font-weight: normal;
 		-webkit-text-size-adjust: 100%;
@@ -66,7 +66,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #1d1d1d;
-		font-family: Roboto, "Lato", sans-serif;
+		font-family: "Lato", sans-serif;
 		font-weight: 700;}
 	h1 {font-size: 36px;}
 	h2 {font-size: 28px;}
@@ -178,8 +178,8 @@ a.btn {
 	-webkit-border-radius: 4px;
 	border: none;
 	cursor: pointer;
-	font-family: Roboto, "Open Sans", "Roboto";
-}
+	font-family: "Open Sans";
+
 
 button.btn i,
 a.btn i{ 
@@ -417,7 +417,7 @@ a.btn.orange:hover i{
 		background: #f5f5f5;
 		height: 40px;
 		padding: 0;
-		font: 13px Roboto, "Open Sans", "Roboto", sans-serif;
+		font: 13px "Open Sans", sans-serif;
 		outline: none;
 		
 		transition: all 200ms;
