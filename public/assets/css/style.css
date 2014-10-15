@@ -366,7 +366,7 @@ input.searchform:-ms-input-placeholder {
 	width: 380px;
 	display: inline-block;
 	float: left;
-	min-height: 100px;
+	min-height: 125px;
 }
 
 .serviceboxes li p {

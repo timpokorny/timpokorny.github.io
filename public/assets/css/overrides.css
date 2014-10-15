@@ -75,7 +75,8 @@ body
 	/*-webkit-font-smoothing:antialiased;*/
 	/*-webkit-font-smoothing:none;*/
 
-	font: 14px "Open Sans", sans-serif;
+	font: "Open Sans", sans-serif;
+	color: #555;
 }
 
 /* --------------------------------------------------       
@@ -92,15 +93,13 @@ h1, h2, h3, h4, h5, h6
 
 h1, h2
 {
-	margin-top: 15px;
-	margin-bottom: 10px;
 	font-weight: 400;
 }
 
 h1 span, h2 span
 {
 	font-weight: 300;
-	color: #888888;
+	color: #555;
 }
 
 .page-title h1
@@ -111,11 +110,12 @@ h1 span, h2 span
 p
 {
 	/*margin-bottom:0.8em;*/
-	line-height: 1.6em;
+	/*line-height: 1.6em;*/
+	line-height: 22px;
 	font-weight: 300;
 	margin-bottom: 0.8em;
 	font-size: 16px;
-	color: #34495e;
+	color: #555;
 }
 
 /* code style for documentation */
@@ -364,6 +364,7 @@ a.btn.thin
 	border-radius: .25em;
 	display: inline;
 	padding: .2em .6em .2em;
+	font-family: "Open Sans";
 	font-size: 100%;
 	font-weight: normal;
 	line-height: 1;
@@ -759,7 +760,7 @@ abbr.initialism {
 strong
 {
 	font-family: "Open Sans";
-	font-weight: 700;
+	font-weight: 600;
 }
 
 /* Sidebar Table of Contents
@@ -804,13 +805,15 @@ article.post .post-content
 	border-bottom: none; /* 2px solid #EEE; */
 }
 
+article.post .post-content h1{ margin-top: 30px; margin-bottom: 10px; }
+article.post .post-content h2{ margin-top: 30px; margin-bottom: 10px; }
 article.post .post-content h3{ margin-top: 30px; }
 article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.6em; }
 
 /* Fix the lists by giving them back some basic style, but only for articles */
 article ul { list-style-type: disc; margin-bottom: 10px; }
 article ol { list-style-type: decimal; margin-bottom: 10px; }
-article li { margin-left: 3em; font-size:17px; font-weight:300; line-height: 1.5em; }
+article li { margin-left: 3em; font-size:15px; font-weight:300; line-height: 1.5em; }
 
 /* Different list style for tabs */
 article .tabs ul {  margin: 0; }
@@ -870,7 +873,7 @@ article table tr:last-child td:first-child{ border-radius: 0 4px 0; -moz-border-
 article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-border-radius: 0 0 4px 0; -webkit-border-radius: 0 0 4px 0; }
 
 /* Frequency Asked Questions */
-.faq h1, h2
+.faq h1, .faq h2
 {
 	padding-top: 30px;
 }

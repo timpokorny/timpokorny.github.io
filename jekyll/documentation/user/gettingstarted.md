@@ -22,6 +22,20 @@ You can get _Italic Text_ by using `_Text Here_` or `*Text Here*`.
 
 You can get some **Bold Text** by using `__Text Here__` or `**Text Here**`.
 
+Also, let's start with a larger block of text. This lets Tim test things like font spacing
+and line height, while also showing you that the carriage return in the source text has no
+impact on the HTML text in terms of line breaks or the like. When writing your Markdown doc,
+please try and keep lines under 100 columns so that they're considerably simpler to read in
+a text editor. A lot of people try to keep them under 70 columns, but that's really just too short.
+
+Remember, people read web content differnetly, tending to skim. Make the structure of your document
+visible, and in prose be direct, concise and clear without sacrificing completeness. This is
+extremely difficult. When attempting it individuals will often produce brief documentation that
+contains unnecessary information and is ultimately incomplete. Use short paragraphs and write in a
+conversational tone - this isn't a text book. If you can imagine yourself saying it - you are
+probably on the right track.
+
+
 Alerts and Callouts
 -------------------
 Below are some alert box styles you can use to call attention to various important things
