@@ -560,10 +560,10 @@ blockquote small:before
 
 footer a
 {
-	font-weight: 300;
+	font-weight: 400;
 }
 
-address  { font-weight: 300; line-height: 1.6em; }
+address  { font-weight: 400; line-height: 1.6em; }
 address b{ font-weight: 700; line-height: 1.6em; }
 
 abbr[data-original-title] {
