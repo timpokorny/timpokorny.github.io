@@ -111,10 +111,10 @@ p
 {
 	/*margin-bottom:0.8em;*/
 	/*line-height: 1.6em;*/
+	font-size: 14px;
+	font-weight: 400;
 	line-height: 22px;
-	font-weight: 300;
 	margin-bottom: 0.8em;
-	font-size: 16px;
 	color: #555;
 }
 
@@ -166,7 +166,6 @@ pre code
 	display: inline;
 	padding: .2em .4em .2em;
 	font-size: 85%;
-	font-weight: normal;
 	line-height: 1;
 	color: #fff;
 	text-align: center;
@@ -181,7 +180,6 @@ pre code
 	margin-left: 20px;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
-	font-weight: 300;
 }
 
 .default-list li
@@ -191,7 +189,6 @@ pre code
 
 .list
 {
-	font-weight: 300;
 	margin-left: 20px;
 	padding-bottom: 10px;
 }
@@ -203,7 +200,7 @@ pre code
 	margin-bottom: 10px;
 }
 
-.smaller
+.smaller /* used on cover page */
 {
 	font-size: 14px;
 	line-height: 1.6em;
@@ -271,7 +268,6 @@ pre code
 .site-header
 {
 	font-size: 18px;
-	font-weight: 300;
 	line-height: 30px;
 	padding-top: 2em;
 	padding-bottom: 3em;
@@ -366,7 +362,6 @@ a.btn.thin
 	padding: .2em .6em .2em;
 	font-family: "Open Sans";
 	font-size: 100%;
-	font-weight: normal;
 	line-height: 1;
 	color: #fff;
 	text-align: center;
@@ -560,7 +555,6 @@ blockquote small:before
 
 footer a
 {
-	font-weight: 400;
 }
 
 address  { font-weight: 400; line-height: 1.6em; }
@@ -771,7 +765,6 @@ strong
 	padding: 5px 0;
 	display: block;
 	font-size: 15px;
-	font-weight: 400;
 }
 
 .widget ul.categories-list li ul li a{
@@ -789,6 +782,7 @@ strong
 	margin-top: 4px;
 }
 
+/** page tags on documentation theme sidebar */
 .widget ul.tags-list li{ font-weight: 300; }
 
 .meta img
@@ -808,16 +802,15 @@ article.post .post-content
 article.post .post-content h1{ margin-top: 30px; margin-bottom: 10px; }
 article.post .post-content h2{ margin-top: 30px; margin-bottom: 10px; }
 article.post .post-content h3{ margin-top: 30px; }
-article.post .post-content p{ font-size:17px; font-weight:300; line-height:1.6em; }
 
 /* Fix the lists by giving them back some basic style, but only for articles */
 article ul { list-style-type: disc; margin-bottom: 10px; }
 article ol { list-style-type: decimal; margin-bottom: 10px; }
-article li { margin-left: 3em; font-size:15px; font-weight:300; line-height: 1.5em; }
+article li { margin-left: 3em; font-size:15px; line-height: 1.5em; }
 
 /* Different list style for tabs */
-article .tabs ul {  margin: 0; }
-article .tabs li { margin: 0; font-size:17px; font-weight:300; line-height: 1.5em; }
+article .tabs ul { margin: 0; }
+article .tabs li { margin: 0; font-size:17px; line-height: 1.5em; }
 
 /* Tables are wonky for articles (generated from Markdown) because they're not given the css
    class they would be if we did them by hand, and rather than force every table to have that
@@ -852,7 +845,6 @@ article table td
 	border: #E7E7E7 1px solid;
 	border-top: none;
 	border-right: none;
-	font-weight: 300;
 }
 
 article table td strong
