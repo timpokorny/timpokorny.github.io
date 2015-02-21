@@ -2230,7 +2230,7 @@ table.default-table tr:last-child td:last-child {
 /* Tooltips
 ===================================== */
 .tooltip {
-	font-weight: 600;
+	font-weight: inherit;
 	cursor: default;
 }
 
