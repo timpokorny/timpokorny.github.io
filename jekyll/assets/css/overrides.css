@@ -426,6 +426,13 @@ table.default-table td
 	background-color: #ecf0f1;
 }
 
+table.default-table td > strong, b
+{
+	font-weight: bold;
+}
+
+table.auto-width{ width:auto; }
+
 /* --------------------------------------------------       
  * Thumbnail Sections -- from Bootstrap Examples
  * ----------------------------------------------- */
@@ -798,7 +805,7 @@ article.post .post-content
 	border-bottom: none; /* 2px solid #EEE; */
 }
 
-article.post .post-content h1{ margin-top: 30px; margin-bottom: 10px; }
+article.post .post-content h1{ margin-top: 30px; margin-bottom: 20px; }
 article.post .post-content h2{ margin-top: 30px; margin-bottom: 10px; }
 article.post .post-content h3{ margin-top: 30px; }
 
@@ -889,14 +896,14 @@ article table tr:last-child td:last-child { border-radius: 0 0 4px 0; -moz-borde
 	#sidebar.affix-top
 	{
 		position: static;
-		margin-top:30px;
+		margin-top:0px;
 		width:250px;
 	}
 
 	#sidebar.affix
 	{
 		position: fixed;
-		top:30px;
+		top:60px;
 		width:250px;
 	}
 
