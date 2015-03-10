@@ -73,192 +73,196 @@ version: 2.0.0
 						<th>Method</th>
 					</tr>
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Federation Management Services</b></td></tr>
-					{% supported void <b>connect</b>( FederateAmbassador, CallbackModel, String ) %}
-					{% supported void <b>connect</b>( FederateAmbassador fedamb, CallbackModel callbacks ) %}
-					{% supported void <b>disconnect</b>() %}
-					{% supported void <b>createFederationExecution</b>( String fedeateName, URL fomModule ) %}
-					{% supported void <b>createFederationExecution</b>( String federationName, URL[] fomModules ) %}
-					{% supported void <b>createFederationExecution</b>( String federationName, URL[] fomModules, URL mimModule ) %}
-					{% supported void <b>createFederationExecution</b>( String federationName, URL[] fomModules, String timeName ) %}
-					{% supported void <b>createFederationExecution</b>( String federationName, URL[] fomModules, URL mimModule, String timeName ) %}
-					{% supported void <b>destroyFederationExecution</b>( String executionName ) %}
-					{% notsupported void <b>listFederationExecutions()</b> %}
-					{% supported FederateHandle <b>joinFederationExecution</b>( String federateType, String federationName ) %}
-					{% supported FederateHandle <b>joinFederationExecution</b>( String federateName, String federateType, String federationName ) %}
-					{% supported FederateHandle <b>joinFederationExecution</b>( String federateType, String federationName, URL[] fomModules ) %}
-					{% supported FederateHandle <b>joinFederationExecution</b>( String federateName, String federateType, String federationName, URL[] fomModules ) %}
-					{% supported void <b>resignFederationExecution</b>( ResignAction resignAction ) %}
-					{% supported void <b>registerFederationSynchronizationPoint</b>( String label, byte[] tag ) %}
-					{% supported void <b>registerFederationSynchronizationPoint</b>( String label, byte[] tag, FederateHandleSet syncset ) %}
-					{% supported void <b>synchronizationPointAchieved</b>( String label ) %}
-					{% supported void <b>synchronizationPointAchieved</b>( String label, boolean successIndicator ) %}
-					{% notsupported void <b>requestFederationSave</b>( String label ) %}
-					{% notsupported void <b>requestFederationSave</b>( String label, LogicalTime theTime ) %}
-					{% notsupported void <b>federateSaveBegun</b>() %}
-					{% notsupported void <b>federateSaveComplete</b>() %}
-					{% notsupported void <b>federateSaveNotComplete</b>() %}
-					{% notsupported void <b>abortFederationSave</b>() %}
-					{% notsupported void <b>queryFederationSaveStatus</b>() %}
-					{% notsupported void <b>requestFederationRestore</b>( String label ) %}
-					{% notsupported void <b>federateRestoreComplete</b>() %}
-					{% notsupported void <b>federateRestoreNotComplete</b>() %}
-					{% notsupported void <b>abortFederationRestore</b>() %}
-					{% notsupported void <b>queryFederationRestoreStatus</b>() %}
+
+					{% supported void connect( FederateAmbassador, CallbackModel, String ) %}
+					{% supported void connect( FederateAmbassador fedamb, CallbackModel callbacks ) %}
+					{% supported void disconnect() %}
+					{% supported void createFederationExecution( String fedeateName, URL fomModule ) %}
+					{% supported void createFederationExecution( String federationName, URL[] fomModules ) %}
+					{% supported void createFederationExecution( String federationName, URL[] fomModules, URL mimModule ) %}
+					{% supported void createFederationExecution( String federationName, URL[] fomModules, String timeName ) %}
+					{% supported void createFederationExecution( String federationName, URL[] fomModules, URL mimModule, String timeName ) %}
+					{% supported void destroyFederationExecution( String executionName ) %}
+					{% notsupported void listFederationExecutions() %}
+					{% supported FederateHandle joinFederationExecution( String federateType, String federationName ) %}
+					{% supported FederateHandle joinFederationExecution( String federateName, String federateType, String federationName ) %}
+					{% supported FederateHandle joinFederationExecution( String federateType, String federationName, URL[] fomModules ) %}
+					{% supported FederateHandle joinFederationExecution( String federateName, String federateType, String federationName, URL[] fomModules ) %}
+					{% supported void resignFederationExecution( ResignAction resignAction ) %}
+					{% supported void registerFederationSynchronizationPoint( String label, byte[] tag ) %}
+					{% supported void registerFederationSynchronizationPoint( String label, byte[] tag, FederateHandleSet syncset ) %}
+					{% supported void synchronizationPointAchieved( String label ) %}
+					{% supported void synchronizationPointAchieved( String label, boolean successIndicator ) %}
+					{% notsupported void requestFederationSave( String label ) %}
+					{% notsupported void requestFederationSave( String label, LogicalTime theTime ) %}
+					{% notsupported void federateSaveBegun() %}
+					{% notsupported void federateSaveComplete() %}
+					{% notsupported void federateSaveNotComplete() %}
+					{% notsupported void abortFederationSave() %}
+					{% notsupported void queryFederationSaveStatus() %}
+					{% notsupported void requestFederationRestore( String label ) %}
+					{% notsupported void federateRestoreComplete() %}
+					{% notsupported void federateRestoreNotComplete() %}
+					{% notsupported void abortFederationRestore() %}
+					{% notsupported void queryFederationRestoreStatus() %}
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Declaration Management</b></td></tr>
-					{% supported void <b>publishObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
-					{% supported void <b>unpublishObjectClass</b>( ObjectClassHandle theClass ) %}
-					{% supported void <b>unpublishObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
-					{% supported void <b>publishInteractionClass</b>( InteractionClassHandle theInteraction ) %}
-					{% supported void <b>unpublishInteractionClass</b>( InteractionClassHandle theInteraction ) %}
-					{% supported void <b>subscribeObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
-					{% notsupported void <b>subscribeObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes, String updateRate ) %}
-					{% notsupported void <b>subscribeObjectClassAttributesPassively</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
-					{% notsupported void <b>subscribeObjectClassAttributesPassively</b>( ObjectClassHandle theClass, AttributeHandleSet attributes, String updateRate ) %}
-					{% supported void <b>unsubscribeObjectClass</b>( ObjectClassHandle theClass ) %}
-					{% supported void <b>unsubscribeObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
-					{% supported void <b>subscribeInteractionClass</b>( InteractionClassHandle theClass ) %}
-					{% notsupported void <b>subscribeInteractionClassPassively</b>( InteractionClassHandle theClass ) %}
-					{% supported void <b>unsubscribeInteractionClass</b>( InteractionClassHandle theClass ) %}
+
+					{% supported void publishObjectClassAttributes( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
+					{% supported void unpublishObjectClass( ObjectClassHandle theClass ) %}
+					{% supported void unpublishObjectClassAttributes( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
+					{% supported void publishInteractionClass( InteractionClassHandle theInteraction ) %}
+					{% supported void unpublishInteractionClass( InteractionClassHandle theInteraction ) %}
+					{% supported void subscribeObjectClassAttributes( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
+					{% notsupported void subscribeObjectClassAttributes( ObjectClassHandle theClass, AttributeHandleSet attributes, String updateRate ) %}
+					{% notsupported void subscribeObjectClassAttributesPassively( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
+					{% notsupported void subscribeObjectClassAttributesPassively( ObjectClassHandle theClass, AttributeHandleSet attributes, String updateRate ) %}
+					{% supported void unsubscribeObjectClass( ObjectClassHandle theClass ) %}
+					{% supported void unsubscribeObjectClassAttributes( ObjectClassHandle theClass, AttributeHandleSet attributes ) %}
+					{% supported void subscribeInteractionClass( InteractionClassHandle theClass ) %}
+					{% notsupported void subscribeInteractionClassPassively( InteractionClassHandle theClass ) %}
+					{% supported void unsubscribeInteractionClass( InteractionClassHandle theClass ) %}
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Object Management Services</b></td></tr>
-					{% supported void <b>reserveObjectInstanceName</b>( String name ) %}
-					{% notsupported void <b>releaseObjectInstanceName</b>( String name ) %}
-					{% notsupported void <b>reserveMultipleObjectInstanceName</b>( Set<String> names ) %}
-					{% notsupported void <b>releaseMultipleObjectInstanceName</b>( Set<String> names ) %}
-					{% supported ObjectInstanceHandle <b>registerObjectInstance</b>( ObjectClassHandle theClass ) %}
-					{% supported ObjectInstanceHandle <b>registerObjectInstance</b>( ObjectClassHandle theClass, String name ) %}
-					{% supported void <b>updateAttributeValues</b>( ObjectInstanceHandle theObject, AttributeHandleValueMap theAttributes, byte[] tag ) %}
-					{% partialsupport MessageRetractionReturn <b>updateAttributeValues</b>( ObjectInstanceHandle theObject, AttributeHandleValueMap theAttributes, byte[] tag, LogicalTime theTime ) %}
-					{% supported void <b>sendInteraction</b>( InteractionClassHandle theInteraction, ParameterHandleValueMap theParameters, byte[] tag ) %}
-					{% partialsupport MessageRetractionReturn <b>sendInteraction</b>( InteractionClassHandle theInteraction, ParameterHandleValueMap theParameters, byte[] tag, LogicalTime theTime ) %}
-					{% supported void <b>deleteObjectInstance</b>( ObjectInstanceHandle objectHandle, byte[] tag ) %}
-					{% partialsupport MessageRetractionReturn <b>deleteObjectInstance</b>( ObjectInstanceHandle objectHandle, byte[] tag, LogicalTime theTime ) %}
-					{% supported void <b>localDeleteObjectInstance</b>( ObjectInstanceHandle objectHandle ) %}
-					{% supported void <b>requestAttributeValueUpdate</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, byte[] tag ) %}
-					{% supported void <b>requestAttributeValueUpdate</b>( ObjectClassHandle theClass, AttributeHandleSet theAttributes, byte[] tag ) %}
-					{% notsupported void <b>requestAttributeTransportationTypeChange</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, TransportationTypeHandle theType ) %}
-					{% notsupported void <b>queryAttributeTransportationType</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) %}
-					{% notsupported void <b>requestInteractionTransportationTypeChange</b>( InteractionClassHandle theClass, TransportationTypeHandle theType ) %}
-					{% notsupported void <b>queryInteractionTransportationType</b>( FederateHandle theFederate, InteractionClassHandle theInteraction ) %}
+
+					{% supported void reserveObjectInstanceName( String name ) %}
+					{% notsupported void releaseObjectInstanceName( String name ) %}
+					{% notsupported void reserveMultipleObjectInstanceName( Set<String> names ) %}
+					{% notsupported void releaseMultipleObjectInstanceName( Set<String> names ) %}
+					{% supported ObjectInstanceHandle registerObjectInstance( ObjectClassHandle theClass ) %}
+					{% supported ObjectInstanceHandle registerObjectInstance( ObjectClassHandle theClass, String name ) %}
+					{% supported void updateAttributeValues( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag ) %}
+					{% partialsupport MessageRetractionReturn updateAttributeValues( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, LogicalTime time ); Message retraction not supported %}
+					{% supported void sendInteraction( InteractionClassHandle theInteraction, ParameterHandleValueMap parameters, byte[] tag ) %}
+					{% partialsupport MessageRetractionReturn sendInteraction( InteractionClassHandle interaction, ParameterHandleValueMap parameters, byte[] tag, LogicalTime time ); Message retraction not supported %}
+					{% supported void deleteObjectInstance( ObjectInstanceHandle objectHandle, byte[] tag ) %}
+					{% partialsupport MessageRetractionReturn deleteObjectInstance( ObjectInstanceHandle objectHandle, byte[] tag, LogicalTime theTime ); Message retraction not supported %}
+					{% supported void localDeleteObjectInstance( ObjectInstanceHandle objectHandle ) %}
+					{% supported void requestAttributeValueUpdate( ObjectInstanceHandle object, AttributeHandleSet attributes, byte[] tag ) %}
+					{% supported void requestAttributeValueUpdate( ObjectClassHandle theClass, AttributeHandleSet attributes, byte[] tag ) %}
+					{% notsupported void requestAttributeTransportationTypeChange( ObjectInstanceHandle object, AttributeHandleSet attributes, TransportationTypeHandle theType ) %}
+					{% notsupported void queryAttributeTransportationType( ObjectInstanceHandle object, AttributeHandle theAttribute ) %}
+					{% notsupported void requestInteractionTransportationTypeChange( InteractionClassHandle theClass, TransportationTypeHandle theType ) %}
+					{% notsupported void queryInteractionTransportationType( FederateHandle theFederate, InteractionClassHandle theInteraction ) %}
 
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Ownership Management Services</b></td></tr>
-					{% supported void <b>unconditionalAttributeOwnershipDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>negotiatedAttributeOwnershipDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, byte[] tag ) %}
-					{% notsupported void <b>confirmDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, byte[] tag ) %}
-					{% supported void <b>attributeOwnershipAcquisition</b>( ObjectInstanceHandle theObject, AttributeHandleSet desiredAttributes, byte[] tag ) %}
-					{% supported void <b>attributeOwnershipAcquisitionIfAvailable</b>( ObjectInstanceHandle theObject, AttributeHandleSet desiredAttributes ) %}
-					{% notsupported void <b>attributeOwnershipReleaseDenied</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% partialsupport AttributeHandleSet <b>attributeOwnershipDivestitureIfWanted</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>cancelNegotiatedAttributeOwnershipDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>cancelAttributeOwnershipAcquisition</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>queryAttributeOwnership</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) %}
-					{% supported boolean isAttributeOwnedByFederate</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) %}
+
+					{% supported void unconditionalAttributeOwnershipDivestiture( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void negotiatedAttributeOwnershipDivestiture( ObjectInstanceHandle object, AttributeHandleSet attributes, byte[] tag ) %}
+					{% notsupported void confirmDivestiture( ObjectInstanceHandle object, AttributeHandleSet attributes, byte[] tag ) %}
+					{% supported void attributeOwnershipAcquisition( ObjectInstanceHandle object, AttributeHandleSet desiredAttributes, byte[] tag ) %}
+					{% supported void attributeOwnershipAcquisitionIfAvailable( ObjectInstanceHandle object, AttributeHandleSet desiredAttributes ) %}
+					{% notsupported void attributeOwnershipReleaseDenied( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported AttributeHandleSet attributeOwnershipDivestitureIfWanted( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void cancelNegotiatedAttributeOwnershipDivestiture( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void cancelAttributeOwnershipAcquisition( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void queryAttributeOwnership( ObjectInstanceHandle object, AttributeHandle theAttribute ) %}
+					{% supported boolean isAttributeOwnedByFederate( ObjectInstanceHandle object, AttributeHandle theAttribute ) %}
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Time Management Services</b></td></tr>
-					{% supported void <b>enableTimeRegulation</b>( LogicalTimeInterval theLookahead ) %}
-					{% supported void <b>disableTimeRegulation</b>() %}
-					{% supported void <b>enableTimeConstrained</b>() %}
-					{% supported void <b>disableTimeConstrained</b>() %}
-					{% supported void <b>timeAdvanceRequest</b>( LogicalTime theTime ) %}
-					{% supported void <b>timeAdvanceRequestAvailable</b>( LogicalTime theTime ) %}
-					{% supported void <b>nextMessageRequest</b>( LogicalTime theTime ) %}
-					{% supported void <b>nextMessageRequestAvailable</b>( LogicalTime theTime ) %}
-					{% supported void <b>flushQueueRequest</b>( LogicalTime theTime ) %}
-					{% supported void <b>enableAsynchronousDelivery</b>() %}
-					{% supported void <b>disableAsynchronousDelivery</b>() %}
-					{% supported TimeQueryReturn <b>queryGALT</b>() %}
-					{% supported LogicalTime <b>queryLogicalTime</b>() %}
-					{% supported TimeQueryReturn <b>queryLITS</b>() %}
-					{% supported void <b>modifyLookahead</b>( LogicalTimeInterval theLookahead ) %}
-					{% supported LogicalTimeInterval <b>queryLookahead</b>() %}
-					{% notsupported void <b>retract</b>( MessageRetractionHandle theHandle ) %}
-					{% notsupported void <b>changeAttributeOrderType</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, OrderType theType ) %}
-					{% notsupported void <b>changeInteractionOrderType</b>( InteractionClassHandle theClass, OrderType theType ) %}
+					{% supported void enableTimeRegulation( LogicalTimeInterval theLookahead ) %}
+					{% supported void disableTimeRegulation() %}
+					{% supported void enableTimeConstrained() %}
+					{% supported void disableTimeConstrained() %}
+					{% supported void timeAdvanceRequest( LogicalTime theTime ) %}
+					{% supported void timeAdvanceRequestAvailable( LogicalTime theTime ) %}
+					{% supported void nextMessageRequest( LogicalTime theTime ) %}
+					{% supported void nextMessageRequestAvailable( LogicalTime theTime ) %}
+					{% supported void flushQueueRequest( LogicalTime theTime ) %}
+					{% supported void enableAsynchronousDelivery() %}
+					{% supported void disableAsynchronousDelivery() %}
+					{% supported TimeQueryReturn queryGALT() %}
+					{% supported LogicalTime queryLogicalTime() %}
+					{% supported TimeQueryReturn queryLITS() %}
+					{% supported void modifyLookahead( LogicalTimeInterval theLookahead ) %}
+					{% supported LogicalTimeInterval queryLookahead() %}
+					{% notsupported void retract( MessageRetractionHandle theHandle ) %}
+					{% notsupported void changeAttributeOrderType( ObjectInstanceHandle object, AttributeHandleSet attributes, OrderType theType ) %}
+					{% notsupported void changeInteractionOrderType( InteractionClassHandle theClass, OrderType theType ) %}
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Data Distribution Management Services</b></td></tr>
-					{% notsupported RegionHandle createRegion</b>( DimensionHandleSet dimensions ) %}
-					{% notsupported void <b>commitRegionModifications</b>( RegionHandleSet regions ) %}
-					{% notsupported void <b>deleteRegion</b>( RegionHandle theRegion ) %}
-					{% notsupported ObjectInstanceHandle <b>registerObjectInstanceWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
-					{% notsupported ObjectInstanceHandle <b>registerObjectInstanceWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String theObject ) %}
-					{% notsupported void <b>associateRegionsForUpdates</b>( ObjectInstanceHandle theObject, AttributeSetRegionSetPairList attributes ) %}
-					{% notsupported void <b>unassociateRegionsForUpdates</b>( ObjectInstanceHandle theObject, AttributeSetRegionSetPairList attributes ) %}
-					{% notsupported void <b>subscribeObjectClassAttributesWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
-					{% notsupported void <b>subscribeObjectClassAttributesWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String updateRate ) %}
-					{% notsupported void <b>subscribeObjectClassAttributesPassivelyWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
-					{% notsupported void <b>subscribeObjectClassAttributesPassivelyWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String updateRate ) %}
-					{% notsupported void <b>unsubscribeObjectClassAttributesWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
-					{% notsupported void <b>subscribeInteractionClassWithRegions</b>( InteractionClassHandle theClass, RegionHandleSet regions ) %}
-					{% notsupported void <b>subscribeInteractionClassPassivelyWithRegions</b>( InteractionClassHandle theClass, RegionHandleSet regions ) %}
-					{% notsupported void <b>unsubscribeInteractionClassWithRegions</b>( InteractionClassHandle theClass, RegionHandleSet regions ) %}
-					{% notsupported void <b>sendInteractionWithRegions</b>( InteractionClassHandle interaction, ParameterHandleValueMap parameters, RegionHandleSet regions, byte[] tag ) %}
-					{% notsupported MessageRetractionReturn <b>sendInteractionWithRegions</b>( InteractionClassHandle interaction, ParameterHandleValueMap parameters, RegionHandleSet regions, byte[] tag, LogicalTime time ) %}
-					{% notsupported void <b>requestAttributeValueUpdateWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, byte[] tag ) %}
+					{% notsupported RegionHandle createRegion( DimensionHandleSet dimensions ) %}
+					{% notsupported void commitRegionModifications( RegionHandleSet regions ) %}
+					{% notsupported void deleteRegion( RegionHandle theRegion ) %}
+					{% notsupported ObjectInstanceHandle registerObjectInstanceWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
+					{% notsupported ObjectInstanceHandle registerObjectInstanceWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String object ) %}
+					{% notsupported void associateRegionsForUpdates( ObjectInstanceHandle object, AttributeSetRegionSetPairList attributes ) %}
+					{% notsupported void unassociateRegionsForUpdates( ObjectInstanceHandle object, AttributeSetRegionSetPairList attributes ) %}
+					{% notsupported void subscribeObjectClassAttributesWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
+					{% notsupported void subscribeObjectClassAttributesWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String updateRate ) %}
+					{% notsupported void subscribeObjectClassAttributesPassivelyWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
+					{% notsupported void subscribeObjectClassAttributesPassivelyWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String updateRate ) %}
+					{% notsupported void unsubscribeObjectClassAttributesWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) %}
+					{% notsupported void subscribeInteractionClassWithRegions( InteractionClassHandle theClass, RegionHandleSet regions ) %}
+					{% notsupported void subscribeInteractionClassPassivelyWithRegions( InteractionClassHandle theClass, RegionHandleSet regions ) %}
+					{% notsupported void unsubscribeInteractionClassWithRegions( InteractionClassHandle theClass, RegionHandleSet regions ) %}
+					{% notsupported void sendInteractionWithRegions( InteractionClassHandle interaction, ParameterHandleValueMap parameters, RegionHandleSet regions, byte[] tag ) %}
+					{% notsupported MessageRetractionReturn sendInteractionWithRegions( InteractionClassHandle interaction, ParameterHandleValueMap parameters, RegionHandleSet regions, byte[] tag, LogicalTime time ) %}
+					{% notsupported void requestAttributeValueUpdateWithRegions( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, byte[] tag ) %}
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>RTI Support Services</b></td></tr>
-					{% notsupported ResignAction <b>getAutomaticResignDirective</b>() %}
-					{% notsupported void <b>setAutomaticResignDirective</b>( ResignAction resignAction ) %}
-					{% notsupported FederateHandle <b>getFederateHandle</b>( String theName ) %}
-					{% supported String <b>getFederateName</b>( FederateHandle theHandle ) %}
-					{% supported ObjectClassHandle <b>getObjectClassHandle</b>( String theName ) %}
-					{% supported String <b>getObjectClassName</b>( ObjectClassHandle theHandle ) %}
-					{% supported ObjectClassHandle <b>getKnownObjectClassHandle</b>( ObjectInstanceHandle theObject ) %}
-					{% supported ObjectInstanceHandle <b>getObjectInstanceHandle</b>( String theName ) %}
-					{% supported String <b>getObjectInstanceName</b>( ObjectInstanceHandle theHandle ) %}
-					{% supported AttributeHandle <b>getAttributeHandle</b>( ObjectClassHandle whichClass, String theName ) %}
-					{% supported String <b>getAttributeName</b>( ObjectClassHandle whichClass, AttributeHandle theHandle ) %}
-					{% notsupported double <b>getUpdateRateValue</b>( String updateRateDesignator ) %}
-					{% notsupported double <b>getUpdateRateValueForAttribute</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) %}
-					{% supported InteractionClassHandle <b>getInteractionClassHandle</b>( String theName ) %}
-					{% supported String <b>getInteractionClassName</b>( InteractionClassHandle theHandle ) %}
-					{% supported ParameterHandle <b>getParameterHandle</b>( InteractionClassHandle whichClass, String theName ) %}
-					{% supported String <b>getParameterName</b>( InteractionClassHandle whichClass, ParameterHandle theHandle ) %}
-					{% notsupported OrderType <b>getOrderType</b>( String theName ) %}
-					{% notsupported String <b>getOrderName</b>( OrderType theType ) %}
-					{% notsupported TransportationTypeHandle <b>getTransportationTypeHandle</b>( String theName ) %}
-					{% notsupported String <b>getTransportationTypeName</b>( TransportationTypeHandle theHandle ) %}
-					{% notsupported DimensionHandleSet <b>getAvailableDimensionsForClassAttribute</b>( ObjectClassHandle whichClass, AttributeHandle theHandle ) %}
-					{% notsupported DimensionHandleSet <b>getAvailableDimensionsForInteractionClass</b>( InteractionClassHandle theHandle ) %}
-					{% notsupported DimensionHandle <b>getDimensionHandle</b>( String theName ) %}
-					{% notsupported String <b>getDimensionName</b>( DimensionHandle theHandle ) %}
-					{% notsupported long <b>getDimensionUpperBound</b>( DimensionHandle theHandle )  %}
-					{% notsupported DimensionHandleSet <b>getDimensionHandleSet</b>( RegionHandle region ) %}
-					{% notsupported RangeBounds <b>getRangeBounds</b>( RegionHandle region, DimensionHandle dimension ) %}
-					{% notsupported void <b>setRangeBounds</b>( RegionHandle region, DimensionHandle dimension, RangeBounds bounds ) %}
-					{% supported long <b>normalizeFederateHandle</b>( FederateHandle federateHandle ) %}
-					{% notsupported long <b>normalizeServiceGroup</b>( ServiceGroup group ) %}
-					{% notsupported void <b>disableObjectClassRelevanceAdvisorySwitch</b>() %}
-					{% notsupported void <b>enableAttributeRelevanceAdvisorySwitch</b>() %}
-					{% notsupported void <b>disableAttributeRelevanceAdvisorySwitch</b>() %}
-					{% notsupported void <b>enableAttributeScopeAdvisorySwitch</b>() %}
-					{% notsupported void <b>disableAttributeScopeAdvisorySwitch</b>() %}
-					{% notsupported void <b>enableInteractionRelevanceAdvisorySwitch</b>() %}
-					{% notsupported void <b>disableInteractionRelevanceAdvisorySwitch</b>() %}
-					{% supported boolean <b>evokeCallback</b>( double approximateMinTimeInSeconds ) %}
-					{% supported boolean <b>evokeMultipleCallbacks</b>( double approximateMinTimeInSeconds, double approximateMaxTimeInSeconds ) %}
-					{% supported void <b>enableCallbacks</b>() %}
-					{% supported void <b>disableCallbacks</b>() %}
+					{% notsupported ResignAction getAutomaticResignDirective() %}
+					{% notsupported void setAutomaticResignDirective( ResignAction resignAction ) %}
+					{% notsupported FederateHandle getFederateHandle( String theName ) %}
+					{% supported String getFederateName( FederateHandle theHandle ) %}
+					{% supported ObjectClassHandle getObjectClassHandle( String theName ) %}
+					{% supported String getObjectClassName( ObjectClassHandle theHandle ) %}
+					{% supported ObjectClassHandle getKnownObjectClassHandle( ObjectInstanceHandle object ) %}
+					{% supported ObjectInstanceHandle getObjectInstanceHandle( String theName ) %}
+					{% supported String getObjectInstanceName( ObjectInstanceHandle theHandle ) %}
+					{% supported AttributeHandle getAttributeHandle( ObjectClassHandle whichClass, String theName ) %}
+					{% supported String getAttributeName( ObjectClassHandle whichClass, AttributeHandle theHandle ) %}
+					{% notsupported double getUpdateRateValue( String updateRateDesignator ) %}
+					{% notsupported double getUpdateRateValueForAttribute( ObjectInstanceHandle object, AttributeHandle theAttribute ) %}
+					{% supported InteractionClassHandle getInteractionClassHandle( String theName ) %}
+					{% supported String getInteractionClassName( InteractionClassHandle theHandle ) %}
+					{% supported ParameterHandle getParameterHandle( InteractionClassHandle whichClass, String theName ) %}
+					{% supported String getParameterName( InteractionClassHandle whichClass, ParameterHandle theHandle ) %}
+					{% notsupported OrderType getOrderType( String theName ) %}
+					{% notsupported String getOrderName( OrderType theType ) %}
+					{% notsupported TransportationTypeHandle getTransportationTypeHandle( String theName ) %}
+					{% notsupported String getTransportationTypeName( TransportationTypeHandle theHandle ) %}
+					{% notsupported DimensionHandleSet getAvailableDimensionsForClassAttribute( ObjectClassHandle whichClass, AttributeHandle theHandle ) %}
+					{% notsupported DimensionHandleSet getAvailableDimensionsForInteractionClass( InteractionClassHandle theHandle ) %}
+					{% notsupported DimensionHandle getDimensionHandle( String theName ) %}
+					{% notsupported String getDimensionName( DimensionHandle theHandle ) %}
+					{% notsupported long getDimensionUpperBound( DimensionHandle theHandle )  %}
+					{% notsupported DimensionHandleSet getDimensionHandleSet( RegionHandle region ) %}
+					{% notsupported RangeBounds getRangeBounds( RegionHandle region, DimensionHandle dimension ) %}
+					{% notsupported void setRangeBounds( RegionHandle region, DimensionHandle dimension, RangeBounds bounds ) %}
+					{% supported long normalizeFederateHandle( FederateHandle federateHandle ) %}
+					{% notsupported long normalizeServiceGroup( ServiceGroup group ) %}
+					{% notsupported void disableObjectClassRelevanceAdvisorySwitch() %}
+					{% notsupported void enableAttributeRelevanceAdvisorySwitch() %}
+					{% notsupported void disableAttributeRelevanceAdvisorySwitch() %}
+					{% notsupported void enableAttributeScopeAdvisorySwitch() %}
+					{% notsupported void disableAttributeScopeAdvisorySwitch() %}
+					{% notsupported void enableInteractionRelevanceAdvisorySwitch() %}
+					{% notsupported void disableInteractionRelevanceAdvisorySwitch() %}
+					{% supported boolean evokeCallback( double approximateMinTimeInSeconds ) %}
+					{% supported boolean evokeMultipleCallbacks( double approximateMinTimeInSeconds, double approximateMaxTimeInSeconds ) %}
+					{% supported void enableCallbacks() %}
+					{% supported void disableCallbacks() %}
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>API Support Services</b></td></tr>
-					{% supported AttributeHandleFactory <b>getAttributeHandleFactory</b>() %}
-					{% supported AttributeHandleSetFactory <b>getAttributeHandleSetFactory</b>() %}
-					{% supported AttributeHandleValueMapFactory <b>getAttributeHandleValueMapFactory</b>() %}
-					{% supported AttributeSetRegionSetPairListFactory <b>getAttributeSetRegionSetPairListFactory</b>() %}
-					{% supported DimensionHandleFactory <b>getDimensionHandleFactory</b>() %}
-					{% supported DimensionHandleSetFactory <b>getDimensionHandleSetFactory</b>() %}
-					{% supported FederateHandleFactory <b>getFederateHandleFactory</b>() %}
-					{% supported FederateHandleSetFactory <b>getFederateHandleSetFactory</b>() %}
-					{% supported InteractionClassHandleFactory <b>getInteractionClassHandleFactory</b>() %}
-					{% supported ObjectClassHandleFactory <b>getObjectClassHandleFactory</b>() %}
-					{% supported ObjectInstanceHandleFactory <b>getObjectInstanceHandleFactory</b>() %}
-					{% supported ParameterHandleFactory <b>getParameterHandleFactory</b>() %}
-					{% supported ParameterHandleValueMapFactory <b>getParameterHandleValueMapFactory</b>() %}
-					{% supported RegionHandleSetFactory <b>getRegionHandleSetFactory</b>() %}
-					{% supported TransportationTypeHandleFactory <b>getTransportationTypeHandleFactory</b>() %}
-					{% supported String <b>getHLAversion</b>() %}
-					{% supported LogicalTimeFactory <b>getTimeFactory</b>() %}
+					{% supported AttributeHandleFactory getAttributeHandleFactory() %}
+					{% supported AttributeHandleSetFactory getAttributeHandleSetFactory() %}
+					{% supported AttributeHandleValueMapFactory getAttributeHandleValueMapFactory() %}
+					{% supported AttributeSetRegionSetPairListFactory getAttributeSetRegionSetPairListFactory() %}
+					{% supported DimensionHandleFactory getDimensionHandleFactory() %}
+					{% supported DimensionHandleSetFactory getDimensionHandleSetFactory() %}
+					{% supported FederateHandleFactory getFederateHandleFactory() %}
+					{% supported FederateHandleSetFactory getFederateHandleSetFactory() %}
+					{% supported InteractionClassHandleFactory getInteractionClassHandleFactory() %}
+					{% supported ObjectClassHandleFactory getObjectClassHandleFactory() %}
+					{% supported ObjectInstanceHandleFactory getObjectInstanceHandleFactory() %}
+					{% supported ParameterHandleFactory getParameterHandleFactory() %}
+					{% supported ParameterHandleValueMapFactory getParameterHandleValueMapFactory() %}
+					{% supported RegionHandleSetFactory getRegionHandleSetFactory() %}
+					{% supported TransportationTypeHandleFactory getTransportationTypeHandleFactory() %}
+					{% supported String getHLAversion() %}
+					{% supported LogicalTimeFactory getTimeFactory() %}
 
 				</table>
 			</div>
@@ -289,79 +293,79 @@ version: 2.0.0
 					</tr>
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Federation Management</b></td></tr>
-					{% notsupported void <b>connectionLost</b>(String faultDescription) %}
-					{% notsupported void <b>reportFederationExecutions</b>(FederationExecutionInformationSet infoset) %}
-					{% notsupported void <b>synchronizationPointRegistrationSucceeded</b>(String label) %}
-					{% partialsupport void <b>synchronizationPointRegistrationFailed</b>(String label,SynchronizationPointFailureReason reason) %}
-					{% supported void <b>announceSynchronizationPoint</b>(String label, byte[] tag) %}
-					{% supported void <b>federationSynchronized</b>(String label, FederateHandleSet failedToSyncSet) %}
-					{% supported void <b>initiateFederateSave</b>(String label) %}
-					{% notsupported void <b>initiateFederateSave</b>(String label, LogicalTime time) %}
-					{% supported void <b>federationSaved</b>() %}
-					{% supported void <b>federationNotSaved</b>(SaveFailureReason reason) %}
-					{% notsupported void <b>federationSaveStatusResponse</b>(FederateHandleSaveStatusPair[] response) %}
-					{% supported void <b>requestFederationRestoreSucceeded</b>(String label) %}
-					{% supported void <b>requestFederationRestoreFailed</b>(String label) %}
-					{% supported void <b>federationRestoreBegun</b>() %}
-					{% supported void <b>initiateFederateRestore</b>( String label, String federateName, FederateHandle federateHandle ) %}
-					{% supported void <b>federationRestored</b>() %}
-					{% supported void <b>federationNotRestored</b>(RestoreFailureReason reason) %}
-					{% notsupported void <b>federationRestoreStatusResponse</b>(FederateRestoreStatus[] response) %}
+					{% notsupported void connectionLost(String faultDescription) %}
+					{% notsupported void reportFederationExecutions(FederationExecutionInformationSet infoset) %}
+					{% notsupported void synchronizationPointRegistrationSucceeded(String label) %}
+					{% partialsupport void synchronizationPointRegistrationFailed(String label,SynchronizationPointFailureReason reason); Failure reason always returns null %}
+					{% supported void announceSynchronizationPoint(String label, byte[] tag) %}
+					{% supported void federationSynchronized(String label, FederateHandleSet failedToSyncSet) %}
+					{% supported void initiateFederateSave(String label) %}
+					{% notsupported void initiateFederateSave(String label, LogicalTime time) %}
+					{% supported void federationSaved() %}
+					{% supported void federationNotSaved(SaveFailureReason reason) %}
+					{% notsupported void federationSaveStatusResponse(FederateHandleSaveStatusPair[] response) %}
+					{% supported void requestFederationRestoreSucceeded(String label) %}
+					{% supported void requestFederationRestoreFailed(String label) %}
+					{% supported void federationRestoreBegun() %}
+					{% supported void initiateFederateRestore( String label, String federateName, FederateHandle federateHandle ) %}
+					{% supported void federationRestored() %}
+					{% supported void federationNotRestored(RestoreFailureReason reason) %}
+					{% notsupported void federationRestoreStatusResponse(FederateRestoreStatus[] response) %}
 
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Declaration Management</b></td></tr>
-					{% notsupported void <b>startRegistrationForObjectClass</b>(ObjectClassHandle theClass) %}
-					{% notsupported void <b>stopRegistrationForObjectClass</b>(ObjectClassHandle theClass) %}
-					{% notsupported void <b>turnInteractionsOn</b>(InteractionClassHandle theHandle) %}
-					{% notsupported void <b>turnInteractionsOff</b>(InteractionClassHandle theHandle) %}
+					{% notsupported void startRegistrationForObjectClass(ObjectClassHandle theClass) %}
+					{% notsupported void stopRegistrationForObjectClass(ObjectClassHandle theClass) %}
+					{% notsupported void turnInteractionsOn(InteractionClassHandle theHandle) %}
+					{% notsupported void turnInteractionsOff(InteractionClassHandle theHandle) %}
 
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Object Management</b></td></tr>
-					{% supported void <b>objectInstanceNameReservationSucceeded</b>(String objectName) %}
-					{% supported void <b>objectInstanceNameReservationFailed</b>(String objectName) %}
-					{% notsupported void <b>multipleObjectInstanceNameReservationSucceeded</b>(Set<String> objectNames) %}
-					{% notsupported void <b>multipleObjectInstanceNameReservationFailed</b>(Set<String> objectNames) %}
-					{% supported void <b>discoverObjectInstance</b>( ObjectInstanceHandle object, ObjectClassHandle objectClass, String objectName ) %}
-					{% notsupported void <b>discoverObjectInstance</b>( ObjectInstanceHandle object, ObjectClassHandle objectClass, String objectName, FederateHandle provider ) %}
-					{% supported void <b>reflectAttributeValues</b>( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, SupplementalReflectInfo reflectInfo ) %}
-					{% supported void <b>reflectAttributeValues</b>( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, SupplementalReflectInfo info )  %}
-					{% notsupported void <b>reflectAttributeValues</b>( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, MessageRetractionHandle retractionHandle, SupplementalReflectInfo info ) %}
-					{% supported void <b>receiveInteraction</b>( InteractionClassHandle interactionClass, ParameterHandleValueMap theParameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, SupplementalReceiveInfo info ) %}
-					{% supported void <b>receiveInteraction</b>( InteractionClassHandle interactionClass, ParameterHandleValueMap theParameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, SupplementalReceiveInfo receiveInfo ) %}
-					{% notsupported void <b>receiveInteraction</b>( InteractionClassHandle interactionClass, ParameterHandleValueMap theParameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, MessageRetractionHandle retractionHandle, SupplementalReceiveInfo info ) %}
-					{% supported void <b>removeObjectInstance</b>( ObjectInstanceHandle object, byte[] tag, OrderType sent, SupplementalRemoveInfo removeInfo ) %}
-					{% supported void <b>removeObjectInstance</b>( ObjectInstanceHandle object, byte[] tag, OrderType sent, LogicalTime theTime, OrderType receivedOrder, SupplementalRemoveInfo removeInfo ) %}
-					{% notsupported void <b>removeObjectInstance</b>( ObjectInstanceHandle object, byte[] tag, OrderType sent, LogicalTime theTime, OrderType receivedOrder, MessageRetractionHandle retractionHandle, SupplementalRemoveInfo removeInfo ) %}
+					{% supported void objectInstanceNameReservationSucceeded(String objectName) %}
+					{% supported void objectInstanceNameReservationFailed(String objectName) %}
+					{% notsupported void multipleObjectInstanceNameReservationSucceeded(Set<String> objectNames) %}
+					{% notsupported void multipleObjectInstanceNameReservationFailed(Set<String> objectNames) %}
+					{% supported void discoverObjectInstance( ObjectInstanceHandle object, ObjectClassHandle objectClass, String objectName ) %}
+					{% notsupported void discoverObjectInstance( ObjectInstanceHandle object, ObjectClassHandle objectClass, String objectName, FederateHandle provider ) %}
+					{% supported void reflectAttributeValues( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, SupplementalReflectInfo reflectInfo ) %}
+					{% supported void reflectAttributeValues( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, SupplementalReflectInfo info )  %}
+					{% notsupported void reflectAttributeValues( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, MessageRetractionHandle retractionHandle, SupplementalReflectInfo info ) %}
+					{% supported void receiveInteraction( InteractionClassHandle interactionClass, ParameterHandleValueMap parameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, SupplementalReceiveInfo info ) %}
+					{% supported void receiveInteraction( InteractionClassHandle interactionClass, ParameterHandleValueMap parameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, SupplementalReceiveInfo receiveInfo ) %}
+					{% notsupported void receiveInteraction( InteractionClassHandle interactionClass, ParameterHandleValueMap parameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, MessageRetractionHandle retractionHandle, SupplementalReceiveInfo info ) %}
+					{% supported void removeObjectInstance( ObjectInstanceHandle object, byte[] tag, OrderType sent, SupplementalRemoveInfo removeInfo ) %}
+					{% supported void removeObjectInstance( ObjectInstanceHandle object, byte[] tag, OrderType sent, LogicalTime theTime, OrderType receivedOrder, SupplementalRemoveInfo removeInfo ) %}
+					{% notsupported void removeObjectInstance( ObjectInstanceHandle object, byte[] tag, OrderType sent, LogicalTime theTime, OrderType receivedOrder, MessageRetractionHandle retractionHandle, SupplementalRemoveInfo removeInfo ) %}
 
-					{% notsupported void <b>attributesInScope</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) %}
-					{% notsupported void <b>attributesOutOfScope</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>provideAttributeValueUpdate</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes, byte[] tag ) %}
-					{% notsupported void <b>turnUpdatesOnForObjectInstance</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) %}
-					{% notsupported void <b>turnUpdatesOnForObjectInstance</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes, String updateRateDesignator ) %}
-					{% notsupported void <b>turnUpdatesOffForObjectInstance</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) %}
-					{% notsupported void <b>confirmAttributeTransportationTypeChange</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes, TransportationTypeHandle theTransportation ) %}
-					{% notsupported void <b>reportAttributeTransportationType</b>( ObjectInstanceHandle object, AttributeHandle theAttribute, TransportationTypeHandle theTransportation ) %}
-					{% notsupported void <b>confirmInteractionTransportationTypeChange</b>( InteractionClassHandle theInteraction, TransportationTypeHandle theTransportation ) %}
-					{% notsupported void <b>reportInteractionTransportationType</b>( FederateHandle theFederate, InteractionClassHandle theInteraction, TransportationTypeHandle theTransportation ) %}
+					{% notsupported void attributesInScope( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% notsupported void attributesOutOfScope( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void provideAttributeValueUpdate( ObjectInstanceHandle object, AttributeHandleSet attributes, byte[] tag ) %}
+					{% notsupported void turnUpdatesOnForObjectInstance( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% notsupported void turnUpdatesOnForObjectInstance( ObjectInstanceHandle object, AttributeHandleSet attributes, String updateRateDesignator ) %}
+					{% notsupported void turnUpdatesOffForObjectInstance( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% notsupported void confirmAttributeTransportationTypeChange( ObjectInstanceHandle object, AttributeHandleSet attributes, TransportationTypeHandle theTransportation ) %}
+					{% notsupported void reportAttributeTransportationType( ObjectInstanceHandle object, AttributeHandle theAttribute, TransportationTypeHandle theTransportation ) %}
+					{% notsupported void confirmInteractionTransportationTypeChange( InteractionClassHandle theInteraction, TransportationTypeHandle theTransportation ) %}
+					{% notsupported void reportInteractionTransportationType( FederateHandle theFederate, InteractionClassHandle theInteraction, TransportationTypeHandle theTransportation ) %}
 
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Ownership Management</b></td></tr>
-					{% supported void <b>requestAttributeOwnershipAssumption</b>( ObjectInstanceHandle theObject, AttributeHandleSet offeredAttributes, byte[] tag ) %}
-					{% notsupported void <b>requestDivestitureConfirmation</b>( ObjectInstanceHandle theObject, AttributeHandleSet offeredAttributes ) %}
-					{% supported void <b>attributeOwnershipAcquisitionNotification</b>( ObjectInstanceHandle theObject, AttributeHandleSet securedAttributes, byte[] tag ) %}
-					{% supported void <b>attributeOwnershipUnavailable</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>requestAttributeOwnershipRelease</b>( ObjectInstanceHandle theObject, AttributeHandleSet candidateAttributes, byte[] tag ) %}
-					{% supported void <b>confirmAttributeOwnershipAcquisitionCancellation</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) %}
-					{% supported void <b>informAttributeOwnership</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute, FederateHandle theOwner ) %}
-					{% supported void <b>attributeIsNotOwned</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) %}
-					{% supported void <b>attributeIsOwnedByRTI</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) %}
+					{% supported void requestAttributeOwnershipAssumption( ObjectInstanceHandle object, AttributeHandleSet offeredAttributes, byte[] tag ) %}
+					{% notsupported void requestDivestitureConfirmation( ObjectInstanceHandle object, AttributeHandleSet offeredAttributes ) %}
+					{% supported void attributeOwnershipAcquisitionNotification( ObjectInstanceHandle object, AttributeHandleSet securedAttributes, byte[] tag ) %}
+					{% supported void attributeOwnershipUnavailable( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void requestAttributeOwnershipRelease( ObjectInstanceHandle object, AttributeHandleSet candidateAttributes, byte[] tag ) %}
+					{% supported void confirmAttributeOwnershipAcquisitionCancellation( ObjectInstanceHandle object, AttributeHandleSet attributes ) %}
+					{% supported void informAttributeOwnership( ObjectInstanceHandle object, AttributeHandle theAttribute, FederateHandle theOwner ) %}
+					{% supported void attributeIsNotOwned( ObjectInstanceHandle object, AttributeHandle theAttribute ) %}
+					{% supported void attributeIsOwnedByRTI( ObjectInstanceHandle object, AttributeHandle theAttribute ) %}
 
 
 					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Time Management</b></td></tr>
-					{% supported void <b>timeRegulationEnabled</b>( LogicalTime time ) %}
-					{% supported void <b>timeConstrainedEnabled</b>( LogicalTime time ) %}
-					{% supported void <b>timeAdvanceGrant</b>( LogicalTime theTime ) %}
-					{% notsupported void <b>requestRetraction</b>( MessageRetractionHandle theHandle ) %}
+					{% supported void timeRegulationEnabled( LogicalTime time ) %}
+					{% supported void timeConstrainedEnabled( LogicalTime time ) %}
+					{% supported void timeAdvanceGrant( LogicalTime theTime ) %}
+					{% notsupported void requestRetraction( MessageRetractionHandle theHandle ) %}
 
 				</table>
 			</div>
