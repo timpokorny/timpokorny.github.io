@@ -5,7 +5,6 @@ author: Tim Pokorny
 section: User Documentation
 section-path: documentation/user/
 tags: [java, c++, hla13, ieee1516e]
-version: 2.x
 
 header-image-path: assets/images/logos/macosx-yosemite-450x250.png
 header-image-text: Some descriptive text

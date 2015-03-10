@@ -5,7 +5,7 @@ author: Tim Pokorny
 section: LVC Guides
 section-path: documentation/guides/
 tags: [vbs, vbs3, guides]
-version: 2.x
+compatibility_version: 2.x
 
 header-image-path: assets/images/simsystems/vbs3-3.jpg
 header-image-text: VBS3 from Bohemia Interactive Simulations
@@ -47,7 +47,7 @@ excerpt: >
 	</tr>
 	<tr>
 		<td><b>Portico Versions</b></td>
-		<td>2.x</td>
+		<td>{{ page.compatibility_version }}</td>
 	</tr>
 </table>
 

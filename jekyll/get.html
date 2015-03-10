@@ -33,8 +33,8 @@ layout: default
 	<div class="container">
 		
 		<div class="sixteen columns">
-			<h2>Stable / <span>2.0.0 <small>&nbsp;&nbsp;(April 1, 2013)</small></span>
-				<span style="float:right;"><small><a href="{% site_root %}about/releases/2.0.0/">Release Notes</a></small></span></h2>
+			<h2>Stable / <span>{{ site.stable_version }} <small>&nbsp;&nbsp;({{ site.stable_date }})</small></span>
+				<span style="float:right;"><small><a href="{% site_root %}about/releases/{{site.stable_version}}/index.html">Release Notes</a></small></span></h2>
 		</div>
 
 		<div class="standard plan one-third column">
@@ -103,7 +103,7 @@ layout: default
 		<div class="container nightly">
 		
 			<div class="sixteen columns">
-				<h2>Nightly / <span>8 August, 2014</span></h2>
+				<h2>Nightly / <span>{{ site.nightly_date }}</span></h2>
 			</div>
 		
 			<div class="standard plan one-third column">

@@ -18,3 +18,8 @@ kramdown:
 
 #permalink: pretty
 
+# Portico specific properties
+stable_version: 2.0.0
+stable_date: April 1, 2013
+nightly_version: 2.0.1
+nightly_date: 10 March, 2015
