@@ -1,0 +1,109 @@
+---
+layout: default
+version: 2.0.0
+---
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="twelve columns">
+			<h1>Portico API Status</h1>
+		</div>
+		
+		<nav class="four columns">
+			<ul class="breadcrumbs">
+				<li><a href="../../../index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li><a href="../../index.html">Developer</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li>API Status</li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+<!--<div class="fullwidth band-turquoise dragdown" style="margin-top:-40px;">-->
+<div class="page-content">
+	<div class="container">
+	
+		<p class="bigger">Portico strives to implement as much of the various HLA standards as
+			possible. Our stated goal is to be 100% standards compliant, but you can't have
+			everything all at once - especially in your RTI! To make sure you know just which
+			calls are supported by Portico, we've built these handy guides.
+		</p>
+
+	</div> <!-- Container -->
+</div> <!-- Page Content -->
+
+
+<!-- API Status / Start
+================================================== -->
+<section id="apistatis">
+
+	<a name="apistatis"></a>
+
+	<div class="page-content">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>API Status / <span>Portico {{page.version}}</span></h2>
+
+				<p class="bigger">The table below links to separate pages that
+					show the various <code>RTIambassador</code> and <code>FederateAmbassador</code> calls that
+					are supported.
+				</p>
+
+				<table class="default-table auto-width" style="text-align:middle;">
+					<tr>
+						<th>&nbsp;</th>
+						<th><h3>Java</h3></th>
+						<th><h3>C++</h3></th>
+					</tr>
+					<tr>
+						<td><b>HLA v1.3</b><br/><small>RTI-NG Compatible</small></td>
+						<td><a href="hla13/java.html"><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+						<td><a href="hla13/cpp.html" ><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+					</tr>
+					<tr>
+						<td><b>HLA v1.3 DLC</b><br/><small>SISO-STD-004-2004</small></td>
+						<td><a href="dlc13/java.html"><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+						<td><a href="dlc13/cpp.html" ><span class="tooltip label label-warning" title="Not Supported on Windows">Linux & Mac OS X</span></a></td>
+					</tr>
+					<tr>
+						<td><b>IEEE 1516-2010</b><br/><small>HLA Evolved</small></td>
+						<td><a href="ieee1516e/java.html"><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+						<td><a href="ieee1516e/cpp.html" ><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+					</tr>
+
+					<tr><th colspan="3" style="text-align:center;"><h3>Deprecated Interfaces</h3></th></tr>
+
+					<tr>
+						<td><span style="color:#ccc;">IEEE 1516-2000</span></td>
+						<td><span class="tooltip label label-deprecated" title="Last Supported in 1.x">Deprecated</span></td>
+						<td><span class="tooltip label label-deprecated" title="Never supported">Not Supported</span></td>
+					</tr>
+
+					<tr>
+						<td><span style="color:#ccc;">IEEE 1516 DLC (2004)<br/><small>SISO-STD-004.1-2004</small></span></td>
+						<td><span class="tooltip label label-deprecated" title="Last Supported in 1.x">Deprecated</span></td>
+						<td><span class="tooltip label label-deprecated" title="Never supported">Not Supported</span></td>
+					</tr>
+				</table>
+
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Supported Interfaces / End
+================================================== -->
+
+<!-- Mailing List Signup
+================================================== -->
+{% include celebrity-kevin.html %}

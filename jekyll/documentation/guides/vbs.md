@@ -33,7 +33,7 @@ excerpt: >
 	<tr>
 		<td><b>HLA Interfaces</b></td>
 		<td>
-			<a href="{% site_root %}documentation/developer/apistatus/hla13/cpp.html">HLA 1.3 (c++)</a>
+			<a href="{% site_root %}documentation/developer/apistatus/hla13/cpp.html">HLA 1.3 (c++)</a>, 
 			<a href="{% site_root %}documentation/developer/apistatus/ieee1516e/cpp.html">IEEE 1516-2010 (c++)</a>
 		</td>
 	</tr>

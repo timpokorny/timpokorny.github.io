@@ -8,7 +8,7 @@
 	<meta charset="utf-8" />
 	<title>The Portico Project</title>
     <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
-    <link rel="canonical" href="http://timpokorny.github.io/about/releases/1.0.0/">
+    <link rel="canonical" href="http://timpokorny.github.io/documentation/developer/apistatus/">
 	<link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../../assets/favicon.ico" type="image/x-icon">
 	
@@ -160,22 +160,17 @@
 <div class="page-title">
 	<div class="container">
 
-		<div class="four columns">
-			<h1>Portico v1.0.1</h1>
+		<div class="twelve columns">
+			<h1>Portico API Status</h1>
 		</div>
 		
-		<nav class="twelve columns">
+		<nav class="four columns">
 			<ul class="breadcrumbs">
 				<li><a href="../../../index.html">Home</a></li>
 				<li><i class="icon-angle-right"></i></li>
-
-				<li><a href="../../../about/index.html">About</a></li>
+				<li><a href="../../index.html">Developer</a></li>
 				<li><i class="icon-angle-right"></i></li>
-
-				<li><a href="../../../about/status.html#release-notes">Releases</a></li>
-				<li><i class="icon-angle-right"></i></li>
-
-				<li>1.0.0 </li>
+				<li>API Status</li>
 			</ul>
 		</nav>
 		
@@ -185,147 +180,84 @@
 <!-- Title Bar / End
 ================================================== -->
 
+<!--<div class="fullwidth band-turquoise dragdown" style="margin-top:-40px;">-->
+<div class="page-content">
+	<div class="container">
+	
+		<p class="bigger">Portico strives to implement as much of the various HLA standards as
+			possible. Our stated goal is to be 100% standards compliant, but you can't have
+			everything all at once - especially in your RTI! To make sure you know just which
+			calls are supported by Portico, we've built these handy guides.
+		</p>
 
-<!-- Introduction / Start
+	</div> <!-- Container -->
+</div> <!-- Page Content -->
+
+
+<!-- API Status / Start
 ================================================== -->
-<div class="container">
+<section id="apistatis">
 
-	<div class="four columns">
-		<table class="default-table" style="width:auto;">
-			<tr>
-				<td><strong>Release Date</strong></td>
-				<td>May 27th, 2009</td>
-			</tr>
-			<tr>
-				<td><strong>Status</strong></td>
-				<td><span class="bigger label label-default">Deprecated</span></td>
-			</tr>
-			<tr>
-				<td><strong>Download</strong></td>
-				<td><a href="../../../get.html#archive">Archive</a></td>
-			</tr>
-			<tr>
-				<td><strong>Git Tag</strong></td>
-				<td>N/A</td>
-			</tr>
-			<tr>
-				<td><strong>Baseline</strong></td>
-				<td>/portico-1.0.x</td>
-			</tr>
-		</table>
+	<a name="apistatis"></a>
 
-	</div>
+	<div class="page-content">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>API Status / <span>Portico 2.0.0</span></h2>
 
-	<div class="eleven columns">
+				<p class="bigger">The table below links to separate pages that
+					show the various <code>RTIambassador</code> and <code>FederateAmbassador</code> calls that
+					are supported.
+				</p>
 
-				<div class="alert error">
-			<p>This release has been deprecated. Users are strongly encouraged to update to a support release.
-		</div>
+				<table class="default-table auto-width" style="text-align:middle;">
+					<tr>
+						<th>&nbsp;</th>
+						<th><h3>Java</h3></th>
+						<th><h3>C++</h3></th>
+					</tr>
+					<tr>
+						<td><b>HLA v1.3</b><br/><small>RTI-NG Compatible</small></td>
+						<td><a href="hla13/java.html"><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+						<td><a href="hla13/cpp.html" ><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+					</tr>
+					<tr>
+						<td><b>HLA v1.3 DLC</b><br/><small>SISO-STD-004-2004</small></td>
+						<td><a href="dlc13/java.html"><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+						<td><a href="dlc13/cpp.html" ><span class="tooltip label label-warning" title="Not Supported on Windows">Linux & Mac OS X</span></a></td>
+					</tr>
+					<tr>
+						<td><b>IEEE 1516-2010</b><br/><small>HLA Evolved</small></td>
+						<td><a href="ieee1516e/java.html"><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+						<td><a href="ieee1516e/cpp.html" ><span class="tooltip label label-success" title="Click for details">Supported</span></a></td>
+					</tr>
 
+					<tr><th colspan="3" style="text-align:center;"><h3>Deprecated Interfaces</h3></th></tr>
 
-		<h2>JSAF Stability Improvements</h2>
+					<tr>
+						<td><span style="color:#ccc;">IEEE 1516-2000</span></td>
+						<td><span class="tooltip label label-deprecated" title="Last Supported in 1.x">Deprecated</span></td>
+						<td><span class="tooltip label label-deprecated" title="Never supported">Not Supported</span></td>
+					</tr>
 
-		<p>
-			<span class="dropcap">P</span>ortico 1.0 is here! It's been a long road, with a lot
-			of hours put in by the whole group to get the release over the line. Over 200 separate
-			tickets have been addressed since the last release, adding a number of new features and
-			filling out the public API. Version 1.0 is a major milestone for any project, and
-			a special thank-you to the whole development is in order. We're very proud of what
-			has been put in place since the project started and we hope you enjoy using it!
-		</p>
+					<tr>
+						<td><span style="color:#ccc;">IEEE 1516 DLC (2004)<br/><small>SISO-STD-004.1-2004</small></span></td>
+						<td><span class="tooltip label label-deprecated" title="Last Supported in 1.x">Deprecated</span></td>
+						<td><span class="tooltip label label-deprecated" title="Never supported">Not Supported</span></td>
+					</tr>
+				</table>
 
-		<h2>Clogging the Tubes - Target 5000</h2>
-		<p>
-			Let's face it, the HLA is a niche technology. Despite this, we've been somewhat
-			overwhelmed by the interest in Portico. To date our various installers have been
-			downloaded almost 5000 times by groups all around the globe. As we tick over to
-			version 1.0, let's bust through this milestone as well!
-		</p>
+			</div>
 
-		<h2>Save/Restore and Ownership Management</h2>
-		<p>
-			Portico now supports both Save/Restore and Ownership Management services for the
-			HLA 1.3 specification. This is provided for the Java and C++ interfaces and works
-			across all platforms. These have been a long time coming, and now, save for some
-			smaller calls here and there, Portico support covers the full 1.3 specification.
-		</p>
-		<p>
-			For compete details on the support level of various <span class="code">RTIambassador</span> and
-			<span class="code">FederateAmbassador</span> calls, see the
-			<a href="../../../documentation/developer/apistatus.html">Portico API Status</a> page.
-		</p>
-
-		<h2>Performance Improvements</h2>
-		<p>
-			Performance has been a focus of the Portico v1.0 release, and significant gains have
-			been made. Through optimization at various levels inside the libraries, Portico is now
-			significantly faster than it was in the previous releases. A comparison of Portico v0.9,
-			Portico v1.0 and DMSO RTI-NGv6 was generated and can be 
-			<a href="../../../documentation/user/performance.html">found here</a>.
-			On that page you'll also find a new section describing how to tweak the various
-			Portico options for better performance in your particular environment.
-		</p>
-		<p>
-			As part of the report generation, a benchmarking application known as PGauge was
-			developed (for both Java and C++). The code for PGauge will be made available in
-			the source respoistory for anyone interested.
-		</p>
-
-		<h2>Architecture Changes</h2>
-		<p>
-			As part of performance improvements, Portico underwent some significant architectural
-			refactoring. As part of this move, there is no longer a central RTI component.
-			When federates are started on the same network in the same federation, they will find
-			and communicate with one another. Portico version 0.8 (the last release to contain
-			the client/server architecture) will remain available for download by those who would
-			like a point-to-point connection.
-		</p>
-
-		<h2>C++ Interface Improvements</h2>
-		<p>
-			Throughout the development of the 1.0 release, a number of bugs were identified and
-			fixed within the Portico C++ interface. These improvements have resulted in increased
-			stability across all platforms, as well as better performance.
-		</p>
-		<p>
-			As part of performance testing, the C++ interface was also put through some
-			considerable load testing across Windows, Linux and Mac OS X, helping to identify
-			any problems and resulting in increased quality for the interface.
-		</p>
-		<p>
-			Finally, a number of problems with the DLC 1.3 interface have been fixed and full
-			support (to the same level as the RTI-NG compatible interface) is now provided, giving
-			users a C++ platform on which they can build fully featured federates.
-		</p>
-
-		<h2>Improvements and Bug Fixes</h2>
-		<p>
-			Thanks to help from a number of users on the forums, a number of bugs have been
-			identified and fixed as part of the Portico v1.0 release. These have been across
-			all areas of Portico, but a few were more subtle bugs in Time Management (if anyone
-			finds any more, please post them on the forums!).
-		</p>
-
-		<h2>What's Next?</h2>
-		<p>
-			Getting a product as big as Portico to Version 1.0 is a big milestone - but it's not
-			a place to stop. From this point we've start to turn our attention to the IEEE-1516
-			API and are making plans on folding it into Portico family.
-		</p>
-		<p>
-			Finally, I'd like to extend a big thank-you to everyone who has downloaded and used
-			Portico, and especially to those who have contributed back, either through code,
-			bug reporting or general activity across the forums. Getting this far doesn't happen
-			without the help of a lot of people. Well done and happy simulating! 
-		</p>
-
-	</div>
-
-</div>
-<!-- Introduction / End
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Supported Interfaces / End
 ================================================== -->
 
-
+<!-- Mailing List Signup
+================================================== -->
 <!-- Kevin / Start
 ================================================== -->
 <div class="fullwidth background-turquoise celebrity celebrity-flat dragdown">

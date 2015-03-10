@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+			<!-- Basic Page Needs -->
+	<meta charset="utf-8" />
+	<title>The Portico Project</title>
+    <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
+    <link rel="canonical" href="http://timpokorny.github.io/documentation/developer/apistatus/ieee1516e/java.html">
+	<link rel="shortcut icon" href="../../../../assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../../assets/favicon.ico" type="image/x-icon">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" href="../../../../assets/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../../../assets/css/colors/8.css" id="color" />
+	<link rel="stylesheet" href="../../../../assets/css/overrides.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../../../../assets/css/prism.css">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="../../../../assets/js/jquery-1.9.0.min.js"></script>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="../../../../assets/js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.quovolver.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.tooltipster.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.jpanelmenu.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/swipe.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/retina.js"></script>
+	<script type="text/javascript" src="../../../../assets/js/custom.js"></script>
+
+	</head>
+
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
+
+		
+<!-- ===================================================================== -->
+<!--                            Navigation Bar                             -->
+<!-- ===================================================================== -->
+<header class="menu">
+	<div class="container">
+	
+		<!-- Mobile Only Menu Button  -->
+		<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+		
+		<!-- Logo  -->  
+		<a class="logo" href="../../../../index.html"><img src="../../../../assets/images/logo.png"/></a>
+		
+		<!-- Navigation -->   
+		<nav>
+			<ul class="navigation">
+				<li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
+				<li class="current"><a href="../../../../index.html">Home</a></li>
+
+				<li><a href="../../../../get.html">Get</a>
+					<ul>
+						<li><a href="../../../../get.html#stable">Stable</a></li>
+						<li><a href="../../../../get.html#nightly">Nightly</a></li>
+						<li><a href="../../../../get.html#archive">Archive</a></li>
+					</ul>
+				</li>
+
+				<li><a href="../../../../about/index.html" class="arrow">About</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../../../about/index.html">About Portico</a></li>
+						<li><a href="../../../../about/index.html#devteam">Developer Team</a></li>
+						<li><a href="../../../../about/index.html#history">Portico History</a></li>
+						<li><a href="../../../../about/status.html">Status and Roadmap</a></li>
+						<li><a href="../../../../about/license.html">License</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../../../documentation/" class="arrow">Documentation</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../../../documentation/user/" class="arrow">For Users</a>
+							<ul>
+								<li><a href="../../../../documentation/user/gettingstarted.html">Getting Started</a></li>
+								<li><a href="../../../../documentation/user/switching.html">Switching to Portico</a></li>
+								<li><a href="../../../../documentation/user/configure.html">Configuring Portico</a></li>
+								<li><a href="../../../../documentation/user/performance.html">Performance</a></li>
+								<li><a href="../../../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
+								<li><a href="../../../../documentation/user/faq.html">Portico FAQ</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../documentation/developer/" class="arrow">For Developers</a>
+							<ul>
+								<li><a href="../../../../documentation/developer/welcome.html">Welcome to the HLA</a></li>
+								<li><a href="../../../../documentation/developer/java.html">Java Federates</a></li>
+								<li><a href="../../../../documentation/developer/cpp.html">C++ Federates</a></li>
+								<li><a href="../../../../documentation/developer/apistatus/index.html">API Status</a></li>
+								<li><a href="../../../../documentation/developer/building.html">Building Portico</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../documentation/guides/" class="arrow">LVC Guides</a>
+							<ul>
+								<!-- Live -->
+								<!-- Virtual -->
+								<li><a href="../../../../documentation/guides/vbs.html">VBS</a></li>
+								<li><a href="../../../../documentation/guides/steelbeasts.html">Steel Beasts</a></li>
+								<li><a href="../../../../documentation/guides/xplane.html">X-Plane</a></li>
+								<li><a href="../../../../documentation/guides/unity.html">Unity3D</a></li>
+								<!-- Constructive -->
+								<li><a href="../../../../documentation/guides/onesaf.html">OneSAF</a></li>
+								<li><a href="../../../../documentation/guides/jsaf.html">JSAF</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../about/status.html#supported-platforms">Supported Platforms</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../../../community/" class="arrow">Community</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../../../news/">Latest News</a></li>
+						<li><a href="../../../../community/index.html">Community Support</a></li>
+						<li><a href="../../../../community/bugs.html">Reporting Bugs</a></li>
+						<li><a href="../../../../community/contributing.html">Contributing</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../../../support/">Support</a></li>
+
+				<li><a href="../../../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div><!-- End of container -->
+</header>
+<!-- Main Menu / End
+================================================== -->
+
+
+		<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="twelve columns">
+			<h1>Portico API Status</h1>
+		</div>
+		
+		<nav class="four columns">
+			<ul class="breadcrumbs">
+				<li><a href="../../../index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li><a href="../../index.html">Developer</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li><a href="../index.html">API Status</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li>IEEE 1516-2010 (Java) </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+<section id="introduction">
+
+	<a name="apistatis"></a>
+
+	<div class="page-content">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>IEEE 1516-2010 / <span>Java</span></h2>
+
+				<p class="bigger">The tables below list the RTI Ambassador and Federate Ambassador
+					calls supported for this interface. Where applicable, specific implementation
+					notes are included.
+				</p>
+
+				<ul class="default-list">
+					<li><a href="#rtiamb">RTI Ambassador</a></li>
+					<li><a href="#fedamb">Federate Ambassador</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- RTIambassador / Start
+================================================== -->
+<section id="rtiamb">
+
+	<a name="rtiamb"></a>
+
+	<div class="fullwidth background-silver" style="margin-top:30px;margin-bottom:-60px;">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>RTI Ambassador</h2>
+
+				<table class="default-table" style="font-size:1.0em">
+					<tr>
+						<th>Supported</th>
+						<th>Method</th>
+					</tr>
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Federation Management Services</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>connect</b>( FederateAmbassador, CallbackModel, String ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>connect</b>( FederateAmbassador fedamb, CallbackModel callbacks ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>disconnect</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>createFederationExecution</b>( String fedeateName, URL fomModule ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>createFederationExecution</b>( String federationName, URL[] fomModules ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>createFederationExecution</b>( String federationName, URL[] fomModules, URL mimModule ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>createFederationExecution</b>( String federationName, URL[] fomModules, String timeName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>createFederationExecution</b>( String federationName, URL[] fomModules, URL mimModule, String timeName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>destroyFederationExecution</b>( String executionName ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>listFederationExecutions()</b> </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>FederateHandle <b>joinFederationExecution</b>( String federateType, String federationName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>FederateHandle <b>joinFederationExecution</b>( String federateName, String federateType, String federationName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>FederateHandle <b>joinFederationExecution</b>( String federateType, String federationName, URL[] fomModules ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>FederateHandle <b>joinFederationExecution</b>( String federateName, String federateType, String federationName, URL[] fomModules ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>resignFederationExecution</b>( ResignAction resignAction ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>registerFederationSynchronizationPoint</b>( String label, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>registerFederationSynchronizationPoint</b>( String label, byte[] tag, FederateHandleSet syncset ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>synchronizationPointAchieved</b>( String label ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>synchronizationPointAchieved</b>( String label, boolean successIndicator ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestFederationSave</b>( String label ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestFederationSave</b>( String label, LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federateSaveBegun</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federateSaveComplete</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federateSaveNotComplete</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>abortFederationSave</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>queryFederationSaveStatus</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestFederationRestore</b>( String label ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federateRestoreComplete</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federateRestoreNotComplete</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>abortFederationRestore</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>queryFederationRestoreStatus</b>() </td></tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Declaration Management</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>publishObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unpublishObjectClass</b>( ObjectClassHandle theClass ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unpublishObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>publishInteractionClass</b>( InteractionClassHandle theInteraction ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unpublishInteractionClass</b>( InteractionClassHandle theInteraction ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>subscribeObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes, String updateRate ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributesPassively</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributesPassively</b>( ObjectClassHandle theClass, AttributeHandleSet attributes, String updateRate ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unsubscribeObjectClass</b>( ObjectClassHandle theClass ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unsubscribeObjectClassAttributes</b>( ObjectClassHandle theClass, AttributeHandleSet attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>subscribeInteractionClass</b>( InteractionClassHandle theClass ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeInteractionClassPassively</b>( InteractionClassHandle theClass ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unsubscribeInteractionClass</b>( InteractionClassHandle theClass ) </td></tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Object Management Services</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>reserveObjectInstanceName</b>( String name ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>releaseObjectInstanceName</b>( String name ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>reserveMultipleObjectInstanceName</b>( Set<String> names ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>releaseMultipleObjectInstanceName</b>( Set<String> names ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectInstanceHandle <b>registerObjectInstance</b>( ObjectClassHandle theClass ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectInstanceHandle <b>registerObjectInstance</b>( ObjectClassHandle theClass, String name ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>updateAttributeValues</b>( ObjectInstanceHandle theObject, AttributeHandleValueMap theAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-info' title=''>Partial Support</span></td><td>MessageRetractionReturn <b>updateAttributeValues</b>( ObjectInstanceHandle theObject, AttributeHandleValueMap theAttributes, byte[] tag, LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>sendInteraction</b>( InteractionClassHandle theInteraction, ParameterHandleValueMap theParameters, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-info' title=''>Partial Support</span></td><td>MessageRetractionReturn <b>sendInteraction</b>( InteractionClassHandle theInteraction, ParameterHandleValueMap theParameters, byte[] tag, LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>deleteObjectInstance</b>( ObjectInstanceHandle objectHandle, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-info' title=''>Partial Support</span></td><td>MessageRetractionReturn <b>deleteObjectInstance</b>( ObjectInstanceHandle objectHandle, byte[] tag, LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>localDeleteObjectInstance</b>( ObjectInstanceHandle objectHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>requestAttributeValueUpdate</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>requestAttributeValueUpdate</b>( ObjectClassHandle theClass, AttributeHandleSet theAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestAttributeTransportationTypeChange</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, TransportationTypeHandle theType ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>queryAttributeTransportationType</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestInteractionTransportationTypeChange</b>( InteractionClassHandle theClass, TransportationTypeHandle theType ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>queryInteractionTransportationType</b>( FederateHandle theFederate, InteractionClassHandle theInteraction ) </td></tr>
+
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Ownership Management Services</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>unconditionalAttributeOwnershipDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>negotiatedAttributeOwnershipDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>confirmDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>attributeOwnershipAcquisition</b>( ObjectInstanceHandle theObject, AttributeHandleSet desiredAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>attributeOwnershipAcquisitionIfAvailable</b>( ObjectInstanceHandle theObject, AttributeHandleSet desiredAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>attributeOwnershipReleaseDenied</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-info' title=''>Partial Support</span></td><td>AttributeHandleSet <b>attributeOwnershipDivestitureIfWanted</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>cancelNegotiatedAttributeOwnershipDivestiture</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>cancelAttributeOwnershipAcquisition</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>queryAttributeOwnership</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>boolean isAttributeOwnedByFederate</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) </td></tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Time Management Services</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>enableTimeRegulation</b>( LogicalTimeInterval theLookahead ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>disableTimeRegulation</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>enableTimeConstrained</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>disableTimeConstrained</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>timeAdvanceRequest</b>( LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>timeAdvanceRequestAvailable</b>( LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>nextMessageRequest</b>( LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>nextMessageRequestAvailable</b>( LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>flushQueueRequest</b>( LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>enableAsynchronousDelivery</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>disableAsynchronousDelivery</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>TimeQueryReturn <b>queryGALT</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>LogicalTime <b>queryLogicalTime</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>TimeQueryReturn <b>queryLITS</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>modifyLookahead</b>( LogicalTimeInterval theLookahead ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>LogicalTimeInterval <b>queryLookahead</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>retract</b>( MessageRetractionHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>changeAttributeOrderType</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes, OrderType theType ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>changeInteractionOrderType</b>( InteractionClassHandle theClass, OrderType theType ) </td></tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Data Distribution Management Services</b></td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>RegionHandle createRegion</b>( DimensionHandleSet dimensions ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>commitRegionModifications</b>( RegionHandleSet regions ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>deleteRegion</b>( RegionHandle theRegion ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>ObjectInstanceHandle <b>registerObjectInstanceWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>ObjectInstanceHandle <b>registerObjectInstanceWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String theObject ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>associateRegionsForUpdates</b>( ObjectInstanceHandle theObject, AttributeSetRegionSetPairList attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>unassociateRegionsForUpdates</b>( ObjectInstanceHandle theObject, AttributeSetRegionSetPairList attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributesWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributesWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String updateRate ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributesPassivelyWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeObjectClassAttributesPassivelyWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, String updateRate ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>unsubscribeObjectClassAttributesWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeInteractionClassWithRegions</b>( InteractionClassHandle theClass, RegionHandleSet regions ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>subscribeInteractionClassPassivelyWithRegions</b>( InteractionClassHandle theClass, RegionHandleSet regions ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>unsubscribeInteractionClassWithRegions</b>( InteractionClassHandle theClass, RegionHandleSet regions ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>sendInteractionWithRegions</b>( InteractionClassHandle interaction, ParameterHandleValueMap parameters, RegionHandleSet regions, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>MessageRetractionReturn <b>sendInteractionWithRegions</b>( InteractionClassHandle interaction, ParameterHandleValueMap parameters, RegionHandleSet regions, byte[] tag, LogicalTime time ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestAttributeValueUpdateWithRegions</b>( ObjectClassHandle theClass, AttributeSetRegionSetPairList attributes, byte[] tag ) </td></tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>RTI Support Services</b></td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>ResignAction <b>getAutomaticResignDirective</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>setAutomaticResignDirective</b>( ResignAction resignAction ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>FederateHandle <b>getFederateHandle</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getFederateName</b>( FederateHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectClassHandle <b>getObjectClassHandle</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getObjectClassName</b>( ObjectClassHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectClassHandle <b>getKnownObjectClassHandle</b>( ObjectInstanceHandle theObject ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectInstanceHandle <b>getObjectInstanceHandle</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getObjectInstanceName</b>( ObjectInstanceHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>AttributeHandle <b>getAttributeHandle</b>( ObjectClassHandle whichClass, String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getAttributeName</b>( ObjectClassHandle whichClass, AttributeHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>double <b>getUpdateRateValue</b>( String updateRateDesignator ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>double <b>getUpdateRateValueForAttribute</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>InteractionClassHandle <b>getInteractionClassHandle</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getInteractionClassName</b>( InteractionClassHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ParameterHandle <b>getParameterHandle</b>( InteractionClassHandle whichClass, String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getParameterName</b>( InteractionClassHandle whichClass, ParameterHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>OrderType <b>getOrderType</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>String <b>getOrderName</b>( OrderType theType ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>TransportationTypeHandle <b>getTransportationTypeHandle</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>String <b>getTransportationTypeName</b>( TransportationTypeHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>DimensionHandleSet <b>getAvailableDimensionsForClassAttribute</b>( ObjectClassHandle whichClass, AttributeHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>DimensionHandleSet <b>getAvailableDimensionsForInteractionClass</b>( InteractionClassHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>DimensionHandle <b>getDimensionHandle</b>( String theName ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>String <b>getDimensionName</b>( DimensionHandle theHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>long <b>getDimensionUpperBound</b>( DimensionHandle theHandle )  </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>DimensionHandleSet <b>getDimensionHandleSet</b>( RegionHandle region ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>RangeBounds <b>getRangeBounds</b>( RegionHandle region, DimensionHandle dimension ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>setRangeBounds</b>( RegionHandle region, DimensionHandle dimension, RangeBounds bounds ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>long <b>normalizeFederateHandle</b>( FederateHandle federateHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>long <b>normalizeServiceGroup</b>( ServiceGroup group ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>disableObjectClassRelevanceAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>enableAttributeRelevanceAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>disableAttributeRelevanceAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>enableAttributeScopeAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>disableAttributeScopeAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>enableInteractionRelevanceAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>disableInteractionRelevanceAdvisorySwitch</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>boolean <b>evokeCallback</b>( double approximateMinTimeInSeconds ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>boolean <b>evokeMultipleCallbacks</b>( double approximateMinTimeInSeconds, double approximateMaxTimeInSeconds ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>enableCallbacks</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>disableCallbacks</b>() </td></tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>API Support Services</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>AttributeHandleFactory <b>getAttributeHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>AttributeHandleSetFactory <b>getAttributeHandleSetFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>AttributeHandleValueMapFactory <b>getAttributeHandleValueMapFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>AttributeSetRegionSetPairListFactory <b>getAttributeSetRegionSetPairListFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>DimensionHandleFactory <b>getDimensionHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>DimensionHandleSetFactory <b>getDimensionHandleSetFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>FederateHandleFactory <b>getFederateHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>FederateHandleSetFactory <b>getFederateHandleSetFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>InteractionClassHandleFactory <b>getInteractionClassHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectClassHandleFactory <b>getObjectClassHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ObjectInstanceHandleFactory <b>getObjectInstanceHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ParameterHandleFactory <b>getParameterHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>ParameterHandleValueMapFactory <b>getParameterHandleValueMapFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>RegionHandleSetFactory <b>getRegionHandleSetFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>TransportationTypeHandleFactory <b>getTransportationTypeHandleFactory</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>String <b>getHLAversion</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>LogicalTimeFactory <b>getTimeFactory</b>() </td></tr>
+
+				</table>
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- RTIambassador / End
+================================================== -->
+
+
+<!-- FederateAmbassador / Start
+================================================== -->
+<section id="fedamb">
+
+	<a name="fedamb"></a>
+
+	<div class="fullwidth background-midnightblue" style="margin-bottom:-60px;">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2 style="color:#fff;">Federate Ambassador</h2>
+
+				<table class="default-table" style="font-size:1.0em">
+					<tr>
+						<th>Supported</th>
+						<th>Method</th>
+					</tr>
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Federation Management</b></td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>connectionLost</b>(String faultDescription) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>reportFederationExecutions</b>(FederationExecutionInformationSet infoset) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>synchronizationPointRegistrationSucceeded</b>(String label) </td></tr>
+					<tr><td><span class='tooltip label label-info' title=''>Partial Support</span></td><td>void <b>synchronizationPointRegistrationFailed</b>(String label,SynchronizationPointFailureReason reason) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>announceSynchronizationPoint</b>(String label, byte[] tag) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>federationSynchronized</b>(String label, FederateHandleSet failedToSyncSet) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>initiateFederateSave</b>(String label) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>initiateFederateSave</b>(String label, LogicalTime time) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>federationSaved</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>federationNotSaved</b>(SaveFailureReason reason) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federationSaveStatusResponse</b>(FederateHandleSaveStatusPair[] response) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>requestFederationRestoreSucceeded</b>(String label) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>requestFederationRestoreFailed</b>(String label) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>federationRestoreBegun</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>initiateFederateRestore</b>( String label, String federateName, FederateHandle federateHandle ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>federationRestored</b>() </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>federationNotRestored</b>(RestoreFailureReason reason) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>federationRestoreStatusResponse</b>(FederateRestoreStatus[] response) </td></tr>
+
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Declaration Management</b></td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>startRegistrationForObjectClass</b>(ObjectClassHandle theClass) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>stopRegistrationForObjectClass</b>(ObjectClassHandle theClass) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>turnInteractionsOn</b>(InteractionClassHandle theHandle) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>turnInteractionsOff</b>(InteractionClassHandle theHandle) </td></tr>
+
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Object Management</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>objectInstanceNameReservationSucceeded</b>(String objectName) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>objectInstanceNameReservationFailed</b>(String objectName) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>multipleObjectInstanceNameReservationSucceeded</b>(Set<String> objectNames) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>multipleObjectInstanceNameReservationFailed</b>(Set<String> objectNames) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>discoverObjectInstance</b>( ObjectInstanceHandle object, ObjectClassHandle objectClass, String objectName ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>discoverObjectInstance</b>( ObjectInstanceHandle object, ObjectClassHandle objectClass, String objectName, FederateHandle provider ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>reflectAttributeValues</b>( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, SupplementalReflectInfo reflectInfo ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>reflectAttributeValues</b>( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, SupplementalReflectInfo info )  </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>reflectAttributeValues</b>( ObjectInstanceHandle object, AttributeHandleValueMap attributes, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, MessageRetractionHandle retractionHandle, SupplementalReflectInfo info ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>receiveInteraction</b>( InteractionClassHandle interactionClass, ParameterHandleValueMap theParameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, SupplementalReceiveInfo info ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>receiveInteraction</b>( InteractionClassHandle interactionClass, ParameterHandleValueMap theParameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, SupplementalReceiveInfo receiveInfo ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>receiveInteraction</b>( InteractionClassHandle interactionClass, ParameterHandleValueMap theParameters, byte[] tag, OrderType sent, TransportationTypeHandle transport, LogicalTime theTime, OrderType received, MessageRetractionHandle retractionHandle, SupplementalReceiveInfo info ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>removeObjectInstance</b>( ObjectInstanceHandle object, byte[] tag, OrderType sent, SupplementalRemoveInfo removeInfo ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>removeObjectInstance</b>( ObjectInstanceHandle object, byte[] tag, OrderType sent, LogicalTime theTime, OrderType receivedOrder, SupplementalRemoveInfo removeInfo ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>removeObjectInstance</b>( ObjectInstanceHandle object, byte[] tag, OrderType sent, LogicalTime theTime, OrderType receivedOrder, MessageRetractionHandle retractionHandle, SupplementalRemoveInfo removeInfo ) </td></tr>
+
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>attributesInScope</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>attributesOutOfScope</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>provideAttributeValueUpdate</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>turnUpdatesOnForObjectInstance</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>turnUpdatesOnForObjectInstance</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes, String updateRateDesignator ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>turnUpdatesOffForObjectInstance</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>confirmAttributeTransportationTypeChange</b>( ObjectInstanceHandle object, AttributeHandleSet theAttributes, TransportationTypeHandle theTransportation ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>reportAttributeTransportationType</b>( ObjectInstanceHandle object, AttributeHandle theAttribute, TransportationTypeHandle theTransportation ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>confirmInteractionTransportationTypeChange</b>( InteractionClassHandle theInteraction, TransportationTypeHandle theTransportation ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>reportInteractionTransportationType</b>( FederateHandle theFederate, InteractionClassHandle theInteraction, TransportationTypeHandle theTransportation ) </td></tr>
+
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Ownership Management</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>requestAttributeOwnershipAssumption</b>( ObjectInstanceHandle theObject, AttributeHandleSet offeredAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestDivestitureConfirmation</b>( ObjectInstanceHandle theObject, AttributeHandleSet offeredAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>attributeOwnershipAcquisitionNotification</b>( ObjectInstanceHandle theObject, AttributeHandleSet securedAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>attributeOwnershipUnavailable</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>requestAttributeOwnershipRelease</b>( ObjectInstanceHandle theObject, AttributeHandleSet candidateAttributes, byte[] tag ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>confirmAttributeOwnershipAcquisitionCancellation</b>( ObjectInstanceHandle theObject, AttributeHandleSet theAttributes ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>informAttributeOwnership</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute, FederateHandle theOwner ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>attributeIsNotOwned</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>attributeIsOwnedByRTI</b>( ObjectInstanceHandle theObject, AttributeHandle theAttribute ) </td></tr>
+
+
+					<tr><td colspan="2" class="background-white" style="text-align:center;"><b>Time Management</b></td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>timeRegulationEnabled</b>( LogicalTime time ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>timeConstrainedEnabled</b>( LogicalTime time ) </td></tr>
+					<tr><td><span class='tooltip label label-success' title=''>Supported</span></td><td>void <b>timeAdvanceGrant</b>( LogicalTime theTime ) </td></tr>
+					<tr><td><span class='tooltip label label-danger' title=''>Not Supported</span></td><td>void <b>requestRetraction</b>( MessageRetractionHandle theHandle ) </td></tr>
+
+				</table>
+			</div>
+
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- FederateAmbassador / End
+================================================== -->
+
+
+
+		
+<!-- Footer / Start
+================================================== -->
+<footer>
+  <section id="footer-mainn">
+    <div class="container">
+
+      <!-- Project Information -->
+      <div class="three columns">
+        <h4>Project</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../../about/index.html">About Portico</a></li>
+          <li><a href="../../../../about/index.html#devteam">Developer Team</a></li>
+          <li><a href="../../../../about/roadmap.html">Status and Roadmap</a></li>
+          <li><a href="../../../..//get.html">Get Portico</a></li>
+          <li><a href="../../../..//nightly.html">Nightly Builds</a></li>
+        </ul>
+      </div>
+
+      <!-- User Documentation -->
+      <div class="three columns">
+        <h4>For Users</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../../documentation/user/gettingstarted.html">Getting Started with Portico</a></li>
+          <li><a href="../../../../documentation/guides/index.html">Portico and LVC Tools</a></li>
+          <li><a href="../../../../documentation/user/switching.html">Switching to Portico</a></li>
+          <li><a href="../../../../documentation/user/configure.html">Configuring Portico</a></li>
+          <li><a href="../../../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="../../../../documentation/user/faq.html">Portico FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Developer Documentation -->
+      <div class="three columns">
+        <h4>For Developers</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../../documentation/developer/welcome.html">Welcome to the HLA</a></li>
+          <li><a href="../../../../documentation/developer/java.html">Writing Java Federates</a></li>
+          <li><a href="../../../../documentation/developer/cpp.html">Writing C++ Federates</a></li>
+          <li><a href="../../../../documentation/developer/apistatus/index.html">API Status</a></li>
+          <li><a href="../../../../documentation/developer/building.html">Building Portico</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Documentation -->
+      <div class="two columns">
+        <h4>Community</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../../../news/">Latest News</a></li>
+          <li><a href="../../../../community/bugs.html">Reporting Bugs</a></li>
+          <li><a href="../../../../community/index.html#mailing-lists">Mailing Lists</a></li>
+          <li><a href="../../../../community/index.html#forums">Community Forums</a></li>
+          <li><a href="../../../../community/contributing.html">Contributing</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="five columns" style="margin-left:20px;margin-right:0;">
+        <h4>Commercial Support</h4>
+        <hr class="smalline"/>
+        <p><img src="../../../../assets/images/logos/calytrix-logo-icon.jpg" class="img-circle pull-left"/>
+          <address>
+            &nbsp;&nbsp;<b>Calytrix Technologies</b><br>
+            &nbsp;&nbsp;Level 2, 110 William St <br/>
+            &nbsp;&nbsp;Perth, Western Australia, 6000<br/>
+            &nbsp;&nbsp;<abbr title="Email"><b>E:</b></abbr> sales@calytrix.com<br/>
+            &nbsp;&nbsp;<abbr title="Phone"><b>P:</b></abbr> +61 8 9226 4288<br/>
+            &nbsp;&nbsp;<a href="/contact.html"><i class="icon-pencil"></i> Go to contact form</a>
+          </address>
+        </p>
+
+        <!-- Mailchimp Signup -->
+        <!--
+        <p>
+          <h4 style="margin-top:0;padding-top:5px;">Announcement List</h4>
+          <div class="newsletter">
+            <form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
+            <input type="email" value="you@yourcompany.com"
+                name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+                onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+            <input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+          </form>
+          </div>
+        </p>
+        -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="footer-bar">
+    <div class="container">
+      <div class="eight columns">
+        <div class="footer-logo"><span>2014 © The Portico Project.</span></div>
+      </div>
+      
+      <div class="eight columns">
+        <ul class="footer-links">
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<!-- ==================================================
+Footer / End -->
+
+
+		<script src="../../../../assets/js/prism.js"></script>
+
+		
+	</body>
+
+</html>

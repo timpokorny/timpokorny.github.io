@@ -157,7 +157,7 @@ pre code
 }
 
 /* define the style for in-line code within a paragraph */
-.code, article.post .post-content code /* pretty much copied from the style for labels */
+.code, code, article.post .post-content code /* pretty much copied from the style for labels */
 {
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	border-radius: .25em;
@@ -368,12 +368,13 @@ a.btn.thin
 }
 
 
-.label-default { background-color: #777; }
-.label-primary { background-color: #428bca; }
-.label-success { background-color: #5cb85c; }
-.label-info    { background-color: #5bc0de; }
-.label-warning { background-color: #f0ad4e; }
-.label-danger  { background-color: #d9534f; }
+.label-default    { background-color: #777; }
+.label-primary    { background-color: #428bca; }
+.label-success    { background-color: #5cb85c; }
+.label-info       { background-color: #5bc0de; }
+.label-warning    { background-color: #f0ad4e; }
+.label-danger     { background-color: #d9534f; }
+.label-deprecated { background-color: #cccccc; }
 
 /*
 .label-default{ background-color: #999999; }
