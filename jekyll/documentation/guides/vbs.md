@@ -61,18 +61,18 @@ communication, CASEVAC/MEDEVAC, obstacle crossing and much more.
 VBS and HLA
 ===================
 Each copy of VBS ships with <a href="www.calytrix.com/products/lvcgame/">LVC Game</a> from
-Calytrix Technologies. DIS and HLA integration is provided through the built-in LVC Game
-gateway using a variety of FOMs.
+Calytrix Technologies. DIS and HLA integration is provided through this gateway using a variety
+of FOMs.
  
-To connect VBS to a Portico-based federation, you must first configure LVC Game to use
-Portico, defining the appropriate HLA interface and FOM that you wish to use.
-VBS is a windows-only application, with 32/64-bit support. When connecting with Portico
-users should use the Visual Studio 10 inteface.
+To connect VBS to a Portico federation, you must configure LVC Game to use Portico, defining
+the appropriate HLA interface and FOM that you wish to use. VBS is a windows-only application,
+with 32/64-bit support. When connecting with Portico users should use the **Visual Studio 10**
+inteface.
 
 Supported Versions
 --------------------
-The following list shows the specific versions of Portico that the author recommends
-are used depending on the version of VBS that you have installed.
+The following list shows the specific versions of Portico that we recommend you use, and
+which we have verified through testing.
 
 | VBS Version | Portico Version |
 | ----------- | --------------- |
@@ -83,8 +83,7 @@ are used depending on the version of VBS that you have installed.
 
 Supported Interfaces
 --------------------
-VBS uses the Portico C++ interface, which means that the plain 1516 interface is not supported.
-However, the standard 1.3 and HLA-Evolved interfaces can be used:
+The following HLA interfaces are supported when linking Portico with VBS:
 
 | HLA Interface  | Supported  |
 | ---------------|------------|
@@ -95,22 +94,21 @@ However, the standard 1.3 and HLA-Evolved interfaces can be used:
 
 <div class="alert info">
 	<p><b>32/64-bit Mode</b><br/>
-	VBS runs in both 32 and 64-bit mode. Ensure you get the version of Portico that is 
-	appropriate to the version of VBS you intend to use.</p>
+	VBS runs in both 32 and 64-bit mode. Ensure you download the appropriate Portico installer
+	to match the version of VBS you intend to use.</p>
 </div>
 
 
 Configuring VBS for Portico
 ============================
-Setting up any application to use the HLA is rarely a simple process, however once you know the
-major moving parts you need to worry about, getting VBS working with Portico is mercifully
-straightforward.
+Setting up any application to use the HLA is rarely a simple process. However, once you know the
+major moving parts, getting VBS working with Portico is mercifully straightforward.
 
 The major steps are:
 
   1. Set your `RTI_HOME` environment variable
   2. Set your `PATH` environment variable
-  3. Turn on the LVC Game HLA plugin in `vbsClient.config`
+  3. Turn the LVC Game HLA plugin on inside `vbsClient.config`
   4. Edit the `HLA.config` file
   5. Replace LVC Game's default `RTI.rid` file
 
