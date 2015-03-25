@@ -16,6 +16,9 @@ redcarpet:
 kramdown:
     input: GFM
 
+# We don't use because it's just that much harder to make use of offline.
+# You can't link to /relative/url and exepcted /relative/url/index.html to
+# be picked up and displayed :(
 #permalink: pretty
 
 # Portico specific properties
