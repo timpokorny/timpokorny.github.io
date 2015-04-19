@@ -55,13 +55,18 @@ module Jekyll
         end
       else
         path = "pages"+page["url"]  # prefix with "pages" so the asset location is "assets/pages/..."
+        
+        # remove the file extension for the page so that we get a special directory for
+        # all the page's assets. If we don't do this, the whole page is stripped.
+        temp = path.split( "." )
+        path = temp[0,temp.size-1].join("");
       end
 
       # get the relative location back to the root - we do this before we strip
       # the filename as our relative function needs this
       relative_root = relative(path)
 
-      #strip filename
+      # strip filename
       path = File.dirname(path) if path =~ /\.\w+$/
 
       #fix double slashes
@@ -127,10 +132,10 @@ module Jekyll
       # the filename as our relative function needs this
       relative_root = relative(path)
 
-      #strip filename
+      # strip filename
       path = File.dirname(path) if path =~ /\.\w+$/
 
-      #fix double slashes
+      # fix double slashes
       "#{relative_root}assets/#{@filename}".gsub(/\/{2,}/, '/')
     end
 
