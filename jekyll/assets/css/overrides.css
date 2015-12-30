@@ -84,16 +84,16 @@ body
  * ----------------------------------------------- */
 h1, h2, h3, h4, h5, h6
 {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
 	margin: 10px 0;
 	color: #555555;
 	text-rendering: optimizelegibility;
-	font-weight:900;
-	font-family: "Lato", sans-serif;
 }
 
 h1, h2
 {
-	font-weight: 400;
+	font-weight: 700;
 }
 
 h1 span, h2 span
@@ -109,11 +109,13 @@ h1 span, h2 span
 
 p
 {
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 22px;
+	font-size: 1.0em;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin-top: 1.0em;
 	margin-bottom: 0.8em;
-	color: #555;
+	/*color: #6f6f6f;*/
+	color: #5a5a5a;
 }
 
 /* code style for documentation */
@@ -137,8 +139,12 @@ pre, pre[class*="language-"]
 pre, code, pre code, .code
 {
 	/* make sure the background is the same colour for both the wrapper and nested versions */
-	background-color: #4e4e4e !important;/*
-	background-color: #777 !important;*/
+	background-color: #eeeeee !important;
+	color: #333 !important;
+	
+	/* dark background, light text
+	background-color: #4e4e4e !important;
+	color: #eee !important;*/
 }
 
 /* set up fenced code block specifics - these must  be !important so they override the more
@@ -198,9 +204,17 @@ pre code
 	margin-bottom: 10px;
 }
 
-.smaller /* used on cover page */
+.welcome-tile /* used on cover page */
 {
-	font-size: 14px;
+	font-size: 1.1em;
+	margin-top: 0.0em;
+	line-height: 1.5em;
+}
+
+.why-use-portico /* used on cover page */
+{
+	font-size: 1.0em;
+	margin-top: 0.0em;
 	line-height: 1.6em;
 }
 
@@ -331,6 +345,18 @@ a.btn.thin
 {
 	width: 48px; /* os-logo icons */
 	display: inline;
+}
+
+.version-icon .icon {
+	background: #55aaee;
+	/*border-radius: 3px; round-rect corners */
+	color: #fff;
+	/*display: block;*/
+	font-size: 24px;
+	height: 48px;
+	line-height: 1.875;
+	text-align: center;
+	width: 48px;
 }
 
 /* for pass/fail nightly build badges */
@@ -800,12 +826,13 @@ strong
 /* Articles have a big booty because they have a comment section underneath. Slim it down */
 article.post .post-content
 {
-	padding-bottom: 40px;
-	margin-bottom: 10px;
-	line-height: 1.6em;
+	font-size: 1.1em;
+	padding-bottom: 2.8em;
+	margin-bottom: 0.8em;
 	border-bottom: none; /* 2px solid #EEE; */
 }
 
+article.post .post-content p { line-height: 1.5em; }
 article.post .post-content h1{ margin-top: 30px; margin-bottom: 20px; }
 article.post .post-content h2{ margin-top: 30px; margin-bottom: 10px; }
 article.post .post-content h3{ margin-top: 30px; }
