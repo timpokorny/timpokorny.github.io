@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Using Portico with VBS
-author: Tim Pokorny
+author: Open LVC Team
 section: LVC Guides
 section-path: documentation/guides/
 tags: [vbs, vbs3, guides]
