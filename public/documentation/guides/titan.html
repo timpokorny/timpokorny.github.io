@@ -8,7 +8,7 @@
 	<meta charset="utf-8" />
 	<title>The Portico Project</title>
     <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
-    <link rel="canonical" href="http://timpokorny.github.io/documentation/user/faq.html">
+    <link rel="canonical" href="http://timpokorny.github.io/documentation/guides/titan.html">
 	<link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
 	
@@ -156,185 +156,205 @@
 ================================================== -->
 
 
-		<!-- Title Bar / Start
+
+<!-- Title Bar / Start
 ================================================== -->
 <div class="page-title">
 	<div class="container">
 
-		<div class="twelve columns">
-			<h1>Frequency Asked Questions</h1>
+		<div class="eight columns">
+			<h1>Using Portico with Titan.IM</h1>
+			<div class="meta clearfix">
+<!--  <span><img src="../../assets/images/icons/user.png" alt="author"/>posted by Open LVC Team,</span> -->
+<!---->
+<!-- <span><img src="../../assets/images/icons/ribbon.png" alt="tags"/> <span>in <a href="../../documentation/guides/">LVC Guides</a>.</span> -->
+<!--					  <span><img src="../../assets/images/icons/clock.png" alt="reading time"> <span>Reading Time: about 2  minutes</span>-->
+			</div>
 		</div>
 		
-		<nav class="four columns">
+		<nav class="eight columns">
 			<ul class="breadcrumbs">
-				<li><a href="../index.html">Home</a></li>
-				<li><i class="icon-angle-right"></i></li>
-				<li>FAQ </li>
+			
+				<li class="active">Using Portico with Titan.IM</li>
 			</ul>
+
 		</nav>
-		
+
 	</div>
 </div>
 
 <!-- Title Bar / End
 ================================================== -->
 
-<!-- FAQ / Start
+<!-- Article / Start
 ================================================== -->
-<section class="faq">
+<section class="article" style="margin-bottom:-50px;">
 	<div class="container">
-		<div class="three_fourth column">
-
-		<h2 id="general-questions" style="padding-top:0;">General Questions</h2>
 	
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Curabitur eget leo at velit imperdiet varius eu ipsum vitae velit congue iaculis vitaes.</a>
-			<div class="toggle-content">
-				<p>Nunc euismod lobortis massa, id sollicitudin augue auctor vel. Integer ornare sollicitudin turpis 
-				vitae vestibulum. Curabitur faucibus ullamcorper lorem sed egestas. Pellentesque laoreet auctor eros,
-				et consectetur eros auctor eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 
-				tortor nisi, egestas eget molestie tincidunt, tempus sed justo. Vestibulum ultricies auctor varius. 
-				Fusce consequat tincidunt dui, ac adipiscing turpis adipiscing pulvinar. Aliquam erat volutpat. 
-				Vivamus eleifend rhoncus nulla in laoreet. Aliquam commodo gravida magna eget tincidunt. 
-				Fusce nisi augue, malesuada in commodo quis, euismod quis orci. Integer vitae nisl non augue 
-				ullamcorper blandit. Donec vitae nibh ipsum, vitae semper orci. Nunc sed elit in nulla auctor 
-				imperdiet. Ut a nisl sit amet odio accumsan laoreet. Sed pharetra lectus in arcu pellentesque 
-				et iaculis justo pellentesque. Etiam laoreet sodales sapien, id congue magna malesuada ut. 
-				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-			</div>
-		</div>
-		 
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Fusce consequat tincidunt dui, ac adipiscing turpis adipiscing pulvinar.</a>
-			<div class="toggle-content">
-				<p>Aliquam commodo gravida magna eget tincidunt. 
-				Fusce nisi augue, malesuada in commodo quis, euismod quis orci. Integer vitae nisl non augue 
-				ullamcorper blandit. Donec vitae nibh ipsum, vitae semper orci. Nunc sed elit in nulla auctor 
-				imperdiet. Ut a nisl sit amet odio accumsan laoreet. Sed pharetra lectus in arcu pellentesque 
-				et iaculis justo pellentesque. </p>
-			</div>
+		<div class="three_fourth column">
+		
+			<!-- Post Start -->
+			<article class="post">
+			
+				<div class="post-content">
+				
+					<!-- Thumbnail -->
+					
+					<img src="../../assets/images/simsystems/titan-3.jpg" alt="Titan Vanguard from Titan.IM"/>
+					
+
+					
+					<!-- Post Content -->
+					<p class="begin">Titan.IM represents the next wave of virtual simulation. Built on the Outerra World Rendering Engine, Titan is a single simulation environment supporting land, sea, air, space and subsurface simulation with global coverage. Out-of-the-box, Titan ships with Calytrix LVC Game to connect with DIS and HLA simulation networks. Here we see how to link it with Portico.
+</p>
+					
+
+					<table class="default-table" style="width:auto;font-size:0.8em">
+    <tr>
+        <td><b>Vendor</b></td>
+        <td><a href="https://bisimulations.com/">Bohemia Interactive Simulations</a></td>
+    </tr>
+    <tr>
+        <td><b>Version</b></td>
+        <td>Titan Vanguard</td>
+    </tr>
+    <tr>
+        <td><b>Operating System</b></td>
+        <td>Windows 7, 8.1, 10 (32/64)</td>
+    </tr>
+    <tr>
+        <td><b>HLA Interfaces</b></td>
+        <td>
+            <a href="../../documentation/developer/apistatus/hla13/cpp.html">HLA 1.3 (c++)</a>, 
+            <a href="../../documentation/developer/apistatus/ieee1516e/cpp.html">IEEE 1516-2010 (c++)</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Suported FOMs</b></td>
+        <td>
+            <a href="../../documentation/hla/standards.html#rpr1">RPR1</a>, 
+            <a href="../../documentation/hla/standards.html#rpr2">RPR2</a>,
+            <a href="../../documentation/hla/standards.html#erf">ERF5</a>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Portico Versions</b></td>
+        <td>1.x</td>
+    </tr>
+</table>
+
+<p>Titan.IM represents the next wave of virtual simulation. Built on the Outerra World Rendering
+Engine, Titan is a single simulation environment supporting land, sea, air, space and subsurface
+simulation with global coverage. Out-of-the-box, Titan ships with Calytrix LVC Game to connect
+with DIS and HLA simulation networks. Here we see how to link it with Portico.</p>
+
+<h1 id="titan-and-hla">Titan and HLA</h1>
+
+<p>Each copy of Titan embeds <em>Calytrix <a href="http://www.calytrix.com/products/lvcgame/">LVC Game</a></em>.
+DIS/HLA connectivity is provided through this gateway supporting a variety of FOMs and all
+major versions of the HLA API. </p>
+
+<p>To connect Titan with a Portico federation we have to configure LVC Game to use Portico as its RTI.
+Titan is a windows-only application, and has 32/64-bit support. For the integration to work a user
+must identify the right set of Portico libraries to use (vc10). </p>
+
+<h2 id="supported-versions">Supported Versions</h2>
+
+<p>The following list shows the specific versions of Portico that we recommend you use, and
+which we have verified through testing.</p>
+
+<table><thead>
+<tr>
+<th>Titan Version</th>
+<th>Portico Version</th>
+<th>Visual Studio</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Vanguard 2016</td>
+<td><span class="label label-success">Portico 2.1+</span></td>
+<td>VC10</td>
+</tr>
+</tbody></table>
+
+<h2 id="supported-interfaces">Supported Interfaces</h2>
+
+<p>The following HLA interfaces are supported between Portico and Titan:</p>
+
+<table><thead>
+<tr>
+<th>HLA Interface</th>
+<th>Supported</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>IEEE 1516-2010</td>
+<td><span class="label label-success">Supported</span></td>
+</tr>
+<tr>
+<td>IEEE 1516-2000</td>
+<td><span class="tooltip label label-danger" title="Not Supported in C++">Not Supported</span></td>
+</tr>
+<tr>
+<td>HLA 1.3</td>
+<td><span class="label label-success">Supported</span></td>
+</tr>
+</tbody></table>
+
+<div class="alert info">
+    <p><b>32/64-bit Mode</b><br/>
+    Titan runs in both 32 and 64-bit mode. Ensure you download the appropriate Portico installer
+    to match the version of Titan you intend to use.</p>
+</div>
+
+
+				</div>
+		
+			</article>
+			<!-- Post End -->
+			
 		</div>
 		
-		<h2 id="configuring-portico">Configuring Portico</h2>
+		<div class="one_fourth column">
+			
+			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="440">
 
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Aliquam erat ac ipsum. Integer aliquam purus.</a>
-			<div class="toggle-content">
-				<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. 
-				Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, 
-				ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum
-				in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec ma
-				lesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum.
-				Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum 
-				sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer
-				ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penat
-				ibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus
-				blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus,
-				pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus 
-				et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis 
-				in nibh vel risus. Sed vel lectus. Ut sagittis, ipsum dolor quam. </p>
+				<!-- Search -->
+				<div class="widget" id="search">
+					<form name="search-form" action="https://www.google.com/search" method="get">
+						<div class="search-icon"><input type="text" class="searching" name="as_q" placeholder="Search..." /></div>
+						<input type="submit" style="display:none;" name="as_sitesearch" value="porticoproject.org"/>
+					</form>
+				</div>
+
+				<!-- Contents -->
+				<!-- Will be replaced by the TOC generation js below -->
+				<div class="widget" id="menu">
+					<h3>Table of Contents</h3>
+					<div class="toc"></div>
+				</div>
+
+			
+				<div class="widget" id="tags">
+					<h3>Tags</h3>
+					<ul class="tags-list">
+					
+						<li><a href="#">titan</a></li>
+					
+						<li><a href="#">titan.im</a></li>
+					
+						<li><a href="#">guides</a></li>
+					
+					</ul>
+				</div>
+			
+
 			</div>
 		</div>
-
-		<h2 id="networking-questions" style="padding-topp:30px;">Networking Questions</h2>
-
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Curabitur eget leo at velit imperdiet varius eu ipsum vitae velit congue iaculis vitaes.</a>
-			<div class="toggle-content">
-				<p>Nunc euismod lobortis massa, id sollicitudin augue auctor vel. Integer ornare sollicitudin turpis 
-				vitae vestibulum. Curabitur faucibus ullamcorper lorem sed egestas. Pellentesque laoreet auctor eros,
-				et consectetur eros auctor eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 
-				tortor nisi, egestas eget molestie tincidunt, tempus sed justo. Vestibulum ultricies auctor varius. 
-				Fusce consequat tincidunt dui, ac adipiscing turpis adipiscing pulvinar. Aliquam erat volutpat. 
-				Vivamus eleifend rhoncus nulla in laoreet. Aliquam commodo gravida magna eget tincidunt. 
-				Fusce nisi augue, malesuada in commodo quis, euismod quis orci. Integer vitae nisl non augue 
-				ullamcorper blandit. Donec vitae nibh ipsum, vitae semper orci. Nunc sed elit in nulla auctor 
-				imperdiet. Ut a nisl sit amet odio accumsan laoreet. Sed pharetra lectus in arcu pellentesque 
-				et iaculis justo pellentesque. Etiam laoreet sodales sapien, id congue magna malesuada ut. 
-				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-			</div>
-		</div>
-		
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Fusce consequat tincidunt dui, ac adipiscing turpis adipiscing pulvinar.</a>
-			<div class="toggle-content">
-				<p>Aliquam commodo gravida magna eget tincidunt. 
-				Fusce nisi augue, malesuada in commodo quis, euismod quis orci. Integer vitae nisl non augue 
-				ullamcorper blandit. Donec vitae nibh ipsum, vitae semper orci. Nunc sed elit in nulla auctor 
-				imperdiet. Ut a nisl sit amet odio accumsan laoreet. Sed pharetra lectus in arcu pellentesque 
-				et iaculis justo pellentesque. </p>
-			</div>
-		</div>
-		
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Aliquam erat ac ipsum. Integer aliquam purus.</a>
-			<div class="toggle-content">
-				<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. 
-				Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, 
-				ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum
-				in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec ma
-				lesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum.
-				Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum 
-				sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer
-				ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penat
-				ibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus
-				blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus,
-				pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus 
-				et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis 
-				in nibh vel risus. Sed vel lectus. Ut sagittis, ipsum dolor quam. </p>
-			</div>
-		</div>
-		
-		<h2 id="licensing-questions">Licensing Questions</h2>
-
-		<div class="toggle">
-			<a href="#" class="toggle-trigger">Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu.</a>
-			<div class="toggle-content">
-				<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. 
-				Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, 
-				ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum
-				in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec ma
-				lesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum.
-				Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum 
-				sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer
-				ultrices posuere cubilia Curae, Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultric,
-				blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus,
-				pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus 
-				et, porttitor risus.</p>
-			</div>
-		</div> <!-- column -->
 	</div>
-		
-	<!-- Table of Contents -->
-	<div class="one_fourth column">
-		
-		<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="440">
-
-			<!-- Search -->
-			<div class="widget" id="search">
-				<form name="search-form" action="https://www.google.com/search" method="get">
-					<div class="search-icon"><input type="text" class="searching" name="as_q" placeholder="Search..." /></div>
-					<input type="submit" style="display:none;" name="as_sitesearch" value="porticoproject.org"/>
-				</form>
-			</div>
-
-			<!-- Contents -->
-			<!-- Will be replaced by the TOC generation js below -->
-			<div class="widget" id="menu">
-				<h3>Table of Contents</h3>
-				<div class="toc"></div>
-			</div>
-
-		</div>
-
-	</div>
-	</div> <!-- container -->
 </section>
-<!-- FAQ / End
-================================================== -->
 
-
-		
+	
 <!-- Footer / Start
 ================================================== -->
 <footer>
@@ -450,15 +470,11 @@
 Footer / End -->
 
 
-		<script src="../../assets/js/prism.js"></script>
-
-		
-		<script type="text/javascript" src="../../assets/js/bootstrap-3.2.0.min.js"></script>
-		<script src="../../assets/js/toc.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() { $('.toc').toc(); });
-		</script>
-		
-	</body>
-
+	<script type="text/javascript" src="../../assets/js/bootstrap-3.2.0.min.js"></script>
+	<script src="../../assets/js/prism.js"></script>
+	<script src="../../assets/js/toc.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() { $('.toc').toc(); });
+	</script>
+</body>
 </html>
