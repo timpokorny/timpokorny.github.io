@@ -11,9 +11,9 @@ header-image-path: assets/images/simsystems/vbs3-3.jpg
 header-image-text: VBS3 from Bohemia Interactive Simulations
 
 excerpt: > 
-    VBS3 is a flexible simulation training solution for scenario training, mission rehersal,
-    squad-based tactical training and more. VBS uses Calytrix Technologies LVC Game to connect
-    to simulation networks via DIS and HLA. Here, we look at how to link it with Portico.
+    VBS3 is a flexible simulation training solution for individual and squad level infantry 
+    training. DIS/HLA connectivity in VBS is provided by either Calytrix LVC Game or VBS Gateway
+    depending on the version. This guide discusses how to use Portico with VBS3.
 
 ---
 
@@ -28,7 +28,7 @@ excerpt: >
 	</tr>
 	<tr>
 		<td><b>Operating System</b></td>
-		<td>Windows 7 (32/64), Windows 8 (32/64)</td>
+		<td>Windows 7, 8, 10 (32/64)</td>
 	</tr>
 	<tr>
 		<td><b>HLA Interfaces</b></td>
@@ -52,17 +52,26 @@ excerpt: >
 </table>
 
 
-VBS3 is a flexible simulation training solution for scenario training, mission rehearsal
-and more. Leveraging proven games industry technology, VBS3 adds all the elements required
-to deliver structured simulation supported training, including After Action Review, realistic
-radio communications, support for specialst procedures and actions such as hand signal
-communication, CASEVAC/MEDEVAC, obstacle crossing and much more.
+VBS3 is a flexible simulation training solution for infantry and squad level tactical training.
+Leveraging the technology behind the popular commercial game Arma 3. It adds various simulation
+capabilities to this base including After Action Review, support for specialist procedures,
+hand-signal communications, CASEVAC/MEDEVAC and more.
 
 VBS and HLA
 ===================
-Each copy of VBS includes _Calytrix <a href="http://www.calytrix.com/products/lvcgame/">LVC Game</a>_.
-DIS/HLA connectivity is provided through this gateway supporting a variety of FOMs and all
-major versions of the HLA API. 
+VBS can operate on HLA federations through one of two middleware options: LVC Game or VBS Gateway:
+
+  - VBS *v3.7* and earlier: LVC Game
+  - VBS *v3.7.1* and later: VBS Gateway
+
+This article describes how to enable and configure LVC Game for VBS 3. Information on how to
+configure and enable VBS Gateway for Portico is not yet available and the level of compatibility
+is currently not known.
+
+WARNING: This guide only applies to VBS versions 3.7 and earlier.
+
+LVC Game is shipped directly with VBS. There is no need for any separate installation. It ships
+with support for a wide variety of FOMs and both major versions of the HLA API.
 
 Connecting VBS to a Portico federation involves configuring LVC Game to use Portico as its RTI, 
 and defining the appropriate FOM for VBS to use. VBS is a windows-only application and has 32/64-bit
