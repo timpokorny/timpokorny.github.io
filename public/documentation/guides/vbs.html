@@ -101,6 +101,7 @@
 							<ul>
 								<li><a href="../../documentation/user/gettingstarted.html">Running Federates with Portico</a></li>
 								<li><a href="../../documentation/user/configure.html">Configuring Portico</a></li>
+								<li><a href="../../documentation/user/wan.html">Portico over a WAN</a></li>
 								<li><a href="../../documentation/user/performance.html">Performance</a></li>
 								<li><a href="../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
 								<li><a href="../../documentation/user/faq.html">Portico FAQ</a></li>
@@ -168,7 +169,7 @@
 <!--  <span><img src="../../assets/images/icons/user.png" alt="author"/>posted by Open LVC Team,</span> -->
 <!---->
 <!-- <span><img src="../../assets/images/icons/ribbon.png" alt="tags"/> <span>in <a href="../../documentation/guides/">LVC Guides</a>.</span> -->
-<!--					  <span><img src="../../assets/images/icons/clock.png" alt="reading time"> <span>Reading Time: about 12  minutes</span>-->
+<!--					  <span><img src="../../assets/images/icons/clock.png" alt="reading time"> <span>Reading Time: about 17  minutes</span>-->
 			</div>
 		</div>
 		
@@ -243,11 +244,6 @@
     </tr>
 </table>
 
-<p>VBS3 is a flexible simulation training solution for infantry and squad level tactical training.
-Leveraging the technology behind the popular commercial game Arma 3. It adds various simulation
-capabilities to this base including After Action Review, support for specialist procedures,
-hand-signal communications, CASEVAC/MEDEVAC and more.</p>
-
 <h1 id="vbs-and-hla">VBS and HLA</h1>
 
 <p>VBS can operate on HLA federations through one of two middleware options: LVC Game or VBS Gateway:</p>
@@ -257,20 +253,24 @@ hand-signal communications, CASEVAC/MEDEVAC and more.</p>
 <li>VBS <em>v3.7.1</em> and later: VBS Gateway</li>
 </ul>
 
-<p>This article describes how to enable and configure LVC Game for VBS 3. Information on how to
-configure and enable VBS Gateway for Portico is not yet available and the level of compatibility
-is currently not known.</p>
+<p>This article describes how to enable and configure LVC Game for VBS 3. As such, it only applies
+to versions of <strong>VBS 3.7 and earlier</strong>.</p>
 
-<p>WARNING: This guide only applies to VBS versions 3.7 and earlier.</p>
+<div class="alert error">
+    <p><b>VBS Gateway</b><br/>
+     Thus far we haven't been able to get Portico working with VBS Gateway. Its level of
+     compatibility is unknown and at this point in time it is unsupported. Information from
+     anyone who has been successful would be greatly appreciated!</p>
+</div>
 
-<p>LVC Game is shipped directly with VBS. There is no need for any separate installation. It ships
-with support for a wide variety of FOMs and both major versions of the HLA API.</p>
+<p>LVC Game is shipped directly with VBS. There is no need for any separate installation.</p>
 
 <p>Connecting VBS to a Portico federation involves configuring LVC Game to use Portico as its RTI, 
-and defining the appropriate FOM for VBS to use. VBS is a windows-only application and has 32/64-bit
-support. For the integration to work a user must identify the right set of libraries for VBS to
-use based on the appropriate complier (vc8, 9, 10...). The table below lists which interfaces
-should be used for which VBS verison.</p>
+and defining the appropriate FOM for VBS to use.</p>
+
+<p>VBS is a windows-only application and has 32/64-bit support. Depending on your version of VBS,
+you will need to identify the right set of Portico libraries to use (vc8, 9, 10...). The table
+below lists which interfaces should be used for which VBS verison.</p>
 
 <h2 id="supported-versions">Supported Versions</h2>
 
@@ -285,18 +285,18 @@ which we have verified through testing.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>VBS 3.2+</td>
-<td><span class="label label-success">Portico 2.1+</span></td>
+<td>VBS 3.2-3.7</td>
+<td><span class="label label-success">Portico 2.1.x</span></td>
 <td>VC10</td>
 </tr>
 <tr>
 <td>VBS 3.0</td>
-<td><span class="label label-success">Portico 2.0</span></td>
+<td><span class="label label-success">Portico 2.0.x</span></td>
 <td>VC8</td>
 </tr>
 <tr>
-<td>VBS 2.15</td>
-<td><span class="label label-success">Portico 2.0</span></td>
+<td>VBS 2.x</td>
+<td><span class="label label-success">Portico 2.0.x</span></td>
 <td>VC8</td>
 </tr>
 </tbody></table>
@@ -331,10 +331,21 @@ which we have verified through testing.</p>
     to match the version of VBS you intend to use.</p>
 </div>
 
+<h1 id="vbs/lvc-deployment">VBS/LVC Deployment</h1>
+
+<p>In a typical VBS/LVC network, a single computer acts as the LVC Gateway. This computer is also
+typically the VBS game server (active or dedicated server).</p>
+
+<p>All changes discussed below should only be made on the server. Regular client PCs will connect
+via standard VBS networking to a game where the server will bridge out to the federation.</p>
+
 <h1 id="configuring-vbs-for-portico">Configuring VBS for Portico</h1>
 
-<p>So you have VBS up and running and you want to link it through to Portico? 
-Setting up any application to use the HLA is rarely a simple process. However, once you know the
+<p>We start by assuming that you have VBS and Portico both installed into their default locations.
+If you need help with Portico, check out the
+<a href="documentation/user/gettingstarted.html">Install Portico</a> guide.</p>
+
+<p>Setting up any application to use the HLA is rarely a simple process. However, once you know the
 major moving parts, getting VBS working with Portico is mercifully straightforward.</p>
 
 <p>The major steps are:</p>
@@ -352,23 +363,25 @@ setting up.</p>
 
 <p><em>LVC Game for VBS</em> supports a number of different FOMs. Which version you choose will
 slightly alter your configuration. In this guide we will be setting up <strong>VBS3</strong> with the
-<strong>HLA 1.3</strong> plugin using the <strong>RPR2</strong> FOM. Where applicable we&#39;ll make notes about how to use
-different interface/FOM combinations. To test things, we recommend having a second computer handy
-so that you can link VBS to VBS.</p>
+<strong>HLA Evolved</strong> (1516e) plugin using the <strong>RPR2</strong> FOM. Where applicable we&#39;ll make notes about how
+to use different interface/FOM combinations.</p>
+
+<p>To test things, we recommend having a second computer handy so that you can link two instances of
+VBS together via Portico.</p>
 
 <h2 id="preparing-the-environment">Preparing the Environment</h2>
 
 <p>Excited? Really!? OK - whatever works for you...</p>
 
-<p>Let&#39;s start from the beginning. To start, you&#39;ll want to
-<a href="documentation/user/gettingstarted.html">Install Portico</a>. Be sure to
-note down the location where you installed it, because we&#39;re about to use that information.</p>
+<p>We assume you&#39;ve installed Portico and that it is located in <code>C:\Program Files\Portico\2.1.0</code>.
+Remember that.</p>
 
 <h3 id="setting-rti_home">Setting RTI_HOME</h3>
 
-<p>Portico has a few moving pieces that need to find one another on your local system. To do this
-they use the <code>RTI_HOME</code> environment variable. Depending on the Portico version, the installer
-may have already set this variable for you, but to be sure you should always check.</p>
+<p>Portico has a few moving pieces that need to find one another when things fire up. As is the
+HLA convention, to do this they use the <code>RTI_HOME</code> environment variable. Depending on the Portico
+version, the installer may have already set this variable for you, but to be sure you should always
+check.</p>
 
 <p>In Windows, open the control panel and search for &quot;System&quot;. This should give you an option
 to &quot;Edit the system environment variables&quot;.</p>
@@ -390,92 +403,173 @@ location to the directory Portico was installed in to.</p>
 
 <h3 id="setting-the-path">Setting the PATH</h3>
 
-<p>The system path is a series of folders that Windows will look inside whehn it is trying to 
-load DLLs and other droll bits and pieces. Due to the way Portico is implemented, we have to
-add two directories to this path:</p>
+<p>The system path is a series of folders that Windows looks inside when it is trying to 
+load DLLs and other droll bits and pieces. For implementation reasons you really don&#39;t care about
+(really) we need to add two additional directories:</p>
 
-<p># The directory that contains the RTI DLLs
-  # The directory that contains the Java Virtual Machine DLL</p>
+<ul>
+<li>The directory that contains the RTI DLLs</li>
+<li>The directory that contains the Java Virtual Machine DLL</li>
+</ul>
 
-<p>To get started, let&#39;s figure out what these values should be. Firstly, the RTI DLLs. The location
-will depend on which Visual Studio compiler version you are using. The version in Portico must
-match that of the application you are integrating with. This will typically be in that product&#39;s
-documentation. For LVC Game, refer to the table presented earlier. We&#39;re using VBS v3.6 for this
-test, so we want the VC10 interface:</p>
+<p>Let&#39;s figure out what these values should be. First, the RTI DLLs.</p>
+
+<p>The important bit to remember here is that you must know which compiler version you need.
+We mentioned in the table under the &quot;Supported Versions&quot; section earlier.</p>
+
+<p>For LVC Game, refer to the table presented earlier. We&#39;re using VBS v3.6 for this
+test, so we want the VC10 interface, so we are going to add the following directory to the path:</p>
 
 <p><code>%RTI_HOME%\bin\vc10</code></p>
 
-<p>Notice that we used the special &quot;%name%&quot; syntax. This lets us use the value of another environment
-variable rather than having to manually enter in the full path information. The location of all
-RTI DLLs in Portico is in the <code>bin/vcXX</code> directory, where &#39;XX&#39; is the version number you need. If
-you have any doubt, go look inside that folder in Windows explorer.</p>
+<p><img src="../../../assets/pages/documentation/guides/vbs/4-add-rti-home.jpg" alt="Extending the system PATH"></p>
 
-<p>Secondly, we need to find the location of the Java Virtual Machine (JVM) DLLs. This is also
-pretty simple because Portico includes the JVM in your installation. The only thing you have
-to be aware of is that the path changes slightly between 32-bit and 64-bit.</p>
+<p>Notice that we used the special &quot;%name%&quot; syntax. This tells windows to replace this path
+with the value of a different enviornment variable.</p>
+
+<p>The location of all RTI DLLs in Portico is in the <code>bin/vcXX</code> directory, where &#39;XX&#39; is the
+version number you need. If you have any doubt, go look inside that folder in Windows explorer:</p>
+
+<p><img src="../../../assets/pages/documentation/guides/vbs/5-dlls-for-compilers.jpg" alt="DLLs for different compilers"></p>
+
+<p>Next we need to find the location of the Java Virtual Machine (JVM) DLLs. Portico ships with
+the JVM it wants to use. The only thing you have to be aware of is that the path you want will
+change slightly between 32-bit and 64-bit versions:</p>
 
 <ul>
 <li><strong>32-bit</strong>: <code>%RTI_HOME%\jre\bin\client</code></li>
 <li><strong>64-bit</strong>: <code>%RTI_HOME%\jre\bin\server</code></li>
 </ul>
 
-<p>NOTE NOTE NOTE NOTE NOTE</p>
+<p><img src="../../../assets/pages/documentation/guides/vbs/6-jvm-dll-locations.jpg" alt="JVM DLLs for 32/64-bit"></p>
 
-<p>The system path is specified as a &quot;;&quot; separated list. That is, the full path is one big long
-entry, but inside the paths are separated by the &quot;;&quot; character. We will add our two enteries
-to the end. Again, note that the Portico installer may have already done this for you. If it
-has it is always worth double checking.</p>
+<div class="alert info">
+    <p><b>System Path Format</b><br/>
+    The system path is specified as a <code>;</code> separated list. That is, value of the
+    <code>PATH</code> variable is one line string of paths, each separated by the <code>;</code>
+    character. We will add our two enteries to the end. Note that the Portico installer may have
+    already done this for you. It is always worth double checking.<br/><br/>
 
-<p>Go back to the environment variables screen and scroll until you the <code>PATH</code> variable. To edit
-it, add the two paths to the end:</p>
+    Go back to the environment variables screen and scroll until you the <code>PATH</code>
+    variable. To edit it, add the two paths to the end:<br/><br/>
 
-<p><code>...;%RTI_HOME%\bin\vc10;%RTI_HOME%\jre\bin\server</code></p>
-
-<p>IMAGE IMAGE IMAGE</p>
+    <code>...;%RTI_HOME%\bin\vc10;%RTI_HOME%\jre\bin\server</code>
+    </p>
+</div>
 
 <p>Double POW! Take a deep breath - the hardest part is over. Once you&#39;ve got the environment
-set up there is very little else you need to do. And to make things even better, this process
-is common to all Portico installs. Now that you&#39;ve learnt it for VBS, you can do it for any
-other application - AND it may well have already been taken care of by the installer (Portico 2.1+)!</p>
+set up there is very little else you need to do. And to make things even better, the process
+you have just completed is common for most Portico installs. Now that you&#39;ve learnt it for VBS,
+you can do it for any other application - AND it may well have already been taken care of by the
+installer!</p>
 
 <h2 id="configuring-vbs">Configuring VBS</h2>
 
-<ul>
-<li>Turn on HLA plugin in vbsClient.config</li>
-<li>Edit HLA.config
+<p>Now that we have the RTI installed and some environment variables pointing to the right location
+we need to configure LVC Game. There are a couple of steps here:</p>
 
-<ul>
-<li>Settings...</li>
-</ul></li>
+<ol>
+<li>Turn on HLA plugin in vbsClient.config</li>
+<li>Edit HLA.config to set federate/federation names</li>
 <li>Replace the RID file</li>
-</ul>
+</ol>
+
+<h3 id="vbs-client-config">VBS Client Config</h3>
+
+<p>The <code>vbsClient.config</code> file is located in <code>[VBS_DIR]\config</code>. It contains the main configuration
+for LVC Game, including the plugins that it should load. We want to edit this file to disable the
+DIS plugin and enabled the HLA plugin.</p>
+
+<p><strong>IMAGE - config directory</strong></p>
+
+<p>Any lines in an LVC Game configuration file starting with the <code>#</code> character are considered
+comments and ignored.</p>
+
+<p>In this case, we will comment out the default plugin configuration and put a <code>#</code> at the start of
+line 123 (approximately). To enable the HLA plugin we will uncomment (remove the <code>#</code>) from line
+123 (approx again). When done, it should look like this:</p>
+
+<p><strong>IMAGE - editing the file to enable HLA</strong></p>
+
+<h3 id="selecting-the-right-interface/fom">Selecting the right Interface/FOM</h3>
+
+<p>When editing the <code>vbsClient.config</code> file you will notice that you can choose from many different
+combinations of HLA version and FOM. It is important to choose the option that fits your needs.</p>
+
+<p>In this example we are using IEEE-1516e and RPR2, but you just as easily switch that to HLA v1.3
+and an alternate FOM like the &quot;Entity Resolution FOM&quot; (ERF) if you wanted. To do this, just enable
+the appropriate line in the configuration to point to the right configuration file.</p>
+
+<h3 id="editing-hla.config">Editing <code>HLA.config</code></h3>
+
+<p>Now that we&#39;ve enabled the HLA plugin, we need to make some final HLA-specific configuration
+edits. To do this, we have to edit the plugin config file: <code>HLA.config</code>.</p>
+
+<p>From the <code>[VBS_DIR]\config</code> directory, go to <code>HLA-1516e\RPR2\HLA.config</code>. Inside this file we are
+going to set two important properties:</p>
+
+<ol>
+<li>The federate name</li>
+<li>The federation name</li>
+</ol>
+
+<p>Inside the <code>HLA.config</code> file look for the following two lines:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">100: 
+101: hla.fedex = LVCGame
+102: 
+...
+140: 
+141: hla.federate = FederateName
+142: 
+</code></pre></div>
+<h3 id="replacing-the-rid-file">Replacing the RID file</h3>
+
+<p>A RID file contains configuration data for an RTI. By default, LVC Game ships with RID files for
+an alternate RTI.</p>
+
+<p>On startup, LVC Game will ensure that the <code>RTI.rid</code> file sitting in the same folder as <code>HLA.config</code>
+is the one that gets loaded. Because this is not a Portico RID file, it is a different, incompatible
+format. As such, we need to replace it with the default Portico RID file.</p>
+
+<p>Copy <code>[RTI_HOME]\RTI.rid</code> to <code>[VBS_DIR]\config\HLA-1516e\RPR2\</code>. If you want to change any Portico
+settings later on, you can do so by editing this RID file.</p>
 
 <h2 id="starting-vbs">Starting VBS</h2>
 
-<ul>
-<li>Launcher -- in Special Builds, ensure &quot;lvc&quot; is checked
+<p>That&#39;s it! Everything is configured. We just need to start VBS with the proper switches to enable
+LVC Game now and we are good.</p>
 
-<ul>
-<li>Alternatively, use the Admin LVC preset</li>
-</ul></li>
-<li>Start VBS</li>
-<li>Start a Network Game
+<p>To do this, from the launcher select the &quot;LVC Admin&quot; preset. Alternatively, you just need to make
+sure that the <code>lvc</code> box is checked on the &quot;Special Builds&quot; section of the launcher profile.</p>
 
-<ul>
-<li>Notice the pause... This is Portico creating a new federation</li>
-</ul></li>
-</ul>
+<p><strong>IMAGE - Launcher Special Builds</strong></p>
+
+<p>Launch VBS and start a network game. LVC Game is initialized when you first click &quot;Start Network Game&quot;:</p>
+
+<p><strong>IMAGE - Button you click when LVC plugin is loaded</strong></p>
+
+<p>If things are working properly you will notice a significant pause after you click this button.
+That pause is Portico creating a new federation.</p>
 
 <h2 id="confirming-it-is-working">Confirming it is working</h2>
 
-<ul>
-<li>Confirm things are working
+<p>To double confirm that things are working we can look in the log files.</p>
 
-<ul>
-<li>Check <code>[VBS]\logs\portico.log</code></li>
-<li>Check <code>[VBS]\LVCGame.log</code></li>
-</ul></li>
-</ul>
+<p>We can first check the LVC Game log file. Look inside <code>[VBS_DIR]\LVCGame.log</code> to see what it
+said about loading the HLA plugin. You should see lines confirming that everything was
+initialized successfully:</p>
+
+<p><strong>IMAGE - LVCGame log file!</strong></p>
+
+<p>Secondly, you can check for the presence of the Portico log file. If LVC Game is being loaded
+properly, and it in turn is loading Portico properly, you&#39;ll have a Portico log file! If it didn&#39;t
+load then the file is unlikely to have been created at all. </p>
+
+<p>Check to see if <code>[VBS_HOME]\logs\portico.log</code> exists:</p>
+
+<p><strong>IMAGE - Portico.log is alive!</strong></p>
+
+<p>And that it is!! Portico is now up and running with VBS.</p>
 
 <h1 id="troubleshooting">Troubleshooting</h1>
 
@@ -486,10 +580,14 @@ that is some sort of surprise. We both know better.</p>
 because we are <em>not</em> cruel, we&#39;ve compiled an awesome list for you!</p>
 
 <ul>
-<li>Error 123: You&#39;ve mismatched your 32/64-bit builds</li>
-<li>Error 123: You&#39;ve forgotten to put the <code>jre.dll</code> directory on your <code>%PATH%</code></li>
-<li>LVCGame.log says &quot;Failed to load...&quot;: You forgot to replace the <code>RTI.rid</code></li>
-<li>You forgot to actually enable the plugin in vbsClient.config</li>
+<li><p>Error 193: Mismatched 32/64-bit</p></li>
+<li><p>Error 126: DLLs are not on the path - have you forgotten <code>jvm.dll</code>?
+    You&#39;ve forgotten to put the <code>jvm.dll</code> directory on your <code>%PATH%</code></p></li>
+<li><p>LVCGame.log says &quot;Failed to load...&quot;: You forgot to replace the <code>RTI.rid</code>
+    Portico is failing to load because the RID file is in a different format.</p></li>
+<li><p>Nothing happened. I don&#39;t get any Portico log but LVC Game log doesn&#39;t show any errors
+    Is the HLA plugin enabled? Check <code>vbsClient.config</code> to ensure that one of the
+    HLA plugins is enabled.</p></li>
 </ul>
 
 
