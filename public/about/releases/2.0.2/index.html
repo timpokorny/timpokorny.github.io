@@ -8,7 +8,7 @@
 	<meta charset="utf-8" />
 	<title>The Portico Project</title>
     <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
-    <link rel="canonical" href="http://timpokorny.github.io/about/releases/1.0.0/">
+    <link rel="canonical" href="http://timpokorny.github.io/about/releases/2.0.2/">
 	<link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../../assets/favicon.ico" type="image/x-icon">
 	
@@ -157,13 +157,13 @@
 ================================================== -->
 
 
-		<!-- Title Bar / Start
+<!-- Title Bar / Start
 ================================================== -->
 <div class="page-title">
 	<div class="container">
 
 		<div class="four columns">
-			<h1>Portico v1.0.1</h1>
+			<h1>Portico v2.0.2</h1>
 		</div>
 		
 		<nav class="twelve columns">
@@ -177,7 +177,7 @@
 				<li><a href="../../../about/status.html#release-notes">Releases</a></li>
 				<li><i class="icon-angle-right"></i></li>
 
-				<li>1.0.0 </li>
+				<li>2.0.2 </li>
 			</ul>
 		</nav>
 		
@@ -187,7 +187,6 @@
 <!-- Title Bar / End
 ================================================== -->
 
-
 <!-- Introduction / Start
 ================================================== -->
 <div class="container">
@@ -196,11 +195,11 @@
 		<table class="default-table" style="width:auto;">
 			<tr>
 				<td><strong>Release Date</strong></td>
-				<td>May 27th, 2009</td>
+				<td>Dec 31st, 2015</td>
 			</tr>
 			<tr>
 				<td><strong>Status</strong></td>
-				<td><span class="bigger label label-default">Deprecated</span></td>
+				<td><span class="bigger label label-success">Released</span></td>
 			</tr>
 			<tr>
 				<td><strong>Download</strong></td>
@@ -208,127 +207,78 @@
 			</tr>
 			<tr>
 				<td><strong>Git Tag</strong></td>
-				<td>N/A</td>
+				<td><a href="https://github.com/openlvc/portico/releases/tag/portico-2.0.2">portico-2.0.2</a></td>
 			</tr>
 			<tr>
 				<td><strong>Baseline</strong></td>
-				<td>/portico-1.0.x</td>
+				<td><a href="https://github.com/openlvc/portico/tree/maintenance-2.0.x">/maintenance-2.0.x</a></td>
 			</tr>
 		</table>
 
 	</div>
 
-	<div class="eleven columns">
+	<div class="eleven columns release-notes">
 
-				<div class="alert error">
-			<p>This release has been deprecated. Users are strongly encouraged to update to a support release.
+				<div class="alert info">
+			<p>This is a Maintenance Release. It is recommended for users currently on the specified baseline.</p>
 		</div>
 
 
-		<h2>JSAF Stability Improvements</h2>
+		<p class="bigger">
+      <span class="dropcap">P</span>ortico v2.0.2 is the second maintenance release for the
+      major <code>2.0.x</code> series. This release provides a number of bugfixes for the core
+      RTI, including an important <code>tick(min,max)</code> timing fix and the remediation of
+      a long standing bug that caused truncation if any single attribute/parameter exceeded
+      <code>989b</code> in size.
+</p>
 
-		<p>
-			<span class="dropcap">P</span>ortico 1.0 is here! It's been a long road, with a lot
-			of hours put in by the whole group to get the release over the line. Over 200 separate
-			tickets have been addressed since the last release, adding a number of new features and
-			filling out the public API. Version 1.0 is a major milestone for any project, and
-			a special thank-you to the whole development is in order. We're very proud of what
-			has been put in place since the project started and we hope you enjoy using it!
-		</p>
+<p class="bigger">
+      The full Change Log is reproduced below and is available for download
+      <a href="https://github.com/openlvc/portico/releases/tag/portico-2.0.2">here</a>.
+</p>
 
-		<h2>Clogging the Tubes - Target 5000</h2>
-		<p>
-			Let's face it, the HLA is a niche technology. Despite this, we've been somewhat
-			overwhelmed by the interest in Portico. To date our various installers have been
-			downloaded almost 5000 times by groups all around the globe. As we tick over to
-			version 1.0, let's bust through this milestone as well!
-		</p>
+<h3 id="notes">Notes</h3>
 
-		<h2>Save/Restore and Ownership Management</h2>
-		<p>
-			Portico now supports both Save/Restore and Ownership Management services for the
-			HLA 1.3 specification. This is provided for the Java and C++ interfaces and works
-			across all platforms. These have been a long time coming, and now, save for some
-			smaller calls here and there, Portico support covers the full 1.3 specification.
-		</p>
-		<p>
-			For compete details on the support level of various <span class="code">RTIambassador</span> and
-			<span class="code">FederateAmbassador</span> calls, see the
-			<a href="../../../documentation/developer/apistatus.html">Portico API Status</a> page.
-		</p>
+<ul>
+<li><code>note</code> Bundled JRE version has been updated to <code>1.8.0_66</code></li>
+</ul>
 
-		<h2>Performance Improvements</h2>
-		<p>
-			Performance has been a focus of the Portico v1.0 release, and significant gains have
-			been made. Through optimization at various levels inside the libraries, Portico is now
-			significantly faster than it was in the previous releases. A comparison of Portico v0.9,
-			Portico v1.0 and DMSO RTI-NGv6 was generated and can be 
-			<a href="../../../documentation/user/performance.html">found here</a>.
-			On that page you'll also find a new section describing how to tweak the various
-			Portico options for better performance in your particular environment.
-		</p>
-		<p>
-			As part of the report generation, a benchmarking application known as PGauge was
-			developed (for both Java and C++). The code for PGauge will be made available in
-			the source respoistory for anyone interested.
-		</p>
+<h3 id="improvements">Improvements</h3>
 
-		<h2>Architecture Changes</h2>
-		<p>
-			As part of performance improvements, Portico underwent some significant architectural
-			refactoring. As part of this move, there is no longer a central RTI component.
-			When federates are started on the same network in the same federation, they will find
-			and communicate with one another. Portico version 0.8 (the last release to contain
-			the client/server architecture) will remain available for download by those who would
-			like a point-to-point connection.
-		</p>
+<ul>
+<li><code>improve</code> Fixed a problem that made Portico difficult to use in private Maven repos.
+         This would manifest as extremely long startup time as a large number of
+         non-Portico related jar files were unnecessarily scanned. (<code>#148</code>)</li>
+<li><code>improve</code> Added ability to generate a sandbox that includes a JRE by calling the
+         <code>sandbox.full</code> target. This is useful when building from source for use
+         with <code>RTI_HOME</code> directly set to the sandbox directory. (<code>#130</code>)</li>
+</ul>
 
-		<h2>C++ Interface Improvements</h2>
-		<p>
-			Throughout the development of the 1.0 release, a number of bugs were identified and
-			fixed within the Portico C++ interface. These improvements have resulted in increased
-			stability across all platforms, as well as better performance.
-		</p>
-		<p>
-			As part of performance testing, the C++ interface was also put through some
-			considerable load testing across Windows, Linux and Mac OS X, helping to identify
-			any problems and resulting in increased quality for the interface.
-		</p>
-		<p>
-			Finally, a number of problems with the DLC 1.3 interface have been fixed and full
-			support (to the same level as the RTI-NG compatible interface) is now provided, giving
-			users a C++ platform on which they can build fully featured federates.
-		</p>
+<h3 id="bug-fixes">Bug Fixes</h3>
 
-		<h2>Improvements and Bug Fixes</h2>
-		<p>
-			Thanks to help from a number of users on the forums, a number of bugs have been
-			identified and fixed as part of the Portico v1.0 release. These have been across
-			all areas of Portico, but a few were more subtle bugs in Time Management (if anyone
-			finds any more, please post them on the forums!).
-		</p>
+<ul>
+<li><code>bugfix</code> Fixed a bug that would cause the truncation of values for large attribute
+        reflections or parameters sent. If a value of an individual attributes or
+        parameter was &gt;<code>989b</code>, all values after the 989th byte were being trucated
+        to <code>0</code>. (#65)</li>
+<li><code>bugfix</code> Fixed a problem preventing use of Portico with time managed federates
+        generated by Pitch Developer Studio (<code>#41</code>)</li>
+<li><code>bugfix</code> Fixed a problem where calling <code>tick(min_time,max_time)</code> would not tick
+        for at least <code>min_time</code> if there were messages waiting for processing.
+        (<code>#53</code>)</li>
+<li><code>bugfix</code> Fixed a problem with <code>IEEE-1516e</code> Java interface referencing wrong
+        <code>LogicalTimeFactory</code> implementation with Integer-based times. (<code>#142</code>)</li>
+</ul>
 
-		<h2>What's Next?</h2>
-		<p>
-			Getting a product as big as Portico to Version 1.0 is a big milestone - but it's not
-			a place to stop. From this point we've start to turn our attention to the IEEE-1516
-			API and are making plans on folding it into Portico family.
-		</p>
-		<p>
-			Finally, I'd like to extend a big thank-you to everyone who has downloaded and used
-			Portico, and especially to those who have contributed back, either through code,
-			bug reporting or general activity across the forums. Getting this far doesn't happen
-			without the help of a lot of people. Well done and happy simulating! 
-		</p>
 
+		<p>&nbsp;</p> <!-- just need a little breathing room -->
 	</div>
 
 </div>
 <!-- Introduction / End
 ================================================== -->
 
-
-<!-- Kevin / Start
+	<!-- Kevin / Start
 ================================================== -->
 <div class="fullwidth background-turquoise celebrity celebrity-flat no-margin dragdown">
 	<div class="container">
@@ -356,8 +306,7 @@
 ================================================== -->
 
 
-
-		
+	
 <!-- Footer / Start
 ================================================== -->
 <footer>
@@ -473,9 +422,11 @@
 Footer / End -->
 
 
-		<script src="../../../assets/js/prism.js"></script>
-
-		
-	</body>
-
+	<script type="text/javascript" src="../../../assets/js/bootstrap-3.2.0.min.js"></script>
+	<script src="../../../assets/js/prism.js"></script>
+	<script src="../../../assets/js/toc.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() { $('.toc').toc(); });
+	</script>
+</body>
 </html>

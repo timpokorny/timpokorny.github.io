@@ -1229,7 +1229,7 @@ article.post .post-content pre code {
 	color: inherit;
 }
 
-article.post .post-content code {
+article.post .post-content code, .release-notes code {
 	display: block;
 	clear: both;
 	overflow: auto;

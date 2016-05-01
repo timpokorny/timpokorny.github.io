@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
+
+		{% include header.html %}
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="four columns">
+			<h1>Portico v{{ page.version }}</h1>
+		</div>
+		
+		<nav class="twelve columns">
+			<ul class="breadcrumbs">
+				<li><a href="{% site_root %}index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/index.html">About</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li><a href="{% site_root %}about/status.html#release-notes">Releases</a></li>
+				<li><i class="icon-angle-right"></i></li>
+
+				<li>{{ page.version }} </li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+<!-- Introduction / Start
+================================================== -->
+<div class="container">
+
+	<div class="four columns">
+		<table class="default-table" style="width:auto;">
+			<tr>
+				<td><strong>Release Date</strong></td>
+				<td>{{ page.release-date }}</td>
+			</tr>
+			<tr>
+				<td><strong>Status</strong></td>
+				<td><span class="bigger label {{ page.status-css-class }}">{{ page.status }}</span></td>
+			</tr>
+			<tr>
+				<td><strong>Download</strong></td>
+				<td><a href="{% site_root %}get.html#archive">Archive</a></td>
+			</tr>
+			<tr>
+				<td><strong>Git Tag</strong></td>
+				<td><a href="https://github.com/openlvc/portico/releases/tag/{{ page.tag }}">{{ page.tag }}</a></td>
+			</tr>
+			<tr>
+				<td><strong>Baseline</strong></td>
+				<td><a href="https://github.com/openlvc/portico/tree/{{ page.baseline }}">/{{ page.baseline }}</a></td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="eleven columns release-notes">
+
+		{% include {{ page.type }} %}
+
+		{{ content }}
+
+		<p>&nbsp;</p> <!-- just need a little breathing room -->
+	</div>
+
+</div>
+<!-- Introduction / End
+================================================== -->
+
+	{% include celebrity-kevin.html %}
+
+	{% include footer.html %}
+
+	<script type="text/javascript" src="{% site_asset js/bootstrap-3.2.0.min.js %}"></script>
+	<script src="{% site_asset js/prism.js %}"></script>
+	<script src="{% site_asset js/toc.js %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() { $('.toc').toc(); });
+	</script>
+</body>
+</html>

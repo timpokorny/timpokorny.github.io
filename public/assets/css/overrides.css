@@ -162,7 +162,7 @@ pre code
 }
 
 /* define the style for in-line code within a paragraph */
-.code, code, article.post .post-content code /* pretty much copied from the style for labels */
+.code, code, article.post .post-content code, .release-notes code /* pretty much copied from the style for labels */
 {
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	border-radius: .25em;
@@ -774,6 +774,41 @@ abbr.initialism {
           border-radius: 500px;
 }
 
+
+/* --------------------------------------------------       
+ * Release Notes Template
+ * ----------------------------------------------- */
+.release-notes h3
+{
+	font-family: "Open Sans";
+	font-weight: bold;
+}
+
+.release-notes ul
+{
+	list-style-type: none;
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
+
+.release-notes li {line-height: 25px; margin-left: 23px;}
+.release-notes li:before {
+	content: "\f101";
+	display: inline-block;
+	width: 18px;
+	margin-left: -18px;
+	font-family: 'FontAwesome';
+	font-size: 17px;
+}
+.release-notes li ul { line-height: 25px; margin: 5px 0!important;}
+.release-notes li ul li:before  {
+	content: "\f105";
+	display: inline-block;
+	width: 18px;
+	margin-left: -18px;
+	font-family: 'FontAwesome';
+	font-size: 14px;
+}
 
 
 /* --------------------------------------------------       

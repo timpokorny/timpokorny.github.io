@@ -23,6 +23,6 @@ kramdown:
 
 # Portico specific properties
 stable_version: 2.1.0
-stable_date: 30 April, 2016
-nightly_version: 2.1.0
-nightly_date: 30 April, 2016
+stable_date: 2 May, 2016
+nightly_version: 2.1.0-dev
+nightly_date: 2 May, 2016
