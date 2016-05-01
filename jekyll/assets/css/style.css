@@ -1222,6 +1222,13 @@ article.post .post-content p.begin {
 	margin-top: 10px;
 }
 
+/* We use prism to color <pre><code> blocks, so we don't want those overridden by
+   by the specific style we set out for inline blocks. */
+article.post .post-content pre code {
+	background-color: inherit;
+	color: inherit;
+}
+
 article.post .post-content code {
 	display: block;
 	clear: both;

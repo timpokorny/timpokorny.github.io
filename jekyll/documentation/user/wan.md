@@ -29,8 +29,8 @@ distributed assest embedded on location, or run a single simulation across centr
 geographically separated, Portico's WAN support removes the network boundaries.
 
 
-Why use this capability?
--------------------------
+Use Cases
+----------
 There are many reasons why you might want to connect federates via a point-to-point, TCP
 configuration rather than using the local multicast:
 
@@ -63,8 +63,8 @@ communication, removing the need for additional connections that would not be ab
 NAT.
 
 
-How does it work?
-------------------
+Overview
+---------
 Portico's WAN support has been designed to be sensitive to deployment realities
 while minimizing infrastructure needs and maintaining simplicity and ease-of-use.
 
@@ -274,7 +274,7 @@ enabling WAN support in its RID.
 
 ```
 [tim@sgp1:/opt/local/hperf-1.0.0]$ vim RTI.rid
-~~~
+...
 [tim@sgp1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name sgp --peers nyc
 ```
 

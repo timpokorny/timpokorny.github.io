@@ -220,7 +220,7 @@ globe-spanning federations with the flick of a switch. Whether you want to conne
 distributed assest embedded on location, or run a single simulation across centres
 geographically separated, Portico&#39;s WAN support removes the network boundaries.</p>
 
-<h2 id="why-use-this-capability?">Why use this capability?</h2>
+<h2 id="use-cases">Use Cases</h2>
 
 <p>There are many reasons why you might want to connect federates via a point-to-point, TCP
 configuration rather than using the local multicast:</p>
@@ -256,7 +256,7 @@ through the NAT. This connection is then held open and reused by the WAN Router 
 communication, removing the need for additional connections that would not be able to traverse a
 NAT.</p>
 
-<h2 id="how-does-it-work?">How does it work?</h2>
+<h2 id="overview">Overview</h2>
 
 <p>Portico&#39;s WAN support has been designed to be sensitive to deployment realities
 while minimizing infrastructure needs and maintaining simplicity and ease-of-use.</p>
@@ -458,10 +458,9 @@ INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
 As this the first federate at this site, we&#39;ll have to designate it as the local gateway by
 enabling WAN support in its RID.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">[tim@sgp1:/opt/local/hperf-1.0.0]$ vim RTI.rid
+...
+[tim@sgp1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name sgp --peers nyc
 </code></pre></div>
-<p>[tim@sgp1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name sgp --peers nyc
-```</p>
-
 <div class="alert error">
   <p><b>Single Gateway Per Site</b><br/>
   It is only necessary to designate a <i>single</i> federate at each site to be the local gateway.
@@ -633,7 +632,7 @@ experiment with these settings to find what works best for you.</p>
 		
 		<div class="one_fourth column">
 			
-			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="440">
+			<div id="sidebar" data-spy="affix" data-offset-top="150" data-offset-bottom="440">
 
 				<!-- Search -->
 				<div class="widget" id="search">

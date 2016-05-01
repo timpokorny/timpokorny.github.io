@@ -107,8 +107,8 @@ The following HLA interfaces are supported when linking Portico with VBS:
 	to match the version of VBS you intend to use.</p>
 </div>
 
-VBS/LVC Deployment
-===================
+VBS Deployment with LVC Game
+=============================
 In a typical VBS/LVC network, a single computer acts as the LVC Gateway. This computer is also
 typically the VBS game server (active or dedicated server).
 
@@ -364,5 +364,5 @@ because we are _not_ cruel, we've compiled an awesome list for you!
   		Is the HLA plugin enabled? Check `vbsClient.config` to ensure that one of the
   		HLA plugins is enabled.
 
-
+That is all.
 

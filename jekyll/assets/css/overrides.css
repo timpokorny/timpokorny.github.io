@@ -138,9 +138,10 @@ pre, pre[class*="language-"]
 
 pre, code, pre code, .code
 {
+	/* Set by Prism so just leave this out */
 	/* make sure the background is the same colour for both the wrapper and nested versions */
-	background-color: #eeeeee !important;
-	color: #333 !important;
+	/*background-color: #eeeeee !important;*/
+	/*color: #333 !important;*/
 	
 	/* dark background, light text
 	background-color: #4e4e4e !important;
@@ -158,8 +159,6 @@ pre code
 	text-align: left !important;
 	padding: 20px 0 20px 20px !important;
 	margin: 0 0 0 0 !important;
-
-	color: #ffffff;	
 }
 
 /* define the style for in-line code within a paragraph */
@@ -171,7 +170,7 @@ pre code
 	padding: .2em .4em .2em;
 	font-size: 85%;
 	line-height: 1;
-	color: #fff;
+	color: #333;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: baseline;
