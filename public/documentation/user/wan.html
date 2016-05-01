@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+			<!-- Basic Page Needs -->
+	<meta charset="utf-8" />
+	<title>The Portico Project</title>
+    <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
+    <link rel="canonical" href="http://timpokorny.github.io/documentation/user/wan.html">
+	<link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../assets/css/colors/8.css" id="color" />
+	<link rel="stylesheet" href="../../assets/css/overrides.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="../../assets/css/prism.css">
+	<link rel="stylesheet" href="../../assets/css/ionicons.min.css" type="text/css" media="all">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="../../assets/js/jquery-1.9.0.min.js"></script>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="../../assets/js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.quovolver.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.tooltipster.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.jpanelmenu.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/swipe.js"></script>
+	<script type="text/javascript" src="../../assets/js/retina.js"></script>
+	<script type="text/javascript" src="../../assets/js/custom.js"></script>
+
+	</head>
+
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
+
+		
+<!-- ===================================================================== -->
+<!--                            Navigation Bar                             -->
+<!-- ===================================================================== -->
+<header class="menu">
+	<div class="container">
+	
+		<!-- Mobile Only Menu Button  -->
+		<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+		
+		<!-- Logo  -->  
+		<a class="logo" href="../../index.html"><img src="../../assets/images/logo.png"/></a>
+		
+		<!-- Navigation -->   
+		<nav>
+			<ul class="navigation">
+				<li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
+				<li class="current"><a href="../../index.html">Home</a></li>
+
+				<li><a href="../../get.html">Get</a>
+					<ul>
+						<li><a href="../../get.html#stable">Stable</a></li>
+						<li><a href="../../get.html#nightly">Nightly</a></li>
+						<li><a href="../../get.html#archive">Archive</a></li>
+					</ul>
+				</li>
+
+				<li><a href="../../about/index.html" class="arrow">About</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../about/index.html">About Portico</a></li>
+						<li><a href="../../about/index.html#devteam">Developer Team</a></li>
+						<li><a href="../../about/index.html#history">Portico History</a></li>
+						<li><a href="../../about/status.html">Status and Roadmap</a></li>
+						<li><a href="../../about/license.html">License</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../documentation/" class="arrow">Documentation</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../documentation/user/" class="arrow">For Users</a>
+							<ul>
+								<li><a href="../../documentation/user/gettingstarted.html">Running Federates with Portico</a></li>
+								<li><a href="../../documentation/user/configure.html">Configuring Portico</a></li>
+								<li><a href="../../documentation/user/wan.html">Portico over a WAN</a></li>
+								<li><a href="../../documentation/user/performance.html">Performance</a></li>
+								<li><a href="../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
+								<li><a href="../../documentation/user/faq.html">Portico FAQ</a></li>
+							</ul>
+						</li>
+						<li><a href="../../documentation/developer/" class="arrow">For Developers</a>
+							<ul>
+								<li><a href="../../documentation/developer/java.html">Java Federates</a></li>
+								<li><a href="../../documentation/developer/cpp.html">C++ Federates</a></li>
+								<li><a href="../../documentation/developer/apistatus/index.html">API Status</a></li>
+								<li><a href="../../documentation/developer/building.html">Building Portico</a></li>
+							</ul>
+						</li>
+						<li><a href="../../documentation/guides/" class="arrow">LVC Guides</a>
+							<ul>
+								<!-- Live -->
+								<!-- Virtual -->
+								<li><a href="../../documentation/guides/titan.html">Titan.IM</a></li>
+								<li><a href="../../documentation/guides/prepar3d.html">Prepar3D</a></li>
+								<li><a href="../../documentation/guides/steelbeasts.html">Steel Beasts</a></li>
+								<li><a href="../../documentation/guides/vbs.html">VBS</a></li>
+								<li><a href="../../documentation/guides/xplane.html">X-Plane</a></li>
+								<li><a href="../../documentation/guides/unity.html">Unity3D</a></li>
+								<!-- Constructive -->
+								<li><a href="../../documentation/guides/onesaf.html">OneSAF</a></li>
+								<li><a href="../../documentation/guides/jsaf.html">JSAF</a></li>
+							</ul>
+						</li>
+						<li><a href="../../about/status.html#supported-platforms">Supported Platforms</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../community/" class="arrow">Community</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="../../news/">Latest News</a></li>
+						<li><a href="../../community/index.html">Community Support</a></li>
+						<li><a href="../../community/bugs.html">Reporting Bugs</a></li>
+						<li><a href="../../community/contributing.html">Contributing</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="../../support/">Support</a></li>
+
+				<li><a href="../../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div><!-- End of container -->
+</header>
+<!-- Main Menu / End
+================================================== -->
+
+
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="eight columns">
+			<h1>Using Portico over a WAN</h1>
+			<div class="meta clearfix">
+<!--  <span><img src="../../assets/images/icons/user.png" alt="author"/>posted by Open LVC Team,</span> -->
+<!---->
+<!-- <span><img src="../../assets/images/icons/ribbon.png" alt="tags"/> <span>in <a href="../../documentation/user/">User Documentation</a>.</span> -->
+<!--					  <span><img src="../../assets/images/icons/clock.png" alt="reading time"> <span>Reading Time: about 25  minutes</span>-->
+			</div>
+		</div>
+		
+		<nav class="eight columns">
+			<ul class="breadcrumbs">
+			
+				<li class="active">Using Portico over a WAN</li>
+			</ul>
+
+		</nav>
+
+	</div>
+</div>
+
+<!-- Title Bar / End
+================================================== -->
+
+<!-- Article / Start
+================================================== -->
+<section class="article" style="margin-bottom:-50px;">
+	<div class="container">
+	
+		<div class="three_fourth column">
+		
+			<!-- Post Start -->
+			<article class="post">
+			
+				<div class="post-content">
+				
+					<!-- Thumbnail -->
+					
+					<img src="../../assets/pages/documentation/user/wan/page-logo.jpg" alt="Using Portico over a WAN"/>
+					
+
+					
+					<!-- Post Content -->
+					<p class="begin">Network communications in Portico use UDP over Multicast by default. This provides a fast, robust interconnect for most federations. However, if you want to create a truly global federation, linking simulations separated by continents, you will need to use the WAN bridging capabilities added in Portico v2.1.
+</p>
+					
+
+					<h1 id="using-portico-over-the-internet">Using Portico over the Internet</h1>
+
+<p>So you want to run a federation over the Internet, ay? Well I have good news for
+you; Portico has your back!</p>
+
+<p>Starting from version 2.1, Portico has added a WAN mode that will allow users to create
+globe-spanning federations with the flick of a switch. Whether you want to connect together
+distributed assest embedded on location, or run a single simulation across centres
+geographically separated, Portico&#39;s WAN support removes the network boundaries.</p>
+
+<h2 id="why-use-this-capability?">Why use this capability?</h2>
+
+<p>There are many reasons why you might want to connect federates via a point-to-point, TCP
+configuration rather than using the local multicast:</p>
+
+<ol>
+<li>Local network policy restrictions (blocking of multicast)</li>
+<li>Connect simulations running across different networks</li>
+<li>Connect simulations running in geographically separate areas that cannot be moves (large simulators perhaps)</li>
+<li>Operate a Portico federation on a commercial cloud provider where multicast is blocked</li>
+<li>The LOLs</li>
+</ol>
+
+<p>With this new capability we have designed a facility that is both sensitive to those who want to
+add single remote federates to a federation as well as those who want to run clusters at many
+different sites.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>WAN-enabled federations impose two additional requirements.</p>
+
+<ol>
+<li><p>Must be able to run a single WAN Router somewhere accessible to all networks. This computer
+ must be able to accept incoming connections.</p></li>
+<li><p>A single local federate at each site must be able to connect out from the local network to
+ the WAN Router.</p></li>
+</ol>
+
+<p><strong>Firewall</strong> exceptions will need to be set up for the WAN Router to allow it to receive connections.
+This is required on the computer hosting the WAN Router only.</p>
+
+<p><strong>NAT Traversal</strong> is supported. A local federate creates a connection outward from the local network
+through the NAT. This connection is then held open and reused by the WAN Router for inbound
+communication, removing the need for additional connections that would not be able to traverse a
+NAT.</p>
+
+<h2 id="how-does-it-work?">How does it work?</h2>
+
+<p>Portico&#39;s WAN support has been designed to be sensitive to deployment realities
+while minimizing infrastructure needs and maintaining simplicity and ease-of-use.</p>
+
+<p>To connect distributed networks, a central WAN Router component is used.</p>
+
+<p>The basic topology of a WAN-enabled simualtion revolves around a central WAN Router. The router
+sits at the the center of the distributed simulation and ensures that messages from each network
+are approprirately forwarded on to the other networks:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Federate &lt;--|              /                    \              |--&gt; Federate
+ ^          |              \                    /              |          ^
+ |          v              /                    \              v          |
+ |   (Federate|Gateway) ---\---- WAN Router ----/--- (Gateway|Federate)   |
+ |          ^              /                    \              ^          |
+ V          |              \                    /              |          V
+Federate &lt;--|              /                    \              |--&gt; Federate
+</code></pre></div>
+<p>The router is the only component with special access requirements. It must be able to <strong>accept
+incoming connections</strong> from the other networks. The port used by the router can be configured,
+but defaults to <code>23114</code>.</p>
+
+<p>At each local site, very little changes. Federates on the same network segment continue to
+interoperate using multicast as they have previously done. Additionally, one federate on 
+each network is designated as the local Gateway*. This is enabled through the RID file,
+with additional configuration options specifying the IP address and port of the router.</p>
+
+<p><em>* Can run a standalone gateway process if desired.</em></p>
+
+<h2 id="step-by-step">Step-by-Step</h2>
+
+<p>In this example we&#39;ll work through the changes required to WAN-enable a federation. The commands
+presented here reference the <strong>HPref</strong> performance testing federate that was used in the
+development of this capability. It is left as an exercise for the reader to adapt the startup
+process for their own federates according to their specific needs.</p>
+
+<p>In this example we will execute two instances of a throughput testing federation using three
+separate sites:</p>
+
+<ol>
+<li>Singapore - Throughput Federate #1</li>
+<li>Amsterdam - WAN Router</li>
+<li>New York  - Throughput Federate #2</li>
+</ol>
+
+<h3 id="step-1:-start-the-wan-router">Step 1: Start the WAN Router</h3>
+
+<p><strong>Amsterdamn</strong></p>
+
+<p>As above, the router sits at the heard of a WAN-enabled simulation and must be able to accept
+incoming connections from all remote sites. From the <em>Portico installation directory</em> you run
+the following command:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@ams1:/opt/local/portico-2.1.0]$ bin/wanrouter.sh --address ams.openlvc.org
+
+INFO  [portico.wan]: 
+##########################################################
+#                   Portico Open RTI                     #
+#            Welcome to Portico for the HLA!             #
+#                                                        #
+#     Portico is distributed by under the terms of       #
+#    the Common Development and Distribution License.    #
+#    For a copy of the license, see the LICENSE file     #
+#     included in the root of the distributable you      #
+#                      downloaded.                       #
+##########################################################
+#                                                        #
+#                    System Information                  #
+#                                                        #
+# Portico Version:          2.1.0 (build 0)              #
+# Platform Architecture:    amd64                        #
+# CPUs:                     1                            #
+# Operating System:         Linux                        #
+# Operating System Version: 3.13.0-32-generic            #
+# Java Version:             1.8.0_25                     #
+# Java Vendor:              Oracle Corporation           #
+#                                                        #
+# Startup Time:             Oct 9, 2015 - 11:01:42 AM    #
+# RID File:                 RTI.rid                      #
+# Log Level:                WARN                         #
+#                                                        #
+##########################################################
+ =&gt; RTI Home: /opt/local/portico-2.1.0
+INFO  [portico.wan]: WAN Router Configuration:
+INFO  [portico.wan]: |---------------------------------------|
+INFO  [portico.wan]: | Address: ams.openlvc.org/64.74.223.36 |
+INFO  [portico.wan]: |    Port: 23114                        |
+INFO  [portico.wan]: | Metrics: false                        |
+INFO  [portico.wan]: |---------------------------------------|
+INFO  [portico.wan]: 
+INFO  [portico.wan]: Starting Portico WAN Router. Press &quot;x&quot; to exit
+INFO  [portico.wan]: 
+INFO  [portico.wan]: Ready to accept connections
+</code></pre></div>
+<p>Configuration of the WAN Router is done via command line. If you run the <code>--help</code> argument you will
+get a full listing of options.</p>
+
+<p>The most important options to specify is the Network Interface (<strong>NIC</strong>) which the router will
+accept connections on. You pass the <code>--address [IP/Name]</code> argument, specifying one of the following:</p>
+
+<ul>
+<li><code>x.x.x.x</code>         - IP address that is used by the NIC</li>
+<li><code>host.domain.com</code> - Host name that points to the IP used by the NIC</li>
+<li><code>GLOBAL</code>          - Symbolic name telling the WAN Router to select the NIC witht the first
+                    globally accessible IP it finds</li>
+<li><code>SITE_LOCAL</code>      - Will select a &quot;site local&quot; address: <code>192.168.x.x</code>, <code>10.x.x.x</code>, <code>172.16.x.x</code></li>
+<li><code>LINK_LOCAL</code>      - Will select a &quot;link local&quot; address: <code>169.254.x.x</code></li>
+<li><code>LOOPBACK</code>        - Will select the local loopback adapter</li>
+</ul>
+
+<p>In our example we specify a domain name that points back to the local machine on the public IP
+that all the other networks will use to find it: <code>ams.openlvc.org</code>.</p>
+
+<p>By default, the localhost address of <code>127.0.0.1</code> is used. This is likely not useful to you, so be
+sure to specify something the other networks can reach.</p>
+
+<h3 id="step-2:-configure-each-local-sites">Step 2: Configure each Local Sites</h3>
+
+<p><strong>New York</strong></p>
+
+<p>Only a single outward connection is needed at each local site. All local federates communicate at
+full speed using regular local networking without having to deal with the additional overhead of
+TCP.</p>
+
+<p>This is especially important when you have a single external federate a large number of local
+federates. You don&#39;t want all the local federates having to push their updates out to a router
+just so they can be reflected back to the same network. We want to conserve this bandwidth for
+inter-network traffic.</p>
+
+<p>At each local site you will have to designate a single federate as the <em>Local Gateway</em>. To do this
+you will need to make two changes in that federate&#39;s RID file.</p>
+
+<ol>
+<li>Set WAN support to <code>enabled</code></li>
+<li>Specify the address of the WAN Router</li>
+</ol>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@nyc1:/opt/local/hperf-1.0.0]$ vim RTI.rid
+
+281: portico.wan.enabled = true
+282: 
+283: # (5.2) Router Address/Port
+284: #       Specifies the address and port of the WAN router to use. Note that the
+285: #       syntax is &quot;address:port&quot;.
+286: #
+287: #       Default: 127.0.0.1:23114
+288: #
+289: portico.wan.router = ams.openlvc.org:23114
+</code></pre></div>
+<p>Once you&#39;ve made the appropriate configuration you can start the local federate. It will act as
+both a local federate and the local gateway. Let&#39;s start by firing it up:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@nyc1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name nyc --peers sgp
+Starting HPerf Test Federate (use --help to display usage)
+INFO  [hp.nyc]: 
+INFO  [hp.nyc]:     Test Driver: Throughput Test
+INFO  [hp.nyc]:   Callback Mode: IMMEDIATE
+INFO  [hp.nyc]:    Time Stepped: NO
+INFO  [hp.nyc]: 
+INFO  [hp.nyc]: Creating RTIambassador
+INFO  [hp.nyc]: Connecting...
+INFO  [hp.nyc]: Creating Federation...
+
+-------------------------------------------------------------------
+GMS: address=nyc1-45062, cluster=test-fed, physical address=10.0.0.1:42383
+-------------------------------------------------------------------
+INFO  [hp.nyc]: Created Federation [test-fed]
+INFO  [hp.nyc]: Joined Federation as nyc
+INFO  [hp.nyc]: Publish and Subscribe complete
+INFO  [hp.nyc]: Registering HLAobjectRoot.TestFederate object for local federate
+INFO  [hp.nyc]:  ===================================
+INFO  [hp.nyc]:  =     Running Throughput Test     =
+INFO  [hp.nyc]:  ===================================
+INFO  [hp.nyc]: 
+INFO  [hp.nyc]:       Messsage Size = 1.00KB
+INFO  [hp.nyc]:          Loop Count = 20
+INFO  [hp.nyc]:        Object Count = 20
+INFO  [hp.nyc]:   Interaction Count = 20
+INFO  [hp.nyc]:   Messages Per Loop = 40 (20 updates, 20 interactions)
+INFO  [hp.nyc]:          Total Sent = 800
+INFO  [hp.nyc]:               Peers = 1
+INFO  [hp.nyc]:     Total Send Size = 800.00KB
+INFO  [hp.nyc]:     Total Revc Size = 800.00KB
+INFO  [hp.nyc]:      Total Messages = 1,600
+INFO  [hp.nyc]: 
+INFO  [hp.nyc]: Waiting for peers: [sgp]
+</code></pre></div>
+<p>You may notice above that the GMS message includes an IP address in the <code>10.x.x.x</code> range.
+This is the standard Portico networking connecting to the local network. Inside the federate
+a separate TCP connection is being made to the WAN Router.</p>
+
+<p>If there is a problem connecting to the WAN Router you will get an error at this point.
+If the federate can connect to the WAN Router you will not see anything unusual. On the
+router you will see a connection notice:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">INFO  [portico.wan]: Ready to accept connections
+INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
+</code></pre></div>
+<h3 id="step-3:-start-other-federates">Step 3: Start Other Federates</h3>
+
+<p><strong>Singapore</strong></p>
+
+<p>In this example we will repeat this process for the federate at the local Singapore site.
+As this the first federate at this site, we&#39;ll have to designate it as the local gateway by
+enabling WAN support in its RID.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@sgp1:/opt/local/hperf-1.0.0]$ vim RTI.rid
+</code></pre></div>
+<p>[tim@sgp1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name sgp --peers nyc
+```</p>
+
+<div class="alert error">
+  <p><b>Single Gateway Per Site</b><br/>
+  It is only necessary to designate a <i>single</i> federate at each site to be the local gateway.
+  When starting other federates at the same site, just start them as normal. Their WAN support must
+  be left **turned off**.
+  </p>
+</div>
+
+<p>Assuming we are only using a single federate at each site, once the second federate is started
+they should both connect to one another and run through until completion. Once they&#39;ve finished
+you will see disconnection notices on the WAN Router:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
+INFO  [portico.wan]:  (Accepted) Connection ID=2, ip=/123.179.131.27:47112
+INFO  [portico.wan]:   (Removed) Connection ID=2 has disconnected
+INFO  [portico.wan]:             Packets From: 47 packets, 870KB
+INFO  [portico.wan]:             Packets Sent: 44 packets, 870KB
+INFO  [portico.wan]:   (Removed) Connection ID=1 has disconnected
+INFO  [portico.wan]:             Packets From: 48 packets, 872KB
+INFO  [portico.wan]:             Packets Sent: 47 packets, 870KB
+</code></pre></div>
+<p>Congratulations! You have now run a fully distributed simulation. Testing federates in Singapore
+and New York have exchanged messages, bounding all traffic through a router in Amsterdam. That&#39;s
+about as distributed as it gets.</p>
+
+<h2 id="firewall-and-nat-traversal">Firewall and NAT Traversal</h2>
+
+<p>One of the key design considerations for the Portico WAN capability has been simplicify,
+especially as it relates to firewall and NAT support.</p>
+
+<p>Every effort has been made to minimize problems, however additional configuration will always
+be required for sites with particularly stringent security policies.</p>
+
+<p>The <em>WAN Router</em> is the main component that has special requirements. It must be accessible from
+the remote sites and available on the appropriately configured port. This must work through any
+local firewall or NAT and configuration of these will require support from the deployment site.</p>
+
+<p>With regard to remote sites, there are no special requirements beyond the ability of the <em>Local
+Gateway</em> to connect outbound to the <em>WAN Router</em>. When a connection to the router is established,
+the socket is held open and also used as a channel to send inbound messages. Because it is using 
+an already established connection rather than initiating a new one, this typically will not cause
+issues with firewall or NAT traversal. </p>
+
+<p>Outbound connections are commonly not an issue on most networks, however in some instances a local
+network policy may only permit them on various ports. In this case the local firewall must either
+be permitted to allow outbound connections on the Portico WAN port (<code>23114</code>) or the port must be
+changed to something that is allowed.</p>
+
+<h2 id="configuring-portico-for-the-wan">Configuring Portico for the WAN</h2>
+
+<p>All configuration for a local gateway is done via the RID file. Inside the RID you will find
+several WAN specific configuration properties. The main ones are listed below, but please consult
+the fully documented default RID file shipped with Portico for the complete list:</p>
+
+<ol>
+<li><p><code>portico.wan.enabled</code> - Enable/Disable the WAN sub-system for the federate. Set to <code>true</code>
+  for any federate that will act as a local gateway.</p></li>
+<li><p><code>portico.wan.router</code> - The address/port combination of the <em>WAN Router</em>. When WAN mode is
+  enabled this is used by the <em>Local Gateway</em> to find the router. Default: <code>127.0.0.1:23114</code></p></li>
+<li><p><code>portico.wan.bundle.enabled</code> - Defaulting to <code>true</code>, this setting will queue up messages at
+  the local gateway until there are enough to send as a large batch. This makes more efficient
+  use of the network and has a significant impact on increasing throughput in most cases.
+  Defaults to <code>true</code>.</p></li>
+<li><p><code>portico.wan.bundle.maxsize</code> - Defines the maximum size of all messages to queue up for
+  bundling before we force them to be flushed to the WAN Router. Default is <code>64K</code>.</p></li>
+<li><p><code>portico.wan.bundle.timeout</code> - Defines the maximum amount of time we should hold any message
+  for in the bundler before flushing to the router. This ensures that messages are flushed out
+  in a timely fashion rather than waiting indefinately for enough other messages to arrive to
+  meet the <code>maxsize</code> requirement. Defined in milliseconds and defaults to <code>20</code>.</p></li>
+</ol>
+
+<h2 id="important-considerations">Important Considerations</h2>
+
+<p>For the most part configuration should be pretty straightforward. However, there are some
+important bits and pieces to keep in mind when running a distributed simulation like this.</p>
+
+<h3 id="start-the-local-gateway-federates-first">Start the Local Gateway federates first</h3>
+
+<p>When a local gateway is running, all Portico traffic will be forwarded to it. An essential part
+of startup is the federation joining process. To ensure that any local federates (non-WAN) find
+the federation successfully, we have to ensure that they are connected to it! This means, we
+have to run the local gateway federate first.</p>
+
+<div class="alert error">
+  <p><b>Start each Local Gateway first</b><br/>
+  To avoid any startup problems the local gateway must be the first federates started at each site.
+  </p>
+</div>
+
+<p>In the example used earlier, if we were running three federates at the New York site (<code>nyc1</code>, <code>nyc2</code>
+and <code>nyc3</code>) we would first start <code>nyc1</code> (assuming it was configured as the local gateway). This
+would link us in to any running federation that the Singapore site might have already created. We
+can then run <code>nyc2</code> and <code>nyc3</code>. Their messages will relay through <code>nyc1</code> and responses from
+Singapore will be routed back to them.</p>
+
+<p>If we ran one of these local federates first, they would have no way to connect into or know about
+the remote federation. Due to Portico being a completely distributed RTI, this would result in the
+federates starting a new federation on the local network only.</p>
+
+<p>So, as a general rule, <strong>always start the Local Gateway federates first</strong>.</p>
+
+<h3 id="don&#39;t-enable-wan-mode-in-more-than-one-local-federate">Don&#39;t enable WAN mode in more than one local federate</h3>
+
+<p>Every federate that has <code>portico.wan.enabled = true</code> will try to connect to a WAN Router. If you
+use the same RID file for multiple federates and this setting is enabled, they will <strong>all</strong> try
+to connect to the WAN router as well as the local network and you will get packet echo.</p>
+
+<h2 id="message-bundling">Message Bundling</h2>
+
+<p><em>Message Bundling</em> is a concept used to increase the throughput of a federation by making more
+effective use of network resources.</p>
+
+<p>The idea is simple: Because sending messages over a point-to-point pipe is expensive and slow,
+it&#39;s better to send fewer messages containing more data than lots of messages with little chunks.</p>
+
+<p>When enabled, bundling will block messages from being forwarded inside the Local Gateway. It will
+queue them up so that they can be sent in a large batch together. This is why earlier you may have
+noticed that the <em>WAN Router</em> console output only listed that each federate had sent ~48 packets
+rather than the 1,600 that the test says should have been sent. All 1,600 messages were sent, but
+they were sent in 40-odd bundles.</p>
+
+<h3 id="tuning-bundling">Tuning Bundling</h3>
+
+<p>There are two trigger conditions that will cause the queue to be flushed to the router:</p>
+
+<ol>
+<li>The combined size of the stored messages reaches a defined limit</li>
+<li>The amount of time that the oldest message has been held for has reached a defined limit</li>
+</ol>
+
+<p>Both these settings are configurable. Finiding the right balance depends largely on the cadenace
+of your work load.</p>
+
+<p>Most simulation loads tend to contain more asynchronous messages that come at a regular and rapid
+rate. These loads naturally suit bundling. The sustained send-rate will cause the bundling threshold
+to be met regularlly. Overall throughput in this case is more of a performance factor than the
+latency of any subset of messages. This can become especially true when you start adding slow links
+into the WAN which can be used much more effectively in larger batches.</p>
+
+<p>However, if your load includes a number of synchronous calls, bundling may turn out to harm overall
+performance. Messages will get held for an unnecessary amount of time as Portico waits in the hope
+that more will arrive so they can be bundled together. The only problem is those messages never
+arrive. The messages are then only flushed when the time-limit trigger is exceeded.</p>
+
+<p>A classic example is Portico&#39;s latency benchmarking federate. It sends single messages out to all
+federates and then waits for responses. Because these messages are small, they get held up by the
+bundler as it waits for more data to flush as a block.</p>
+
+<p>This data is never going to come beacuse the test federate won&#39;t do anything until it gets
+responses back from the rest of the federation, which requires the original message to be sent.</p>
+
+<p>In this situation there are two options:</p>
+
+<ol>
+<li>Lower the max hold time: It defaults to 20ms, but you can lower it to whatever you want</li>
+<li>Turn bundling off entirely</li>
+</ol>
+
+<p>The right choice for you will depend on the specifics of your simulation. Portico has chosen
+some sensible defaults that tend to work well for the common case, but we&#39;d advise you to
+experiment with these settings to find what works best for you.</p>
+
+
+				</div>
+		
+			</article>
+			<!-- Post End -->
+			
+		</div>
+		
+		<div class="one_fourth column">
+			
+			<div id="sidebar" data-spy="affix" data-offset-top="188" data-offset-bottom="440">
+
+				<!-- Search -->
+				<div class="widget" id="search">
+					<form name="search-form" action="https://www.google.com/search" method="get">
+						<div class="search-icon"><input type="text" class="searching" name="as_q" placeholder="Search..." /></div>
+						<input type="submit" style="display:none;" name="as_sitesearch" value="porticoproject.org"/>
+					</form>
+				</div>
+
+				<!-- Contents -->
+				<!-- Will be replaced by the TOC generation js below -->
+				<div class="widget" id="menu">
+					<h3>Table of Contents</h3>
+					<div class="toc"></div>
+				</div>
+
+			
+				<div class="widget" id="tags">
+					<h3>Tags</h3>
+					<ul class="tags-list">
+					
+						<li><a href="#">wan</a></li>
+					
+					</ul>
+				</div>
+			
+
+			</div>
+		</div>
+	</div>
+</section>
+
+	
+<!-- Footer / Start
+================================================== -->
+<footer>
+  <section id="footer-mainn">
+    <div class="container">
+
+      <!-- Project Information -->
+      <div class="three columns">
+        <h4>Project</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../about/index.html">About Portico</a></li>
+          <li><a href="../../about/index.html#devteam">Developer Team</a></li>
+          <li><a href="../../about/roadmap.html">Status and Roadmap</a></li>
+          <li><a href="../..//get.html">Get Portico</a></li>
+          <li><a href="../..//nightly.html">Nightly Builds</a></li>
+        </ul>
+      </div>
+
+      <!-- User Documentation -->
+      <div class="three columns">
+        <h4>For Users</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../documentation/user/gettingstarted.html">Getting Started with Portico</a></li>
+          <li><a href="../../documentation/guides/index.html">Portico and LVC Tools</a></li>
+          <li><a href="../../documentation/user/switching.html">Switching to Portico</a></li>
+          <li><a href="../../documentation/user/configure.html">Configuring Portico</a></li>
+          <li><a href="../../documentation/user/troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="../../documentation/user/faq.html">Portico FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Developer Documentation -->
+      <div class="three columns">
+        <h4>For Developers</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../documentation/developer/welcome.html">Welcome to the HLA</a></li>
+          <li><a href="../../documentation/developer/java.html">Writing Java Federates</a></li>
+          <li><a href="../../documentation/developer/cpp.html">Writing C++ Federates</a></li>
+          <li><a href="../../documentation/developer/apistatus/index.html">API Status</a></li>
+          <li><a href="../../documentation/developer/building.html">Building Portico</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Documentation -->
+      <div class="two columns">
+        <h4>Community</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="../../news/">Latest News</a></li>
+          <li><a href="../../community/bugs.html">Reporting Bugs</a></li>
+          <li><a href="../../community/index.html#mailing-lists">Mailing Lists</a></li>
+          <li><a href="../../community/index.html#forums">Community Forums</a></li>
+          <li><a href="../../community/contributing.html">Contributing</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="five columns" style="margin-left:20px;margin-right:0;">
+        <h4>Commercial Support</h4>
+        <hr class="smalline"/>
+        <p><img src="../../assets/images/logos/calytrix-logo-icon.jpg" class="img-circle pull-left"/>
+          <address>
+            &nbsp;&nbsp;<b>Calytrix Technologies</b><br>
+            &nbsp;&nbsp;Level 2, 67 Milligan St <br/>
+            &nbsp;&nbsp;Perth, Western Australia, 6000<br/>
+            &nbsp;&nbsp;<abbr title="Email"><b>E:</b></abbr> sales@calytrix.com<br/>
+            &nbsp;&nbsp;<abbr title="Phone"><b>P:</b></abbr> +61 8 9226 4288<br/>
+            &nbsp;&nbsp;<a href="/contact.html"><i class="icon-pencil"></i> Go to contact form</a>
+          </address>
+        </p>
+
+        <!-- Mailchimp Signup -->
+        <!--
+        <p>
+          <h4 style="margin-top:0;padding-top:5px;">Announcement List</h4>
+          <div class="newsletter">
+            <form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
+            <input type="email" value="you@yourcompany.com"
+                name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+                onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+            <input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+          </form>
+          </div>
+        </p>
+        -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="footer-bar">
+    <div class="container">
+      <div class="eight columns">
+        <div class="footer-logo"><span><script type="text/javascript">document.write(new Date().getFullYear())</script> © The Portico Project.</span></div>
+      </div>
+
+      <div class="eight columns">
+        <ul class="footer-links">
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<!-- ==================================================
+Footer / End -->
+
+
+	<script type="text/javascript" src="../../assets/js/bootstrap-3.2.0.min.js"></script>
+	<script src="../../assets/js/prism.js"></script>
+	<script src="../../assets/js/toc.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() { $('.toc').toc(); });
+	</script>
+</body>
+</html>

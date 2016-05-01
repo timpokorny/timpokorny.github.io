@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+			<!-- Basic Page Needs -->
+	<meta charset="utf-8" />
+	<title>The Portico Project</title>
+    <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
+    <link rel="canonical" href="http://timpokorny.github.io/getnotified.html">
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+	
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Style Files -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/css/colors/8.css" id="color" />
+	<link rel="stylesheet" href="assets/css/overrides.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="assets/css/prism.css">
+	<link rel="stylesheet" href="assets/css/ionicons.min.css" type="text/css" media="all">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Begin MailChimp Signup Form -->
+	<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src="assets/js/jquery-1.9.0.min.js"></script>
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="assets/js/jquery.jcarousel.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.quovolver.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.tooltipster.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.jpanelmenu.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript" src="assets/js/swipe.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+	</head>
+
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
+
+		
+<!-- ===================================================================== -->
+<!--                            Navigation Bar                             -->
+<!-- ===================================================================== -->
+<header class="menu">
+	<div class="container">
+	
+		<!-- Mobile Only Menu Button  -->
+		<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+		
+		<!-- Logo  -->  
+		<a class="logo" href="index.html"><img src="assets/images/logo.png"/></a>
+		
+		<!-- Navigation -->   
+		<nav>
+			<ul class="navigation">
+				<li class="search"><input class="searchform" type="search" value="" placeholder="Search"></li>
+				<li class="current"><a href="index.html">Home</a></li>
+
+				<li><a href="get.html">Get</a>
+					<ul>
+						<li><a href="get.html#stable">Stable</a></li>
+						<li><a href="get.html#nightly">Nightly</a></li>
+						<li><a href="get.html#archive">Archive</a></li>
+					</ul>
+				</li>
+
+				<li><a href="about/index.html" class="arrow">About</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="about/index.html">About Portico</a></li>
+						<li><a href="about/index.html#devteam">Developer Team</a></li>
+						<li><a href="about/index.html#history">Portico History</a></li>
+						<li><a href="about/status.html">Status and Roadmap</a></li>
+						<li><a href="about/license.html">License</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="documentation/" class="arrow">Documentation</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="documentation/user/" class="arrow">For Users</a>
+							<ul>
+								<li><a href="documentation/user/gettingstarted.html">Running Federates with Portico</a></li>
+								<li><a href="documentation/user/configure.html">Configuring Portico</a></li>
+								<li><a href="documentation/user/wan.html">Portico over a WAN</a></li>
+								<li><a href="documentation/user/performance.html">Performance</a></li>
+								<li><a href="documentation/user/troubleshooting.html">Troubleshooting</a></li>
+								<li><a href="documentation/user/faq.html">Portico FAQ</a></li>
+							</ul>
+						</li>
+						<li><a href="documentation/developer/" class="arrow">For Developers</a>
+							<ul>
+								<li><a href="documentation/developer/java.html">Java Federates</a></li>
+								<li><a href="documentation/developer/cpp.html">C++ Federates</a></li>
+								<li><a href="documentation/developer/apistatus/index.html">API Status</a></li>
+								<li><a href="documentation/developer/building.html">Building Portico</a></li>
+							</ul>
+						</li>
+						<li><a href="documentation/guides/" class="arrow">LVC Guides</a>
+							<ul>
+								<!-- Live -->
+								<!-- Virtual -->
+								<li><a href="documentation/guides/titan.html">Titan.IM</a></li>
+								<li><a href="documentation/guides/prepar3d.html">Prepar3D</a></li>
+								<li><a href="documentation/guides/steelbeasts.html">Steel Beasts</a></li>
+								<li><a href="documentation/guides/vbs.html">VBS</a></li>
+								<li><a href="documentation/guides/xplane.html">X-Plane</a></li>
+								<li><a href="documentation/guides/unity.html">Unity3D</a></li>
+								<!-- Constructive -->
+								<li><a href="documentation/guides/onesaf.html">OneSAF</a></li>
+								<li><a href="documentation/guides/jsaf.html">JSAF</a></li>
+							</ul>
+						</li>
+						<li><a href="about/status.html#supported-platforms">Supported Platforms</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="community/" class="arrow">Community</a>
+					<!-- Drop-Down / Start -->
+					<ul>
+						<li><a href="news/">Latest News</a></li>
+						<li><a href="community/index.html">Community Support</a></li>
+						<li><a href="community/bugs.html">Reporting Bugs</a></li>
+						<li><a href="community/contributing.html">Contributing</a></li>
+					</ul>
+					<!-- Drop-Down / End -->
+				</li>
+
+				<li><a href="support/">Support</a></li>
+
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div><!-- End of container -->
+</header>
+<!-- Main Menu / End
+================================================== -->
+
+
+		<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="twelve columns">
+			<h1>Get Notified</h1>
+		</div>
+		
+		<nav class="four columns">
+			<ul class="breadcrumbs">
+				<li><a href="index.html">Home</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				<li>Get Notified</li>
+			</ul>
+		</nav>
+		
+	</div>
+</div>
+<!-- Title Bar / End
+================================================== -->
+
+<!-- Nightly / Start
+================================================== -->
+<section id="nightly">
+
+	<a name="nightly"></a>
+
+	<div class="fullwidth" style="margin-bottom:-60px;">
+
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2>Notifications / <span>Email</span></h2>
+			</div>
+		
+			<div class="standard plan one-third column">
+				<div class="plan-price get-portico">
+					<img src="assets/images/logos/windows8-450x250.jpg"/>
+				</div>
+				<div class="plan-features">
+					Sign up to our notification mailing list to get notified whenever we've
+					finished baking some fresh Portico. It might not smell as nice as a fresh
+					loaf of bread, but it is Gluten Free.
+
+					You'll get notified when:
+					<ul>
+						<li>We've uploaded a new release</li>
+						<li>We're going to be somewhere you might be</li>
+						<li>We have something useful for you (new docs, etc)</li>
+						<li><strong>Visual Studio</strong> 8, 9 and 10</li>
+						<li><strong>Java</strong> 8u66</li>
+					</ul>
+					<a class="btn grey" href="#">Download</a>
+				</div>
+			</div>
+			
+			<div class="standard plan two-thirds column">
+				<div class="plan-price get-portico">
+					<img src="assets/images/logos/linux-450x250.png"/>
+				</div>
+				<div class="plan-features">
+					<ul>
+						<li><span class="bigger label label-danger">Build Failed</span></li>
+						<li>Ubuntu 12.04/14.04 and CentOS 6.5</li>
+						<li><strong>64-bit</strong></li>
+						<li><strong>GCC</strong> 4.4+</li>
+						<li><strong>Java</strong> 8u66</li>
+					</ul>
+					<a class="btn grey" href="#">Download</a>
+				</div>
+			</div>
+			
+		</div> <!-- Container -->
+	</div> <!-- Full Width -->
+</section>
+<!-- Nightly / End
+================================================== -->
+
+<!-- HRH Queen Liz / Start
+================================================== -->
+<div class="fullwidth theme-blue celebrity no-margin dragdown">
+	<div class="container">
+		<img src="assets/images/people/queen.png" style="float:left;width:250px;"/>
+		<p>
+			Way down here in Australia, we on Team Portico speak the Queen's English. 
+			Sign up to the announcement mailing list and see for yourself! Liz would.
+		</p>
+
+				<form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8"
+		      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+		      class="validate" target="_blank" novalidate>
+
+			<input type="email" value="you@yourcompany.com" name="EMAIL" class="email"
+			       id="mce-EMAIL" placeholder="email address"
+			       onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+			<div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+			<input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+		</form>
+
+	</div>
+</div>
+<!-- HRH Queen Liz / End
+================================================== -->
+
+
+
+		
+<!-- Footer / Start
+================================================== -->
+<footer>
+  <section id="footer-mainn">
+    <div class="container">
+
+      <!-- Project Information -->
+      <div class="three columns">
+        <h4>Project</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="about/index.html">About Portico</a></li>
+          <li><a href="about/index.html#devteam">Developer Team</a></li>
+          <li><a href="about/roadmap.html">Status and Roadmap</a></li>
+          <li><a href="/get.html">Get Portico</a></li>
+          <li><a href="/nightly.html">Nightly Builds</a></li>
+        </ul>
+      </div>
+
+      <!-- User Documentation -->
+      <div class="three columns">
+        <h4>For Users</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="documentation/user/gettingstarted.html">Getting Started with Portico</a></li>
+          <li><a href="documentation/guides/index.html">Portico and LVC Tools</a></li>
+          <li><a href="documentation/user/switching.html">Switching to Portico</a></li>
+          <li><a href="documentation/user/configure.html">Configuring Portico</a></li>
+          <li><a href="documentation/user/troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="documentation/user/faq.html">Portico FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Developer Documentation -->
+      <div class="three columns">
+        <h4>For Developers</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="documentation/developer/welcome.html">Welcome to the HLA</a></li>
+          <li><a href="documentation/developer/java.html">Writing Java Federates</a></li>
+          <li><a href="documentation/developer/cpp.html">Writing C++ Federates</a></li>
+          <li><a href="documentation/developer/apistatus/index.html">API Status</a></li>
+          <li><a href="documentation/developer/building.html">Building Portico</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Documentation -->
+      <div class="two columns">
+        <h4>Community</h4>
+        <hr class="smalline"/>
+        <ul class="footer-recent-news">
+          <li><a href="news/">Latest News</a></li>
+          <li><a href="community/bugs.html">Reporting Bugs</a></li>
+          <li><a href="community/index.html#mailing-lists">Mailing Lists</a></li>
+          <li><a href="community/index.html#forums">Community Forums</a></li>
+          <li><a href="community/contributing.html">Contributing</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="five columns" style="margin-left:20px;margin-right:0;">
+        <h4>Commercial Support</h4>
+        <hr class="smalline"/>
+        <p><img src="assets/images/logos/calytrix-logo-icon.jpg" class="img-circle pull-left"/>
+          <address>
+            &nbsp;&nbsp;<b>Calytrix Technologies</b><br>
+            &nbsp;&nbsp;Level 2, 67 Milligan St <br/>
+            &nbsp;&nbsp;Perth, Western Australia, 6000<br/>
+            &nbsp;&nbsp;<abbr title="Email"><b>E:</b></abbr> sales@calytrix.com<br/>
+            &nbsp;&nbsp;<abbr title="Phone"><b>P:</b></abbr> +61 8 9226 4288<br/>
+            &nbsp;&nbsp;<a href="/contact.html"><i class="icon-pencil"></i> Go to contact form</a>
+          </address>
+        </p>
+
+        <!-- Mailchimp Signup -->
+        <!--
+        <p>
+          <h4 style="margin-top:0;padding-top:5px;">Announcement List</h4>
+          <div class="newsletter">
+            <form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
+            <input type="email" value="you@yourcompany.com"
+                name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+                onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
+            <input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+          </form>
+          </div>
+        </p>
+        -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="footer-bar">
+    <div class="container">
+      <div class="eight columns">
+        <div class="footer-logo"><span><script type="text/javascript">document.write(new Date().getFullYear())</script> © The Portico Project.</span></div>
+      </div>
+
+      <div class="eight columns">
+        <ul class="footer-links">
+          <li><a href="#"><i class="icon-twitter"></i></a></li>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<!-- ==================================================
+Footer / End -->
+
+
+		<script src="assets/js/prism.js"></script>
+
+		
+	</body>
+
+</html>
