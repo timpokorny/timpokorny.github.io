@@ -1,15 +1,124 @@
----
-layout: default
----
-<div class="post">
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+		{% include head.html %}
+	</head>
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+	<body style="position:relative;" data-spy="scroll" data-target="#menu" data-offset="100">
 
-  <article class="post-content">
-  {{ content }}
-  </article>
+		{% include header.html %}
 
+
+<!-- Title Bar / Start
+================================================== -->
+<div class="page-title">
+	<div class="container">
+
+		<div class="eight columns">
+			<h1>{{ page.title }}</h1>
+			<div class="meta clearfix">
+<!--{% if page.author %}  <span><img src="{% site_asset images/icons/user.png %}" alt="author"/>posted by {{ page.author }},</span> {% endif %}-->
+{% if page.date %}    <span><img src="{% site_asset images/icons/calendar.png %}" alt="post date"/>{{ page.date | date: "%b %-d, %Y" }}</span> {% endif %}
+<!--{% if page.section %} <span><img src="{% site_asset images/icons/ribbon.png %}" alt="tags"/> <span>in <a href="{% site_root %}{{page.section-path}}">{{page.section}}</a>.</span> {% endif %}-->
+<!--					  <span><img src="{% site_asset images/icons/clock.png %}" alt="reading time"> <span>Reading Time: {{ page.content | reading_time }}</span>-->
+			</div>
+		</div>
+		
+		<nav class="eight columns">
+			<ul class="breadcrumbs">
+			{% for ancestor in page.ancestors %}
+				{% if ancestor.title %}
+				<li><a href="{{ ancestor.url }}">{{ancestor.title}}</a></li>
+				<li><i class="icon-angle-right"></i></li>
+				{% endif %}
+			{% endfor %}
+				<li class="active">{{ page.title }}</li>
+			</ul>
+
+		</nav>
+
+	</div>
 </div>
+
+<!-- Title Bar / End
+================================================== -->
+
+<!-- Article / Start
+================================================== -->
+<section class="article" style="margin-bottom:-50px;">
+	<div class="container">
+	
+		<div class="three_fourth column">
+		
+			<!-- Post Start -->
+			<article class="post">
+			
+				<div class="post-content">
+				
+					<!-- Thumbnail -->
+					{% if page.header-image-path %}
+					<img src="{% site_root %}{{ page.header-image-path }}" alt="{{ page.header-image-text }}"/>
+					{% endif %}
+
+					{% if page.excerpt %}
+					<!-- Post Content -->
+					<p class="begin">{{ page.excerpt }}</p>
+					{% endif %}
+
+					{{ content }}
+
+				</div>
+		
+			</article>
+			<!-- Post End -->
+			
+		</div>
+		
+		<div class="one_fourth column">
+			
+			<div id="sidebar" data-spy="affix" data-offset-top="150" data-offset-bottom="440">
+
+				<!-- Search -->
+				<div class="widget" id="search">
+					<form name="search-form" action="https://www.google.com/search" method="get">
+						<div class="search-icon"><input type="text" class="searching" name="as_q" placeholder="Search..." /></div>
+						<input type="submit" style="display:none;" name="as_sitesearch" value="porticoproject.org"/>
+					</form>
+				</div>
+
+				<!-- Contents -->
+				<!-- Will be replaced by the TOC generation js below -->
+				<div class="widget" id="menu">
+					<h3>Table of Contents</h3>
+					<div class="toc"></div>
+				</div>
+
+			{% if page.tags %}
+				<div class="widget" id="tags">
+					<h3>Tags</h3>
+					<ul class="tags-list">
+					{% for tag in page.tags %}
+						<li><a href="#">{{ tag }}</a></li>
+					{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+	{% include footer.html %}
+
+	<script type="text/javascript" src="{% site_asset js/bootstrap-3.2.0.min.js %}"></script>
+	<script src="{% site_asset js/prism.js %}"></script>
+	<script src="{% site_asset js/toc.js %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() { $('.toc').toc(); });
+	</script>
+</body>
+</html>
