@@ -8,7 +8,7 @@
 	<meta charset="utf-8" />
 	<title>The Portico Project</title>
     <meta name="description" content="The Portico Project - Open Source HLA: By Jerks, For Jerks.">
-    <link rel="canonical" href="http://timpokorny.github.io/about/releases/2.1.0/">
+    <link rel="canonical" href="http://timpokorny.github.io/2016/05/04/portico-2.1.0.html">
 	<link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../../../assets/favicon.ico" type="image/x-icon">
 	
@@ -157,79 +157,62 @@
 ================================================== -->
 
 
+
 <!-- Title Bar / Start
 ================================================== -->
 <div class="page-title">
 	<div class="container">
 
-		<div class="four columns">
+		<div class="eight columns">
 			<h1>Portico v2.1.0</h1>
+			<div class="meta clearfix">
+<!--  <span><img src="../../../assets/images/icons/user.png" alt="author"/>posted by Open LVC Team,</span> -->
+    <span><img src="../../../assets/images/icons/calendar.png" alt="post date"/>May 4, 2016</span> 
+<!---->
+<!--					  <span><img src="../../../assets/images/icons/clock.png" alt="reading time"> <span>Reading Time: about 5  minutes</span>-->
+			</div>
 		</div>
 		
-		<nav class="twelve columns">
+		<nav class="eight columns">
 			<ul class="breadcrumbs">
-				<li><a href="../../../index.html">Home</a></li>
-				<li><i class="icon-angle-right"></i></li>
-
-				<li><a href="../../../about/index.html">About</a></li>
-				<li><i class="icon-angle-right"></i></li>
-
-				<li><a href="../../../about/status.html#release-notes">Releases</a></li>
-				<li><i class="icon-angle-right"></i></li>
-
-				<li>2.1.0 </li>
+			
+				<li class="active">Portico v2.1.0</li>
 			</ul>
+
 		</nav>
-		
+
 	</div>
 </div>
 
 <!-- Title Bar / End
 ================================================== -->
 
-<!-- Introduction / Start
+<!-- Article / Start
 ================================================== -->
-<div class="container">
+<section class="article" style="margin-bottom:-50px;">
+	<div class="container">
+	
+		<div class="three_fourth column">
+		
+			<!-- Post Start -->
+			<article class="post">
+			
+				<div class="post-content">
+				
+					<!-- Thumbnail -->
+					
+					<img src="../../../assets/pages/documentation/user/wan/page-logo.jpg" alt="Global Simulation"/>
+					
 
-	<div class="four columns">
-		<table class="default-table" style="width:auto;">
-			<tr>
-				<td><strong>Release Date</strong></td>
-				<td>May 4th, 2016</td>
-			</tr>
-			<tr>
-				<td><strong>Status</strong></td>
-				<td><span class="bigger label label-success">Released</span></td>
-			</tr>
-			<tr>
-				<td><strong>Download</strong></td>
-				<td><a href="../../../get.html#archive">Archive</a></td>
-			</tr>
-			<tr>
-				<td><strong>Git Tag</strong></td>
-				<td><a href="https://github.com/openlvc/portico/releases/tag/portico-2.1.0">portico-2.1.0</a></td>
-			</tr>
-			<tr>
-				<td><strong>Baseline</strong></td>
-				<td><a href="https://github.com/openlvc/portico/tree/maintenance-2.1.x">/maintenance-2.1.x</a></td>
-			</tr>
-		</table>
-
-	</div>
-
-	<div class="eleven columns release-notes">
-
-				<div class="alert success">
-			<p>This is a Major Release. It contains significant updates and is recommended for all users.</p>
-		</div>
-
-
-
-		<p class="bigger">
-    <span class="dropcap">T</span>he Portico team is pleased to announce the general availability
-    of Portico v2.1.0. This release focuses on some major steps forward in allowing users to execute
-    federations that use assets separated by firewalls, domains and oceans.
+					
+					<!-- Post Content -->
+					<p class="begin">With the release of version 2.1, Portico takes a major step forward in enabling bigger and more distributed simulations. New Wide Area Network support will help our users build and execute federations with a truly global span.
 </p>
+					
+
+					<p>The Portico team is pleased to announce the general availability of Portico v2.1.0. This release
+focuses on some major steps forward in allowing users to execute federations that use assets
+separated by firewalls, domains and oceans.</p>
 
 <p>Portico has enjoyed considerable support from Thales in recent years, both through individual
 contributions helping to address defects, and with broader support aimed at helping facilitate
@@ -240,7 +223,7 @@ with Thales supporting the development and testing of new wide-area networking c
 connect to one-another over a point-to-point backbone. This will give users the opportunity
 to bridge federations between networks; whether across a campus, country, continent or the globe. </p>
 
-<h3 id="notes">Notes</h3>
+<h2 id="notes">Notes</h2>
 
 <ul>
 <li><code>note</code> The bundled JRE version is <code>1.8.0_66</code></li>
@@ -248,7 +231,7 @@ to bridge federations between networks; whether across a campus, country, contin
       Libraries generated for these compilers will be removed in the next version.</li>
 </ul>
 
-<h3 id="new-features">New Features</h3>
+<h2 id="new-features">New Features</h2>
 
 <ul>
 <li><code>feature</code> Added support bridging single federates into a federation via point-to-point link (<code>#44</code>)</li>
@@ -258,7 +241,7 @@ to bridge federations between networks; whether across a campus, country, contin
          metadata about those messages (<code>#43</code>)</li>
 </ul>
 
-<h3 id="improvements">Improvements</h3>
+<h2 id="improvements">Improvements</h2>
 
 <ul>
 <li><code>improve</code> Improved the way messages are handled when federate is overloaded, causing reduction
@@ -276,7 +259,7 @@ to bridge federations between networks; whether across a campus, country, contin
          threads based on system CPU count. Build-time speedup of 30% (<code>#79</code>)</li>
 </ul>
 
-<h3 id="bugs">Bugs</h3>
+<h2 id="bugs">Bugs</h2>
 
 <ul>
 <li><code>bugfix</code> Fixed problem with rapid ownership exchange and re-exchange among federates (<code>#166</code>)</li>
@@ -302,40 +285,47 @@ with MOM attributes in <code>1516</code> and <code>1516e</code> interfaces (<cod
 </ul>
 
 
-		<p>&nbsp;</p> <!-- just need a little breathing room -->
+				</div>
+		
+			</article>
+			<!-- Post End -->
+			
+		</div>
+		
+		<div class="one_fourth column">
+			
+			<div id="sidebar" data-spy="affix" data-offset-top="150" data-offset-bottom="440">
+
+				<!-- Search -->
+				<div class="widget" id="search">
+					<form name="search-form" action="https://www.google.com/search" method="get">
+						<div class="search-icon"><input type="text" class="searching" name="as_q" placeholder="Search..." /></div>
+						<input type="submit" style="display:none;" name="as_sitesearch" value="porticoproject.org"/>
+					</form>
+				</div>
+
+				<!-- Contents -->
+				<!-- Will be replaced by the TOC generation js below -->
+				<div class="widget" id="menu">
+					<h3>Table of Contents</h3>
+					<div class="toc"></div>
+				</div>
+
+			
+				<div class="widget" id="tags">
+					<h3>Tags</h3>
+					<ul class="tags-list">
+					
+						<li><a href="#">releases</a></li>
+					
+					</ul>
+				</div>
+			
+
+			</div>
+		</div>
 	</div>
-
-</div>
-<!-- Introduction / End
-================================================== -->
-
-	<!-- Kevin / Start
-================================================== -->
-<div class="fullwidth background-turquoise celebrity celebrity-flat no-margin dragdown">
-	<div class="container">
-		<img src="../../../assets/images/people/garnett.png" style="float:left;width:250px;"/>
-		<p>
-			If Kevin is to be believed, <a href="https://www.youtube.com/watch?v=Wcz_kDCBTBk" style="color:#ffffff">anything
-			is possible</a>. Where "anything" includes you signing up to the Portico announcement
-			mailing list, he may well be right. Is he? Don't let Kevin down. He's a big guy.
-		</p>
-
-				<form action="http://porticoproject.us8.list-manage.com/subscribe/post?u=8a5244c74f2c0bf4b87b62c14&amp;id=c882fd83f8"
-		      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-		      class="validate" target="_blank" novalidate>
-
-			<input type="email" value="you@yourcompany.com" name="EMAIL" class="email"
-			       id="mce-EMAIL" placeholder="email address"
-			       onfocus="if (this.value=='you@yourcompany.com') this.value = ''" required>
-			<div style="position: absolute; left: -5000px;"><input type="text" name="b_8a5244c74f2c0bf4b87b62c14_c882fd83f8" tabindex="-1" value=""></div>
-			<input type="submit" style="display:none;" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-		</form>
-
-	</div>
-</div>
-<!-- Kevin / End
-================================================== -->
-
+</section>
 
 	
 <!-- Footer / Start
