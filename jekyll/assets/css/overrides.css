@@ -6,7 +6,7 @@
  * Flat-UI Background Colorws
  * In swatch pairs from flatuicolors.com
  * ------------------------------------- */
-Flat background colours in swatch pairs from https://flatuicolors.com/ */
+/* Flat background colours in swatch pairs from https://flatuicolors.com/ */
 .background-white        { background-color: #ffffff; }
 .background-black        { background-color: #000000; }
 
@@ -84,16 +84,11 @@ body
  * ----------------------------------------------- */
 h1, h2, h3, h4, h5, h6
 {
-	font-family: "Lato", sans-serif;
-	font-weight: 700;
+	font-family: "Segoe UI", "Lato", sans-serif;
+	font-weight: 600;
 	margin: 10px 0;
 	color: #555555;
 	text-rendering: optimizelegibility;
-}
-
-h1, h2
-{
-	font-weight: 700;
 }
 
 h1 span, h2 span
@@ -417,7 +412,7 @@ a.btn.thin
 {
 	color: #ffffff;
 	margin-top: 0;
-	font-weight: 900;
+	font-weight: 700;
 }
 
 .alert-orange
@@ -904,7 +899,7 @@ article table th
 	vertical-align: top;
 	font-size: 13px;
 	font-weight: 700;
-	font-family: "Lato", sans-serif;
+	font-family: "Segoe UI", sans-serif;
 }
 
 article table td
