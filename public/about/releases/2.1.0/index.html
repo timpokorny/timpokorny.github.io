@@ -226,9 +226,9 @@
 
 
 		<p class="bigger">
-    <span class="dropcap">T</span>he Portico team is pleased to announce the general availability
-    of Portico v2.1.0. This release focuses on some major steps forward in allowing users to execute
-    federations that use assets separated by firewalls, domains and oceans.
+	<span class="dropcap">T</span>he Portico team is pleased to announce the general availability
+	of Portico v2.1.0. This release focuses on some major steps forward in allowing users to execute
+	federations that use assets separated by firewalls, domains and oceans.
 </p>
 
 <p>Portico has enjoyed considerable support from Thales in recent years, both through individual
@@ -238,68 +238,69 @@ with Thales supporting the development and testing of new wide-area networking c
 
 <p>The WAN features added in this release will allow clusters of federates at multiple sites to
 connect to one-another over a point-to-point backbone. This will give users the opportunity
-to bridge federations between networks; whether across a campus, country, continent or the globe. </p>
+to bridge federations between networks; whether across a campus, country, continent or the globe.</p>
 
 <h3 id="notes">Notes</h3>
 
 <ul>
-<li><code>note</code> The bundled JRE version is <code>1.8.0_66</code></li>
-<li><code>note</code> Support for Visual Studio 8 (2005) and Visual Studio 9 (2008) has been deprecated.
-      Libraries generated for these compilers will be removed in the next version.</li>
+  <li><code>note</code> The bundled JRE version is <code>1.8.0_66</code></li>
+  <li><code>note</code> Support for Visual Studio 8 (2005) and Visual Studio 9 (2008) has been deprecated.
+       Libraries generated for these compilers will be removed in the next version.</li>
 </ul>
 
 <h3 id="new-features">New Features</h3>
 
 <ul>
-<li><code>feature</code> Added support bridging single federates into a federation via point-to-point link (<code>#44</code>)</li>
-<li><code>feature</code> Added support for connecting clusters of federations via point-to-point link (<code>#135</code>)</li>
-<li><code>feature</code> Updated MOM facilities to work in 1516e as expected (<code>#55</code>)</li>
-<li><code>feature</code> Added Federation Auditor which will log messages exchanged by a federate including some
-         metadata about those messages (<code>#43</code>)</li>
+  <li><code>feature</code> Added support bridging single federates into a federation via point-to-point link (<code>#44</code>)</li>
+  <li><code>feature</code> Added support for connecting clusters of federations via point-to-point link (<code>#135</code>)</li>
+  <li><code>feature</code> Updated MOM facilities to work in 1516e as expected (<code>#55</code>)</li>
+  <li><code>feature</code> Added Federation Auditor which will log messages exchanged by a federate including some
+          metadata about those messages (<code>#43</code>)</li>
 </ul>
 
 <h3 id="improvements">Improvements</h3>
 
 <ul>
-<li><code>improve</code> Improved the way messages are handled when federate is overloaded, causing reduction
-         in lost packets (<code>#63</code>)</li>
-<li><code>improve</code> Improvments to make the loading of federate internal message handlers more robust (<code>#75</code>)</li>
-<li><code>improve</code> Added a summary-mode to the Portico federate message Auditor (<code>#64</code>)</li>
-<li><code>improve</code> Improved logging of Auditor to include current date (<code>#62</code>)</li>
-<li><code>improve</code> Updated README to include updated information for the configuration/deployment of Portico (<code>#50</code>)</li>
-<li><code>improve</code> Improved the Auditor to contain information breakdowns for sent/received Interactions (<code>#58</code>)</li>
-<li><code>improve</code> Updated C++ example federates on Linux to remove warnings (<code>#160</code>)</li>
-<li><code>improve</code> Updated C++ example federate packages on Mac OSX and Linux to provide customized environment
-         files for use with GDB (<code>#162</code>)</li>
-<li><code>improve</code> Portico will now appear properly in Add/Remove Programs list on Windows (<code>#132</code>)</li>
-<li><code>improve</code> Added support for parallel C++ compilation with automatic detection of optimal number of
-         threads based on system CPU count. Build-time speedup of 30% (<code>#79</code>)</li>
+  <li><code>improve</code> Improved the way messages are handled when federate is overloaded, causing reduction
+          in lost packets (<code>#63</code>)</li>
+  <li><code>improve</code> Improvments to make the loading of federate internal message handlers more robust (<code>#75</code>)</li>
+  <li><code>improve</code> Added a summary-mode to the Portico federate message Auditor (<code>#64</code>)</li>
+  <li><code>improve</code> Improved logging of Auditor to include current date (<code>#62</code>)</li>
+  <li><code>improve</code> Updated README to include updated information for the configuration/deployment of Portico (<code>#50</code>)</li>
+  <li><code>improve</code> Improved the Auditor to contain information breakdowns for sent/received Interactions (<code>#58</code>)</li>
+  <li><code>improve</code> Updated C++ example federates on Linux to remove warnings (<code>#160</code>)</li>
+  <li><code>improve</code> Updated C++ example federate packages on Mac OSX and Linux to provide customized environment
+          files for use with GDB (<code>#162</code>)</li>
+  <li><code>improve</code> Portico will now appear properly in Add/Remove Programs list on Windows (<code>#132</code>)</li>
+  <li><code>improve</code> Added support for parallel C++ compilation with automatic detection of optimal number of
+          threads based on system CPU count. Build-time speedup of 30% (<code>#79</code>)</li>
 </ul>
 
 <h3 id="bugs">Bugs</h3>
 
 <ul>
-<li><code>bugfix</code> Fixed problem with rapid ownership exchange and re-exchange among federates (<code>#166</code>)</li>
-<li><code>bugfix</code> <code>evokeSingleCallback(double)</code> will now wait appropriate amount of time if there are
+  <li><code>bugfix</code> Fixed problem with rapid ownership exchange and re-exchange among federates (<code>#166</code>)</li>
+  <li><code>bugfix</code> <code>evokeSingleCallback(double)</code> will now wait appropriate amount of time if there are
 no messages to immediately process (<code>#118</code>)</li>
-<li><code>bugfix</code> Fixed problem causing truncation of attributes or interaction params over <code>986b</code> in size (<code>#65</code>)</li>
-<li><code>bugfix</code> Fixed problem with HLA-Evolved FOM parser not recognizing some transport and order
+  <li><code>bugfix</code> Fixed problem causing truncation of attributes or interaction params over <code>986b</code> in size (<code>#65</code>)</li>
+  <li><code>bugfix</code> Fixed problem with HLA-Evolved FOM parser not recognizing some transport and order
 properties unless they were defined as child elements (<code>#163</code>)</li>
-<li><code>bugfix</code> Fixed potential hang when calling <code>disconnect()</code> in HLA-Evolved interface (<code>#118</code>)</li>
-<li><code>bugfix</code> Fixed sporadic exceptions that sometimes happened when federates resigned (<code>#54</code>)</li>
-<li><code>bugfix</code> Fixed problem with incorrect DLL naming for <code>64-bit</code> libraries (<code>#59</code>)</li>
-<li><code>bugfix</code> Fixed a problem that prevented automatic crash identification for lost federates (<code>#162</code>, <code>#126</code>)</li>
-<li><code>bugfix</code> Fixed problem initializing Portico in Java-based web applications (<code>#157</code>)</li>
-<li><code>bugfix</code> Fixed <code>LogicalTimeFactoryFactory</code> loading of <code>HLAinteger64Time</code> (<code>#142</code>)</li>
-<li><code>bugfix</code> Fixed linker error for HLA 1.3 C++ test suite on Windows (<code>#124</code>)</li>
-<li><code>bugfix</code> Fixed bug with incorrect modification of <code>UpdatesAttributes</code> objects if JVM communications
+  <li><code>bugfix</code> Fixed potential hang when calling <code>disconnect()</code> in HLA-Evolved interface (<code>#118</code>)</li>
+  <li><code>bugfix</code> Fixed sporadic exceptions that sometimes happened when federates resigned (<code>#54</code>)</li>
+  <li><code>bugfix</code> Fixed problem with incorrect DLL naming for <code>64-bit</code> libraries (<code>#59</code>)</li>
+  <li><code>bugfix</code> Fixed a problem that prevented automatic crash identification for lost federates (<code>#162</code>, <code>#126</code>)</li>
+  <li><code>bugfix</code> Fixed problem initializing Portico in Java-based web applications (<code>#157</code>)</li>
+  <li><code>bugfix</code> Fixed <code>LogicalTimeFactoryFactory</code> loading of <code>HLAinteger64Time</code> (<code>#142</code>)</li>
+  <li><code>bugfix</code> Fixed linker error for HLA 1.3 C++ test suite on Windows (<code>#124</code>)</li>
+  <li><code>bugfix</code> Fixed bug with incorrect modification of <code>UpdatesAttributes</code> objects if JVM communications
 binding is used (<code>#120</code>)</li>
-<li><code>bugfix</code> Fixed compile warnings in HLA 1.3 C++ test suite under Ubuntu 14.04 (GCC 4.8) (<code>#99</code>)</li>
-<li><code>bugfix</code> Fixed problem that was adding erronous null characters to end of string encoded for use
+  <li><code>bugfix</code> Fixed compile warnings in HLA 1.3 C++ test suite under Ubuntu 14.04 (GCC 4.8) (<code>#99</code>)</li>
+  <li><code>bugfix</code> Fixed problem that was adding erronous null characters to end of string encoded for use
 with MOM attributes in <code>1516</code> and <code>1516e</code> interfaces (<code>#105</code>)</li>
-<li><code>bugfix</code> Fixed a problem where MOM infrastructure would serve MOM updated even if it was disabled (<code>#108</code>)</li>
-<li><code>bugfix</code> Fixed logging inside federation restore <code>RTIambassador</code> method (<code>#76</code>)</li>
+  <li><code>bugfix</code> Fixed a problem where MOM infrastructure would serve MOM updated even if it was disabled (<code>#108</code>)</li>
+  <li><code>bugfix</code> Fixed logging inside federation restore <code>RTIambassador</code> method (<code>#76</code>)</li>
 </ul>
+
 
 
 		<p>&nbsp;</p> <!-- just need a little breathing room -->

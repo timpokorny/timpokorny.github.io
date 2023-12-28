@@ -211,26 +211,24 @@
 					
 
 					<h1 id="using-portico-over-the-internet">Using Portico over the Internet</h1>
-
 <p>So you want to run a federation over the Internet, ay? Well I have good news for
 you; Portico has your back!</p>
 
 <p>Starting from version 2.1, Portico has added a WAN mode that will allow users to create
 globe-spanning federations with the flick of a switch. Whether you want to connect together
 distributed assest embedded on location, or run a single simulation across centres
-geographically separated, Portico&#39;s WAN support removes the network boundaries.</p>
+geographically separated, Portico’s WAN support removes the network boundaries.</p>
 
 <h2 id="use-cases">Use Cases</h2>
-
 <p>There are many reasons why you might want to connect federates via a point-to-point, TCP
 configuration rather than using the local multicast:</p>
 
 <ol>
-<li>Local network policy restrictions (blocking of multicast)</li>
-<li>Connect simulations running across different networks</li>
-<li>Connect simulations running in geographically separate areas that cannot be moves (large simulators perhaps)</li>
-<li>Operate a Portico federation on a commercial cloud provider where multicast is blocked</li>
-<li>The LOLs</li>
+  <li>Local network policy restrictions (blocking of multicast)</li>
+  <li>Connect simulations running across different networks</li>
+  <li>Connect simulations running in geographically separate areas that cannot be moves (large simulators perhaps)</li>
+  <li>Operate a Portico federation on a commercial cloud provider where multicast is blocked</li>
+  <li>The LOLs</li>
 </ol>
 
 <p>With this new capability we have designed a facility that is both sensitive to those who want to
@@ -238,14 +236,17 @@ add single remote federates to a federation as well as those who want to run clu
 different sites.</p>
 
 <h2 id="requirements">Requirements</h2>
-
 <p>WAN-enabled federations impose two additional requirements.</p>
 
 <ol>
-<li><p>Must be able to run a single WAN Router somewhere accessible to all networks. This computer
- must be able to accept incoming connections.</p></li>
-<li><p>A single local federate at each site must be able to connect out from the local network to
- the WAN Router.</p></li>
+  <li>
+    <p>Must be able to run a single WAN Router somewhere accessible to all networks. This computer
+must be able to accept incoming connections.</p>
+  </li>
+  <li>
+    <p>A single local federate at each site must be able to connect out from the local network to
+the WAN Router.</p>
+  </li>
 </ol>
 
 <p><strong>Firewall</strong> exceptions will need to be set up for the WAN Router to allow it to receive connections.
@@ -257,8 +258,7 @@ communication, removing the need for additional connections that would not be ab
 NAT.</p>
 
 <h2 id="overview">Overview</h2>
-
-<p>Portico&#39;s WAN support has been designed to be sensitive to deployment realities
+<p>Portico’s WAN support has been designed to be sensitive to deployment realities
 while minimizing infrastructure needs and maintaining simplicity and ease-of-use.</p>
 
 <p>To connect distributed networks, a central WAN Router component is used.</p>
@@ -266,14 +266,16 @@ while minimizing infrastructure needs and maintaining simplicity and ease-of-use
 <p>The basic topology of a WAN-enabled simualtion revolves around a central WAN Router. The router
 sits at the the center of the distributed simulation and ensures that messages from each network
 are approprirately forwarded on to the other networks:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Federate &lt;--|              /                    \              |--&gt; Federate
+
+<pre><code>Federate &lt;--|              /                    \              |--&gt; Federate
  ^          |              \                    /              |          ^
  |          v              /                    \              v          |
  |   (Federate|Gateway) ---\---- WAN Router ----/--- (Gateway|Federate)   |
  |          ^              /                    \              ^          |
  V          |              \                    /              |          V
 Federate &lt;--|              /                    \              |--&gt; Federate
-</code></pre></div>
+</code></pre>
+
 <p>The router is the only component with special access requirements. It must be able to <strong>accept
 incoming connections</strong> from the other networks. The port used by the router can be configured,
 but defaults to <code>23114</code>.</p>
@@ -286,8 +288,7 @@ with additional configuration options specifying the IP address and port of the 
 <p><em>* Can run a standalone gateway process if desired.</em></p>
 
 <h2 id="step-by-step">Step-by-Step</h2>
-
-<p>In this example we&#39;ll work through the changes required to WAN-enable a federation. The commands
+<p>In this example we’ll work through the changes required to WAN-enable a federation. The commands
 presented here reference the <strong>HPref</strong> performance testing federate that was used in the
 development of this capability. It is left as an exercise for the reader to adapt the startup
 process for their own federates according to their specific needs.</p>
@@ -296,19 +297,19 @@ process for their own federates according to their specific needs.</p>
 separate sites:</p>
 
 <ol>
-<li>Singapore - Throughput Federate #1</li>
-<li>Amsterdam - WAN Router</li>
-<li>New York  - Throughput Federate #2</li>
+  <li>Singapore - Throughput Federate #1</li>
+  <li>Amsterdam - WAN Router</li>
+  <li>New York  - Throughput Federate #2</li>
 </ol>
 
-<h3 id="step-1:-start-the-wan-router">Step 1: Start the WAN Router</h3>
-
+<h3 id="step-1-start-the-wan-router">Step 1: Start the WAN Router</h3>
 <p><strong>Amsterdamn</strong></p>
 
 <p>As above, the router sits at the heard of a WAN-enabled simulation and must be able to accept
 incoming connections from all remote sites. From the <em>Portico installation directory</em> you run
 the following command:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@ams1:/opt/local/portico-2.1.0]$ bin/wanrouter.sh --address ams.openlvc.org
+
+<pre><code>[tim@ams1:/opt/local/portico-2.1.0]$ bin/wanrouter.sh --address ams.openlvc.org
 
 INFO  [portico.wan]: 
 ##########################################################
@@ -345,10 +346,11 @@ INFO  [portico.wan]: |    Port: 23114                        |
 INFO  [portico.wan]: | Metrics: false                        |
 INFO  [portico.wan]: |---------------------------------------|
 INFO  [portico.wan]: 
-INFO  [portico.wan]: Starting Portico WAN Router. Press &quot;x&quot; to exit
+INFO  [portico.wan]: Starting Portico WAN Router. Press "x" to exit
 INFO  [portico.wan]: 
 INFO  [portico.wan]: Ready to accept connections
-</code></pre></div>
+</code></pre>
+
 <p>Configuration of the WAN Router is done via command line. If you run the <code>--help</code> argument you will
 get a full listing of options.</p>
 
@@ -356,13 +358,13 @@ get a full listing of options.</p>
 accept connections on. You pass the <code>--address [IP/Name]</code> argument, specifying one of the following:</p>
 
 <ul>
-<li><code>x.x.x.x</code>         - IP address that is used by the NIC</li>
-<li><code>host.domain.com</code> - Host name that points to the IP used by the NIC</li>
-<li><code>GLOBAL</code>          - Symbolic name telling the WAN Router to select the NIC witht the first
+  <li><code>x.x.x.x</code>         - IP address that is used by the NIC</li>
+  <li><code>host.domain.com</code> - Host name that points to the IP used by the NIC</li>
+  <li><code>GLOBAL</code>          - Symbolic name telling the WAN Router to select the NIC witht the first
                     globally accessible IP it finds</li>
-<li><code>SITE_LOCAL</code>      - Will select a &quot;site local&quot; address: <code>192.168.x.x</code>, <code>10.x.x.x</code>, <code>172.16.x.x</code></li>
-<li><code>LINK_LOCAL</code>      - Will select a &quot;link local&quot; address: <code>169.254.x.x</code></li>
-<li><code>LOOPBACK</code>        - Will select the local loopback adapter</li>
+  <li><code>SITE_LOCAL</code>      - Will select a “site local” address: <code>192.168.x.x</code>, <code>10.x.x.x</code>, <code>172.16.x.x</code></li>
+  <li><code>LINK_LOCAL</code>      - Will select a “link local” address: <code>169.254.x.x</code></li>
+  <li><code>LOOPBACK</code>        - Will select the local loopback adapter</li>
 </ul>
 
 <p>In our example we specify a domain name that points back to the local machine on the public IP
@@ -371,8 +373,7 @@ that all the other networks will use to find it: <code>ams.openlvc.org</code>.</
 <p>By default, the localhost address of <code>127.0.0.1</code> is used. This is likely not useful to you, so be
 sure to specify something the other networks can reach.</p>
 
-<h3 id="step-2:-configure-each-local-sites">Step 2: Configure each Local Sites</h3>
-
+<h3 id="step-2-configure-each-local-sites">Step 2: Configure each Local Sites</h3>
 <p><strong>New York</strong></p>
 
 <p>Only a single outward connection is needed at each local site. All local federates communicate at
@@ -380,32 +381,35 @@ full speed using regular local networking without having to deal with the additi
 TCP.</p>
 
 <p>This is especially important when you have a single external federate a large number of local
-federates. You don&#39;t want all the local federates having to push their updates out to a router
+federates. You don’t want all the local federates having to push their updates out to a router
 just so they can be reflected back to the same network. We want to conserve this bandwidth for
 inter-network traffic.</p>
 
 <p>At each local site you will have to designate a single federate as the <em>Local Gateway</em>. To do this
-you will need to make two changes in that federate&#39;s RID file.</p>
+you will need to make two changes in that federate’s RID file.</p>
 
 <ol>
-<li>Set WAN support to <code>enabled</code></li>
-<li>Specify the address of the WAN Router</li>
+  <li>Set WAN support to <code>enabled</code></li>
+  <li>Specify the address of the WAN Router</li>
 </ol>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@nyc1:/opt/local/hperf-1.0.0]$ vim RTI.rid
+
+<pre><code>[tim@nyc1:/opt/local/hperf-1.0.0]$ vim RTI.rid
 
 281: portico.wan.enabled = true
 282: 
 283: # (5.2) Router Address/Port
 284: #       Specifies the address and port of the WAN router to use. Note that the
-285: #       syntax is &quot;address:port&quot;.
+285: #       syntax is "address:port".
 286: #
 287: #       Default: 127.0.0.1:23114
 288: #
 289: portico.wan.router = ams.openlvc.org:23114
-</code></pre></div>
-<p>Once you&#39;ve made the appropriate configuration you can start the local federate. It will act as
-both a local federate and the local gateway. Let&#39;s start by firing it up:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@nyc1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name nyc --peers sgp
+</code></pre>
+
+<p>Once you’ve made the appropriate configuration you can start the local federate. It will act as
+both a local federate and the local gateway. Let’s start by firing it up:</p>
+
+<pre><code>[tim@nyc1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name nyc --peers sgp
 Starting HPerf Test Federate (use --help to display usage)
 INFO  [hp.nyc]: 
 INFO  [hp.nyc]:     Test Driver: Throughput Test
@@ -439,7 +443,8 @@ INFO  [hp.nyc]:     Total Revc Size = 800.00KB
 INFO  [hp.nyc]:      Total Messages = 1,600
 INFO  [hp.nyc]: 
 INFO  [hp.nyc]: Waiting for peers: [sgp]
-</code></pre></div>
+</code></pre>
+
 <p>You may notice above that the GMS message includes an IP address in the <code>10.x.x.x</code> range.
 This is the standard Portico networking connecting to the local network. Inside the federate
 a separate TCP connection is being made to the WAN Router.</p>
@@ -447,22 +452,25 @@ a separate TCP connection is being made to the WAN Router.</p>
 <p>If there is a problem connecting to the WAN Router you will get an error at this point.
 If the federate can connect to the WAN Router you will not see anything unusual. On the
 router you will see a connection notice:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">INFO  [portico.wan]: Ready to accept connections
-INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
-</code></pre></div>
-<h3 id="step-3:-start-other-federates">Step 3: Start Other Federates</h3>
 
+<pre><code>INFO  [portico.wan]: Ready to accept connections
+INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
+</code></pre>
+
+<h3 id="step-3-start-other-federates">Step 3: Start Other Federates</h3>
 <p><strong>Singapore</strong></p>
 
 <p>In this example we will repeat this process for the federate at the local Singapore site.
-As this the first federate at this site, we&#39;ll have to designate it as the local gateway by
+As this the first federate at this site, we’ll have to designate it as the local gateway by
 enabling WAN support in its RID.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[tim@sgp1:/opt/local/hperf-1.0.0]$ vim RTI.rid
+
+<pre><code>[tim@sgp1:/opt/local/hperf-1.0.0]$ vim RTI.rid
 ...
 [tim@sgp1:/opt/local/hperf-1.0.0]$ ./throughput.sh --federate-name sgp --peers nyc
-</code></pre></div>
+</code></pre>
+
 <div class="alert error">
-  <p><b>Single Gateway Per Site</b><br/>
+  <p><b>Single Gateway Per Site</b><br />
   It is only necessary to designate a <i>single</i> federate at each site to be the local gateway.
   When starting other federates at the same site, just start them as normal. Their WAN support must
   be left **turned off**.
@@ -470,9 +478,10 @@ enabling WAN support in its RID.</p>
 </div>
 
 <p>Assuming we are only using a single federate at each site, once the second federate is started
-they should both connect to one another and run through until completion. Once they&#39;ve finished
+they should both connect to one another and run through until completion. Once they’ve finished
 you will see disconnection notices on the WAN Router:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
+
+<pre><code>INFO  [portico.wan]:  (Accepted) Connection ID=1, ip=/62.71.224.76:56149
 INFO  [portico.wan]:  (Accepted) Connection ID=2, ip=/123.179.131.27:47112
 INFO  [portico.wan]:   (Removed) Connection ID=2 has disconnected
 INFO  [portico.wan]:             Packets From: 47 packets, 870KB
@@ -480,13 +489,13 @@ INFO  [portico.wan]:             Packets Sent: 44 packets, 870KB
 INFO  [portico.wan]:   (Removed) Connection ID=1 has disconnected
 INFO  [portico.wan]:             Packets From: 48 packets, 872KB
 INFO  [portico.wan]:             Packets Sent: 47 packets, 870KB
-</code></pre></div>
+</code></pre>
+
 <p>Congratulations! You have now run a fully distributed simulation. Testing federates in Singapore
-and New York have exchanged messages, bounding all traffic through a router in Amsterdam. That&#39;s
+and New York have exchanged messages, bounding all traffic through a router in Amsterdam. That’s
 about as distributed as it gets.</p>
 
 <h2 id="firewall-and-nat-traversal">Firewall and NAT Traversal</h2>
-
 <p>One of the key design considerations for the Portico WAN capability has been simplicify,
 especially as it relates to firewall and NAT support.</p>
 
@@ -501,7 +510,7 @@ local firewall or NAT and configuration of these will require support from the d
 Gateway</em> to connect outbound to the <em>WAN Router</em>. When a connection to the router is established,
 the socket is held open and also used as a channel to send inbound messages. Because it is using 
 an already established connection rather than initiating a new one, this typically will not cause
-issues with firewall or NAT traversal. </p>
+issues with firewall or NAT traversal.</p>
 
 <p>Outbound connections are commonly not an issue on most networks, however in some instances a local
 network policy may only permit them on various ports. In this case the local firewall must either
@@ -509,30 +518,38 @@ be permitted to allow outbound connections on the Portico WAN port (<code>23114<
 changed to something that is allowed.</p>
 
 <h2 id="configuring-portico-for-the-wan">Configuring Portico for the WAN</h2>
-
 <p>All configuration for a local gateway is done via the RID file. Inside the RID you will find
 several WAN specific configuration properties. The main ones are listed below, but please consult
 the fully documented default RID file shipped with Portico for the complete list:</p>
 
 <ol>
-<li><p><code>portico.wan.enabled</code> - Enable/Disable the WAN sub-system for the federate. Set to <code>true</code>
-  for any federate that will act as a local gateway.</p></li>
-<li><p><code>portico.wan.router</code> - The address/port combination of the <em>WAN Router</em>. When WAN mode is
-  enabled this is used by the <em>Local Gateway</em> to find the router. Default: <code>127.0.0.1:23114</code></p></li>
-<li><p><code>portico.wan.bundle.enabled</code> - Defaulting to <code>true</code>, this setting will queue up messages at
-  the local gateway until there are enough to send as a large batch. This makes more efficient
-  use of the network and has a significant impact on increasing throughput in most cases.
-  Defaults to <code>true</code>.</p></li>
-<li><p><code>portico.wan.bundle.maxsize</code> - Defines the maximum size of all messages to queue up for
-  bundling before we force them to be flushed to the WAN Router. Default is <code>64K</code>.</p></li>
-<li><p><code>portico.wan.bundle.timeout</code> - Defines the maximum amount of time we should hold any message
-  for in the bundler before flushing to the router. This ensures that messages are flushed out
-  in a timely fashion rather than waiting indefinately for enough other messages to arrive to
-  meet the <code>maxsize</code> requirement. Defined in milliseconds and defaults to <code>20</code>.</p></li>
+  <li>
+    <p><code>portico.wan.enabled</code> - Enable/Disable the WAN sub-system for the federate. Set to <code>true</code>
+ for any federate that will act as a local gateway.</p>
+  </li>
+  <li>
+    <p><code>portico.wan.router</code> - The address/port combination of the <em>WAN Router</em>. When WAN mode is
+ enabled this is used by the <em>Local Gateway</em> to find the router. Default: <code>127.0.0.1:23114</code></p>
+  </li>
+  <li>
+    <p><code>portico.wan.bundle.enabled</code> - Defaulting to <code>true</code>, this setting will queue up messages at
+ the local gateway until there are enough to send as a large batch. This makes more efficient
+ use of the network and has a significant impact on increasing throughput in most cases.
+ Defaults to <code>true</code>.</p>
+  </li>
+  <li>
+    <p><code>portico.wan.bundle.maxsize</code> - Defines the maximum size of all messages to queue up for
+ bundling before we force them to be flushed to the WAN Router. Default is <code>64K</code>.</p>
+  </li>
+  <li>
+    <p><code>portico.wan.bundle.timeout</code> - Defines the maximum amount of time we should hold any message
+ for in the bundler before flushing to the router. This ensures that messages are flushed out
+ in a timely fashion rather than waiting indefinately for enough other messages to arrive to
+ meet the <code>maxsize</code> requirement. Defined in milliseconds and defaults to <code>20</code>.</p>
+  </li>
 </ol>
 
 <h2 id="important-considerations">Important Considerations</h2>
-
 <p>For the most part configuration should be pretty straightforward. However, there are some
 important bits and pieces to keep in mind when running a distributed simulation like this.</p>
 
@@ -544,7 +561,7 @@ the federation successfully, we have to ensure that they are connected to it! Th
 have to run the local gateway federate first.</p>
 
 <div class="alert error">
-  <p><b>Start each Local Gateway first</b><br/>
+  <p><b>Start each Local Gateway first</b><br />
   To avoid any startup problems the local gateway must be the first federates started at each site.
   </p>
 </div>
@@ -561,19 +578,18 @@ federates starting a new federation on the local network only.</p>
 
 <p>So, as a general rule, <strong>always start the Local Gateway federates first</strong>.</p>
 
-<h3 id="don&#39;t-enable-wan-mode-in-more-than-one-local-federate">Don&#39;t enable WAN mode in more than one local federate</h3>
+<h3 id="dont-enable-wan-mode-in-more-than-one-local-federate">Don’t enable WAN mode in more than one local federate</h3>
 
 <p>Every federate that has <code>portico.wan.enabled = true</code> will try to connect to a WAN Router. If you
 use the same RID file for multiple federates and this setting is enabled, they will <strong>all</strong> try
 to connect to the WAN router as well as the local network and you will get packet echo.</p>
 
 <h2 id="message-bundling">Message Bundling</h2>
-
 <p><em>Message Bundling</em> is a concept used to increase the throughput of a federation by making more
 effective use of network resources.</p>
 
 <p>The idea is simple: Because sending messages over a point-to-point pipe is expensive and slow,
-it&#39;s better to send fewer messages containing more data than lots of messages with little chunks.</p>
+it’s better to send fewer messages containing more data than lots of messages with little chunks.</p>
 
 <p>When enabled, bundling will block messages from being forwarded inside the Local Gateway. It will
 queue them up so that they can be sent in a large batch together. This is why earlier you may have
@@ -586,8 +602,8 @@ they were sent in 40-odd bundles.</p>
 <p>There are two trigger conditions that will cause the queue to be flushed to the router:</p>
 
 <ol>
-<li>The combined size of the stored messages reaches a defined limit</li>
-<li>The amount of time that the oldest message has been held for has reached a defined limit</li>
+  <li>The combined size of the stored messages reaches a defined limit</li>
+  <li>The amount of time that the oldest message has been held for has reached a defined limit</li>
 </ol>
 
 <p>Both these settings are configurable. Finiding the right balance depends largely on the cadenace
@@ -604,23 +620,24 @@ performance. Messages will get held for an unnecessary amount of time as Portico
 that more will arrive so they can be bundled together. The only problem is those messages never
 arrive. The messages are then only flushed when the time-limit trigger is exceeded.</p>
 
-<p>A classic example is Portico&#39;s latency benchmarking federate. It sends single messages out to all
+<p>A classic example is Portico’s latency benchmarking federate. It sends single messages out to all
 federates and then waits for responses. Because these messages are small, they get held up by the
 bundler as it waits for more data to flush as a block.</p>
 
-<p>This data is never going to come beacuse the test federate won&#39;t do anything until it gets
+<p>This data is never going to come beacuse the test federate won’t do anything until it gets
 responses back from the rest of the federation, which requires the original message to be sent.</p>
 
 <p>In this situation there are two options:</p>
 
 <ol>
-<li>Lower the max hold time: It defaults to 20ms, but you can lower it to whatever you want</li>
-<li>Turn bundling off entirely</li>
+  <li>Lower the max hold time: It defaults to 20ms, but you can lower it to whatever you want</li>
+  <li>Turn bundling off entirely</li>
 </ol>
 
 <p>The right choice for you will depend on the specifics of your simulation. Portico has chosen
-some sensible defaults that tend to work well for the common case, but we&#39;d advise you to
+some sensible defaults that tend to work well for the common case, but we’d advise you to
 experiment with these settings to find what works best for you.</p>
+
 
 
 				</div>

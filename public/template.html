@@ -217,62 +217,70 @@
 <p>You can get some <strong>Bold Text</strong> by using <code>__Text Here__</code> or <code>**Text Here**</code>.</p>
 
 <h2 id="alerts-and-callouts">Alerts and Callouts</h2>
-
 <p>Below are some alert box styles you can use to call attention to various important things
 in your document. Unfortunately these are only available as embedded HTML as there is no
 easy Markdown conversion:</p>
 
 <h3 id="info-alert">Info Alert</h3>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">&lt;div class=&quot;alert info&quot;&gt;
+
+<pre><code class="language-markup">&lt;div class="alert info"&gt;
   &lt;p&gt;This is an Info alert - use it to alert people to alertful things.&lt;/p&gt;
 &lt;/div&gt;
-</code></pre></div>
+</code></pre>
+
 <div class="alert info">
   <p>This is an Info alert - use it to alert people to alertful things.</p>
 </div>
 
 <h3 id="success-alert">Success Alert</h3>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">&lt;div class=&quot;alert success&quot;&gt;
+
+<pre><code class="language-markup">&lt;div class="alert success"&gt;
   &lt;p&gt;This is a Success alert - use it to affirm successful things.&lt;/p&gt;
 &lt;/div&gt;
-</code></pre></div>
+</code></pre>
+
 <div class="alert success">
   <p>This is a Success alert - use it to affirm successful things.</p>
 </div>
 
 <h3 id="warning-alert">Warning Alert</h3>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">&lt;div class=&quot;alert warning&quot;&gt;
+
+<pre><code class="language-markup">&lt;div class="alert warning"&gt;
   &lt;p&gt;This is a Warning alert - use it to warn people about scary things.&lt;/p&gt;
 &lt;/div&gt;
-</code></pre></div>
+</code></pre>
+
 <div class="alert warning">
   <p>This is a Warning alert - use it to warn people about scary things.</p>
 </div>
 
 <h3 id="error-alert">Error Alert</h3>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">&lt;div class=&quot;alert error&quot;&gt;
+
+<pre><code class="language-markup">&lt;div class="alert error"&gt;
   &lt;p&gt;This is an Error alert - use it to alert people to red things.&lt;/p&gt;
 &lt;/div&gt;
-</code></pre></div>
+</code></pre>
+
 <div class="alert error">
   <p>This is an Error alert - use it to alert people to red things.</p>
 </div>
 
 <h2 id="quotes">Quotes</h2>
+<p>Quotes are blocks prefixed with ` &gt;`. For example:</p>
 
-<p>Quotes are blocks prefixed with <code>&gt;</code>. For example:</p>
-<div class="highlight"><pre><code class="language-markdown" data-lang="markdown"> &gt; Are you quite sure that all those bells and whistles, all those wonderful facilities of
+<pre><code class="language-markdown"> &gt; Are you quite sure that all those bells and whistles, all those wonderful facilities of
  &gt; your so called powerful programming languages, belong to the solution set rather than the
  &gt; problem set?
  &gt; 
  &gt;  -- Edsger W. Dijkstra
-</code></pre></div>
+</code></pre>
+
 <blockquote>
-<p>Are you quite sure that all those bells and whistles, all those wonderful facilities of
+  <p>Are you quite sure that all those bells and whistles, all those wonderful facilities of
 your so called powerful programming languages, belong to the solution set rather than the
 problem set?</p>
 
-<p>-- Edsger W. Dijkstra</p>
+  <p>– Edsger W. Dijkstra</p>
 </blockquote>
 
 <h1 id="code-highlighting">Code Highlighting</h1>
@@ -285,8 +293,10 @@ create sections <code>like this</code>.</p>
 <p>If we want to get a bit more specific with the background colour of the highlight we have to
 drop back to html again. For example: <span class="label label-info">methodWithBlueBackground()</span>
 is generated from this:</p>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">&lt;span class=&quot;label label-info&quot;&gt;methodWithBlueBackground()&lt;/span&gt;
-</code></pre></div>
+
+<pre><code class="language-markup">&lt;span class="label label-info"&gt;methodWithBlueBackground()&lt;/span&gt;
+</code></pre>
+
 <p>Other options available include:</p>
 
 <p><span class="label label-default">label-default</span>, 
@@ -300,102 +310,113 @@ is generated from this:</p>
 
 <p>Fenced code blocks are also supported. They start with three backticks and should be followed by
 the name of the language you wish to use. For example:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">```java
+
+<pre><code>```java
 public static void main( String[] args )
 {
-    System.out.println( &quot;Do you like Portico?&quot; );
-    for( int i = 0; i &lt; 10; i++ )
-    {
-        String temp = &quot;Yes I do!&quot;;
-        System.out.println( temp );
-    }
+	System.out.println( "Do you like Portico?" );
+	for( int i = 0; i &lt; 10; i++ )
+	{
+		String temp = "Yes I do!";
+		System.out.println( temp );
+	}
 }
-</code></pre></div><div class="highlight"><pre><code class="language-java" data-lang="java">public static void main( String[] args )
+</code></pre>
+
+<pre><code class="language-java">public static void main( String[] args )
 {
-  System.out.println( &quot;Do you like Portico?&quot; );
+  System.out.println( "Do you like Portico?" );
   for( int i = 0; i &lt; 10; i++ )
   {
-    String temp = &quot;Yes I do!&quot;;
+    String temp = "Yes I do!";
     System.out.println( temp );
   }
 }
-</code></pre></div>
+</code></pre>
+
 <h3 id="external-code-files">External Code Files</h3>
 
 <p>Finally, you can point the highlighter at an external file, which it will parse and bring in
 for highlighting:</p>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">&lt;!-- Bring in some code from an external file --&gt;
-&lt;pre data-src=&quot;Main.java&quot; class=&quot;language-java&quot;&gt;&lt;/pre&gt;
-</code></pre></div>
+
+<pre><code class="language-markup">&lt;!-- Bring in some code from an external file --&gt;
+&lt;pre data-src="Main.java" class="language-java"&gt;&lt;/pre&gt;
+</code></pre>
+
 <pre data-src="Main.java" class="language-java"></pre>
 
 <h1 id="tables">Tables</h1>
+<p>Tables? You want tables? OK. They’re really easy.</p>
 
-<p>Tables? You want tables? OK. They&#39;re really easy.</p>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">| Left-Aligned     |   Center Aligned    |    Right Aligned |
+<pre><code class="language-markup">| Left-Aligned     |   Center Aligned    |    Right Aligned |
 | :--------------- |:-------------------:| ----------------:|
 | col 3 is         | **some wordy text** |       **$1600**  |
 | col 2 is         | centered            |             $12  |
 | zebra stripes    | are neat            |              $1  |
-</code></pre></div>
-<table><thead>
-<tr>
-<th style="text-align: left">Left-Aligned</th>
-<th style="text-align: center">Center Aligned</th>
-<th style="text-align: right">Right Aligned</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">col 3 is</td>
-<td style="text-align: center"><strong>some wordy text</strong></td>
-<td style="text-align: right"><strong>$1600</strong></td>
-</tr>
-<tr>
-<td style="text-align: left">col 2 is</td>
-<td style="text-align: center">centered</td>
-<td style="text-align: right">$12</td>
-</tr>
-<tr>
-<td style="text-align: left">zebra stripes</td>
-<td style="text-align: center">are neat</td>
-<td style="text-align: right">$1</td>
-</tr>
-</tbody></table>
+</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Left-Aligned</th>
+      <th style="text-align: center">Center Aligned</th>
+      <th style="text-align: right">Right Aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">col 3 is</td>
+      <td style="text-align: center"><strong>some wordy text</strong></td>
+      <td style="text-align: right"><strong>$1600</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zebra stripes</td>
+      <td style="text-align: center">are neat</td>
+      <td style="text-align: right">$1</td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="links">Links</h1>
-
 <p>Links to other pages have a simple format, with the text to display held in square-brackets,
 follows by the URL to link to. For example, consider the following:</p>
 
 <ul>
-<li><strong>Text Link</strong>
-
-<ul>
-<li>Markdown: <code>The [Portico Website](http://www.porticoproject.org)</code></li>
-<li>Result: The <a href="http://www.porticoproject.org">Portico Website</a></li>
-</ul></li>
-<li><strong>Direct Link</strong>
-
-<ul>
-<li>Markdown: <code>&lt;http://www.porticoproject.org&gt;</code></li>
-<li>Result: <a href="http://www.porticoproject.org">http://www.porticoproject.org</a></li>
-</ul></li>
-<li><strong>Email Link</strong>
-
-<ul>
-<li>Markdown: <code>&lt;support@porticoproject.org&gt;</code></li>
-<li>Result: <a href="mailto:support@porticoproject.org">support@porticoproject.org</a></li>
-</ul></li>
+  <li><strong>Text Link</strong>
+    <ul>
+      <li>Markdown: <code>The [Portico Website](http://www.porticoproject.org)</code></li>
+      <li>Result: The <a href="http://www.porticoproject.org">Portico Website</a></li>
+    </ul>
+  </li>
+  <li><strong>Direct Link</strong>
+    <ul>
+      <li>Markdown: <code>&lt;http://www.porticoproject.org&gt;</code></li>
+      <li>Result: <a href="http://www.porticoproject.org">http://www.porticoproject.org</a></li>
+    </ul>
+  </li>
+  <li><strong>Email Link</strong>
+    <ul>
+      <li>Markdown: <code>&lt;support@porticoproject.org&gt;</code></li>
+      <li>Result: <a href="mailto:support@porticoproject.org">support@porticoproject.org</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h1 id="images">Images</h1>
-
 <p>Images are also straightforward, except that you have little control over things like the size :(</p>
-<div class="highlight"><pre><code class="language-markup" data-lang="markup">![This is the alt text for the image](assets/images/logos/macosx-yosemite-450x250.png)![This is the alt text for the image](assets/images/logos/macosx-yosemite-450x250.png)
-</code></pre></div>
-<p><img src="assets/images/logos/macosx-yosemite-450x250.png" alt="This is the alt text for the image"></p>
 
-<p>That&#39;s all for now!</p>
+<pre><code class="language-markup">![This is the alt text for the image](assets/images/logos/macosx-yosemite-450x250.png)![This is the alt text for the image](assets/images/logos/macosx-yosemite-450x250.png)
+</code></pre>
+
+<p><img src="assets/images/logos/macosx-yosemite-450x250.png" alt="This is the alt text for the image" /></p>
+
+<p>That’s all for now!</p>
+
 
 
 				</div>
