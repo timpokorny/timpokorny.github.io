@@ -1,7 +1,7 @@
 /**
   *
-  * jPanelMenu 1.3.0 (http://jpanelmenu.com)
-  * By Anthony Colangelo (http://acolangelo.com)
+  * jPanelMenu 1.3.0 (https://jpanelmenu.com)
+  * By Anthony Colangelo (https://acolangelo.com)
   *
 * */
 

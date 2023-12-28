@@ -190,11 +190,11 @@ Links to other pages have a simple format, with the text to display held in squa
 follows by the URL to link to. For example, consider the following:
 
   - **Text Link**
-    - Markdown: `The [Portico Website](http://www.porticoproject.org)`
-    - Result: The [Portico Website](http://www.porticoproject.org)
+    - Markdown: `The [Portico Website](https://www.porticoproject.org)`
+    - Result: The [Portico Website](https://www.porticoproject.org)
   - **Direct Link**
-    - Markdown: `<http://www.porticoproject.org>`
-    - Result: <http://www.porticoproject.org>
+    - Markdown: `<https://www.porticoproject.org>`
+    - Result: <https://www.porticoproject.org>
   - **Email Link**
     - Markdown: `<support@porticoproject.org>`
     - Result: <support@porticoproject.org>

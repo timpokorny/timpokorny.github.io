@@ -61,7 +61,7 @@ with DIS and HLA simulation networks. Here we see how to link it with Portico.
 
 Titan and HLA
 ===================
-Each copy of Titan embeds _Calytrix <a href="http://www.calytrix.com/products/lvcgame/">LVC Game</a>_.
+Each copy of Titan embeds _Calytrix <a href="https://www.calytrix.com/products/lvcgame/">LVC Game</a>_.
 DIS/HLA connectivity is provided through this gateway supporting a variety of FOMs and all
 major versions of the HLA API. 
 

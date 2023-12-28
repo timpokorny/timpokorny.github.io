@@ -3,7 +3,7 @@ title: The Portico Project
 email: peeps@porticoproject.org
 description: "The Portico Project - Open Source HLA: By Jerks, For Jerks."
 baseurl: ""
-url: "http://timpokorny.github.io"
+url: "https://timpokorny.github.io"
 github_username:  timpokorny
 destination: ../public/
 

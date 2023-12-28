@@ -3,8 +3,8 @@
  * Copyright(c) 2011 Rico Sta. Cruz <rico@ricostacruz.com>
  * MIT Licensed.
  *
- * http://ricostacruz.com/jquery.transit
- * http://github.com/rstacruz/jquery.transit
+ * https://ricostacruz.com/jquery.transit
+ * https://github.com/rstacruz/jquery.transit
  */
 
 /*!
@@ -44,7 +44,7 @@ https://github.com/alexanderdickson/waitForImages
  * waitForImages 1.4
  * -----------------
  * Provides a callback when all images have loaded in your given selector.
- * http://www.alexanderdickson.com/
+ * https://www.alexanderdickson.com/
  *
  *
  * Copyright (c) 2011 Alex Dickson

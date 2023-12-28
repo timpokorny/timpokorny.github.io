@@ -11,7 +11,7 @@
 
 ###############################################################################################
 # Title: Page Asset Tag for Jekyll
-# Author: Tim Pokorny (adapted from work by Sam Rayner http://samrayner.com)
+# Author: Tim Pokorny (adapted from work by Sam Rayner https://samrayner.com)
 # Description: Output a relative URL for assets based on the post/page path
 # Location: (Tim) TBC
 #           (Sam) https://github.com/samrayner/jekyll-asset-path-plugin
